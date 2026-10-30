@@ -1,0 +1,95 @@
+{
+  "persona_id": "p-ocd-03-nt-np",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 3,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "a8022e56a8e5b87a",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Martin",
+      "to": "Aleksander",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-ocd-03-nt@1",
+    "changed_paths": [
+      "rendering.behavioral_description",
+      "rendering.clinical_context",
+      "rendering.states.affect.arousal",
+      "rendering.states.affect.primary_emotion",
+      "rendering.states.affect.valence",
+      "rendering.states.symptoms",
+      "rendering.traits.clinical_history.current_treatment",
+      "rendering.traits.clinical_history.history",
+      "rendering.traits.clinical_history.presentation",
+      "rendering.traits.cognitive_style",
+      "rendering.traits.communication_register",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Aleksander is a 52-year-old pharmacist who has run the same independent pharmacy for almost twenty years. He's married to Dana, his wife of fourteen years, and describes himself as someone who likes things settled and doesn't enjoy surprises. He reads a lot of nonfiction, keeps a tidy garage, and is well liked by regular customers who say he remembers their prescriptions without looking them up.",
+    "clinical_context": "Aleksander has no mental-health presentation. Like most people, he occasionally has a passing thought wondering whether he truly loves Dana or married the right person; these thoughts crop up now and then, particularly since his father-in-law died and old memories of early disagreements in the marriage came back to him. The thoughts pass on their own within minutes, and he doesn't do anything to try to resolve or get rid of them.",
+    "behavioral_description": "Aleksander will mention, in an easygoing way, that he sometimes wonders whether he really loves Dana, especially when he's tired or after a disagreement, but he treats it as an ordinary passing thought rather than something worth dwelling on. He doesn't bring it up repeatedly or look to others to reassure him about it; if the subject comes up, he shrugs it off and moves on to whatever he actually wants to talk about, whether that's the pharmacy, a book he's reading, or weekend plans.",
+    "traits": {
+      "age": 52,
+      "gender": "transgender man",
+      "profession": "pharmacist, owns a small independent pharmacy",
+      "relationship_status": "married to his wife Dana, fourteen years",
+      "living_situation": "lives with his wife in a house they've owned for over a decade",
+      "psychological_reactance": "low",
+      "communication_register": "plain and detailed, straightforward, no clinical vocabulary",
+      "help_seeking_orientation": "sees no reason to seek help for this; treats the occasional passing doubt as unremarkable and not something to work through with anyone",
+      "cognitive_style": "even-keeled and practical; notices a passing doubt, doesn't dwell on it or search for certainty, and moves on",
+      "clinical_history": {
+        "presentation": "no mental-health presentation",
+        "current_treatment": "none; he has never needed or sought mental-health treatment",
+        "history": "No mental-health history. The occasional thought about whether he loves his wife became a bit more noticeable around the time of his father-in-law's death, when old arguments from early in the marriage came to mind now and then, but it was fleeting and never affected how he functioned or felt day to day."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "occasional passing thought about whether he truly loves his wife, especially when tired or after a disagreement",
+        "the thought fades on its own within minutes without him doing anything about it"
+      ],
+      "affect": {
+        "valence": "neutral to mildly negative",
+        "arousal": "calm",
+        "primary_emotion": "occasional mild uncertainty"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000602",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

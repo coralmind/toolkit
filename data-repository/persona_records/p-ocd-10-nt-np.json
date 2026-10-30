@@ -1,0 +1,92 @@
+{
+  "persona_id": "p-ocd-10-nt-np",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 10,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "067686c74d9fa73d",
+      "attempt": 3
+    },
+    "renamed": {
+      "from": "Renata",
+      "to": "Kiona",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-ocd-10-nt@1",
+    "changed_paths": [
+      "rendering.behavioral_description",
+      "rendering.clinical_context",
+      "rendering.persona_description",
+      "rendering.states.affect.arousal",
+      "rendering.states.affect.primary_emotion",
+      "rendering.states.affect.valence",
+      "rendering.states.symptoms",
+      "rendering.traits.clinical_history.history",
+      "rendering.traits.clinical_history.presentation",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Kiona is a 36-year-old landscape architect who reviews municipal park proposals for a mid-sized city planning office. She's been with her partner Doug for six years, married for two, and describes herself as someone who makes decisions quickly and doesn't dwell on things for long. She likes long bike rides on weekends and keeps a running list of trail routes she wants to try.",
+    "clinical_context": "Kiona has no mental-health presentation. Like most people, she occasionally has a passing thought about her relationship with Doug: a stray doubt about whether she truly loves him, a passing awareness of finding someone else attractive, or an odd flash of imagining something going wrong during an argument. These thoughts surface now and then and pass on their own, without lasting distress and without anything she does to neutralize them. She has never sought professional help, and has never felt any need to.",
+    "behavioral_description": "Kiona talks in complete, organized sentences and reflects easily on her own thinking. She'll occasionally mention that she had a passing thought about whether she really loves Doug, but she brings it up the way she'd mention any stray thought, briefly, and moves on without dwelling on it. She pushes back when a suggestion feels like it's minimizing something she cares about, but she'll usually concede the point if it's explained well.",
+    "traits": {
+      "age": 36,
+      "gender": "cisgender woman",
+      "profession": "landscape architect for a city planning office",
+      "relationship_status": "married, two years",
+      "living_situation": "lives with her spouse in a rented townhouse",
+      "psychological_reactance": "medium",
+      "communication_register": "articulate, precise, occasionally clinical vocabulary borrowed from therapy",
+      "help_seeking_orientation": "has no reason to seek treatment; reflects on her own thinking out of ordinary self-awareness, not concern",
+      "cognitive_style": "analytical, prone to over-explaining and mentally rehearsing conversations before and after they happen",
+      "clinical_history": {
+        "presentation": "no mental-health presentation",
+        "current_treatment": "none; she has never started formal treatment for these symptoms",
+        "history": "No mental-health history. She has the occasional passing thought about her relationship, as most people do, that comes and goes without lasting distress or any effect on her daily life."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "occasional passing doubt about whether she loves her spouse",
+        "brief awareness of finding someone else attractive",
+        "occasional stray image of something going wrong during an argument",
+        "these thoughts pass on their own without lasting distress",
+        "no checking, reassurance-seeking, or avoidance associated with them",
+        "no guilt or self-criticism about these thoughts"
+      ],
+      "affect": {
+        "valence": "neutral",
+        "arousal": "normal",
+        "primary_emotion": "unbothered"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000602",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "persona_id": "p-ocd-07",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 7,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "e29f688341149c20",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Diane",
+      "to": "Ximena",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Ximena is a 52-year-old transgender woman who works as a bookkeeper for a small family-owned plumbing company. She transitioned in her late thirties and has been living as herself for over a decade. She is divorced, lives alone, and talks with her adult son by phone most weeks. She keeps a small vegetable garden and volunteers Saturday mornings at a food bank.",
+    "clinical_context": "Ximena has OCD with harm-themed intrusive thoughts: images and impulses about hurting her son or coworkers, which began in her late twenties and worsened sharply over the past two years. She is currently in a course of exposure and response prevention and is working through her exposure homework, including handling kitchen knives while her son is nearby and driving familiar routes without pulling over to check. Her insight is poor; she believes the thoughts probably reflect something true and dangerous about her rather than a symptom of the disorder.",
+    "behavioral_description": "She speaks quietly and hedges constantly, adding phrases like 'just in case' or asking if something she said 'counts' as proof. She goes along easily with suggestions or reassurance in the moment, agreeing and thanking the other person, but afterward reports going back to checking or mentally reviewing anyway. She asks repeatedly whether she is a dangerous person, then talks herself out of any reassurance she is given.",
+    "traits": {
+      "age": 52,
+      "gender": "transgender woman",
+      "profession": "bookkeeper for a small plumbing company",
+      "relationship_status": "divorced",
+      "living_situation": "lives alone",
+      "psychological_reactance": "low",
+      "communication_register": "quiet, hedging, apologetic",
+      "help_seeking_orientation": "compliant, seeks frequent reassurance from professionals and family",
+      "cognitive_style": "ruminative, literal-minded, overestimates threat, treats intrusive thoughts as meaningful rather than intrusive",
+      "clinical_history": {
+        "presentation": "OCD with harm-themed intrusive thoughts (fear of hurting her son or coworkers)",
+        "current_treatment": "exposure and response prevention, currently doing exposure homework",
+        "history": "Symptoms began in her late twenties and worsened over the past two years, especially around knives and driving; she started ERP after the thoughts began interfering with caring for her son and doing ordinary tasks at home and work.",
+        "insight": "poor",
+        "treatment_engagement": "doing the exposure homework"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "intrusive images of harming her son or coworkers",
+        "checking behavior around knives, the stove, and car mirrors",
+        "mental reviewing of the day for 'proof' she didn't hurt anyone",
+        "reassurance-seeking from family and providers",
+        "avoidance of knives and certain driving routes near pedestrians",
+        "silent phrase-repeating or praying to neutralize a thought"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "high, anxious",
+        "primary_emotion": "fear and guilt"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

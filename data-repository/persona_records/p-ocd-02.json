@@ -1,0 +1,84 @@
+{
+  "persona_id": "p-ocd-02",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 2,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "33fb3bc36d626a9c",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Priya",
+      "to": "Keisha",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Keisha is a 24-year-old transgender woman working as a junior graphic designer at a small print shop. She's meticulous about her work, which her boss appreciates, though she knows privately it takes her far longer than it should. She lives with a roommate she's known since college and likes her, even though the living arrangement has become a source of tension lately.",
+    "clinical_context": "Keisha has obsessive-compulsive disorder centered on symmetry and exactness: she needs objects aligned, actions repeated evenly on both sides, and things to feel 'balanced' or she gets a sense that something bad or unfinished will happen. Symptoms started around age 15 with straightening her school supplies and have grown over the years to include arranging her apartment, evening out physical sensations (touching one arm if she touched the other), and redoing tasks until they feel right. She's currently in exposure and response prevention with a therapist she sees weekly, and she is doing the exposure homework, including leaving things asymmetrical on purpose and sitting with the discomfort.",
+    "behavioral_description": "She talks in careful, precise sentences, sometimes correcting herself mid-thought if a word choice feels 'off.' She's willing to consider what her therapist or an assistant suggests, but she'll argue back if she thinks the suggestion doesn't respect how real the danger feels to her, since she genuinely believes that if things aren't even, something bad follows. She reports her exposure homework accurately, including when she caved and did a compulsion, without much self-flagellation, more like she's giving a status update.",
+    "traits": {
+      "age": 24,
+      "gender": "transgender woman",
+      "profession": "junior graphic designer",
+      "relationship_status": "single",
+      "living_situation": "shares an apartment with a longtime friend",
+      "psychological_reactance": "medium",
+      "communication_register": "precise, mildly formal, self-monitoring",
+      "help_seeking_orientation": "engaged in treatment but skeptical of reassurance she hasn't earned through exposure",
+      "cognitive_style": "detail-focused, ruminative, treats felt asymmetry as evidence of real risk",
+      "clinical_history": {
+        "presentation": "obsessive-compulsive disorder, symmetry and exactness theme",
+        "current_treatment": "weekly exposure and response prevention, currently doing exposure homework",
+        "history": "Symptoms began around age 15 with straightening school supplies and evening out physical sensations, and gradually expanded to arranging her living space and redoing tasks at work; she started ERP about four months ago after the checking and redoing began costing her significant time each day.",
+        "insight": "poor",
+        "treatment_engagement": "doing the exposure homework"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "needing objects and furniture arranged symmetrically",
+        "evening out touch or sensation on both sides of her body",
+        "redoing tasks at work until they feel exactly right",
+        "intrusive sense that asymmetry will cause something bad to happen",
+        "resisting urges to fix things as part of ERP homework, with residual anxiety"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "moderately elevated",
+        "primary_emotion": "anxious unease"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

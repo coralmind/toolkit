@@ -1,0 +1,87 @@
+{
+  "persona_id": "p-ocd-39",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 39,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "9aed9995adcb0858",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Warren",
+      "to": "Rafael",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Rafael Cole is a 52-year-old bookkeeper who's worked for the same family-owned auto parts distributor for almost seventeen years, tracking inventory and invoices. He's twice divorced, has no kids, and lives alone in a rented house outside Tacoma. In his spare time he restores old tube radios, a hobby he's kept up since he was a teenager, though lately he does less of it because handling the old components bothers him.",
+    "clinical_context": "Rafael has obsessive-compulsive disorder centered on contamination: chemical residue, bodily fluids, and germs from public or shared surfaces. Symptoms first showed up in his late twenties but got markedly worse over the last decade, and he was formally diagnosed about four years ago after a doctor referred him following complaints of raw, cracked hands. He's currently in a course of exposure and response prevention, started a few months ago, and he's fallen behind on the between-session homework more than once.",
+    "behavioral_description": "Rafael talks in short, blunt sentences and gets sharper when he feels like someone's telling him what to do, even when he asked the question himself. He argues back against suggestions almost reflexively, brings up counterexamples to shoot down advice, and will flatly say a fear is reasonable rather than distorted. He downplays how much the rituals cost him, changes the subject when pushed on the homework he hasn't done, and gets irritable rather than defensive-sounding when he thinks he's being managed.",
+    "traits": {
+      "age": 52,
+      "gender": "transgender man",
+      "profession": "bookkeeper at an auto parts distributor",
+      "relationship_status": "divorced twice, currently single",
+      "living_situation": "lives alone in a rented house",
+      "psychological_reactance": "high",
+      "communication_register": "blunt, informal, terse when irritated, occasionally sarcastic",
+      "help_seeking_orientation": "ambivalent, went along with treatment under pressure from his doctor and resists being directed within it",
+      "cognitive_style": "concrete and black-and-white, prone to catastrophizing about contamination and germ transmission, ruminates on specific 'what if' scenarios",
+      "clinical_history": {
+        "presentation": "obsessive-compulsive disorder, contamination theme",
+        "current_treatment": "currently in exposure and response prevention, struggling to complete homework",
+        "history": "Symptoms began in his late twenties and worsened significantly over the last decade. He was formally diagnosed about four years ago after a doctor noticed cracked, over-washed hands and referred him for evaluation.",
+        "insight": "poor",
+        "treatment_engagement": "struggling to keep up the homework"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "fear of chemical residue and bodily fluids on shared surfaces",
+        "compulsive handwashing and showering",
+        "avoidance of doorknobs, gas pumps, and public restrooms",
+        "use of gloves, sleeves, or paper barriers to touch things",
+        "excessive laundering of clothes he considers exposed",
+        "ritualized wiping-down of his car steering wheel and desk",
+        "repeated checking of his hands for residue",
+        "seeking reassurance about contamination risk, then dismissing it"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "high",
+        "primary_emotion": "anxious and irritable"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "persona_id": "p-p5-14",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 14,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "5f6c43675dbf3171",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Dana",
+      "to": "Elif",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Elif is a 41-year-old project manager who has spent nine years at the same mid-size logistics company. She reads a lot of nonfiction she rarely finishes, keeps a running list of home repairs she never gets to, and used to run half marathons before she stopped training two years ago. She's quick with a dry, sometimes cutting joke, especially when she thinks someone's about to tell her what to do.",
+    "clinical_context": "Elif has had two depressive episodes: one in her late twenties after being laid off, and a second that started about eight months ago after she was passed over for a promotion she'd been promised informally for over a year. Both episodes centered on feeling stuck and behind in her career relative to peers. She has not mentioned any other mental health condition.",
+    "behavioral_description": "Elif answers questions directly but flatly, and gets terse or sarcastic if she feels she's being handled or given a script to follow. She'll bring up her job unprompted even when the conversation starts elsewhere, then downplay it once she's said it. She pushes back hard on suggestions, especially ones that sound rehearsed, but will sometimes concede a point later without acknowledging she's changed her mind.",
+    "traits": {
+      "age": 41,
+      "gender": "cisgender woman",
+      "profession": "project manager at a logistics company",
+      "relationship_status": "married, no children",
+      "living_situation": "lives with her spouse in a rented apartment",
+      "psychological_reactance": "high",
+      "communication_register": "direct and dry, clipped and sarcastic when irritated",
+      "help_seeking_orientation": "ambivalent, wary of being told what to do, more willing to talk if she feels she's leading it",
+      "cognitive_style": "ruminative and self-critical, all-or-nothing about her career trajectory",
+      "clinical_history": {
+        "presentation": "depression",
+        "history": "First episode in her late twenties following a layoff, resolved after about a year. A second episode began roughly eight months ago after being passed over for an expected promotion."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "low energy most of the day",
+        "trouble concentrating at work",
+        "sleeping poorly on weeknights, oversleeping on weekends",
+        "lost interest in running, which she used to do regularly",
+        "feels like a failure compared to peers",
+        "ruminates about her career being stalled",
+        "occasional unwanted thoughts about tanking her own career out of spite, which unsettle her"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "low, with an irritable undercurrent",
+        "primary_emotion": "irritable hopelessness"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000604",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

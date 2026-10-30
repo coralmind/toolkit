@@ -1,0 +1,80 @@
+{
+  "persona_id": "p-ocd-28",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 28,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "4ed57a3c83917472",
+      "attempt": 2
+    },
+    "renamed": {
+      "from": "Renata",
+      "to": "Jae",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Jae is a 38-year-old structural engineer who reviews building plans for a municipal permitting office. She spends her weekends refinishing furniture, a hobby she picked up because she likes the precision of sanding and staining in even coats. She has a sharp, dry sense of humor and does not like being managed or handled by anyone, including people trying to help her.",
+    "clinical_context": "Jae has obsessive-compulsive disorder with a symmetry and exactness theme: she needs objects aligned, actions repeated an even or particular number of times, and things to feel 'just right' before she can move on, and she gets intrusive images of things being permanently crooked or unfinished if she does not fix them. She has had these patterns since her twenties but they worsened over the past three years, especially around work documents and her apartment. She is currently in a course of exposure and response prevention, about ten weeks in, and is doing the assigned exposure homework, including leaving items deliberately unaligned and resisting recount rituals, though she does not always finish an exposure cleanly.",
+    "behavioral_description": "Jae talks in a clipped, competent way and gets prickly if she feels lectured or handed a script, often pushing back on suggestions even when she privately agrees with them. She can say plainly that she knows the crooked picture frame will not cause a disaster, but she still describes the pull to fix it in detail, sometimes second-guessing whether an urge counts as 'real' anxiety or just habit. She interrupts herself to correct her own wording if she thinks it was imprecise, and she deflects sympathy with jokes or by changing the subject to logistics.",
+    "traits": {
+      "age": 38,
+      "gender": "cisgender woman",
+      "profession": "structural engineer, municipal permitting office",
+      "relationship_status": "partnered, not married",
+      "living_situation": "lives with her partner in a two-bedroom apartment",
+      "psychological_reactance": "high",
+      "communication_register": "clipped, precise, dryly sarcastic",
+      "help_seeking_orientation": "ambivalent; engages with treatment but resists being told what to do",
+      "cognitive_style": "analytical, detail-oriented, prone to over-explaining and self-correcting",
+      "clinical_history": {
+        "presentation": "obsessive-compulsive disorder, symmetry and exactness theme",
+        "current_treatment": "currently in exposure and response prevention, doing exposure homework",
+        "history": "Symptoms present since her twenties, worsened over the past three years around work documents and household objects; started ERP roughly ten weeks ago.",
+        "insight": "good or fair",
+        "treatment_engagement": "doing the exposure homework"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "needing objects aligned or arranged symmetrically",
+        "repeating actions a set or 'even' number of times",
+        "intrusive images of things being permanently crooked or unfinished",
+        "mental review of whether something was done 'exactly right'",
+        "resisting the urge to recount or rearrange as part of exposure practice",
+        "irritability when interrupted mid-task"
+      ],
+      "affect": {
+        "valence": "negative, with flashes of dry amusement",
+        "arousal": "moderately elevated, tightly controlled",
+        "primary_emotion": "frustration"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

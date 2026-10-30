@@ -1,0 +1,92 @@
+{
+  "persona_id": "p-anx-10-nt",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "anxiety",
+      "row": 10,
+      "seed": 20260926
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "009451833c050d00",
+      "attempt": 2
+    },
+    "renamed": {
+      "from": "Warren",
+      "to": "Sipho",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-anx-10@1",
+    "changed_paths": [
+      "rendering.behavioral_description",
+      "rendering.clinical_context",
+      "rendering.traits.clinical_history.current_treatment",
+      "rendering.traits.clinical_history.history",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Sipho is a 52-year-old facilities manager for a mid-sized school district, transitioned in his late thirties, and has worked in the same district long enough that most colleagues just know him as Sipho. He coaches a rec-league softball team on weekends, which he loves, but skips the post-game bar gatherings almost every time. He's methodical about his tools and his truck, keeps a tidy toolbox and a tidier spreadsheet of work orders, and describes himself as someone who'd rather fix a boiler than make small talk about it.",
+    "clinical_context": "Sipho has social anxiety centered on being watched or judged in group settings, especially meetings where he has to speak up, and situations where his voice or mannerisms might draw attention. It's been present since adolescence but got sharper after he transitioned, when he became newly self-conscious about being read or scrutinized in ways he wasn't before. He's never pursued treatment for it, managing it on his own by avoiding or minimizing the situations that set it off.",
+    "behavioral_description": "Sipho is plainspoken and a little gruff, describing his week in concrete terms rather than feelings language, and he'll often downplay how anxious a situation made him until pressed. He pushes back when something sounds like it's asking him to overshare or perform enthusiasm he doesn't feel, and he'll say so directly rather than going quiet about it. He tends to route around situations that make him anxious rather than work through them, and gets irritated when a suggestion seems to skip past how he actually operates.",
+    "traits": {
+      "age": 52,
+      "gender": "transgender man",
+      "profession": "facilities manager for a school district",
+      "relationship_status": "divorced, currently single",
+      "living_situation": "lives alone in a rented house, two grown kids nearby",
+      "psychological_reactance": "medium",
+      "communication_register": "plain, terse, mildly gruff, avoids emotional vocabulary",
+      "help_seeking_orientation": "not currently seeking treatment; skeptical of therapy in general and of advice that feels generic or therapist-speak",
+      "cognitive_style": "concrete, task-oriented, tracks things like a work log, resists abstraction",
+      "clinical_history": {
+        "presentation": "social anxiety, focused on being watched or judged in group and speaking situations",
+        "current_treatment": "no current treatment",
+        "history": "anxious in groups since his teens, intensified in his late thirties after transitioning when he became more self-conscious about being scrutinized; has never started any course of treatment for it."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "racing heart before staff meetings",
+        "urge to leave social gatherings early",
+        "rehearsing sentences before saying them out loud",
+        "avoiding eye contact when anxious",
+        "sweating and blushing when put on the spot",
+        "overanalyzing how he came across afterward"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "elevated",
+        "primary_emotion": "apprehension"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

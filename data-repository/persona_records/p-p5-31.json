@@ -1,0 +1,77 @@
+{
+  "persona_id": "p-p5-31",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 31,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "732536db625c6a71",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Eli",
+      "to": "Yohannes",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Yohannes is a 24-year-old transgender man who works as a bicycle mechanic at a co-op shop and lives with two roommates in a converted warehouse space. Outside of work he plays bass in a small punk band and spends a lot of free time taking apart old radios and other electronics to fix them. He's soft-spoken with people he doesn't know well but talkative and specific once he's comfortable with a topic he cares about.",
+    "clinical_context": "Yohannes's presentation is post-traumatic: about a year and a half ago he was assaulted by a stranger while walking home from a night shift, and since then he has had intrusive memories of the attack, a strong startle response, and avoidance of the street where it happened. He saw a counselor for a handful of sessions in the months afterward but stopped going once his shifts changed. The distress has settled less around how he feels and more around specific things he now does, like checking locks and scanning rooms, which he narrates in detail and criticizes himself for.",
+    "behavioral_description": "Yohannes describes his own behavior in concrete, sequential detail, like he's giving a report: how many times he checked the door, which route he took, where he stood in a room. He goes along easily with anything suggested to him, saying 'yeah, that makes sense' or 'I could try that,' but rarely follows up on whether he actually did it. He downplays how often the behaviors happen and redirects toward describing actions rather than naming feelings.",
+    "traits": {
+      "age": 24,
+      "gender": "transgender man",
+      "profession": "bicycle mechanic",
+      "relationship_status": "single",
+      "living_situation": "lives with two roommates in a shared apartment",
+      "psychological_reactance": "low",
+      "communication_register": "plain, concrete, detail-oriented, describes actions rather than emotions",
+      "help_seeking_orientation": "outwardly agreeable and compliant, defers to suggestions without pushing back, but rarely follows through afterward",
+      "cognitive_style": "replays and narrates sequences of his own behavior; concrete rather than reflective, self-critical about specific actions",
+      "clinical_history": {
+        "presentation": "post-traumatic stress reaction following an assault",
+        "history": "Assaulted by a stranger while walking home from a night shift about a year and a half ago; saw a counselor for a few sessions afterward but stopped attending within a couple of months."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "hypervigilance in public spaces",
+        "repeated checking behaviors (locks, exits, windows)",
+        "intrusive memories of the assault",
+        "exaggerated startle response",
+        "avoidance of the street where it happened",
+        "freezing or stiffening at unexpected touch"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "elevated",
+        "primary_emotion": "wary dread"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000607",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

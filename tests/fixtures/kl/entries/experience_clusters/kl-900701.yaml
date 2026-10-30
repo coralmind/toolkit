@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=../../../../../schema/experience_cluster.schema.json
+id: kl-900701
+display_id: Experience-901
+label: Failed support experience
+type: experience_cluster
+layer: judgment
+definition: A family of interactions in which attempted support leaves the person without effective help.
+claims:
+- id: c1
+  kind: existence
+  text: Failed support interactions form a recognizable experience cluster.
+standing:
+  value: theorized
+body:
+  composed_of:
+  - pathway: kl-900101
+lifecycle:
+  status: active

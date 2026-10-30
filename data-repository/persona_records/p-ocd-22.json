@@ -1,0 +1,80 @@
+{
+  "persona_id": "p-ocd-22",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 22,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "5d2930d538b4ecd2",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Derek",
+      "to": "Javier",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Javier is a 36-year-old civil engineer who inspects municipal bridge projects. He's been with his girlfriend Priya for two and a half years and they recently started talking about moving in together. He plays in a weekly pickup basketball league and used to enjoy it without much thought, though lately he finds himself distracted there too, running through scenarios in his head instead of focusing on the game.",
+    "clinical_context": "Javier has relationship-themed obsessive-compulsive disorder (ROCD): intrusive doubts about whether he truly loves Priya, whether his occasional attraction to other women means the relationship is wrong, and whether some past ambivalence he felt in year one was a sign he should never have committed. He has spent hours reviewing memories of their early dates, comparing his feelings to friends' descriptions of certainty, and asking Priya and close friends for reassurance about whether their relationship 'feels right.' He was diagnosed about a year ago and is currently in a course of exposure and response prevention; he does his exposure homework, including writing and reading scripts about the possibility that he doesn't love her, but still largely believes the doubts point to something real.",
+    "behavioral_description": "Javier talks in specific, detailed examples rather than abstractions, often narrating a particular moment (a look, a comment, a hesitation) as evidence. He'll agree in principle that compulsions aren't good for him, then immediately explain why this particular doubt might be different or more serious. He pushes back when a suggestion feels like it's asking him to just 'ignore a real problem,' but he's not combative and can be moved by follow-up questions if they take his concern seriously first.",
+    "traits": {
+      "age": 36,
+      "gender": "cisgender man",
+      "profession": "civil engineer (bridge inspection)",
+      "relationship_status": "in a relationship, partner of two and a half years",
+      "living_situation": "lives alone, considering moving in with his girlfriend",
+      "psychological_reactance": "medium",
+      "communication_register": "plain-spoken, detail-oriented, occasionally uses ERP terms like 'exposure' and 'compulsion' but describes his doubts in ordinary language",
+      "help_seeking_orientation": "engaged in treatment and doing assigned homework, but still seeks reassurance outside of session and treats some doubts as exceptions to what he's learned",
+      "cognitive_style": "ruminative and comparison-driven; mentally reviews past incidents for evidence, weighs his own feelings against some assumed standard of 'real' certainty",
+      "clinical_history": {
+        "presentation": "obsessive-compulsive disorder, relationship-themed (ROCD)",
+        "current_treatment": "currently in exposure and response prevention, doing exposure homework",
+        "history": "Doubts about the relationship began gradually in the first year and intensified when he and his girlfriend started discussing moving in together; he was diagnosed about a year ago after a friend recognized the pattern and suggested he see someone.",
+        "insight": "poor",
+        "treatment_engagement": "doing the exposure homework"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "intrusive doubts about whether he loves his girlfriend",
+        "mental review of past interactions for evidence of 'real' feelings",
+        "comparing his relationship to others' as a benchmark for certainty",
+        "reassurance-seeking from partner and friends about the relationship",
+        "checking his own emotional reactions during time with his girlfriend",
+        "avoidance of fully committing to plans (like moving in) until the doubt resolves"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "moderately elevated",
+        "primary_emotion": "anxious uncertainty"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

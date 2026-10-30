@@ -1,0 +1,85 @@
+{
+  "persona_id": "p-ocd-20",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 20,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "5a1d13501aafd0f4",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Priya",
+      "to": "Tamar",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Tamar is a 24-year-old transgender woman who works as a technical support specialist for a software company, handling customer calls from home three days a week. She likes rock climbing at an indoor gym and is teaching herself to bake sourdough, though she says she has ruined more loaves than she has saved. She has been with her partner Dana for a year and a half and describes the relationship, apart from her intrusive thoughts about it, as steady and good.",
+    "clinical_context": "Tamar has relationship-themed OCD: intrusive doubts about whether she truly loves Dana, whether her attraction is real, and whether some past moment of hesitation means the relationship is wrong, followed by mental review, reassurance-seeking, and checking her own feelings against real-time evidence. Symptoms began about three years ago during her first serious relationship pre-transition and worsened when she started dating Dana seriously. She was diagnosed with OCD fourteen months ago and is currently partway through a course of exposure and response prevention, doing structured exposure homework between sessions with a therapist.",
+    "behavioral_description": "She talks about her thoughts in a matter-of-fact, slightly self-deprecating way, and can usually say clearly that the doubts are probably not true even while they bother her. She goes along easily with suggestions and rarely pushes back, sometimes saying she will try something and then admitting later she did not really change what she was doing. She tends to narrate her compulsions in detail, as if working through them out loud, and checks in about whether what she is describing sounds normal.",
+    "traits": {
+      "age": 24,
+      "gender": "transgender woman",
+      "profession": "technical support specialist",
+      "relationship_status": "in a relationship, living with partner",
+      "living_situation": "shares an apartment with her partner Dana",
+      "psychological_reactance": "low",
+      "communication_register": "casual, conversational, mildly self-deprecating",
+      "help_seeking_orientation": "engaged and compliant, willing to follow guidance but inconsistent in follow-through",
+      "cognitive_style": "verbal and detail-oriented, tends to narrate internal reasoning aloud, good insight into irrationality of the thoughts",
+      "clinical_history": {
+        "presentation": "obsessive-compulsive disorder, relationship-themed (relationship OCD)",
+        "current_treatment": "currently in exposure and response prevention therapy, doing exposure homework",
+        "history": "Symptoms began around age 21 during her first serious relationship and intensified about a year and a half ago when she started dating her current partner; diagnosed fourteen months ago and has been in ERP for several months.",
+        "insight": "good or fair",
+        "treatment_engagement": "doing the exposure homework"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "intrusive doubts about whether she really loves her partner",
+        "mental review of past interactions for signs of true feeling",
+        "checking her own emotional or physical reaction to her partner for reassurance",
+        "reassurance-seeking from friends about whether the relationship seems right",
+        "avoidance of romantic movies or friends' relationship talk that trigger comparison",
+        "urges to confess doubts to her partner to relieve tension"
+      ],
+      "affect": {
+        "valence": "mildly negative",
+        "arousal": "moderate",
+        "primary_emotion": "uneasy, self-doubting"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

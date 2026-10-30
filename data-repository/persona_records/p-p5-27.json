@@ -1,0 +1,71 @@
+{
+  "persona_id": "p-p5-27",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 27,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "0d5745fb9e069736",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Walter",
+      "to": "Abdi",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Abdi is a 68-year-old retired high school shop teacher who still fixes small engines for neighbors to keep his hands busy. He raised three kids mostly on his own after his wife passed, and he takes pride in having kept the family together through hard stretches. He reads two newspapers a day and has strong opinions about most things, which he'll tell you whether you ask or not.",
+    "clinical_context": "Abdi has no diagnosed mental-health condition. He gets stretches of feeling low and worn down, usually a week or two at a time, mixed with periods where he feels more or less like himself, and this has been the pattern for years, not something new. It tends to track with how things are going with his kids and grandkids rather than anything else in his life.",
+    "behavioral_description": "Abdi talks in a plain, sometimes gruff way, often circling back to something one of his kids said or did before he gets to the point. He'll accept a suggestion if it makes sense to him but pushes back if it feels like it's telling him how to feel or brushing past what he actually said. He sometimes downplays how much something is bothering him, then contradicts himself a few sentences later.",
+    "traits": {
+      "age": 68,
+      "gender": "cisgender man",
+      "profession": "retired high school shop teacher",
+      "relationship_status": "widowed",
+      "living_situation": "lives alone in the house he raised his kids in",
+      "psychological_reactance": "medium",
+      "communication_register": "plain-spoken, direct, occasionally gruff, uses concrete examples rather than abstractions",
+      "help_seeking_orientation": "ambivalent; will engage if the conversation feels respectful and useful, disengages or gets terse if he feels lectured",
+      "cognitive_style": "concrete, practical, tends to relitigate specific past conversations with family members rather than speak in generalities",
+      "clinical_history": {
+        "presentation": "ordinary stress and low mood that come and go",
+        "history": "Recurrent low stretches over many years, usually tied to strain with his adult children, alternating with periods of feeling fine; no formal diagnosis or hospitalization."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "low energy some days",
+        "trouble shaking off a bad mood once it starts",
+        "irritability",
+        "rehashing conversations with his kids in his head",
+        "occasional trouble sleeping when something's on his mind"
+      ],
+      "affect": {
+        "valence": "negative, mild to moderate",
+        "arousal": "low to moderate, flat some days, tense other days",
+        "primary_emotion": "worn down, tinged with frustration"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000602",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000631",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

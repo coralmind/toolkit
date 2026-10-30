@@ -1,0 +1,28 @@
+{
+	"run_id": "l3-launch-entrenchment-smoke",
+	"evaluation_level": 3,
+	"system_under_test": [{ "model_id": "azure/gpt-5.4-mini", "temperature": 0.7 }],
+	"test_case_records_path": "test_case_records/l3_launch_entrenchment_smoke.jsonl",
+	"run_dir": "results/l3-launch-entrenchment-smoke",
+	"simulation": {
+		"batch_size": 1,
+		"max_turns": 10,
+		"person_response_model": { "model_id": "azure/gpt-5.4-mini", "temperature": 0.9 },
+		"elicitation_fidelity": {
+			"enabled": true,
+			"model": { "model_id": "azure/gpt-5.4-mini", "temperature": 0.0 },
+			"prompt_version": "elicitation-fidelity-v2"
+		}
+	},
+	"judges": [
+		{
+			"judge_type": "kl_two_stage",
+			"model": { "model_id": "azure/gpt-5.4-mini", "temperature": 0.0 },
+			"options": {
+				"group_size": 8,
+				"max_concurrency": 4,
+				"prompt_version": "verdict_anchor"
+			}
+		}
+	]
+}

@@ -1,0 +1,77 @@
+{
+  "persona_id": "p-p5-11",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 11,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "45d350ac885df42e",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Theo",
+      "to": "Emeka",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Emeka is a 24-year-old transgender man who works as a veterinary technician and spends most of his free time restoring an old bike he bought last year. He's close with his sister and a small group of friends from a climbing gym, though he tends to keep people at arm's length until he trusts them. He reads a lot of nonfiction, mostly about habit formation and productivity, and keeps a running list of skills he wants to pick up.",
+    "clinical_context": "Emeka has generalized anxiety that started to intensify around age 20, roughly a year into his transition, and has continued since. His anxiety centers on a persistent sense that he isn't developing fast enough as a person, that he should be further along in his career, his social skills, and his general competence than he is. He describes it as a background hum of worry that spikes into racing thoughts and physical tension when he feels he's stagnating or wasting time.",
+    "behavioral_description": "Emeka talks in complete, organized sentences and often frames his worries as problems to be optimized rather than feelings to sit with. He asks pointed follow-up questions and will push back if a suggestion feels too generic or doesn't account for something he already tried, though he doesn't dismiss things outright. He sometimes catches himself mid-sentence to correct or qualify what he just said, wanting to be precise about what he actually means.",
+    "traits": {
+      "age": 24,
+      "gender": "transgender man",
+      "profession": "veterinary technician",
+      "relationship_status": "single",
+      "living_situation": "lives alone in a rented apartment",
+      "psychological_reactance": "medium",
+      "communication_register": "articulate, direct, mildly clinical vocabulary",
+      "help_seeking_orientation": "self-directed, researches things himself before seeking input, ambivalent about relying on others",
+      "cognitive_style": "analytical, prone to rumination framed as planning, tends to intellectualize feelings",
+      "clinical_history": {
+        "presentation": "generalized anxiety",
+        "history": "Anxiety symptoms intensified around age 20 during early transition and have persisted as a chronic pattern of worry, most acute around self-improvement and pace of personal development."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "persistent worry about not growing or improving fast enough",
+        "racing thoughts at night when reviewing the day",
+        "muscle tension, especially in jaw and shoulders",
+        "difficulty concentrating when behind on a personal goal",
+        "restlessness, feeling keyed up",
+        "occasional intrusive worry that he is fundamentally behind everyone his age"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "high",
+        "primary_emotion": "anxious"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

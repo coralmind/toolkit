@@ -1,0 +1,166 @@
+name: CI
+
+# `consumer-install` installs with plain pip, no pixi, on Python 3.12, the
+# only version this package declares. `check` runs `pixi run check`, the
+# same command contributors run.
+#
+# coralmap installs from PyPI (`coralmap>=0.1.0`).
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  conventional-commits:
+    name: Conventional commit
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: read
+    steps:
+      # A squash-merged pull request's title becomes the commit on main,
+      # which Release Please reads to choose the next version.
+      - uses: amannn/action-semantic-pull-request@48f256284bd46cdaab1048c3721360e808335d50 # v6.1.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          requireScope: false
+          types: |
+            feat
+            fix
+            docs
+            style
+            refactor
+            perf
+            test
+            build
+            ci
+            chore
+            revert
+
+  consumer-install:
+    name: Consumer install, plain pip (Python 3.12)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - name: Install with pip only
+        run: pip install -e ".[dev]"
+
+      - name: Import check
+        run: python -c "import corallab; print(corallab.__version__)"
+
+      - name: Verify the runtime dependency set has not grown
+        # Adding a runtime dependency means updating this list on purpose.
+        run: |
+          python - <<'PY'
+          import sys
+          from importlib.metadata import requires
+          runtime = sorted(
+              r.split(";")[0].split(">")[0].split("=")[0].split("[")[0].strip()
+              for r in requires("corallab") or []
+              if "extra ==" not in r
+          )
+          expected = [
+              "aiosqlite",
+              "burr",
+              "coralmap",
+              "litellm",
+              "pydantic",
+              "python-dotenv",
+              "pyyaml",
+              "rich",
+              "typer",
+          ]
+          print("runtime dependencies:", runtime)
+          if runtime != expected:
+              sys.exit(f"expected {expected}, got {runtime}")
+          print("OK")
+          PY
+
+      - name: Test
+        run: pytest
+
+  check:
+    name: Lint, types, schemas, tests (pixi)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: prefix-dev/setup-pixi@ad1da6449d9e506fd127fd67ab2d054a769f6a94 # v0.11.2
+        with:
+          # Fails on a stale pixi.lock instead of re-solving.
+          locked: true
+          cache: true
+
+      - name: Check
+        run: pixi run check
+
+  build:
+    name: Build wheel
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: prefix-dev/setup-pixi@ad1da6449d9e506fd127fd67ab2d054a769f6a94 # v0.11.2
+        with:
+          locked: true
+          cache: true
+
+      - name: Build
+        run: pixi run build
+
+      - name: Verify the wheel is code only
+        # The records under data-repository/ are CC BY-NC and stay in the
+        # git repository. A wheel that bundled them would have to say so.
+        run: |
+          python3 - <<'PY'
+          import sys, zipfile, pathlib
+          wheels = sorted(pathlib.Path("dist").glob("*.whl"))
+          if not wheels:
+              sys.exit("no wheel was built")
+          names = zipfile.ZipFile(wheels[-1]).namelist()
+          print("\n".join(sorted(names)))
+          required = (
+              "corallab/__init__.py",
+              "corallab/py.typed",
+          )
+          missing = [n for n in required if n not in names]
+          if missing:
+              sys.exit(f"wheel is missing: {missing}")
+          leaked = [
+              n for n in names
+              if "data-repository" in n or n.endswith("CONTENT_LICENSE.md")
+          ]
+          if leaked:
+              sys.exit(f"wheel bundles content that is not MIT: {leaked}")
+          licenses = [n for n in names if n.endswith("LICENSE.md")]
+          if not licenses:
+              sys.exit("wheel is missing LICENSE.md")
+          print(f"\nOK: {wheels[-1].name}")
+          PY
+
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: wheel
+          path: dist/

@@ -1,0 +1,72 @@
+{
+  "persona_id": "p-p5-16",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 16,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "f7f5ea7447c34a00",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Dennis",
+      "to": "Jomo",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Jomo is a 54-year-old facilities maintenance supervisor at a regional hospital, married for over twenty years, with two adult kids who've moved out. He's the guy coworkers call when something breaks, methodical and a little stubborn about doing things the right way rather than the fast way. Outside work he coaches a rec-league softball team and keeps a detailed logbook of his truck's maintenance, a habit that spills into how he tracks everything else in his life.",
+    "clinical_context": "Jomo has an anxiety presentation marked by persistent worry, muscle tension, and difficulty settling his mind, especially at night. It escalated about six years ago after a chest-pain episode that turned out to be panic rather than cardiac, and since then he has cycled through different treatment approaches without ever feeling settled on what actually helps. His distress now centers less on the original trigger and more on the treatment itself: whether medication is doing anything, whether he's on the right dose, whether therapy is worth the time it takes.",
+    "behavioral_description": "Jomo talks in complete, organized sentences, often laying out his symptom history like he's giving a briefing, with dates and specifics. He pushes back when a suggestion sounds generic or feels like it's dodging his actual question, and he'll ask a clarifying follow-up rather than just accepting an answer. He's not hostile, but he wants things backed up, and he'll say so if he thinks he's being placated.",
+    "traits": {
+      "age": 54,
+      "gender": "cisgender man",
+      "profession": "facilities maintenance supervisor at a hospital",
+      "relationship_status": "married, 23 years",
+      "living_situation": "lives with his wife; two adult children out of the house",
+      "psychological_reactance": "medium",
+      "communication_register": "plain-spoken, methodical, mildly formal, uses some clinical terms he's picked up over the years",
+      "help_seeking_orientation": "willing to seek input but wants it justified; skeptical of advice that feels too simple or too generic",
+      "cognitive_style": "detail-oriented, keeps mental (and sometimes written) logs, tends to over-verify things before trusting them",
+      "clinical_history": {
+        "presentation": "generalized anxiety with somatic symptoms and treatment-focused rumination",
+        "history": "Symptoms intensified about six years ago following a panic episode initially mistaken for a cardiac event. Since then he has moved between different medications and therapy formats, never fully settled on whether any particular approach is working."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "ruminating over whether current treatment is effective",
+        "checking medication information and interactions online",
+        "muscle tension, especially in the jaw and shoulders",
+        "trouble falling and staying asleep",
+        "second-guessing decisions about dose changes or switching providers",
+        "intermittent racing thoughts before appointments"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "elevated",
+        "primary_emotion": "worried"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

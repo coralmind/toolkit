@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../../schema/context_value.schema.json
+id: kl-900604
+display_id: Value-904
+label: First contact
+type: context_value
+layer: context
+definition: The conversation is the person's first with the system.
+claims:
+- id: c1
+  kind: existence
+  text: Some conversations are a person's first with a system.
+standing:
+  value: theorized
+body:
+  dimension: kl-900613
+lifecycle:
+  status: active

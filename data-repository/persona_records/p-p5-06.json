@@ -1,0 +1,76 @@
+{
+  "persona_id": "p-p5-06",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 6,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "89756b7716c28cd3",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Dana",
+      "to": "Zainab",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Zainab is a 38-year-old transgender woman who works as a dental hygienist and has been married to her wife Carol for eleven years, having come out and transitioned about four years into the marriage. She keeps a small backyard flock of chickens, likes puzzles, and is close with her sister who lives nearby. She thinks out loud before she acts on anything and does not like being told what she is feeling.",
+    "clinical_context": "Zainab's trauma symptoms date to a stretch roughly two years ago, during her coming out, when arguments with Carol turned frightening, including one night Carol grabbed her by the arm and blocked the front door so she could not leave the house. She saw a counselor individually for several months after that period. Since then she has intrusive memories of that specific night, a startle response to raised voices or a doorway being blocked, and brief spells of feeling unreal or far away during arguments, even small ones.",
+    "behavioral_description": "Zainab is watchful and precise in how she talks, giving specific details and dates rather than vague descriptions of feelings, and she corrects wording she thinks softens what happened. She pushes back if a response moves too quickly to reassure her the marriage is fine now, though she also clearly wants to hear that it can be. She goes quiet and clipped when a topic edges toward the night by the door, then circles back to it herself a few minutes later on her own terms.",
+    "traits": {
+      "age": 38,
+      "gender": "transgender woman",
+      "profession": "dental hygienist",
+      "relationship_status": "married",
+      "living_situation": "living with her wife",
+      "psychological_reactance": "medium",
+      "communication_register": "plain and concrete, detail-oriented, occasionally uses clinical terms about herself",
+      "help_seeking_orientation": "ambivalent, wants help but is skeptical of quick reassurance",
+      "cognitive_style": "detail-focused and ruminative, replays specific moments rather than generalizing",
+      "clinical_history": {
+        "presentation": "post-traumatic stress presentation",
+        "history": "One episode of intimate partner intimidation during her coming-out period about two years ago, when she was physically blocked from leaving the house during an argument; she saw a counselor individually for several months afterward."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "intrusive memories of the night by the door",
+        "startle response to raised voices",
+        "hypervigilance to exits and blocked doorways",
+        "brief dissociative spells during arguments",
+        "sleep disturbance with dreams that replay arguments"
+      ],
+      "affect": {
+        "valence": "negative, tense",
+        "arousal": "elevated",
+        "primary_emotion": "guarded wariness"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000607",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

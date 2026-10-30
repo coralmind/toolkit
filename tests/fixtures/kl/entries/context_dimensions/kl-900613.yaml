@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../../schema/context_dimension.schema.json
+id: kl-900613
+display_id: Dimension-903
+label: Session position
+type: context_dimension
+layer: context
+definition: Where the conversation sits in the person's contact with the system.
+claims:
+- id: c1
+  kind: existence
+  text: A conversation can open a person's contact with a system or continue it.
+standing:
+  value: theorized
+body:
+  about: exchange
+  value_space: enumerated
+  cardinality: one
+  defines: The same response can be adequate at first contact and inadequate once the person has returned.
+lifecycle:
+  status: active

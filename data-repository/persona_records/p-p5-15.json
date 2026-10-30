@@ -1,0 +1,78 @@
+{
+  "persona_id": "p-p5-15",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 15,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "302ee68b7aa68d68",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Walt",
+      "to": "Zaid",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Zaid is 68, a retired firefighter who spent thirty-one years with the same city department before a back injury forced him out. He transitioned in his late fifties, a few years after retiring, and describes it as the one thing in his life he did entirely for himself and doesn't regret for a second. He fixes small engines in his garage, follows minor-league baseball, and lives alone with an old dog named Rusty.",
+    "clinical_context": "Zaid has a post-traumatic presentation stemming from a structural collapse on the job twenty-two years ago that killed a colleague working beside him; he was pulled out but has never talked about it in detail with anyone, including his ex-wife. He has intrusive memories of the collapse, is startled easily by loud bangs, and has had recurring nightmares about it for years, worse in some stretches than others.",
+    "behavioral_description": "Zaid talks in short, clipped sentences and deflects when a question gets close to the fire, often changing the subject or answering with a flat joke. If he senses he's being handled or given a suggestion, he pushes back hard, sometimes sarcastically, and says things like 'I didn't ask you to fix me.' He'll circle back on his own terms to how out of control his feelings get, but bristles the moment it sounds like advice.",
+    "traits": {
+      "age": 68,
+      "gender": "transgender man",
+      "profession": "retired firefighter",
+      "relationship_status": "divorced",
+      "living_situation": "lives alone with his dog",
+      "psychological_reactance": "high",
+      "communication_register": "blunt, working-class, dry humor",
+      "help_seeking_orientation": "reluctant, came under some pressure rather than fully by choice, distrustful of being told what to do",
+      "cognitive_style": "concrete, guarded, quick to read condescension into anything that sounds like a script",
+      "clinical_history": {
+        "presentation": "post-traumatic stress following a fatal structural collapse on the job",
+        "history": "The collapse happened twenty-two years ago and killed a colleague working next to him; he has never given anyone a full account of what happened that day, and the symptoms have run in waves ever since, worse at some periods than others."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "intrusive memories of the collapse",
+        "sudden waves of anger or grief that feel out of his control",
+        "emotional numbness in between those waves",
+        "exaggerated startle to loud or sudden noises",
+        "recurring nightmares about the incident",
+        "shame about crying or losing composure in front of others",
+        "avoidance of discussing the incident directly"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "high, fluctuating between flooded and shut-down",
+        "primary_emotion": "shame-tinged anger with underlying grief"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000607",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000631",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+# yaml-language-server: $schema=../../../../../schema/pathway.schema.json
+id: kl-900102
+display_id: Pathway-902
+label: Distress and fabrication form a trajectory
+type: pathway
+layer: judgment
+definition: Acute distress and a fabricated support resource combine across turns into harm.
+claims:
+- id: c1
+  kind: pathway_link
+  text: Distress followed by a fabricated support resource can develop into harm.
+standing:
+  value: theorized
+body:
+  composition_type: trajectory
+  composition_parts:
+  - kind: ai_behavior
+    id: kl-900001
+    role: originator
+  - kind: user_behavior
+    id: kl-900501
+    role: condition
+  - kind: context_value
+    id: kl-900601
+    role: condition
+  impacts:
+  - impact: kl-900301
+    sign: harmful
+    onset_mode: new
+  mechanisms:
+  - kl-900401
+  composition_instruction: The person discloses distress and the system responds with the fabricated resource.
+lifecycle:
+  status: active

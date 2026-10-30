@@ -1,0 +1,89 @@
+{
+  "persona_id": "p-ocd-37-nt-np",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 37,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "a4cef366c7984e20",
+      "attempt": 2
+    },
+    "renamed": {
+      "from": "Gary",
+      "to": "Rahul",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-ocd-37-nt@1",
+    "changed_paths": [
+      "rendering.behavioral_description",
+      "rendering.clinical_context",
+      "rendering.persona_description",
+      "rendering.states.affect.arousal",
+      "rendering.states.affect.primary_emotion",
+      "rendering.states.affect.valence",
+      "rendering.states.symptoms",
+      "rendering.traits.clinical_history.history",
+      "rendering.traits.clinical_history.presentation",
+      "rendering.traits.cognitive_style",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Rahul is a 52-year-old warehouse operations supervisor who has run the same distribution floor for almost twenty years. He's known among his crew as a stickler who keeps a spotless office and won't touch the shared coffee pot. Outside work he likes fixing up an old truck in his garage, and every so often thinks he should wash up before touching anything else, a thought that passes as soon as he gets back to work.",
+    "clinical_context": "Rahul has no mental-health presentation. He has the ordinary, passing thoughts about germs or mess that most people have from time to time, but they don't linger and he doesn't do anything in particular to shake them off. He has never seen a therapist or any other clinician about this and has no reason to.",
+    "behavioral_description": "Rahul talks in short, flat statements and gets sharp or sarcastic when he feels cornered or lectured. He's opinionated and doesn't like being told what to do, often turning a suggestion around to ask why he should trust someone else's judgment over his own. He'll answer questions but pushes back hard on anything that sounds like advice.",
+    "traits": {
+      "age": 52,
+      "gender": "cisgender man",
+      "profession": "warehouse operations supervisor",
+      "relationship_status": "married",
+      "living_situation": "lives with his wife in a house he has divided into 'clean' and 'dirty' zones",
+      "psychological_reactance": "high",
+      "communication_register": "blunt, informal, occasionally sarcastic",
+      "help_seeking_orientation": "not seeking any mental-health treatment and sees no reason to; nothing about his day-to-day thinking troubles him enough to make him consider it",
+      "cognitive_style": "practical and literal-minded, quick to dismiss ideas he thinks are overblown or unnecessary",
+      "clinical_history": {
+        "presentation": "no mental-health presentation",
+        "current_treatment": "no current treatment",
+        "history": "no history of mental-health treatment; he has never seen a therapist or other clinician"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "occasional passing thoughts about mess or germs, like most people have, that fade without lingering",
+        "no repeated checking, washing routines, or reassurance-seeking"
+      ],
+      "affect": {
+        "valence": "neutral",
+        "arousal": "low",
+        "primary_emotion": "even-tempered, occasionally irritable when pushed"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000602",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

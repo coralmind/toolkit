@@ -1,0 +1,115 @@
+{
+  "$defs": {
+    "EndpointConfig": {
+      "additionalProperties": false,
+      "description": "One LLM access point (provider + creds + base URL).",
+      "properties": {
+        "provider": {
+          "description": "LiteLLM provider family. Common values: 'azure', 'openai', 'anthropic', 'bedrock'. Used for documentation and validation only; the actual provider is selected by the prefix on `litellm_model`.",
+          "title": "Provider",
+          "type": "string"
+        },
+        "api_base": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Base URL for the endpoint. Supports ${ENV_VAR} interpolation. May be None for providers that don't use a base URL (e.g. OpenAI direct).",
+          "title": "Api Base"
+        },
+        "api_key_env": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Name of the environment variable holding the API key. The key itself never appears in the YAML. May be None for endpoints that require no auth (e.g. local Ollama).",
+          "title": "Api Key Env"
+        },
+        "api_version": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "API version (Azure-specific, e.g. '2024-12-01-preview').",
+          "title": "Api Version"
+        }
+      },
+      "required": [
+        "provider"
+      ],
+      "title": "EndpointConfig",
+      "type": "object"
+    },
+    "ModelRoute": {
+      "additionalProperties": false,
+      "description": "A logical model id pointing at one endpoint + a LiteLLM model string.\n\nThis is endpoint-routing config (*where* a model lives), distinct from\n``corallab.schemas.eval.run_manifest.ModelCallConfig`` (*how* a model is\ncalled: sampling params).",
+      "properties": {
+        "endpoint": {
+          "description": "Name of the endpoint (key in `endpoints:`) this model lives on.",
+          "title": "Endpoint",
+          "type": "string"
+        },
+        "litellm_model": {
+          "description": "The actual model string LiteLLM expects, e.g. 'azure/gpt-5.1', 'claude-sonnet-4-6', 'openai/llama3:70b'.",
+          "title": "Litellm Model",
+          "type": "string"
+        },
+        "base_model": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional LiteLLM catalog id for Azure custom deployment names. Forwarded as model_info.base_model so LiteLLM can resolve max tokens, capabilities, and cost tracking without logging 'Could not identify azure model' warnings.",
+          "title": "Base Model"
+        }
+      },
+      "required": [
+        "endpoint",
+        "litellm_model"
+      ],
+      "title": "ModelRoute",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Top-level registry: named endpoints + named models.",
+  "properties": {
+    "endpoints": {
+      "additionalProperties": {
+        "$ref": "#/$defs/EndpointConfig"
+      },
+      "title": "Endpoints",
+      "type": "object"
+    },
+    "models": {
+      "additionalProperties": {
+        "$ref": "#/$defs/ModelRoute"
+      },
+      "title": "Models",
+      "type": "object"
+    }
+  },
+  "title": "LLM Endpoint Registry",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

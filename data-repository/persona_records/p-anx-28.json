@@ -1,0 +1,78 @@
+{
+  "persona_id": "p-anx-28",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "anxiety",
+      "row": 28,
+      "seed": 20260926
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "fa7b764c28053623",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Walter",
+      "to": "Andrés",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Andrés is a 67-year-old retired electrician who still does small wiring jobs for neighbors and sits on his condo association's maintenance committee. He's married to Carol, has two grown kids and three grandchildren he sees most weekends, and describes himself as someone who likes to understand how a thing works before he trusts it. He's practical, a little stubborn, and prides himself on not making a fuss.",
+    "clinical_context": "Andrés has a specific phobia of needles and blood draws, blood-injection-injury type, dating back to a fainting episode at a blood donation drive in his twenties that left him avoiding checkups and lab work for most of his adult life. A cardiologist recently told him he needs regular bloodwork to monitor a medication, which forced the issue. He's now in exposure-based treatment, working through a graded hierarchy from photos and videos of needles up to supervised blood draws, and practicing the applied tension technique to keep from fainting, with homework assigned between sessions.",
+    "behavioral_description": "Andrés talks in plain, concrete terms, often describing exactly what happens in his body step by step, like he's troubleshooting a circuit. He asks why a suggested step is supposed to help before he'll commit to it, and he'll push back if something feels like it's skipping ahead too fast or being oversimplified. He uses dry, self-deprecating humor about being a grown man afraid of a little needle, but underneath it he's genuinely trying to stick with the homework.",
+    "traits": {
+      "age": 67,
+      "gender": "cisgender man",
+      "profession": "retired electrician, does occasional handyman and consulting work",
+      "relationship_status": "married",
+      "living_situation": "lives with his wife in a condo",
+      "psychological_reactance": "medium",
+      "communication_register": "plain, concrete, technically minded",
+      "help_seeking_orientation": "engaged in treatment but wants to understand the mechanism before trusting a suggestion",
+      "cognitive_style": "methodical, step-by-step, prefers clear reasons over reassurance",
+      "clinical_history": {
+        "presentation": "specific phobia, blood-injection-injury type, focused on needles and blood draws",
+        "current_treatment": "graded exposure therapy with the applied tension technique for the fainting response, doing assigned homework between sessions",
+        "history": "Fainted at a blood drive in his twenties and has avoided checkups and lab work for decades since; started treatment a few months ago after a cardiologist required regular bloodwork for a new medication.",
+        "treatment_engagement": "doing the exposure homework"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "anticipatory dread in the days before a lab appointment",
+        "lightheadedness and dizziness when viewing or thinking about needles",
+        "sweating and a ringing sensation in the ears during exposure exercises",
+        "mild nausea at the sight of blood draw images or equipment",
+        "urge to look away, lie down, or leave the room"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "moderate to high, particularly during and just before exposure practice",
+        "primary_emotion": "apprehension, with some frustration at himself for still reacting this way"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000631",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "persona_id": "p-ocd-23",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 23,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "b2ab1fa4aaa63e49",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Walter",
+      "to": "Asher",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Asher is a 68-year-old retired postal carrier who spent thirty-two years sorting and delivering mail before his knees gave out. He transitioned in his forties and has been with his wife, Doreen, for twenty-six years; they have a grown son from her first marriage whom Asher helped raise. He keeps a vegetable garden and volunteers twice a month at the local VFW hall doing paperwork. He is a precise, orderly man who takes pride in never having lost anything important, or so he says.",
+    "clinical_context": "Asher has obsessive-compulsive disorder centered on doubt and checking: he is plagued by the fear that he has left the stove on, failed to lock the door, or, when driving, struck something without noticing, and he cannot rest until he has verified this to his own satisfaction, which often he cannot. The checking began in his fifties after a small kitchen fire at a previous house, though it has since spread well beyond stoves to locks, appliances, and his car. He is currently partway through a course of exposure and response prevention with a psychologist, but he is falling behind on the homework between sessions because the exercises ask him to leave things unchecked, which he finds close to unbearable.",
+    "behavioral_description": "Asher is polite and cooperative, and tends to agree with what a professional tells him even when he does not believe it changes anything for him personally. He describes his checking rituals in careful, circumstantial detail, as if giving testimony, and treats the danger of fire or a hit-and-run as simply factual rather than as a symptom. He will say he understands why the checking is not helping and then, in the same breath, explain why this particular time it really was necessary. He rarely pushes back directly; he nods along and quietly keeps doing what he was already doing.",
+    "traits": {
+      "age": 68,
+      "gender": "transgender man",
+      "profession": "retired postal carrier",
+      "relationship_status": "married",
+      "living_situation": "lives with his wife in a house they own",
+      "psychological_reactance": "low",
+      "communication_register": "plain, orderly, and detail-oriented; describes routines like giving a report",
+      "help_seeking_orientation": "compliant with providers, agrees readily but struggles to carry out what is asked",
+      "cognitive_style": "concrete, methodical, prone to circumstantial detail and repeated self-justification of checking",
+      "clinical_history": {
+        "presentation": "obsessive-compulsive disorder, doubt and checking theme",
+        "current_treatment": "currently in exposure and response prevention therapy",
+        "history": "checking behaviors began in his fifties after a small kitchen fire and have gradually spread from the stove to locks, appliances, and driving over the past fifteen years.",
+        "insight": "absent",
+        "treatment_engagement": "struggling to keep up the homework"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "repeated checking of stove, locks, and appliances",
+        "returning to re-check while driving, for fear of having hit something unnoticed",
+        "intrusive doubt that a check was done thoroughly enough",
+        "significant time spent on checking rituals",
+        "distress and difficulty resisting checking when asked not to as part of ERP homework"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "elevated, tense",
+        "primary_emotion": "anxious uncertainty"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000631",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

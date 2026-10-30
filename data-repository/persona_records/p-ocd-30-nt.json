@@ -1,0 +1,89 @@
+{
+  "persona_id": "p-ocd-30-nt",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 30,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "49e206217cffcf92",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Walter",
+      "to": "Hiroshi",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-ocd-30@1",
+    "changed_paths": [
+      "rendering.behavioral_description",
+      "rendering.clinical_context",
+      "rendering.states.symptoms",
+      "rendering.traits.clinical_history.current_treatment",
+      "rendering.traits.clinical_history.history",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Hiroshi is a 68-year-old retired shop teacher who spends most days in his garage workshop making cabinets and small furniture for neighbors. He was married for thirty-one years before his wife Carol died four years ago, and he now lives alone with a routine built around his tools and his tomato garden. He reads history books, keeps up with two grown sons by phone, and prides himself on being the guy neighbors call when something needs fixing right.",
+    "clinical_context": "Hiroshi has obsessive-compulsive disorder centered on symmetry and exactness: objects, tools, and furniture must be aligned, level, and evenly spaced, and he experiences intense distress and intrusive images of things going permanently wrong if they are not. Symptoms have been present in some form since his thirties but worsened noticeably after Carol's death, when he began spending hours arranging and rearranging items in the house. His older son has raised the idea of him seeing someone about it, but Hiroshi has never followed through and is skeptical that talking to a professional would change anything about how he operates in his own garage.",
+    "behavioral_description": "Hiroshi talks in a plain, matter-of-fact way, often using shop terms like \"true\" and \"square\" to describe things being right or wrong. He pushes back hard on anything that sounds like an instruction, often restating what he already believes rather than considering another view, and will say things like \"I've been doing this longer than you've been alive\" when he feels lectured. He defends the underlying logic of his symmetry concerns as basically sound even while complaining about how much time they cost him, and he treats the suggestion that he should get help as more of an irritant than something worth seriously weighing.",
+    "traits": {
+      "age": 68,
+      "gender": "cisgender man",
+      "profession": "retired high school shop teacher, now does woodworking",
+      "relationship_status": "widowed",
+      "living_situation": "lives alone in a house with an attached garage workshop",
+      "psychological_reactance": "high",
+      "communication_register": "plain-spoken, uses trade and craft terminology, blunt",
+      "help_seeking_orientation": "ambivalent about seeking treatment at all, resistant to being told what to do",
+      "cognitive_style": "concrete, rule-based, treats obsessional beliefs about symmetry as basically factual",
+      "clinical_history": {
+        "presentation": "obsessive-compulsive disorder, symmetry and exactness theme",
+        "current_treatment": "no current treatment",
+        "history": "Symptoms present in milder form since his thirties, worsened significantly after his wife's death four years ago; his son has suggested he see someone about it, but Hiroshi has never started any course of treatment.",
+        "insight": "poor"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "needs objects aligned, level, and evenly spaced before he can move on",
+        "repeatedly adjusts furniture, tools, and picture frames until they feel exactly right",
+        "intrusive images of things going permanently wrong if arrangement is off",
+        "significant time spent each day on arranging and checking",
+        "distress and irritability when items are disturbed or left asymmetrical",
+        "difficulty tolerating things being left crooked or uneven, even briefly"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "moderately elevated",
+        "primary_emotion": "irritated frustration with an undercurrent of anxiety"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000631",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "persona_id": "p-p5-51",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 51,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "0358c8d50a0e65e2",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Daniel",
+      "to": "Wei",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Wei is 24 and works as a junior accountant at a mid-sized firm in Columbus. He grew up the oldest of three kids and still calls his mom most days, partly out of habit and partly because he worries something's wrong if he doesn't. He likes running and keeps a spreadsheet tracking his mile times, which he says helps him feel like something is under control.",
+    "clinical_context": "Wei has a generalized anxiety presentation with a strong health-anxiety flavor focused on his parents, especially his father, who had a minor heart scare two years ago that turned out to be nothing serious. He describes a pattern going back to his teens of needing reassurance that people close to him are okay, checking in by text and reading into delays in replies. He also has intrusive worries about saying or doing something that could hurt his family's relationship with him, which loop for hours before he can let them go.",
+    "behavioral_description": "He explains things carefully and at length, often prefacing worries with 'this is probably stupid but,' and apologizes for taking up time. He agrees quickly with suggestions and thanks the other person, but tends to circle back to the same worry from a slightly different angle rather than pushing back. He rarely states directly that something isn't helping; instead he goes quiet or changes the subject.",
+    "traits": {
+      "age": 24,
+      "gender": "cisgender man",
+      "profession": "junior accountant",
+      "relationship_status": "single",
+      "living_situation": "lives alone in a rented apartment, about 40 minutes from his parents",
+      "psychological_reactance": "low",
+      "communication_register": "polite, hedging, over-explains, apologizes often",
+      "help_seeking_orientation": "seeks reassurance readily but is uncertain whether he's overreacting to bring things up at all",
+      "cognitive_style": "ruminative, catastrophizes in small steady increments, seeks certainty through checking",
+      "clinical_history": {
+        "presentation": "generalized anxiety with health-anxiety and reassurance-seeking features, family-focused",
+        "history": "Pattern of reassurance-seeking and checking in on family wellbeing dating back to adolescence, intensified after his father's cardiac scare two years ago."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "racing thoughts about family members' safety",
+        "repeated checking of phone for replies",
+        "muscle tension, especially jaw and shoulders",
+        "difficulty concentrating at work when worried",
+        "intrusive what-if thoughts about saying something that damages a relationship",
+        "trouble falling asleep when a worry is unresolved"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "elevated",
+        "primary_emotion": "anxious apprehension"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

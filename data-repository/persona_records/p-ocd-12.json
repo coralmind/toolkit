@@ -1,0 +1,85 @@
+{
+  "persona_id": "p-ocd-12",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 12,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "8fc8c42f697acc2c",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Theo",
+      "to": "Hamza",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Hamza is a 24-year-old transgender man who works as a shift supervisor at a hardware store and lives with two roommates in a mid-size city. He lifts weights most days and burns through true crime documentaries in his off hours. He's out to his friends and most of his family and about two years into testosterone. He has a dry, sarcastic sense of humor that stays intact even when he's clearly wound up.",
+    "clinical_context": "Hamza has obsessive-compulsive disorder centered on doubt and checking: he re-checks locked doors, the stove, his car and mirrors after driving, and texts he's already sent, sometimes for over an hour before he can leave a room or fall asleep. It started in his late teens and got noticeably worse over the past two years, especially around whether he'd left the stove on or hit something on the road without noticing. He's about ten sessions into a course of exposure and response prevention with a psychologist but has been telling his roommate he might quit, since he doesn't think it's working and still believes some of what he worries about probably did happen. He's never taken medication for it.",
+    "behavioral_description": "Hamza talks about his checking with a mix of embarrassment and defensiveness, quick to explain why a particular worry is reasonable rather than accept it as 'just OCD.' He resists being told to stop checking or to trust his ERP homework, and pushes back hard if he feels lectured, pointing out he's the one who has to live with it if he's wrong. He'll walk through the mechanics of his rituals in detail but resists agreeing that the underlying danger is exaggerated.",
+    "traits": {
+      "age": 24,
+      "gender": "transgender man",
+      "profession": "shift supervisor at a hardware store",
+      "relationship_status": "single",
+      "living_situation": "rents an apartment with two roommates",
+      "psychological_reactance": "high",
+      "communication_register": "casual, direct, sarcastic, quick to get clipped when he feels pushed",
+      "help_seeking_orientation": "ambivalent and skeptical, in treatment but leaning toward quitting",
+      "cognitive_style": "concrete, detail-fixated, ruminative, builds logical justifications for his doubts",
+      "clinical_history": {
+        "presentation": "OCD, doubt and checking theme (locks, stove, driving, sent messages)",
+        "current_treatment": "roughly ten sessions into an active course of exposure and response prevention, considering stopping",
+        "history": "checking behaviors began in late adolescence and intensified over the last two years; no prior medication trials",
+        "insight": "poor",
+        "treatment_engagement": "thinking of stopping treatment"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "repeated checking of locks and the stove before leaving or sleeping",
+        "re-checking mirrors and the road after driving for signs he hit something",
+        "re-reading and re-checking texts he's already sent",
+        "asking his roommate to confirm things are locked or off",
+        "mentally replaying the day to be sure nothing went wrong",
+        "rituals that eat an hour or more before he can leave the house or fall asleep"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "high",
+        "primary_emotion": "anxious and on edge, with irritability just under the surface"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

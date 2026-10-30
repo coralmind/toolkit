@@ -1,0 +1,77 @@
+{
+  "persona_id": "p-p5-54",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 54,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "dfe05aee09f0d3d2",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Mara",
+      "to": "Mei",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Mei is a 24-year-old transgender woman who works as a pharmacy technician at a chain drugstore. She lives with two roommates in a small apartment, keeps a shelf of houseplants she's slowly gotten better at not killing, and fills notebooks with lists and self-assessments. She's quick to smile and quick to apologize, and she cares a lot about being seen as someone who is trying.",
+    "clinical_context": "Mei shows a post-traumatic presentation following a physical assault on the street near her apartment about two years ago, which she believes was targeted because she is trans. Since then she has had intrusive flashes of the moment, an exaggerated startle response, and a route she still won't walk after dark. Whether she is currently in any treatment is not established here.",
+    "behavioral_description": "She speaks softly and carefully, often qualifying what she says with 'I don't know if this makes sense' or 'sorry, this is probably nothing.' She agrees readily with suggestions and thanks people for them, but the conversation keeps drifting back to whether she is healing 'the right way' or fast enough, and whether she's actually growing from what happened or just getting better at hiding that she isn't. She rarely disagrees or pushes back, even when something doesn't sit right with her.",
+    "traits": {
+      "age": 24,
+      "gender": "transgender woman",
+      "profession": "pharmacy technician",
+      "relationship_status": "single",
+      "living_situation": "shares an apartment with two roommates",
+      "psychological_reactance": "low",
+      "communication_register": "soft-spoken, tentative, apologetic, over-explains herself",
+      "help_seeking_orientation": "help-seeking but self-doubting; takes advice at face value and agrees outwardly, though follow-through is inconsistent",
+      "cognitive_style": "ruminative and self-monitoring, measures her present self against an internal timeline of how healed she 'should' be by now",
+      "clinical_history": {
+        "presentation": "post-traumatic stress reactions following an assault",
+        "history": "Assaulted on the street near her home about two years ago, in what she believes was a hate-motivated attack tied to her being visibly trans; since then she has had intrusive memories of the moment, hypervigilance in public, and has avoided the block where it happened."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "intrusive memories of the assault triggered by loud noises or being approached from behind",
+        "hypervigilance in public, especially after dark",
+        "exaggerated startle response",
+        "avoidance of the specific street where it happened",
+        "difficulty concentrating when she feels watched or crowded",
+        "sleep disrupted by nightmares related to the event"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "elevated, anxious",
+        "primary_emotion": "inadequacy about not healing fast enough"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000607",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

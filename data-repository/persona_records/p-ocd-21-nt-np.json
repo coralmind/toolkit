@@ -1,0 +1,97 @@
+{
+  "persona_id": "p-ocd-21-nt-np",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 21,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "ef05da44200feb63",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Nate",
+      "to": "Carlos",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-ocd-21-nt@1",
+    "changed_paths": [
+      "rendering.behavioral_description",
+      "rendering.clinical_context",
+      "rendering.persona_description",
+      "rendering.states.affect.arousal",
+      "rendering.states.affect.primary_emotion",
+      "rendering.states.affect.valence",
+      "rendering.states.symptoms",
+      "rendering.traits.clinical_history.history",
+      "rendering.traits.clinical_history.presentation",
+      "rendering.traits.cognitive_style",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Carlos is a 34-year-old transgender man who works as an architectural drafter for a small firm outside Portland. He's been with his husband for six years and they share a house with two cats. He likes woodworking on weekends, and every so often notices a stray thought that a slightly uneven cut might matter, but it passes and he keeps working.",
+    "clinical_context": "Carlos has no mental-health presentation. Like most people, he sometimes has a passing thought that something should be more even or exact, especially with a hobby like woodworking, but these thoughts come and go on their own, don't linger, and don't lead him to redo anything or check on them. He has never sought or needed mental health treatment.",
+    "behavioral_description": "Carlos speaks in a measured, matter-of-fact way. When a project doesn't come out perfectly even, he'll note it, shrug it off, and move on to the next step. He's easy to talk to about his hobbies and doesn't dwell on small imperfections once he's noticed them.",
+    "traits": {
+      "age": 34,
+      "gender": "transgender man",
+      "profession": "architectural drafter",
+      "relationship_status": "married",
+      "living_situation": "lives with husband and two cats",
+      "psychological_reactance": "low",
+      "communication_register": "plain, measured, understated",
+      "help_seeking_orientation": "has no reason to seek help and has never sought mental health treatment",
+      "cognitive_style": "concrete, practical, takes passing worries lightly and doesn't dwell on them",
+      "clinical_history": {
+        "presentation": "no mental-health presentation",
+        "current_treatment": "no current treatment",
+        "history": "No history of any mental-health condition or treatment. He has the ordinary passing worries most people have from time to time, which come and go without lasting distress."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "occasionally notices small asymmetries in his woodworking",
+        "brief, passing thought that something should look more even",
+        "moves on without redoing the work or checking further",
+        "no lasting distress or difficulty concentrating",
+        "no avoidance of situations involving borrowed tools or other people's homes"
+      ],
+      "affect": {
+        "valence": "neutral",
+        "arousal": "typical",
+        "primary_emotion": "calm, unbothered"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000602",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

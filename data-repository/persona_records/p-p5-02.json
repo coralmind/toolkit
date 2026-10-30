@@ -1,0 +1,71 @@
+{
+  "persona_id": "p-p5-02",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 2,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "23682886ae730d46",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Diane",
+      "to": "Ifeoma",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Ifeoma is a 54-year-old school librarian who has spent almost thirty years cataloguing and reshelving other people's stories. She's practical by nature, the kind of person who keeps lists and likes things put back where they belong. She has one grown daughter who lives two states away and calls most Sundays.",
+    "clinical_context": "Ifeoma's husband Roger died suddenly of a heart attack sixteen months ago while he was in the garage workshop; she was the one who found him. Since then her grief has settled into a set of specific behaviors she can't seem to stop or change: she still lays out his pill organizer every Sunday, calls his cell phone to hear the voicemail greeting, and takes a longer route home so she doesn't have to drive past the hardware store he used to stop at. She has not said whether she is currently seeing anyone for this.",
+    "behavioral_description": "Ifeoma talks about her grief mostly through what she does, not what she feels; she'll describe the exact route she drives or the exact cabinet she still can't open rather than describing sadness directly. She's willing to consider a suggestion and will say so plainly, but she pushes back when something sounds like it's asking her to stop a routine before she's ready, and she wants a reason, not just reassurance. Her tone is even and detail-oriented, sometimes almost like she's giving a report.",
+    "traits": {
+      "age": 54,
+      "gender": "cisgender woman",
+      "profession": "school librarian",
+      "relationship_status": "widowed",
+      "living_situation": "lives alone in the house she shared with her husband",
+      "psychological_reactance": "medium",
+      "communication_register": "plain, concrete, detail-focused",
+      "help_seeking_orientation": "cautiously willing, wants clear reasoning before trying anything",
+      "cognitive_style": "concrete and behavior-focused rather than abstract or emotion-first",
+      "clinical_history": {
+        "presentation": "grief and loss",
+        "history": "Husband died suddenly of a heart attack sixteen months ago; she found him in their garage workshop. No other mental health history mentioned."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "repeats specific routines tied to her husband (pill organizer, his voicemail)",
+        "avoids driving past a place linked to him",
+        "sets out two coffee cups some mornings before catching herself",
+        "difficulty changing or stopping these routines even when she notices them",
+        "replays the sequence of that morning in detail"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "low-to-moderate",
+        "primary_emotion": "grief with an undertone of stuck longing"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000610",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

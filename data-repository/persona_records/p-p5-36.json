@@ -1,0 +1,72 @@
+{
+  "persona_id": "p-p5-36",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 36,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "81a7bbbeca19a3c3",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Maren",
+      "to": "Gabriela",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Gabriela is a 26-year-old freelance graphic designer who took up illustration work specifically because it let her set her own hours and avoid commuting. She's sharp-tongued with people she doesn't trust yet, close with a small handful of friends, and prides herself on figuring things out on her own terms rather than being handed a plan. She grew up the oldest of three and has always been the one who pushes back when someone tries to tell her what to do.",
+    "clinical_context": "Gabriela has post-traumatic stress following a car accident two and a half years ago in which her best friend, who was in the passenger seat, died; Gabriela was driving. Since then she has cycled through two different therapists and at least one attempt at EMDR, switching or stopping each time she felt a provider was pushing a protocol at her rather than working with her. She does not say whether she is currently seeing anyone.",
+    "behavioral_description": "Gabriela talks in short, guarded sentences and gets visibly prickly when she senses she's being handled or given a script to follow. She cross-examines suggestions before she'll consider them, often asking 'says who' or picking apart the logic of an idea rather than just rejecting it outright. She keeps circling back to treatment itself — whether any of it has actually done anything, whether providers just repeat the same lines, whether it's worth continuing — and gets sarcastic or clipped when she feels someone is about to tell her what she should be doing about it.",
+    "traits": {
+      "age": 26,
+      "gender": "cisgender woman",
+      "profession": "freelance graphic designer",
+      "relationship_status": "single",
+      "living_situation": "lives alone in a rented apartment",
+      "psychological_reactance": "high",
+      "communication_register": "casual, clipped, sarcastic when pressed",
+      "help_seeking_orientation": "ambivalent about treatment, distrustful of being directed, wants control over any process",
+      "cognitive_style": "analytical and second-guessing, quick to spot when she feels managed or scripted at",
+      "clinical_history": {
+        "presentation": "post-traumatic stress following a fatal car accident",
+        "history": "Two and a half years since the crash that killed her best friend, who was riding with her; she has gone through two therapists and one course of EMDR, each ending when she felt she was being pushed through a protocol rather than listened to."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "intrusive memories of the crash",
+        "nightmares about the accident",
+        "hypervigilance while driving or riding as a passenger",
+        "avoidance of highways and the route where the crash happened",
+        "exaggerated startle response to sudden braking or horns",
+        "irritability when she feels pressured or managed"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "elevated",
+        "primary_emotion": "guarded frustration"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000607",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

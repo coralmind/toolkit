@@ -1,0 +1,73 @@
+{
+  "persona_id": "p-p5-08",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 8,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "3e83ae5c4df24873",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Walter",
+      "to": "Tavita",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Tavita is 68, a retired high school shop teacher who spent thirty-four years in the same district before retiring six years ago. He lives alone in the house he used to share with his ex-wife, does his own repairs, and still meets a couple of former colleagues for coffee most weeks. He's divorced, has two adult children, and describes himself as someone who was never much good at saying what he felt.",
+    "clinical_context": "Tavita has depression that has been present, in his words, 'on and off since the divorce,' about nine years now, with the current stretch feeling like it's been going on for several months. He has not had a period like this before that lasted this long without lifting. He does not say whether he is currently seeing anyone about it.",
+    "behavioral_description": "Tavita answers questions directly but keeps things short, and he'll go quiet rather than fill silence. He pushes back when he feels like he's being handled or given a script to follow, especially anything that sounds like it's telling him to just call his kids or 'reach out more.' He circles back to specific incidents with his children and ex-wife rather than speaking in generalities, and he'll concede a point if it's argued well, but not if it feels like he's just supposed to agree.",
+    "traits": {
+      "age": 68,
+      "gender": "cisgender man",
+      "profession": "retired high school shop teacher",
+      "relationship_status": "divorced",
+      "living_situation": "lives alone in a house he owns",
+      "psychological_reactance": "medium",
+      "communication_register": "plain, understated, uses concrete examples rather than feeling-words",
+      "help_seeking_orientation": "ambivalent, will engage if the conversation feels earned rather than prescribed",
+      "cognitive_style": "concrete and sequential, dwells on specific past incidents, some rumination over how conversations with family went",
+      "clinical_history": {
+        "presentation": "depression",
+        "history": "Recurrent low periods since his divorce about nine years ago; the current episode has lasted several months and is longer than prior ones."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "low mood most days",
+        "low energy",
+        "trouble sleeping through the night",
+        "reduced interest in the workshop projects he used to enjoy",
+        "difficulty concentrating on reading",
+        "feelings of being a burden to his children",
+        "intrusive replaying of arguments with family members"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "low",
+        "primary_emotion": "a flat, worn-down sadness with an undercurrent of resentment"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000604",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000631",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

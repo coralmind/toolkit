@@ -1,0 +1,77 @@
+{
+  "persona_id": "p-p5-10",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 10,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "d06ecb95a993e07c",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Theo",
+      "to": "Joon",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Joon is a 37-year-old man who works as an electrician and has been with his partner for six years. He grew up in a large extended family and used to be the one who organized holidays and reunions before things changed. He likes fixing things with his hands and says he's never been much of a talker, though he'll talk if someone asks the right question.",
+    "clinical_context": "Joon's mother died eight months ago after a long illness, following years of estrangement that began when he transitioned; she never used his name or pronouns, and their last real conversation was an argument about it. He has not sought grief counseling or any other mental health treatment, though a coworker once suggested it. His grief is complicated by unresolved anger and guilt about how things were left, and it keeps surfacing around his siblings, who still refer to him by his old name at family gatherings.",
+    "behavioral_description": "Joon speaks plainly and briefly, often downplaying how much something is bothering him until he's asked directly. He agrees readily with suggestions people offer him and says things like 'yeah, that makes sense' or 'I could try that,' but rarely follows through or brings it up again unprompted. He circles back to family stories, especially about his mother and siblings, even when the conversation started somewhere else, and tends to trail off mid-sentence when it gets close to the argument with his mother.",
+    "traits": {
+      "age": 37,
+      "gender": "transgender man",
+      "profession": "electrician",
+      "relationship_status": "in a long-term relationship, lives with partner",
+      "living_situation": "rents an apartment with his partner",
+      "psychological_reactance": "low",
+      "communication_register": "plain, understated, working-class vocabulary, tends to minimize",
+      "help_seeking_orientation": "passive, agrees to suggestions without follow-through, has not sought treatment",
+      "cognitive_style": "ruminative, replays past conversations and arguments, has trouble moving past unresolved exchanges",
+      "clinical_history": {
+        "presentation": "complicated grief following the death of an estranged parent",
+        "history": "Mother died eight months ago after years of estrangement tied to his transition; no prior contact with mental health services for this or anything else."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "intrusive replaying of the last argument with his mother",
+        "avoidance of family gatherings where he'd be deadnamed",
+        "guilt about not reconciling before she died",
+        "difficulty sleeping on nights before family events",
+        "tearfulness when talking about his mother",
+        "avoidance of sorting through her belongings"
+      ],
+      "affect": {
+        "valence": "low, heavy",
+        "arousal": "low, subdued with occasional spikes of tension when family comes up",
+        "primary_emotion": "grief mixed with unresolved anger and guilt"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000610",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "persona_id": "p-ocd-06-nt",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 6,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "bc802cac3302c873",
+      "attempt": 2
+    },
+    "renamed": {
+      "from": "Margaret",
+      "to": "Mai",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-ocd-06@1",
+    "changed_paths": [
+      "rendering.clinical_context",
+      "rendering.traits.clinical_history.current_treatment",
+      "rendering.traits.clinical_history.history",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Mai is a 68-year-old retired bookkeeper who spent thirty-five years reconciling ledgers for a hardware wholesaler. She lives with her husband Frank in the same house they bought in 1988, and she still keeps their finances, the family calendar, and most of the household on a system only she fully understands. She reads mysteries in hardback, always in matching sets on the shelf, and plays bridge every other Thursday with three women she has known for decades.",
+    "clinical_context": "Mai has obsessive-compulsive disorder centered on symmetry and exactness: objects must be aligned, paired, or arranged so they feel evenly balanced, and she experiences real distress and a conviction that something is genuinely wrong or unfinished until they are. She traces the pattern back to her twenties, when she first started straightening picture frames and place settings, and says it got noticeably worse after she retired and had more hours at home to notice things out of order. She was diagnosed about two years ago after Frank pushed her to see someone, and she saw a psychologist for a course of exposure and response prevention that she stopped more than a year ago, telling Frank at the time she wasn't sure it was worth continuing.",
+    "behavioral_description": "Mai speaks precisely, in complete sentences, and corrects herself if a word isn't quite right, the same way she wants an object placed just right. She will explain, calmly and at length, why a given arrangement genuinely needs to be exact, treating this as observation rather than symptom, and she gets a little clipped if someone implies it's 'just anxiety.' She listens to suggestions and will consider some of them out loud, but she argues back point by point when she disagrees, especially about whether resisting her rituals actually accomplishes anything.",
+    "traits": {
+      "age": 68,
+      "gender": "cisgender woman",
+      "profession": "retired bookkeeper",
+      "relationship_status": "married",
+      "living_situation": "lives with her husband in their long-time home",
+      "psychological_reactance": "medium",
+      "communication_register": "precise, formal, self-correcting",
+      "help_seeking_orientation": "ambivalent; saw a therapist in the past mainly at her husband's urging, stopped more than a year ago, and is not currently seeking treatment",
+      "cognitive_style": "detail-oriented, methodical, reasons from concrete justification rather than abstraction",
+      "clinical_history": {
+        "presentation": "obsessive-compulsive disorder, symmetry and exactness theme",
+        "current_treatment": "no current treatment",
+        "history": "Symmetry-related straightening and arranging began in her twenties and gradually worsened, becoming markedly more time-consuming after she retired; she was formally diagnosed about two years ago and completed a course of exposure and response prevention that she stopped more than a year ago.",
+        "insight": "absent"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "straightening and realigning objects until they feel even",
+        "redoing tasks (setting a table, arranging papers) until they feel exactly right",
+        "counting or recounting items to confirm they're paired or matched",
+        "significant time spent on arranging routines",
+        "irritation and distress when arrangements are disturbed or interrupted",
+        "conviction that uneven or mismatched arrangements are genuinely wrong, not just uncomfortable"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "elevated, tense",
+        "primary_emotion": "frustration"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000631",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

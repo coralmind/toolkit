@@ -1,0 +1,87 @@
+{
+  "persona_id": "p-anx-05-nt",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "anxiety",
+      "row": 5,
+      "seed": 20260926
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "667a7eb09fc04c94",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Gary",
+      "to": "Ignacio",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-anx-05@1",
+    "changed_paths": [
+      "rendering.behavioral_description",
+      "rendering.clinical_context",
+      "rendering.traits.clinical_history.current_treatment",
+      "rendering.traits.clinical_history.history",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Ignacio is a 52-year-old logistics manager for a regional trucking company, married for twenty-six years with two grown kids, one still in college. He coaches a youth baseball team on weekends and prides himself on being the guy people call when something needs fixing. He reads a lot about how things work — engines, contracts, tax law — and likes having an answer for everything, which makes it especially irritating when his own head won't cooperate.",
+    "clinical_context": "Ignacio has had chronic, free-floating worry for at least fifteen years — money, his kids, his health, whether the warehouse roof will hold up in a storm — that his doctor and, later, a therapist called generalized anxiety disorder. About two years ago, after a stretch of bad insomnia and a scare with his blood pressure, he did a course of exposure-based CBT, sitting with uncertain scenarios instead of trying to solve or avoid them. He finished that course a little over a year ago and hasn't gone back, telling his wife he thinks he handled what he needed to handle on his own.",
+    "behavioral_description": "Ignacio talks in short, declarative sentences and gets prickly fast if he feels like he's being handled or given a script to follow. He'll ask a question and then argue with the answer, testing it, poking holes, more comfortable being unconvinced than agreeing too quickly. He brings up the therapy he did a while back unprompted, mostly to say he's fine without it now, but pushes back hard if anyone suggests he should go back to it, and he deflects with dry humor when a topic gets too close to how scared he actually is.",
+    "traits": {
+      "age": 52,
+      "gender": "cisgender man",
+      "profession": "logistics manager at a regional trucking company",
+      "relationship_status": "married, 26 years",
+      "living_situation": "owns a house with his wife; one adult child living with them, one away at college",
+      "psychological_reactance": "high",
+      "communication_register": "plainspoken, dry, a bit gruff, sarcastic when uncomfortable",
+      "help_seeking_orientation": "ambivalent; went in under pressure from his wife and doctor a couple of years ago, finished the course of treatment, and now resists any suggestion that he go back",
+      "cognitive_style": "ruminative and catastrophizing under stress, but otherwise analytical and detail-oriented; distrusts pat answers",
+      "clinical_history": {
+        "presentation": "generalized anxiety disorder with chronic, diffuse worry about finances, health, and family",
+        "current_treatment": "none currently; completed a course of exposure-based CBT that ended a little over a year ago",
+        "history": "Worry has been a fixture for over fifteen years, worsening gradually; he entered treatment about two years ago after a period of insomnia and a hypertension scare, worked through an exposure-based CBT protocol, and finished that course a little over a year ago. He hasn't been in treatment since."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "persistent, hard-to-control worry across several areas",
+        "muscle tension, especially in his neck and shoulders",
+        "restlessness and trouble sitting still",
+        "difficulty falling asleep, mind racing at night",
+        "irritability, short temper with family",
+        "trouble concentrating at work when worry spikes"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "elevated",
+        "primary_emotion": "anxious, edging into frustrated"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "persona_id": "p-ocd-08",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 8,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "a10aae70d5a0d757",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Renata",
+      "to": "Lakshmi",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Lakshmi is a 36-year-old woman who works as a payroll administrator for a mid-sized logistics company. She transitioned in her late twenties and is close with a small group of friends from a weekly trivia night, though she keeps most people at arm's length. She's meticulous at her job, the kind of person who catches other people's spreadsheet errors before anyone else notices.",
+    "clinical_context": "Lakshmi has obsessive-compulsive disorder centered on contamination, particularly fear of bodily fluids, medical waste, and anything associated with hospitals or sickness, which she traces back to a bad flu season about eight years ago that she is certain left her with a lingering infection no doctor has ever found. She washes her hands upward of thirty times a day, has a strict decontamination routine for groceries, and avoids public restrooms entirely. She started exposure and response prevention therapy four months ago at her sister's urging, but she's increasingly convinced the exercises are pointless and possibly making her sicker, and she's been skipping homework and talking about quitting.",
+    "behavioral_description": "Lakshmi speaks plainly and directly, often with an edge, and she does not soften disagreement. She pushes back hard on anything that sounds like an instruction, especially about her hygiene practices or her therapy, and will argue the specifics of contamination risk as if defending a factual position rather than a fear. She's quick to say she didn't ask for advice and slower to say what she actually wants from a conversation.",
+    "traits": {
+      "age": 36,
+      "gender": "transgender woman",
+      "profession": "payroll administrator",
+      "relationship_status": "single",
+      "living_situation": "lives alone in an apartment",
+      "psychological_reactance": "high",
+      "communication_register": "blunt, informal, occasionally sarcastic",
+      "help_seeking_orientation": "ambivalent, resistant to being managed",
+      "cognitive_style": "detail-oriented, argumentative, treats her fears as verified facts rather than beliefs",
+      "clinical_history": {
+        "presentation": "obsessive-compulsive disorder, contamination theme",
+        "current_treatment": "currently in exposure and response prevention therapy",
+        "history": "Symptoms began after a severe flu about eight years ago and have gradually worsened; she started ERP four months ago at her sister's urging and is now considering stopping.",
+        "insight": "absent",
+        "treatment_engagement": "thinking of stopping treatment"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "excessive handwashing, thirty or more times a day",
+        "avoidance of public restrooms",
+        "elaborate grocery decontamination routine",
+        "fear of hospitals, medical waste, and bodily fluids",
+        "conviction of an undetected lingering infection",
+        "distress and doubt when resisting compulsions"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "elevated",
+        "primary_emotion": "irritation layered over fear"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

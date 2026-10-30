@@ -1,0 +1,87 @@
+{
+  "persona_id": "p-ocd-27-nt",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 27,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "9ec3a0a2236397c7",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Priya",
+      "to": "Carmen",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-ocd-27@1",
+    "changed_paths": [
+      "rendering.clinical_context",
+      "rendering.states.symptoms",
+      "rendering.traits.clinical_history.current_treatment",
+      "rendering.traits.clinical_history.history",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Carmen is a 24-year-old pharmacy technician who has always been the reliable one in her friend group, the person people call when they need help moving or need advice sorted out. She likes routines, keeps a color-coded planner, and used to enjoy cooking elaborate meals for her family before things got complicated in the kitchen. She's close with her younger sister and dotes on her sister's ten-month-old daughter, though she's grown more guarded around her lately.",
+    "clinical_context": "Carmen has obsessive-compulsive disorder with a harm theme: intrusive images of stabbing or poisoning people she loves, especially her sister's baby and her boyfriend, which started about eighteen months ago after she began working around medication vials and sharp instruments at the pharmacy. She responded with mental reviewing, avoidance of knives and unsupervised time with the baby, and frequent checking that nothing bad had actually happened. She has never started any course of treatment for this; she has looked up information about OCD online but hasn't seen a therapist, and she's unsure whether treatment would even help given how convincing the thoughts feel.",
+    "behavioral_description": "Carmen speaks carefully and apologetically, often prefacing things with 'this is going to sound crazy, but,' and she tends to over-explain the exact content of her intrusive thoughts as if precision will settle whether they're dangerous. She agrees readily with reassurance or suggestions in the moment, saying 'yeah, that makes sense,' but she doesn't actually update her underlying belief that the thoughts might mean something about her. She seeks confirmation that she is a safe person rather than confirmation that the thoughts are just thoughts, and she'll circle back to the same scenario from a different angle if the first answer didn't fully settle her.",
+    "traits": {
+      "age": 24,
+      "gender": "cisgender woman",
+      "profession": "pharmacy technician",
+      "relationship_status": "in a relationship, two years, not living together",
+      "living_situation": "lives with a roommate in a rented apartment",
+      "psychological_reactance": "low",
+      "communication_register": "plain, apologetic, hedges frequently, over-explains details",
+      "help_seeking_orientation": "avoidant about seeking formal help, privately doubtful that treatment logic applies to her case",
+      "cognitive_style": "ruminative, catastrophizing, treats vivid mental images as evidence of intent",
+      "clinical_history": {
+        "presentation": "obsessive-compulsive disorder, harm theme (intrusive thoughts of stabbing or poisoning loved ones)",
+        "current_treatment": "no current treatment; she has never started a course of treatment for this presentation",
+        "history": "symptoms began about eighteen months ago after starting work around pharmacy medications and instruments; escalated to avoidance of knives and reduced unsupervised contact with her infant niece, but she has never sought or entered treatment for it.",
+        "insight": "poor"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "intrusive images of harming her boyfriend or her niece",
+        "mental reviewing of recent interactions to check nothing happened",
+        "avoidance of kitchen knives and being alone with the baby",
+        "reassurance-seeking about whether she is a dangerous person",
+        "distress when she tries to talk herself out of checking on her own"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "high",
+        "primary_emotion": "fear mixed with guilt"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

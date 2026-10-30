@@ -1,0 +1,117 @@
+name: Viewer
+
+# Tests the results viewer and builds the public site from the published samples. What the
+# site shows is what `viewer-ingest --results $SAMPLE_RESULTS` reads; the build reads only
+# that ingested data.
+#
+# Secret: BRAND_READ_TOKEN (read access to coralmind/brand). Pull requests from forks get no
+# secrets, so this workflow fails on them.
+
+# The two paths lists are duplicated because Actions does not support YAML anchors. Keep
+# them in step.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "viewer/**"
+      - "src/**"
+      - "tests/viewer/**"
+      - "scripts/gen_viewer_types.py"
+      - "data-repository/sample_results/**"
+      - "pyproject.toml"
+      - "pixi.lock"
+      - ".github/workflows/viewer.yml"
+  pull_request:
+    paths:
+      - "viewer/**"
+      - "src/**"
+      - "tests/viewer/**"
+      - "scripts/gen_viewer_types.py"
+      - "data-repository/sample_results/**"
+      - "pyproject.toml"
+      - "pixi.lock"
+      - ".github/workflows/viewer.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: viewer-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  SAMPLE_RESULTS: data-repository/sample_results
+
+jobs:
+  build:
+    name: Test, build the public site, check what it publishes
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          # Required: a persisted GITHUB_TOKEN auth header overrides the
+          # BRAND_READ_TOKEN URL rewrite below, and the brand install then fails.
+          persist-credentials: false
+
+      - uses: prefix-dev/setup-pixi@ad1da6449d9e506fd127fd67ab2d054a769f6a94 # v0.11.2
+        with:
+          environments: viewer
+          locked: true
+          cache: true
+
+      - name: Authenticate to coralmind/brand
+        # @coralmind/brand is a private git+ssh dependency. GITHUB_TOKEN cannot
+        # read another repo, so rewrite to HTTPS with a read-only PAT. `--global`
+        # so the git that `npm ci` spawns inside the pixi tasks picks it up.
+        run: |
+          git config --global \
+            url."https://x-access-token:${{ secrets.BRAND_READ_TOKEN }}@github.com/".insteadOf \
+            "ssh://git@github.com/"
+
+      - name: Test
+        # Writes the fixtures with the Python record builders, then runs vitest.
+        run: pixi run -e viewer viewer-test
+
+      - name: Type-check
+        run: pixi run -e viewer viewer-check
+
+      - name: Ingest the published samples
+        run: pixi run -e viewer viewer-ingest --results "$SAMPLE_RESULTS"
+
+      - name: Check the ingested data for private values
+        # Home paths, endpoint addresses and `_`-prefixed fields. Not part of the build.
+        run: pixi run -e viewer viewer-leaks
+
+      - name: Build
+        # next build from the ingested data, then the bundling check.
+        run: pixi run -e viewer viewer-build
+
+      - name: Smoke test
+        run: pixi run -e viewer viewer-smoke
+
+      - name: Assert no results data is committed under viewer/
+        # 'viewer/*.json', not 'viewer/**/*.json': git's `*` already crosses `/`.
+        run: |
+          if git ls-files 'viewer/*.json' \
+             | grep -v -e 'package.json' -e 'package-lock.json' \
+                       -e 'tsconfig.json' -e 'vercel.json'; then
+            echo "::error::Committed JSON under viewer/ that is not config."
+            echo "The viewer holds no results of its own; the ingest writes them"
+            echo "to the gitignored viewer/src/generated/."
+            exit 1
+          fi
+          echo "OK: no committed JSON under viewer/ beyond config."
+
+      - name: Assert no results data is inlined into viewer source
+        # Inlined data is large, so a 64 KB ceiling catches it without inspecting content.
+        run: |
+          large=$(git ls-files -z 'viewer/src/*' \
+                  | xargs -0 -I{} find {} -size +64k -print 2>/dev/null || true)
+          if [ -n "$large" ]; then
+            echo "::error::Oversized tracked file(s) under viewer/src/:"
+            echo "$large"
+            exit 1
+          fi
+          echo "OK: no oversized tracked files under viewer/src/."

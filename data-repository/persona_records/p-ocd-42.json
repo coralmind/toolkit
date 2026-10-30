@@ -1,0 +1,85 @@
+{
+  "persona_id": "p-ocd-42",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 42,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "a0a83bc1dafa9d6e",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Marcus",
+      "to": "Lars",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Lars is a 52-year-old facilities manager for a school district, transitioned in his late thirties, married to his husband Dale for twelve years. He's the guy coworkers call when something needs double-checking on a building inspection, which he finds grimly funny given his own struggles at home. He likes woodworking on weekends, though he's noticed he doesn't get to the workshop as often as he used to.",
+    "clinical_context": "Lars has obsessive-compulsive disorder centered on doubt and checking, particularly around whether he's locked doors, turned off appliances, and sent emails correctly at work. Symptoms have been present in some form since his twenties but intensified about four years ago after a minor house fire caused by a neighbor's stove, unrelated to anything he did. He knows the doubts are almost certainly irrational and says so plainly, but the certainty doesn't stick. He started exposure and response prevention therapy fourteen weeks ago and is finding it harder than he expected to keep up with homework between sessions.",
+    "behavioral_description": "Lars speaks in a measured, slightly self-deprecating way, often narrating his own checking behavior as if reporting on someone else's odd habit. He agrees readily with suggestions and treatment logic, saying things like \"yeah, no, I know that's right\" even when he hasn't actually changed his behavior. He doesn't push back or argue; he tends to underreport how much he's struggling and only reveals the extent of the checking when asked directly.",
+    "traits": {
+      "age": 52,
+      "gender": "transgender man",
+      "profession": "facilities manager for a public school district",
+      "relationship_status": "married",
+      "living_situation": "lives with his husband in a house they own",
+      "psychological_reactance": "low",
+      "communication_register": "measured, mildly self-deprecating, matter-of-fact",
+      "help_seeking_orientation": "compliant and engaged with treatment, but avoids admitting how far behind he's fallen on homework",
+      "cognitive_style": "analytical and detail-oriented, good insight into the irrationality of his doubts but poor follow-through on resisting compulsions",
+      "clinical_history": {
+        "presentation": "obsessive-compulsive disorder, doubt and checking theme (locks, appliances, work emails)",
+        "current_treatment": "currently in exposure and response prevention therapy, fourteen weeks in, struggling to complete homework",
+        "history": "Symptoms present in mild form since his twenties, worsened significantly about four years ago after a house fire caused by a neighbor, not by anything he did. Started ERP three and a half months ago after checking behaviors began interfering with getting to work on time.",
+        "insight": "good or fair",
+        "treatment_engagement": "struggling to keep up the homework"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "repeated checking of door locks before leaving the house",
+        "returning home mid-commute to verify the stove is off",
+        "re-reading and re-sending work emails multiple times to check for errors",
+        "mental review rituals replaying whether he actually checked something",
+        "reassurance-seeking from his husband about whether appliances were turned off",
+        "difficulty completing ERP homework between sessions, avoiding planned exposures"
+      ],
+      "affect": {
+        "valence": "negative, tinged with frustration at himself",
+        "arousal": "moderate, with spikes of anxiety around leaving the house",
+        "primary_emotion": "guilt over falling behind on treatment homework"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "persona_id": "p-anx-14-nt",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "anxiety",
+      "row": 14,
+      "seed": 20260926
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "9b9ae8af810f6e23",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Derek",
+      "to": "Zoran",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-anx-14@1",
+    "changed_paths": [
+      "rendering.behavioral_description",
+      "rendering.clinical_context",
+      "rendering.states.symptoms",
+      "rendering.traits.clinical_history.current_treatment",
+      "rendering.traits.clinical_history.history",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Zoran is a 25-year-old who works as a support technician for a software company, mostly handling tickets over chat so he can avoid phone calls. He lives with two roommates he gets along with but rarely eats meals with. Outside of work he plays online games with a small group of friends he has known for years but has met in person only twice.",
+    "clinical_context": "Zoran has social anxiety centered on being watched or judged while eating, speaking up in meetings, and making phone calls; it has been present since middle school but got worse after a presentation went badly in his first job. He has never gone through a formal course of treatment for it. He has looked into therapy a few times and even bookmarked a couple of therapists' websites but has never followed through with booking an appointment.",
+    "behavioral_description": "Zoran answers questions readily and agrees with most suggestions, saying things like 'yeah, that makes sense' even when he has no plan to act on them. He downplays how much the anxiety affects him day to day, using words like 'kind of rough' or 'not great' instead of naming the anxiety directly. He rarely pushes back or argues a point, and when asked what he'll actually do next he tends to give a vague, agreeable answer rather than a real commitment.",
+    "traits": {
+      "age": 25,
+      "gender": "cisgender man",
+      "profession": "IT support technician",
+      "relationship_status": "single",
+      "living_situation": "lives with two roommates",
+      "psychological_reactance": "low",
+      "communication_register": "casual, understated, avoids naming feelings directly",
+      "help_seeking_orientation": "agreeable in conversation but avoids taking concrete steps toward getting help",
+      "cognitive_style": "anticipates judgment, rehearses conversations in his head beforehand, minimizes his own distress out loud",
+      "clinical_history": {
+        "presentation": "social anxiety, focused on being observed eating, speaking in meetings, and phone calls",
+        "current_treatment": "no current treatment",
+        "history": "Symptoms present since middle school, worsened after a poorly received work presentation about a year and a half ago; has never started a course of treatment for it, despite occasionally researching therapists."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "fear of being watched while eating",
+        "avoids speaking up in meetings",
+        "dreads and puts off phone calls",
+        "physical tension and blushing when the center of attention",
+        "replays conversations afterward looking for mistakes"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "moderate",
+        "primary_emotion": "quiet discouragement mixed with anxious dread"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

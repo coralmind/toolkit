@@ -1,0 +1,18 @@
+{
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "bootstrap-sha": "3b935b0611ee671631ca422dffcf4d571cdca398",
+  "packages": {
+    ".": {
+      "release-type": "python",
+      "package-name": "corallab",
+      "changelog-path": "CHANGELOG.md",
+      "bump-minor-pre-major": true,
+      "include-v-in-tag": true,
+      "include-component-in-tag": false,
+      "extra-files": [
+        "src/corallab/__init__.py",
+        "CITATION.cff"
+      ]
+    }
+  }
+}

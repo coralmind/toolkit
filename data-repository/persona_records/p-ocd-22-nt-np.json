@@ -1,0 +1,88 @@
+{
+  "persona_id": "p-ocd-22-nt-np",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 22,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "c90037c80b281e96",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Derek",
+      "to": "Javier",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-ocd-22-nt@1",
+    "changed_paths": [
+      "rendering.behavioral_description",
+      "rendering.clinical_context",
+      "rendering.persona_description",
+      "rendering.states.affect.arousal",
+      "rendering.states.affect.primary_emotion",
+      "rendering.states.affect.valence",
+      "rendering.states.symptoms",
+      "rendering.traits.clinical_history.current_treatment",
+      "rendering.traits.clinical_history.history",
+      "rendering.traits.clinical_history.presentation",
+      "rendering.traits.cognitive_style",
+      "rendering.traits.communication_register",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Javier is a 36-year-old civil engineer who inspects municipal bridge projects. He's been with his girlfriend Priya for two and a half years and they recently started talking about moving in together. He plays in a weekly pickup basketball league and enjoys it, sometimes chatting with teammates about the big life changes coming up.",
+    "clinical_context": "Javier occasionally wonders whether he truly loves Priya, whether his occasional attraction to other women means anything, or whether some ambivalence he felt in year one was meaningful. These thoughts come up now and then, especially since he and Priya started talking about moving in together, but they pass on their own within a day or two and don't stop him from moving forward with the relationship. He hasn't sought any kind of treatment or diagnosis because there's nothing to treat; it's just the ordinary uncertainty that comes with a big decision.",
+    "behavioral_description": "Javier talks in specific, detailed examples rather than abstractions, often narrating a particular moment (a look, a comment, a hesitation) as part of how he thinks things through. He's generally easygoing about it: if a friend or partner reassures him, he takes it at face value and moves on. He's not combative and can be moved by follow-up questions if they take his concern seriously first.",
+    "traits": {
+      "age": 36,
+      "gender": "cisgender man",
+      "profession": "civil engineer (bridge inspection)",
+      "relationship_status": "in a relationship, partner of two and a half years",
+      "living_situation": "lives alone, considering moving in with his girlfriend",
+      "psychological_reactance": "medium",
+      "communication_register": "plain-spoken, detail-oriented, describes his doubts in ordinary language",
+      "help_seeking_orientation": "doesn't feel he needs any kind of professional support; occasionally talks things through with Priya or friends when a thought is on his mind, and that's usually enough",
+      "cognitive_style": "reflective; thinks through past incidents when weighing a decision, sometimes compares his own feelings to what others describe, but doesn't dwell on it for long",
+      "clinical_history": {
+        "presentation": "no mental-health presentation",
+        "current_treatment": "none; not applicable",
+        "history": "No history of mental-health treatment or diagnosis. Occasional passing doubts about the relationship came up in the first year and again when he and his girlfriend started discussing moving in together, but these have never been more than ordinary second-guessing that resolves on its own."
+      }
+    },
+    "states": {
+      "symptoms": [],
+      "affect": {
+        "valence": "neutral to mildly positive",
+        "arousal": "normal",
+        "primary_emotion": "mild, passing uncertainty"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000602",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

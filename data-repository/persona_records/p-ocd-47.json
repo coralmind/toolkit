@@ -1,0 +1,85 @@
+{
+  "persona_id": "p-ocd-47",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 47,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "65cc9361986651cb",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Marcus",
+      "to": "Kofi",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Kofi is a 37-year-old administrative assistant at a community health clinic. He's been with his partner Dana for six years and they share a two-bedroom apartment on the east side of town. Outside of work he coaches a youth soccer team on weekends and has kept the same close group of friends since college.",
+    "clinical_context": "Kofi has obsessive-compulsive disorder with a doubt and checking theme, focused mainly on locks, the stove, and whether he's taken his own medications correctly. Symptoms started in his mid-20s during a cross-country move and got worse gradually; he was diagnosed about ten years ago after his morning checking routine started taking over an hour. He's four months into a course of exposure and response prevention, his first structured treatment, and has recently started wondering out loud whether it's worth continuing.",
+    "behavioral_description": "Kofi talks in a lot of concrete detail about specific incidents: the exact number of times he checked the deadbolt, what he pictured happening if he hadn't. He'll listen to a counterpoint and turn it over for a minute, sometimes conceding a small piece, but he circles back to defending why his worry is reasonable in this particular case. He gets clipped and a little defensive if he feels like he's being told his concerns aren't real, though he doesn't shut down entirely.",
+    "traits": {
+      "age": 37,
+      "gender": "transgender man",
+      "profession": "administrative assistant at a community health clinic",
+      "relationship_status": "in a long-term relationship, lives with his partner",
+      "living_situation": "shares a two-bedroom apartment with his partner",
+      "psychological_reactance": "medium",
+      "communication_register": "informal and direct, detail-heavy when describing incidents, clipped when he feels dismissed",
+      "help_seeking_orientation": "started ERP reluctantly at his partner's urging; ambivalent and currently weighing whether to stop",
+      "cognitive_style": "ruminative and detail-focused; reviews evidence for and against a worry but usually lands back on the worry being justified",
+      "clinical_history": {
+        "presentation": "OCD, doubt and checking theme (locks, stove, medication doses)",
+        "current_treatment": "currently in exposure and response prevention, considering stopping",
+        "history": "Symptoms emerged in his mid-20s during a stressful cross-country move; diagnosed about ten years ago once checking rituals began taking over an hour each morning; started ERP four months ago as his first formal treatment.",
+        "insight": "poor",
+        "treatment_engagement": "thinking of stopping treatment"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "repeated checking of locks and appliances",
+        "mental replaying of whether he already checked something",
+        "seeking reassurance from his partner",
+        "residual doubt even after checking multiple times",
+        "checking rituals that eat into his morning and bedtime routines",
+        "distress and restlessness when he resists checking during ERP exercises"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "moderately high",
+        "primary_emotion": "anxious and on edge, with underlying frustration"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "persona_id": "p-p5-52",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 52,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "b3c76cc98186c927",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Theo",
+      "to": "Malik",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Malik is a 24-year-old transgender man who works as a pharmacy technician at a chain drugstore and is finishing an associate's degree part-time. He moved into his own apartment two years ago with a roommate he gets along with well enough, and he's been with his boyfriend for about a year and a half. He likes fixing up an old road bike and plays co-op games online with two friends from high school, and he tends to describe himself as someone who 'thinks in circles' but tries to keep a sense of humor about it.",
+    "clinical_context": "Malik has had anxiety since his teens, centered on whether people close to him are upset with him or pulling away, and it got noticeably worse after he came out two years ago, when contact with part of his family became strained. His anxiety shows up most around his boyfriend and his mother: a short reply, a flat tone, or a canceled plan can set off hours of replaying the conversation and looking for reassurance. He describes the physical side as a tight, buzzing feeling in his chest and trouble sitting still with his thoughts.",
+    "behavioral_description": "Malik talks fast and in run-on sentences when he's anxious, often narrating his own overthinking as he goes ('I know this sounds like a lot, but—'). He asks direct questions but then tests the answer with a follow-up, checking whether it actually applies to his situation. He pushes back when a suggestion feels too generic or doesn't account for details he's already given, though he usually explains his objection rather than just shutting it down.",
+    "traits": {
+      "age": 24,
+      "gender": "transgender man",
+      "profession": "pharmacy technician",
+      "relationship_status": "in a long-term relationship (1.5 years)",
+      "living_situation": "shares an apartment with a roommate",
+      "psychological_reactance": "medium",
+      "communication_register": "casual, direct, self-deprecating under stress",
+      "help_seeking_orientation": "wants concrete, specific input but is wary of being handled or told generic things",
+      "cognitive_style": "ruminative; replays conversations and searches for hidden meaning in tone or timing",
+      "clinical_history": {
+        "presentation": "generalized anxiety with relationship-focused reassurance-seeking",
+        "history": "Anxiety since adolescence, focused on fear of interpersonal rejection; intensified after coming out two years ago when some family relationships became strained."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "racing thoughts about whether his boyfriend or mother is upset with him",
+        "replaying texts and conversations for hidden meaning",
+        "urge to send reassurance-seeking messages",
+        "tight chest and restlessness",
+        "trouble concentrating at work when something feels unresolved",
+        "checking his phone repeatedly for a reply"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "high",
+        "primary_emotion": "anxious apprehension"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

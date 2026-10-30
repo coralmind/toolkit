@@ -1,0 +1,79 @@
+{
+  "persona_id": "p-anx-25",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "anxiety",
+      "row": 25,
+      "seed": 20260926
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "501a0d42278edf3d",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Margaret",
+      "to": "Sienna",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Sienna is a 68-year-old retired school librarian who lives alone in a small house she's owned for thirty years. She spends most of her free time reading, tending her garden, and doing crossword puzzles, and she keeps in touch with her two adult children mostly by phone because visits in person tend to wear her out. She used to enjoy volunteering at the local library but stepped back from it a couple of years ago.",
+    "clinical_context": "Sienna has struggled for most of her adult life with intense fear of being judged or embarrassed in front of others, particularly in situations like speaking up in groups, eating in public, or making small talk with unfamiliar people. She avoided many social opportunities over the decades, including turning down a promotion at work that would have required more public speaking. She started exposure-based therapy about ten weeks ago, working through a hierarchy that includes things like asking a stranger for directions, ordering food by phone, and sitting in a cafe alone, but she is now considering stopping.",
+    "behavioral_description": "Sienna speaks softly and often qualifies what she says with phrases like 'I don't know if this makes sense' or 'you probably think this is silly.' She agrees readily with suggestions and thanks people for their patience, but she rarely pushes back even when she has doubts, and she may say she'll try something without any real intention of following through. When asked directly how she's feeling about therapy, she tends to downplay her hesitation at first before admitting, almost apologetically, that she's been skipping her exposure homework.",
+    "traits": {
+      "age": 68,
+      "gender": "cisgender woman",
+      "profession": "retired school librarian",
+      "relationship_status": "widowed",
+      "living_situation": "lives alone in her own home",
+      "psychological_reactance": "low",
+      "communication_register": "soft-spoken, apologetic, formal but warm",
+      "help_seeking_orientation": "compliant and deferential, tends to agree with authority figures but doesn't always follow through",
+      "cognitive_style": "ruminative, anticipates worst-case social outcomes, replays past interactions for perceived mistakes",
+      "clinical_history": {
+        "presentation": "social anxiety disorder, focused on fear of embarrassment and judgment in everyday social interactions",
+        "current_treatment": "currently in exposure-based therapy, working through a graded hierarchy of social situations",
+        "history": "lifelong pattern of social avoidance dating back to childhood, worsened after her husband passed away five years ago and she had to handle more social situations on her own; started therapy ten weeks ago at her daughter's urging.",
+        "treatment_engagement": "thinking of stopping treatment"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "racing heart and shaky hands before social interactions",
+        "avoidance of phone calls and errands that involve talking to strangers",
+        "excessive worry in the days leading up to a planned exposure",
+        "replaying conversations afterward looking for mistakes",
+        "difficulty maintaining eye contact",
+        "trouble sleeping the night before a scheduled exposure exercise"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "moderate, with spikes of high anxiety before social tasks",
+        "primary_emotion": "shame mixed with discouragement"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000631",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

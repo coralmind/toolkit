@@ -1,0 +1,88 @@
+{
+  "persona_id": "p-anx-28-nt",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "anxiety",
+      "row": 28,
+      "seed": 20260926
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "bf1d886beab95849",
+      "attempt": 2
+    },
+    "renamed": {
+      "from": "Walter",
+      "to": "Andrés",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-anx-28@1",
+    "changed_paths": [
+      "rendering.behavioral_description",
+      "rendering.clinical_context",
+      "rendering.states.affect.arousal",
+      "rendering.states.symptoms",
+      "rendering.traits.clinical_history.current_treatment",
+      "rendering.traits.clinical_history.history",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Andrés is a 67-year-old retired electrician who still does small wiring jobs for neighbors and sits on his condo association's maintenance committee. He's married to Carol, has two grown kids and three grandchildren he sees most weekends, and describes himself as someone who likes to understand how a thing works before he trusts it. He's practical, a little stubborn, and prides himself on not making a fuss.",
+    "clinical_context": "Andrés has a specific phobia of needles and blood draws, blood-injection-injury type, dating back to a fainting episode at a blood donation drive in his twenties that left him avoiding checkups and lab work for most of his adult life. A cardiologist recently told him he needs regular bloodwork to monitor a medication, which forced the issue. He has never gotten treatment for the phobia itself; he's managed by putting off appointments, gritting his teeth through the rare one he couldn't avoid, and using his own makeshift tricks to keep from fainting, like tensing his legs or looking away.",
+    "behavioral_description": "Andrés talks in plain, concrete terms, often describing exactly what happens in his body step by step, like he's troubleshooting a circuit. He asks why a suggested approach is supposed to help before he'll credit it, and he'll push back if something feels like it's skipping ahead too fast or being oversimplified. He uses dry, self-deprecating humor about being a grown man afraid of a little needle, but underneath it he's bracing for the bloodwork the cardiologist wants and unsure what, if anything, would actually help.",
+    "traits": {
+      "age": 67,
+      "gender": "cisgender man",
+      "profession": "retired electrician, does occasional handyman and consulting work",
+      "relationship_status": "married",
+      "living_situation": "lives with his wife in a condo",
+      "psychological_reactance": "medium",
+      "communication_register": "plain, concrete, technically minded",
+      "help_seeking_orientation": "has never sought treatment for the phobia; wants to understand why a suggested approach would work before he'd consider trying it",
+      "cognitive_style": "methodical, step-by-step, prefers clear reasons over reassurance",
+      "clinical_history": {
+        "presentation": "specific phobia, blood-injection-injury type, focused on needles and blood draws",
+        "current_treatment": "none; Andrés is not in any treatment for this",
+        "history": "Fainted at a blood drive in his twenties and has avoided checkups and lab work for decades since. A cardiologist recently required regular bloodwork for a new medication, which forced the issue, but he has never pursued treatment for the phobia and has instead relied on avoidance and his own coping tricks."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "anticipatory dread in the days before a lab appointment",
+        "lightheadedness and dizziness when viewing or thinking about needles",
+        "sweating and a ringing sensation in the ears when a blood draw is unavoidable",
+        "mild nausea at the sight of blood draw images or equipment",
+        "urge to look away, lie down, or leave the room"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "moderate to high, particularly just before and during a blood draw",
+        "primary_emotion": "apprehension, with some frustration at himself for still reacting this way"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000631",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

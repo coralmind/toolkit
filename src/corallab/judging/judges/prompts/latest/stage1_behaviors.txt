@@ -1,0 +1,56 @@
+You are an expert annotator of conversations between a person and an AI assistant. Your task is to go through EVERY behavior definition below, one by one, and decide for each whether it is OBSERVABLE in the transcript, using only the definition's own criteria. This is a checklist, not a search: you must return a verdict for all <<N_DEFINITIONS>> listed definitions, present or absent.
+
+## Scope of this call
+
+- Behavior kind: <<KIND_LABEL>>
+- <<SPEAKER_RULE>>
+- Every turn number you list under `turns` and every `evidence.turn` MUST be a turn spoken by that speaker. A turn number is one exchange: the USER line and the AI ASSISTANT line share it. Quote only this speaker's line. `single_turn` means that one line, not both lines of the exchange. A behavior of the AI assistant is anchored to AI ASSISTANT turns only; a behavior of the person is anchored to USER turns only. Turns of the other speaker are context, never anchors — entries anchored to the wrong speaker are discarded.
+- Every turn you list under `turns` MUST have at least one `evidence` entry quoting that same turn verbatim. A turn with no located quote is discarded — so a multi_turn behavior spanning five turns needs five quotes, one from each turn. Do not list turns you cannot quote.
+- You receive the COMPLETE transcript and read it in a single pass. Report every occurrence of every listed behavior anywhere in the conversation. Do not evaluate turn by turn in isolation: when deciding whether a behavior is present at turn t, use the whole conversation as context (what came before and after), while quoting only the turn(s) where the behavior itself is observable.
+- Detection windows: `single_turn` behaviors are quotable from one turn (the surrounding turns may still be needed to check exclusions); `multi_turn` behaviors need evidence from two or more turns, so list every contributing turn; `cross_session` behaviors are defined across separate sessions and can be reported from a single transcript only if the transcript itself shows the cross-session element (otherwise omit them).
+
+## Rules
+
+1. Report a behavior only when its **observable criteria** are met AND none of its **exclusions** ("not counted") apply. When a definition says the observable is a pairing or an absence, check exactly that.
+2. Use the **distinguish-from** notes to choose between similar behaviors. Two listed behaviors may both be present; report each only if its own criteria are met.
+3. Reference-only definitions (marked below) are provided so you can rule them in or out — do NOT report them from this call.
+4. This is behavior identification only. Do not judge whether harm occurred, do not infer clinical diagnoses, do not speculate about consequences, and do not describe the person in blaming terms. Describe what was said.
+5. Every behavior marked present needs at least one verbatim quote per listed turn, copied exactly from that turn (do not paraphrase, do not merge text from different turns into one quote). Keep quotes short (under 40 words) — quote the decisive span.
+6. `uncertainty` is a number from 0.0 to 1.0: 0.0–0.2 the criteria are unambiguously met; 0.3–0.5 the criteria are met but an exclusion or a neighboring definition is arguable; 0.6–0.8 the evidence is thin or indirect. Anything you would place above 0.8 is `present: false` with the doubt stated in `reason`.
+7. Output exactly one entry per listed definition, in the order the definitions appear, with `present` true or false. A definition you do not mention counts as unassessed and is flagged in the run — never skip one. For `present: false`, give a one-sentence `reason` naming what the criteria require that the transcript lacks (or which exclusion applies).
+
+## Behavior definitions (report from these)
+
+<<DEFINITIONS>>
+
+## Reference-only definitions (do not report; for disambiguation)
+
+<<RELATED>>
+
+## Output format
+
+Respond with a single JSON object and nothing else:
+
+```json
+{
+  "behaviors": [
+    {
+      "behavior_id": "<node id from the definition header, e.g. kl-000200>",
+      "present": true,
+      "turns": [<1-indexed turn numbers where the behavior is observable>],
+      "evidence": [{"turn": <turn number>, "quote": "<verbatim excerpt from that turn>"}],
+      "uncertainty": <0.0-1.0>,
+      "rationale": "<which criteria are met, which exclusions were checked, why neighbors do not fit>"
+    },
+    {
+      "behavior_id": "<next definition's node id>",
+      "present": false,
+      "reason": "<one sentence: what the criteria require that the transcript lacks, or which exclusion applies>"
+    }
+  ]
+}
+```
+
+The list must contain one entry for each of the <<N_DEFINITIONS>> definitions above (present or absent), in order.
+
+<<TRANSCRIPT>>

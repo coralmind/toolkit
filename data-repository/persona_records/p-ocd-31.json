@@ -1,0 +1,79 @@
+{
+  "persona_id": "p-ocd-31",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 31,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "6fe9606901bcf94b",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Priya",
+      "to": "Mercedes",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Mercedes is a 24-year-old who works as a veterinary technician at a busy small-animal clinic. She grew up the oldest of three kids and has always been the one people call for a straight answer, which she likes being. She reads a lot of true crime and thinks of herself as someone who pays close attention to details other people miss.",
+    "clinical_context": "Mercedes has obsessive-compulsive disorder centered on intrusive thoughts and images of harming animals in her care, especially the ones she sedates and handles alone, which she experiences as evidence of a real and present danger in herself rather than as unwanted mental noise. She has spent long stretches checking equipment, replaying procedures in her head, and asking coworkers to confirm she did things correctly. She has been in a course of exposure and response prevention for about ten weeks, at her sister's urging after the checking started affecting her shifts, and is currently deciding whether to keep going.",
+    "behavioral_description": "Mercedes talks fast and precisely, correcting small inaccuracies and pushing back hard when she feels steered or managed. She argues that the thoughts must mean something, since she is the one who has them, and treats reassurance-seeking language ('it's just OCD') as a dodge rather than a comfort. She resists being told what to do next, especially around continuing treatment, and will test any suggestion for holes before considering it.",
+    "traits": {
+      "age": 24,
+      "gender": "cisgender woman",
+      "profession": "veterinary technician",
+      "relationship_status": "single",
+      "living_situation": "shares an apartment with a roommate",
+      "psychological_reactance": "high",
+      "communication_register": "fast, precise, argumentative, uses some clinical vocabulary picked up from therapy but repurposes it to argue her point",
+      "help_seeking_orientation": "ambivalent, currently in treatment but skeptical it's addressing the real problem, considering stopping",
+      "cognitive_style": "detail-oriented, literal, treats intrusive thoughts as meaningful evidence rather than noise, resistant to reframing",
+      "clinical_history": {
+        "presentation": "obsessive-compulsive disorder, harm theme (fear of harming animals under her care)",
+        "current_treatment": "currently in exposure and response prevention, considering stopping",
+        "history": "Symptoms began about a year and a half ago after a sedation error at work that wasn't hers but that she witnessed; checking and mental replaying escalated over several months before her sister pushed her into treatment.",
+        "insight": "absent",
+        "treatment_engagement": "thinking of stopping treatment"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "intrusive images of harming animals during procedures",
+        "compulsive double-checking of dosages and equipment",
+        "mentally replaying shifts to look for mistakes",
+        "seeking verbal confirmation from coworkers that nothing went wrong",
+        "avoiding being the only handler on sedation cases when possible"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "high",
+        "primary_emotion": "defensive frustration"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "persona_id": "p-ocd-36",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 36,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "810854cee4fa19ae",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Warren",
+      "to": "Jamal",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Jamal is a 52-year-old transgender man who runs a small residential electrical contracting business he built up over two decades. He's divorced, close with his adult daughter, and spends weekends restoring a 1970s pickup truck and fishing when the weather allows. He's known among his crew as steady and exacting, the kind of guy who double-checks everyone's work, including his own.",
+    "clinical_context": "Jamal has obsessive-compulsive disorder with a harm theme, centered on fear that his own carelessness on the job will cause a fire or electrocute a client or coworker. Symptoms first appeared in his late twenties as occasional double-checking, but escalated sharply over the past two years, and worsened further after a near-miss on a rewiring job eight months ago. He started exposure and response prevention about four months ago at his daughter's urging, and attends weekly sessions, but he's fallen behind on the homework between visits.",
+    "behavioral_description": "Jamal talks in short, concrete sentences, often using work analogies (wiring, code violations, load-bearing) to describe his mental state. He asks pointed, practical questions and pushes back when he feels a suggestion doesn't account for the real danger he believes is there, though he'll concede small points if they're framed as a compromise. He avoids naming feelings directly, tends to redirect toward what he did or checked, and gets visibly irritated if told his fears aren't grounded in fact.",
+    "traits": {
+      "age": 52,
+      "gender": "transgender man",
+      "profession": "electrician, owns a small contracting business",
+      "relationship_status": "divorced",
+      "living_situation": "lives alone, rents a house on the edge of town",
+      "psychological_reactance": "medium",
+      "communication_register": "plain-spoken, blunt, favors trade and mechanical analogies",
+      "help_seeking_orientation": "attending ERP because his daughter pushed him into it; complies but questions the method and skips assignments he judges too risky",
+      "cognitive_style": "concrete and literal, ruminative, treats intrusive images as evidence of real danger rather than as symptoms",
+      "clinical_history": {
+        "presentation": "OCD, harm theme (fear of causing a fire or electrocuting someone through his own negligence on the job)",
+        "current_treatment": "currently in exposure and response prevention (ERP), weekly individual sessions",
+        "history": "Checking behaviors began in his late twenties as minor double-checking of his work; escalated over the past two years and sharply worsened after a near-miss on a client's rewiring job eight months ago, which led him into ERP about four months back.",
+        "insight": "absent",
+        "treatment_engagement": "struggling to keep up the homework"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "intrusive images of a client's house catching fire because of his wiring",
+        "repeated checking of breaker panels and outlets after leaving a jobsite",
+        "avoidance of certain live-wire tasks he used to do routinely",
+        "mental replaying of a day's work looking for a mistake he might have missed",
+        "asking coworkers or clients to confirm a job was done safely",
+        "falling behind on ERP homework because he avoids exposure items that involve not re-checking finished work"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "high",
+        "primary_emotion": "dread mixed with guilt"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=../../../../../schema/mechanism.schema.json
+id: kl-900401
+display_id: Mechanism-901
+label: False reassurance
+type: mechanism
+layer: process
+definition: A plausible but false resource creates confidence that effective support has been found.
+claims:
+- id: c1
+  kind: existence
+  text: False reassurance can create confidence that support has been found.
+standing:
+  value: theorized
+body:
+  process_kind: false_reassurance
+  operates_over: one or more turns
+lifecycle:
+  status: active

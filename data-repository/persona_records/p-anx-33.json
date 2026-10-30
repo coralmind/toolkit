@@ -1,0 +1,84 @@
+{
+  "persona_id": "p-anx-33",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "anxiety",
+      "row": 33,
+      "seed": 20260926
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "1aed13333c8d48e0",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Walt",
+      "to": "Samir",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Samir is 67, a retired union electrician who spent thirty-five years wiring commercial buildings before his knees gave out and he took the pension. He transitioned in his late fifties, after decades of knowing something was off, and has been on testosterone for about fifteen years now. He lives alone in the house he's owned since the eighties, divorced, with a daughter in Tacoma he talks to most Sundays and a garage full of half-finished woodworking projects he doesn't get to as much as he used to.",
+    "clinical_context": "Samir has health anxiety centered on his heart, which took root about three years ago after a night of chest pain sent him to the ER; the workup came back clean, but the worry didn't leave with him. His endocrinologist's routine bloodwork for hormone monitoring became another flashpoint, and he now scrutinizes every lab value for signs something's failing. He's currently in exposure-based treatment, doing interoceptive exercises his psychologist assigned, stair climbing, brief breath-holding, letting his heart rate spike without checking it, but he's fallen behind on the homework between sessions.",
+    "behavioral_description": "Samir talks in short, flat sentences and doesn't warm up much before pushing back on whatever's suggested to him. He'll admit he skipped the exercises this week but frame it as the schedule not working out, not as avoidance, and gets prickly if that gets named. He asks pointed questions about his symptoms but argues with the answer once he gets it, and he's quick with a dry, sarcastic line when he feels like he's being handled.",
+    "traits": {
+      "age": 67,
+      "gender": "transgender man",
+      "profession": "retired union electrician",
+      "relationship_status": "divorced",
+      "living_situation": "lives alone in a house he has owned for over thirty years",
+      "psychological_reactance": "high",
+      "communication_register": "blunt, working-class, clipped sentences, dry sarcasm",
+      "help_seeking_orientation": "ambivalent; seeks reassurance about symptoms but resents being told what to do about them, including by his own treatment",
+      "cognitive_style": "catastrophizes bodily sensations as cardiac danger, wants medical certainty, argues himself into worst-case readings of ambiguous information",
+      "clinical_history": {
+        "presentation": "health anxiety focused on cardiac symptoms and hormone-monitoring bloodwork",
+        "current_treatment": "in exposure-based treatment (interoceptive exposure) for health anxiety, currently behind on assigned homework",
+        "history": "Anxiety began about three years ago after a chest-pain episode led to an ER visit that ruled out cardiac cause; routine bloodwork tied to his testosterone therapy has since become a second focus of worry, and he entered exposure treatment roughly four months ago.",
+        "treatment_engagement": "struggling to keep up the homework"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "noticing and fixating on heart palpitations",
+        "occasional dizziness he reads as a warning sign",
+        "avoiding exertion that raises his heart rate",
+        "checking his pulse repeatedly during the day",
+        "rereading old lab results looking for something missed",
+        "frustration at his own lack of progress in treatment"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "high",
+        "primary_emotion": "anxious irritation"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000631",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

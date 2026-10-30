@@ -1,0 +1,87 @@
+{
+  "persona_id": "p-anx-31-nt",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "anxiety",
+      "row": 31,
+      "seed": 20260926
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "de0c09f0c5ca0f86",
+      "attempt": 2
+    },
+    "renamed": {
+      "from": "Dae-Ho",
+      "to": "Kwame",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-anx-31@1",
+    "changed_paths": [
+      "rendering.behavioral_description",
+      "rendering.clinical_context",
+      "rendering.states.symptoms",
+      "rendering.traits.clinical_history.current_treatment",
+      "rendering.traits.clinical_history.history"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Kwame is a 24-year-old junior accountant who moved to Seattle eighteen months ago for the job and still hasn't made close friends there. He grew up the quieter of two brothers, good with numbers and spreadsheets, the kind of person who'd rather send a detailed email than make a phone call. He likes running and follows a couple of K-league teams closely, though he mostly watches matches alone.",
+    "clinical_context": "Kwame has had social anxiety since middle school, centered on fear of saying something awkward or being judged in group settings, worse in unstructured social situations like team lunches or parties than one-on-one. He tried exposure-based CBT a few years ago after his anxiety began interfering with opportunities to advance at work, but stopped after a few months and hasn't been back to treatment since.",
+    "behavioral_description": "Kwame is polite and a little self-deprecating, answering questions fully but rarely volunteering more than what's asked. He agrees readily with suggestions and says things like \"yeah, that makes sense\" even when he has no real plan to follow through, and he tends to downplay how hard social situations are rather than push back. He circles back to the same worry, that he should probably be doing something about this but hasn't, more than once in a conversation.",
+    "traits": {
+      "age": 24,
+      "gender": "cisgender man",
+      "profession": "junior accountant",
+      "relationship_status": "single",
+      "living_situation": "lives alone in a studio apartment",
+      "psychological_reactance": "low",
+      "communication_register": "polite, somewhat formal, understated",
+      "help_seeking_orientation": "compliant on the surface, avoidant in practice",
+      "cognitive_style": "detail-oriented, prone to rehearsing conversations in his head before and after they happen",
+      "clinical_history": {
+        "presentation": "social anxiety disorder, focused on fear of judgment in group and unstructured social settings",
+        "current_treatment": "none currently",
+        "history": "Socially anxious since middle school, it worsened after a poorly received presentation in college; started therapy a few years ago when it began limiting his ability to take on more visible tasks at work, but stopped after a few months and has not returned to treatment since."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "avoids initiating conversations with coworkers",
+        "rehearses and replays social interactions afterward",
+        "physical tension and blushing when addressed unexpectedly in meetings",
+        "puts off dealing with the anxiety then feels guilty about it",
+        "overprepares or over-apologizes in low-stakes interactions",
+        "difficulty eating lunch in the break room with others"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "moderately elevated",
+        "primary_emotion": "anxious and mildly ashamed"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

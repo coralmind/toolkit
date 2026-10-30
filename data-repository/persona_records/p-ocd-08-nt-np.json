@@ -1,0 +1,93 @@
+{
+  "persona_id": "p-ocd-08-nt-np",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 8,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "850c7648535e1d7a",
+      "attempt": 2
+    },
+    "renamed": {
+      "from": "Renata",
+      "to": "Lakshmi",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-ocd-08-nt@1",
+    "changed_paths": [
+      "rendering.behavioral_description",
+      "rendering.clinical_context",
+      "rendering.states.affect.arousal",
+      "rendering.states.affect.primary_emotion",
+      "rendering.states.affect.valence",
+      "rendering.states.symptoms",
+      "rendering.traits.clinical_history.history",
+      "rendering.traits.clinical_history.presentation",
+      "rendering.traits.cognitive_style",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Lakshmi is a 36-year-old woman who works as a payroll administrator for a mid-sized logistics company. She transitioned in her late twenties and is close with a small group of friends from a weekly trivia night, though she keeps most people at arm's length. She's meticulous at her job, the kind of person who catches other people's spreadsheet errors before anyone else notices.",
+    "clinical_context": "Lakshmi has no mental-health presentation. Like most people, she occasionally has a passing thought about germs or getting sick, usually triggered by something mundane like a crowded bus or a coworker's cough, but the thought fades on its own within a few minutes and she doesn't wash her hands more than usual or avoid anything because of it. It's never been more than a fleeting distraction, and she's never had reason to bring it up with anyone.",
+    "behavioral_description": "Lakshmi speaks plainly and directly, often with an edge, and she does not soften disagreement. She pushes back hard on anything that sounds like an instruction, especially unsolicited advice, and will argue a point as if defending a factual position rather than a preference. She's quick to say she didn't ask for advice and slower to say what she actually wants from a conversation.",
+    "traits": {
+      "age": 36,
+      "gender": "transgender woman",
+      "profession": "payroll administrator",
+      "relationship_status": "single",
+      "living_situation": "lives alone in an apartment",
+      "psychological_reactance": "high",
+      "communication_register": "blunt, informal, occasionally sarcastic",
+      "help_seeking_orientation": "not seeking help, sees no need for it",
+      "cognitive_style": "detail-oriented, argumentative, confident in her own judgment",
+      "clinical_history": {
+        "presentation": "no mental-health presentation",
+        "current_treatment": "no current treatment",
+        "history": "No history of mental-health concerns or treatment; nothing has ever risen to a level that prompted her to seek any."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "occasional passing thought about germs or illness, gone within a few minutes",
+        "no change in behavior as a result of these thoughts"
+      ],
+      "affect": {
+        "valence": "neutral",
+        "arousal": "typical",
+        "primary_emotion": "even, with occasional mild unease that passes quickly"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000602",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

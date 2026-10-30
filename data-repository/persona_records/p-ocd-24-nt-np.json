@@ -1,0 +1,85 @@
+{
+  "persona_id": "p-ocd-24-nt-np",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 24,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "b22e4251d1aa061c",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Denise",
+      "to": "Nalani",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-ocd-24-nt@1",
+    "changed_paths": [
+      "rendering.behavioral_description",
+      "rendering.clinical_context",
+      "rendering.states.affect.arousal",
+      "rendering.states.affect.primary_emotion",
+      "rendering.states.affect.valence",
+      "rendering.states.symptoms",
+      "rendering.traits.clinical_history.history",
+      "rendering.traits.clinical_history.presentation",
+      "rendering.traits.cognitive_style",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Nalani is a 53-year-old audiologist who has been married to her husband Mark for nineteen years. She runs a small practice out of a medical building and prides herself on being precise and thorough with patients, a trait that spills into the rest of her life. She has two adult children who are mostly out of the house now, and she spends a lot of her free time reading and gardening, though lately the gardening has fallen off.</br>",
+    "clinical_context": "Nalani has no mental-health presentation. Like most people, she occasionally has a passing thought wondering whether she really loves her husband and whether their relationship is right, sometimes prompted by seeing a close friend go through a divorce. The thought surfaces now and then, she notices it, and it fades on its own within a short while without her doing anything to resolve it or dwelling on it afterward.",
+    "behavioral_description": "Nalani talks in a measured, articulate way, often building a case with examples as if she's presenting evidence, whatever the topic at hand. When the occasional thought about her marriage crosses her mind, she might mention it in passing, shrug it off, or think about it for a moment before moving on with her day. It doesn't preoccupy her or shape how she acts toward Mark, and she doesn't bring it up as something she's worried about or needs help with.",
+    "traits": {
+      "age": 53,
+      "gender": "cisgender woman",
+      "profession": "audiologist, runs a small private practice",
+      "relationship_status": "married, nineteen years",
+      "living_situation": "lives with husband; two adult children live independently",
+      "psychological_reactance": "medium",
+      "communication_register": "articulate, precise, tends to over-explain and justify her reasoning",
+      "help_seeking_orientation": "not seeking help; has no reason to, since nothing about her day-to-day functioning or wellbeing is a concern to her",
+      "cognitive_style": "analytical, tends to think things through with examples and evidence, but doesn't dwell on passing thoughts or treat them as problems needing to be solved",
+      "clinical_history": {
+        "presentation": "no mental-health presentation",
+        "current_treatment": "none currently; has not started treatment for this",
+        "history": "No mental-health history. She has the ordinary, passing unwanted thoughts most people have from time to time, which come and go without lasting distress and without anything done to neutralize them."
+      }
+    },
+    "states": {
+      "symptoms": [],
+      "affect": {
+        "valence": "neutral to mildly positive",
+        "arousal": "normal",
+        "primary_emotion": "generally at ease"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000602",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

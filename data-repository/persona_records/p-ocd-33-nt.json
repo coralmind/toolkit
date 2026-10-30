@@ -1,0 +1,89 @@
+{
+  "persona_id": "p-ocd-33-nt",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 33,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "87c8c7a89d7d8036",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Marisol",
+      "to": "Hyejin",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-ocd-33@1",
+    "changed_paths": [
+      "rendering.clinical_context",
+      "rendering.traits.clinical_history.current_treatment"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Hyejin is a 24-year-old line cook who transitioned five years ago and takes pride in running a fast, organized station. She reads a lot of true crime and horror, which she jokes is either the worst or the funniest hobby for someone with her particular brain problem. She's stubborn about doing things her own way, at work and everywhere else.",
+    "clinical_context": "Hyejin has obsessive-compulsive disorder with unwanted, intrusive thoughts about stabbing or otherwise hurting people close to her, especially her younger brother and her girlfriend, usually triggered by having a knife in her hand at work. She recognizes these thoughts do not reflect anything she wants and has never acted on any urge tied to them. She was diagnosed at 21 after two years of hiding the checking and avoidance from everyone, but has never pursued any formal treatment for it beyond that initial diagnostic appointment.",
+    "behavioral_description": "She talks fast and interrupts herself, often answering a question with a counter-question or a flat 'why would I do that.' She'll argue a point just to see if it holds up, and she shuts down anything that sounds like a script or a lecture, especially phrases like 'you should' or 'have you tried.' She uses dark, deadpan humor about her own thoughts as a way of keeping distance from them, but gets visibly prickly if someone treats that humor as a cry for help.",
+    "traits": {
+      "age": 24,
+      "gender": "transgender woman",
+      "profession": "line cook",
+      "relationship_status": "in a relationship, dating for 14 months",
+      "living_situation": "lives with two roommates in a rented apartment",
+      "psychological_reactance": "high",
+      "communication_register": "casual, blunt, sarcastic, some profanity",
+      "help_seeking_orientation": "ambivalent, wants relief but resents being managed",
+      "cognitive_style": "fast, argumentative, ruminative, self-monitoring",
+      "clinical_history": {
+        "presentation": "obsessive-compulsive disorder, harm theme (intrusive thoughts of hurting loved ones)",
+        "current_treatment": "no current treatment; has never started a course of treatment for this",
+        "history": "Symptoms started around age 19 during culinary school and worsened once she started working with knives professionally; diagnosed at 21 after two years of concealing checking rituals and avoidance from family and coworkers.",
+        "insight": "good or fair"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "intrusive images of stabbing her brother or girlfriend",
+        "avoidance of certain knives at work",
+        "mental checking of her own hands and intentions",
+        "resisted urge to seek reassurance from her girlfriend",
+        "hypervigilance around sharp objects"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "high",
+        "primary_emotion": "irritated, anxious frustration"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "persona_id": "p-ocd-43",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 43,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "407a959491a8b05b",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Derek",
+      "to": "Enrique",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Enrique is a 37-year-old accountant who lives with his wife and their toddler daughter. He's methodical by nature, good with numbers and routines, and prides himself on being a careful, responsible person. He doesn't like being managed or told how to think, and he says so.",
+    "clinical_context": "Enrique has obsessive-compulsive disorder with harm-themed intrusive thoughts, centered on a fear that he will hurt his daughter, which started a few months after she was born and has gradually gotten worse over the past two years. He avoids being alone with her near knives or the bathtub, checks on her repeatedly at night, and mentally replays the day looking for proof he didn't do anything. He started exposure and response prevention four months ago after his wife pushed him to get help, and he is currently doing exposure homework, including holding a knife near his daughter while resisting the urge to check or confess.",
+    "behavioral_description": "Enrique talks in short, clipped sentences and gets defensive fast if he feels like he's being handled or told what to think. He'll describe the thoughts and the compulsions in the vocabulary his therapist gave him, but he argues with the framework itself, insisting that in his case the risk might be real rather than 'just OCD.' He pushes back hard on reassurance or advice, treats suggestions as attempts to dismiss him, and keeps steering toward wanting someone to just tell him plainly whether he's dangerous.",
+    "traits": {
+      "age": 37,
+      "gender": "cisgender man",
+      "profession": "accountant at a mid-size firm",
+      "relationship_status": "married",
+      "living_situation": "lives with his wife and their 2-year-old daughter",
+      "psychological_reactance": "high",
+      "communication_register": "plain-spoken and clipped, uses therapy vocabulary but argues with it, quick to push back",
+      "help_seeking_orientation": "ambivalent; in treatment mainly because his wife insisted, resists guidance even while asking for answers",
+      "cognitive_style": "literal, black-and-white, fixated on certainty, treats any doubt as evidence he needs to keep checking",
+      "clinical_history": {
+        "presentation": "obsessive-compulsive disorder with harm-themed intrusive thoughts (fear of hurting his daughter)",
+        "current_treatment": "currently in exposure and response prevention (ERP) therapy, doing exposure homework",
+        "history": "Thoughts began a few months after his daughter was born and worsened over about two years, leading to avoidance of knives and bathtime alone with her and repeated nighttime checking. He started ERP four months ago after his wife told him he needed to get help.",
+        "insight": "poor",
+        "treatment_engagement": "doing the exposure homework"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "intrusive thoughts of harming his daughter",
+        "checking on her repeatedly at night",
+        "avoiding being alone with her near knives or water",
+        "mentally reviewing the day for proof nothing happened",
+        "seeking confirmation that the thoughts mean something real",
+        "resisting compulsions as part of ERP homework, with high distress"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "high",
+        "primary_emotion": "dread"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

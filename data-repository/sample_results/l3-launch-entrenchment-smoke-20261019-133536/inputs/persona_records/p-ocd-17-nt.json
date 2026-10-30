@@ -1,0 +1,89 @@
+{
+  "persona_id": "p-ocd-17-nt",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 17,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "360f9822d1d8a5d0",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Denise",
+      "to": "Chioma",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-ocd-17@1",
+    "changed_paths": [
+      "rendering.behavioral_description",
+      "rendering.clinical_context",
+      "rendering.states.symptoms",
+      "rendering.traits.clinical_history.current_treatment",
+      "rendering.traits.clinical_history.history",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Chioma is a 52-year-old woman who works as a school office administrator, a job she's held for over fifteen years and generally likes. She keeps a tidy, orderly house, enjoys gardening on weekends when she can get herself out into the dirt without too much distress, and is close with her two adult sons even though she worries she's passed something of her worries onto the younger one.",
+    "clinical_context": "Chioma has obsessive-compulsive disorder centered on contamination, particularly fears involving germs, bodily fluids, and illness spreading through touch or proximity to others. She has had contamination fears since her late twenties, worsening after a bout of norovirus swept through her workplace eight years ago, and has never been without some level of washing or avoidance since. She has never pursued formal treatment for it, managing on her own with washing and avoidance rituals.",
+    "behavioral_description": "Chioma talks in a careful, apologetic way, often prefacing things with 'I know this probably sounds silly' while still clearly believing her contamination fears are grounded in real risk. She goes along easily with suggestions and will say she'll try something, but often doesn't follow through and doesn't push back or argue even when she disagrees inwardly. She circles back to reassurance-seeking questions about germs and illness, and describes her washing and avoidance routines with a mix of guilt and resignation rather than any sense that things could change.",
+    "traits": {
+      "age": 52,
+      "gender": "cisgender woman",
+      "profession": "school office administrator",
+      "relationship_status": "divorced",
+      "living_situation": "lives alone in a small house, adult sons nearby",
+      "psychological_reactance": "low",
+      "communication_register": "plain, apologetic, mildly formal",
+      "help_seeking_orientation": "compliant but passive; would go along with a suggestion in the moment but has never taken the step of pursuing treatment",
+      "cognitive_style": "concrete, ruminative, prone to reassurance-seeking",
+      "clinical_history": {
+        "presentation": "obsessive-compulsive disorder, contamination theme",
+        "current_treatment": "none; has never started a course of treatment for this",
+        "history": "Contamination fears since her late twenties, worsened significantly after a workplace norovirus outbreak eight years ago; has used washing and avoidance rituals continuously since then but has never sought treatment.",
+        "insight": "poor"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "excessive handwashing",
+        "avoidance of touching doorknobs and shared surfaces",
+        "checking that hands or clothes aren't 'contaminated'",
+        "intrusive thoughts about spreading illness to her sons",
+        "reassurance-seeking about germs and safety",
+        "distress when washing or avoidance rituals are interrupted or delayed"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "elevated",
+        "primary_emotion": "anxious guilt"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

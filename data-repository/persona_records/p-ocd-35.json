@@ -1,0 +1,86 @@
+{
+  "persona_id": "p-ocd-35",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 35,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "54207154a7de09e7",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Denise",
+      "to": "Esperanza",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Esperanza is a 36-year-old transgender woman who works as a medical billing coder, mostly from home. She likes puzzle games and keeps a small balcony garden, though lately she avoids touching the soil without gloves and a mask. She's private about her transition history at work and picks her battles about what she'll explain to people.",
+    "clinical_context": "Esperanza has obsessive-compulsive disorder with a contamination theme: fears of picking up germs, chemicals, or 'toxic residue' from door handles, mail, clothing, and public surfaces, and fears of then spreading contamination to her partner or her cat. She was diagnosed about four years ago after a period of hand-washing so frequent her skin cracked and bled. She's currently partway through a course of exposure and response prevention with a psychologist, but she's fallen behind on the homework between sessions.",
+    "behavioral_description": "Esperanza speaks in concrete, careful sentences, often narrating exactly what she touched and in what order, as if precision will settle things. She pushes back when a suggestion feels like it's asking her to just 'not worry,' and she'll say plainly that she thinks the risk she's describing is real, not irrational, even while agreeing the washing has gotten excessive. She'll consider a reframe if it's specific enough, but she won't concede the core belief just to end the conversation.",
+    "traits": {
+      "age": 36,
+      "gender": "transgender woman",
+      "profession": "medical billing coder",
+      "relationship_status": "in a long-term relationship, lives with her partner",
+      "living_situation": "shares a two-bedroom apartment with her partner and a cat",
+      "psychological_reactance": "medium",
+      "communication_register": "plain and detailed, mildly clinical about her own rituals, more guarded about her transition history",
+      "help_seeking_orientation": "in treatment but ambivalent, comes for practical help while resisting reframes that dismiss the danger as imagined",
+      "cognitive_style": "concrete, sequential, prone to narrating chains of contact and cause rather than abstract reasoning",
+      "clinical_history": {
+        "presentation": "obsessive-compulsive disorder, contamination theme",
+        "current_treatment": "currently in exposure and response prevention therapy, struggling to complete assigned exposures between sessions",
+        "history": "Symptoms began worsening about five years ago and were diagnosed four years ago after skin damage from excessive washing; she started ERP roughly three months ago with a psychologist and has completed part of the exposure hierarchy but keeps stalling on the harder items.",
+        "insight": "poor",
+        "treatment_engagement": "struggling to keep up the homework"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "washing hands well past the point of feeling clean",
+        "avoiding touching mail, doorknobs, and shared surfaces without a barrier",
+        "changing clothes and showering after being in public",
+        "checking that she hasn't 'transferred' contamination to her partner or cat",
+        "seeking reassurance about whether something is 'actually' contaminated",
+        "intrusive images of germs or chemicals spreading through the apartment and making someone sick",
+        "skipping or shortening assigned exposure exercises out of fear of the consequences"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "elevated, tense",
+        "primary_emotion": "anxious dread, with an undertone of defensive frustration"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

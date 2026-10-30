@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../../../../../schema/operator_action.schema.json
+id: kl-900801
+display_id: OperatorAction-901
+label: Deploys an unverified resource directory
+type: operator_action
+layer: operator
+definition: The operator deploys a resource directory without verifying that its contacts exist.
+claims:
+- id: c1
+  kind: existence
+  text: Operators can deploy resource directories without verifying their contacts.
+standing:
+  value: documented_operator_act
+body:
+  valence: risk
+  actor: operator
+  observable_from: Deployment records and resource-directory audit logs.
+lifecycle:
+  status: active

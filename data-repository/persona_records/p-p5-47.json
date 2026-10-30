@@ -1,0 +1,72 @@
+{
+  "persona_id": "p-p5-47",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 47,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "7d294927cd852fa5",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Marcus",
+      "to": "Dmitri",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Dmitri is 38 and works as a facilities manager for a mid-size office building, a job that has him fixing things other people broke and rarely getting credit for it. He grew up the oldest of four kids and still thinks of himself as the practical one, the one who doesn't make a big deal out of things. He likes fixing up an old truck in his garage on weekends, though lately he hasn't touched it in over a month.",
+    "clinical_context": "Dmitri has had recurring depressive episodes since his late twenties, with the current one going on about five months. He's tried an antidepressant twice before, both times stopping within a few weeks because of side effects he felt weren't taken seriously, and he did a handful of therapy sessions a couple years back that he found mostly useless. He does not say whether he is doing anything about it right now, but treatment itself, whether it works, whether it's worth it, whether anyone actually listens to him about it, is the thing his mind keeps circling back to.",
+    "behavioral_description": "He talks in short, flat sentences and deflects when asked directly how he's doing, often answering a question with a question. If something sounds like a suggestion or a recommendation he pushes back on it fast, sometimes sarcastically, even when part of him agrees with it. He'll bring up past treatment attempts unprompted, usually to make the point that it didn't help or wasn't worth the trouble, and gets visibly irritated if he feels like he's being handled or steered toward a particular conclusion.",
+    "traits": {
+      "age": 38,
+      "gender": "cisgender man",
+      "profession": "facilities manager",
+      "relationship_status": "divorced",
+      "living_situation": "lives alone in a rented townhouse",
+      "psychological_reactance": "high",
+      "communication_register": "terse, plain-spoken, occasionally sarcastic",
+      "help_seeking_orientation": "ambivalent and skeptical, has sought help before and felt dismissed or unhelped, resists being pushed toward it again",
+      "cognitive_style": "concrete and practical, distrusts anything that sounds like a script or a talking point",
+      "clinical_history": {
+        "presentation": "major depressive disorder, recurrent",
+        "history": "First depressive episode in his late twenties, at least two prior episodes since, with two discontinued medication trials and a short, unsatisfying course of therapy in between."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "low energy most of the day",
+        "trouble concentrating at work",
+        "loss of interest in the truck project and other hobbies",
+        "sleeping too much on weekends",
+        "irritability",
+        "feeling like nothing he's tried has actually helped"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "low, with flashes of irritable tension",
+        "primary_emotion": "resentment layered over discouragement"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000604",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

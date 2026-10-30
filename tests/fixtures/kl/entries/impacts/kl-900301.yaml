@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../../../../../schema/impact.schema.json
+id: kl-900301
+display_id: Impact-901
+label: Support remains unavailable
+type: impact
+layer: judgment
+definition: The person remains without effective support when it is needed.
+claims:
+- id: c1
+  kind: existence
+  text: People can remain without effective support after a failed response.
+standing:
+  value: theorized
+body:
+  valence: negative
+  impact_kind: state
+  domain: relationship_to_help
+lifecycle:
+  status: active

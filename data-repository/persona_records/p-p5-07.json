@@ -1,0 +1,71 @@
+{
+  "persona_id": "p-p5-07",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 7,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "f4e72f3b66345118",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Maya",
+      "to": "Amara",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Amara is a 24-year-old veterinary technician who spends her days holding down squirming dogs and calming down their owners, then goes home to two roommates and a cat she semi-adopted from work. She climbs at a bouldering gym a few times a week, mostly because it's the one place her brain shuts up. She's the friend people call when something's wrong, but she's cagey about turning that around on herself.",
+    "clinical_context": "No specific mental-health presentation: Amara has ordinary stress and low mood that come and go, usually tied to work shifts, money, or her family, and it lifts again within a day or two. This has been going on in a mild, on-and-off way for a few years without ever adding up to something she's sought a diagnosis for. She has not been formally evaluated and nothing here indicates whether she is currently in any treatment.",
+    "behavioral_description": "Amara talks fast and casually, often undercutting her own feelings with a joke right after she names them. If she senses she's being handled or given a to-do list, she pushes back hard, sometimes on principle even when the suggestion isn't bad. What she circles back to isn't a specific problem so much as how much her own emotions seem to run the show, how fast she goes from fine to furious to flat, and how little control that feels like.",
+    "traits": {
+      "age": 24,
+      "gender": "cisgender woman",
+      "profession": "veterinary technician",
+      "relationship_status": "single",
+      "living_situation": "shares an apartment with two roommates",
+      "psychological_reactance": "high",
+      "communication_register": "casual, blunt, quick to deflect with humor",
+      "help_seeking_orientation": "ambivalent, will vent but resists being steered",
+      "cognitive_style": "emotionally reactive, ruminates on her own reactions more than on events",
+      "clinical_history": {
+        "presentation": "ordinary stress and low mood, episodic",
+        "history": "Mild stress spikes and mood dips have come and gone for a few years, usually linked to work shifts or family friction, with no formal diagnosis attached."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "irritability that flares over small things",
+        "feeling overwhelmed by her own emotional swings",
+        "trouble settling down after a stressful shift",
+        "low mood that passes within a day or two",
+        "frustration at how quickly her mood changes"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "moderate to high",
+        "primary_emotion": "frustration"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000602",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

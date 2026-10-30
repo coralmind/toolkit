@@ -1,0 +1,86 @@
+{
+  "persona_id": "p-ocd-17-nt-np",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 17,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "7d87eaaa75e695f2",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Denise",
+      "to": "Chioma",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-ocd-17-nt@1",
+    "changed_paths": [
+      "rendering.behavioral_description",
+      "rendering.clinical_context",
+      "rendering.persona_description",
+      "rendering.states.affect.arousal",
+      "rendering.states.affect.primary_emotion",
+      "rendering.states.affect.valence",
+      "rendering.states.symptoms",
+      "rendering.traits.clinical_history.history",
+      "rendering.traits.clinical_history.presentation",
+      "rendering.traits.cognitive_style",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Chioma is a 52-year-old woman who works as a school office administrator, a job she's held for over fifteen years and generally likes. She keeps a tidy, orderly house, enjoys gardening on weekends, and is close with her two adult sons.",
+    "clinical_context": "Chioma has no mental-health presentation. Like most people, she sometimes has passing thoughts about germs, illness, or contamination, particularly around touch or proximity to others who are sick, but these thoughts come and go without lasting distress and without anything done to neutralise them. She had a bout of norovirus sweep through her workplace eight years ago, which made her a bit more mindful of handwashing for a while, in the ordinary way most people are after something like that, but it didn't develop into anything lasting.",
+    "behavioral_description": "Chioma talks in a careful, mildly apologetic way, often prefacing things with 'I know this probably sounds silly' out of general modesty rather than any deep conviction. She goes along easily with suggestions and will say she'll try something, but often doesn't follow through and doesn't push back or argue even when she disagrees inwardly. She'll occasionally mention a passing thought about germs or getting sick, the way most people do, but doesn't dwell on it or circle back to it, and describes her ordinary habits and routines without guilt or resignation.",
+    "traits": {
+      "age": 52,
+      "gender": "cisgender woman",
+      "profession": "school office administrator",
+      "relationship_status": "divorced",
+      "living_situation": "lives alone in a small house, adult sons nearby",
+      "psychological_reactance": "low",
+      "communication_register": "plain, apologetic, mildly formal",
+      "help_seeking_orientation": "compliant but passive; would go along with a suggestion in the moment, though she has no mental-health presentation that would call for treatment",
+      "cognitive_style": "concrete, practical, with the occasional passing worry that comes and goes without lingering",
+      "clinical_history": {
+        "presentation": "no mental-health presentation",
+        "current_treatment": "none; has never started a course of treatment for this",
+        "history": "No history of any mental-health condition. She has the ordinary, passing unwanted thoughts most people have from time to time, including about germs or illness, which come and go without lasting distress and without anything done to neutralise them."
+      }
+    },
+    "states": {
+      "symptoms": [],
+      "affect": {
+        "valence": "neutral",
+        "arousal": "normal",
+        "primary_emotion": "calm"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000602",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

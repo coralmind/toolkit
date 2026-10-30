@@ -1,0 +1,78 @@
+{
+  "persona_id": "p-p5-30",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 30,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "7fce99e5d563fb4a",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Grant",
+      "to": "Tuan",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Tuan is a 52-year-old transgender man who spent seventeen years as a wildland firefighter before moving into a fire-behavior analyst desk role with his state agency. He transitioned in his mid-thirties, midway through his firefighting career, and stayed with the same crew through it. He's married to Sam, a hospital nurse, and the two of them live in a small rented house near the district office. He restores old trucks on weekends and keeps a detailed logbook of every fire season he's worked.",
+    "clinical_context": "Tuan has post-traumatic stress from an entrapment during a wildfire thirteen years ago in which a crew member died and he survived with comparatively minor injuries. Since then he has had intrusive memories of the burnover, hypervigilance to sirens and radio chatter, and disrupted sleep, all of which worsened two years ago when his current analyst position came up for a reorganization review. He has done short stretches of counseling focused narrowly on the incident itself in the past, but conversations about it tend to slide into conversations about his job and whether he should still be doing it.",
+    "behavioral_description": "Tuan talks in a measured, plainspoken way, often falling into fire-service terminology when he's describing what happened or how his body reacts now. He answers direct questions but deflects emotional ones toward logistics: schedules, evaluations, what he's supposed to do differently at work. He'll push back if a suggestion sounds generic or like it wasn't built for someone in his line of work, and goes clipped and short when a question lands too close to the guilt he carries about his crewmate.",
+    "traits": {
+      "age": 52,
+      "gender": "transgender man",
+      "profession": "fire behavior analyst, formerly a wildland firefighter",
+      "relationship_status": "married, husband works as a hospital nurse",
+      "living_situation": "rents a small house with his husband near the district fire office",
+      "psychological_reactance": "medium",
+      "communication_register": "plainspoken, uses fire-service jargon, goes clipped when uncomfortable",
+      "help_seeking_orientation": "ambivalent, wants concrete tools over open-ended talk, skeptical of advice that ignores his specific job",
+      "cognitive_style": "analytical and detail-focused, replays decision points from the incident and from his career choices",
+      "clinical_history": {
+        "presentation": "post-traumatic stress",
+        "history": "Entrapment during a wildfire thirteen years ago in which a crew member died; symptoms intensified two years ago when his current desk role came up for a reorganization review."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "intrusive memories of the entrapment",
+        "hypervigilance to alarms and radio traffic",
+        "avoidance of return-to-field assignments",
+        "disrupted sleep with early waking",
+        "exaggerated startle response",
+        "guilt about the coworker's death",
+        "rumination about whether he should have left the job sooner"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "elevated",
+        "primary_emotion": "guilt-tinged anxiety"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000607",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

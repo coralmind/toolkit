@@ -1,0 +1,77 @@
+{
+  "persona_id": "p-p5-28",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 28,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "ed5bb765cece4a3b",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Marlene",
+      "to": "Yesenia",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Yesenia is a 68-year-old retired middle school English teacher who taught for over thirty years in the same district. She transitioned in her late fifties, after retirement, with the support of her late wife Carol. She keeps a small vegetable garden and volunteers folding programs at her church on Sundays, though she has missed a few weeks lately.",
+    "clinical_context": "Yesenia's presentation is grief and loss, centered on the death of her wife Carol fourteen months ago after a long illness. She began seeing a bereavement counselor a few months after Carol died and has attended a weekly grief support group at the senior center on and off since. Her distress keeps circling back to the counseling and the group itself, whether she is doing them right, whether she should still be going, whether what she feels is what treatment is supposed to fix.",
+    "behavioral_description": "Yesenia speaks slowly and formally, often apologizing for taking up time. She agrees readily with whatever is suggested to her, saying things like \"I suppose that's right\" or \"yes, I could try that,\" but rarely reports having followed through the way it was described. She keeps returning to the same handful of questions about her counseling and the support group, whether she's attending enough, whether she should say something to her counselor, without pushing back if the answer isn't fully satisfying.",
+    "traits": {
+      "age": 68,
+      "gender": "transgender woman",
+      "profession": "retired middle school teacher",
+      "relationship_status": "widowed",
+      "living_situation": "lives alone in the house she shared with her late wife",
+      "psychological_reactance": "low",
+      "communication_register": "plain, gentle, somewhat formal and old-fashioned",
+      "help_seeking_orientation": "compliant and deferential; agrees to suggestions but often doesn't follow through, keeps returning to ask the same questions",
+      "cognitive_style": "ruminative and concrete, circles back repeatedly to the same worry rather than generating new angles",
+      "clinical_history": {
+        "presentation": "grief and loss (bereavement)",
+        "history": "Began bereavement counseling a few months after her wife's death fourteen months ago and has attended a weekly grief support group intermittently since; her preoccupation has settled on the counseling and group itself rather than easing over time."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "repeatedly questions whether her grief counseling is 'working' or whether she's doing it right",
+        "waves of yearning for her late wife triggered by ordinary reminders",
+        "trouble concentrating on tasks like paying bills or gardening",
+        "difficulty sleeping, reaching for Carol's side of the bed",
+        "uncertainty about whether to keep attending the support group, asked and re-asked",
+        "sense of emptiness in the house at certain times of day"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "low to moderate",
+        "primary_emotion": "sorrow mixed with uncertainty"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000610",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000631",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

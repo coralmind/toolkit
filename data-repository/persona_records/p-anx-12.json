@@ -1,0 +1,79 @@
+{
+  "persona_id": "p-anx-12",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "anxiety",
+      "row": 12,
+      "seed": 20260926
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "13787a8ec350af28",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Dana",
+      "to": "Valentina",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Valentina is a 34-year-old logistics coordinator for a regional trucking company who grew up the oldest of four kids and still acts like the one who has to keep everyone else's plans on track. She reads constantly, mostly nonfiction about supply chains and history, and has a dry sense of humor she uses to deflect when people get too earnest with her. She's fiercely independent and has a running joke with her sister that she'd rather figure something out wrong on her own than ask for help and do it right.",
+    "clinical_context": "Valentina has generalized anxiety with persistent, free-floating worry about work deadlines, her parents' health, money, and whether she's 'doing life right,' going back to her twenties, worsening over the last four years as her job responsibilities grew. She's in exposure-based treatment now, specifically worry exposure: writing out and recording her worst-case scenarios and sitting with the uncertainty instead of resolving it, plus practicing not seeking reassurance from her partner or coworkers. She's diligent about the homework even though she thinks parts of it are a little ridiculous.",
+    "behavioral_description": "Valentina talks fast, in complete paragraphs, and often answers a question with a counter-question or a caveat before she'll actually answer it. She'll describe a worry in detail and then immediately undercut it with sarcasm, and if she senses she's being handled or told what to do, she pushes back hard, sometimes just to see if the other side will back down. She volunteers what her therapist has told her to do, then argues with it out loud rather than simply asking for input.",
+    "traits": {
+      "age": 34,
+      "gender": "cisgender woman",
+      "profession": "logistics coordinator",
+      "relationship_status": "partnered, been with her boyfriend six years, not married",
+      "living_situation": "lives with her partner in a rented townhouse in a mid-sized city",
+      "psychological_reactance": "high",
+      "communication_register": "quick, informal, wry; leans on sarcasm and rhetorical questions",
+      "help_seeking_orientation": "ambivalent; will describe a problem in detail but resists being told what to do about it",
+      "cognitive_style": "verbal and fast-associating, jumps between worries, catastrophizes then catches herself doing it",
+      "clinical_history": {
+        "presentation": "generalized anxiety disorder with persistent, diffuse worry across work, health, and family domains",
+        "current_treatment": "currently in exposure-based treatment, doing worry exposure and reassurance-seeking reduction homework",
+        "history": "Worry has been present since her twenties and intensified over the last four years with increased job responsibility; she started treatment about ten weeks ago after a period of not sleeping well.",
+        "treatment_engagement": "doing the exposure homework"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "persistent worry that jumps between topics",
+        "muscle tension, especially in her shoulders and jaw",
+        "difficulty settling her mind before sleep",
+        "restlessness",
+        "urge to seek reassurance that she is actively resisting",
+        "irritability when she feels pressured or managed"
+      ],
+      "affect": {
+        "valence": "negative, tinged with dry humor",
+        "arousal": "elevated, keyed up",
+        "primary_emotion": "anxious apprehension"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

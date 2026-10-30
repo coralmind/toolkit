@@ -1,0 +1,91 @@
+{
+  "persona_id": "p-ocd-34-nt-np",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 34,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "ee16949b736359e8",
+      "attempt": 2
+    },
+    "renamed": {
+      "from": "Marcus",
+      "to": "Yusuf",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-ocd-34-nt@1",
+    "changed_paths": [
+      "rendering.behavioral_description",
+      "rendering.clinical_context",
+      "rendering.states.affect.arousal",
+      "rendering.states.affect.primary_emotion",
+      "rendering.states.affect.valence",
+      "rendering.states.symptoms",
+      "rendering.traits.clinical_history.history",
+      "rendering.traits.clinical_history.presentation",
+      "rendering.traits.cognitive_style",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Yusuf is a 37-year-old civil engineer who spends his weekends restoring old furniture with his brother-in-law. He's methodical at work, well-liked by his team for double-checking everyone's calculations, and has a dry sense of humor he uses to deflect when things get heavy. He's married with a five-year-old daughter and coaches her soccer team on Saturdays when he can manage it.",
+    "clinical_context": "Yusuf has no mental-health presentation. Like most people, he occasionally has a passing thought about germs or the chance of his daughter getting sick, especially now that she's started school and brings home the usual seasonal colds. These thoughts come and go on their own; he doesn't dwell on them, and he doesn't do anything in particular to get rid of them. He has never sought or needed mental health treatment.",
+    "behavioral_description": "Yusuf talks in a self-deprecating, plain register, with a dry sense of humor he uses to deflect when things get heavy. He agrees readily with suggestions and thanks people for advice, but rarely pushes back or argues, even when he has no intention of following through. He tends to explain himself at length, circling back to reassure the listener that he's not particularly worried about things.",
+    "traits": {
+      "age": 37,
+      "gender": "cisgender man",
+      "profession": "civil engineer",
+      "relationship_status": "married",
+      "living_situation": "lives with wife and 5-year-old daughter",
+      "psychological_reactance": "low",
+      "communication_register": "plain with occasional clinical vocabulary, self-deprecating, mildly formal",
+      "help_seeking_orientation": "not seeking treatment, since he has no mental-health concerns to address; occasionally mentions a passing worry to his wife in ordinary conversation",
+      "cognitive_style": "methodical, prone to over-explaining and hedging",
+      "clinical_history": {
+        "presentation": "no mental-health presentation",
+        "current_treatment": "no current treatment",
+        "history": "No history of mental health treatment. Occasional passing thoughts about germs or his daughter getting sick, of the ordinary kind most people have, that come and go without lasting distress."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "occasional passing thought about germs after touching doorknobs or shaking hands, which fades on its own",
+        "washes hands at ordinary times, consistent with typical hygiene habits",
+        "brief worry about his daughter getting sick that resolves without needing reassurance",
+        "no avoidance of public restrooms, waiting rooms, or other everyday spaces",
+        "no repeated checking or mental reviewing of what he touched during the day"
+      ],
+      "affect": {
+        "valence": "neutral to mildly positive",
+        "arousal": "low",
+        "primary_emotion": "ordinary, mild concern that passes quickly"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000602",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

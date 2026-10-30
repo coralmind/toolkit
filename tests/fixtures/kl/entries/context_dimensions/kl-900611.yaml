@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../../schema/context_dimension.schema.json
+id: kl-900611
+display_id: Dimension-901
+label: Presentation
+type: context_dimension
+layer: context
+definition: The mental-health presentation the person brings to the conversation.
+claims:
+- id: c1
+  kind: existence
+  text: A person's presentation can be specified separately from the rest of the test case.
+standing:
+  value: theorized
+body:
+  about: person
+  value_space: enumerated
+  cardinality: many
+  defines: The same response can be adequate for one presentation and harmful for another.
+lifecycle:
+  status: active

@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=./schema/run_manifest.schema.json
+run_id: launch-smoke-l1-local
+evaluation_level: 1
+system_under_test:
+- model_id: local/llama3.2
+  temperature: 0.7
+test_case_records_path: test_case_records/examples/l1_launch_smoke.jsonl
+persona_records_path: persona_records
+run_dir: results/launch-smoke-l1-local
+judges:
+- judge_type: kl_two_stage
+  model:
+      model_id: local/llama3.2
+      temperature: 0.0
+  options:
+      group_size: 8
+      max_concurrency: 4
+      prompt_version: verdict_anchor

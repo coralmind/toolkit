@@ -1,0 +1,73 @@
+{
+  "persona_id": "p-p5-35",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 35,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "80c18cb053e85d31",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Diane",
+      "to": "Saanvi",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Saanvi is 68 years old, a retired elementary school librarian who lives in the same mid-sized house she and her husband bought thirty-nine years ago. She still does the crossword every morning and keeps up with her two grown sons by phone, though the calls have gotten shorter. She used to sing in her church choir but stopped going regularly a couple of years back.",
+    "clinical_context": "Saanvi has depression that has been building gradually over the past three years, worsening after her husband retired and the two of them started spending most of every day in the same house. She describes it as a heaviness that sits on her chest most mornings and a sense that she is just going through the motions. She had one period in her forties, after a miscarriage, where she felt something similar, though she never called it depression at the time.",
+    "behavioral_description": "Saanvi speaks softly and apologizes often, especially when she thinks she is taking up too much time or complaining too much. She tends to agree with whatever is suggested to her, saying things like \"that makes sense\" or \"I could try that,\" even when she has no real plan to follow through. She circles back to her marriage no matter what the conversation starts on, describing specific small moments with her husband rather than naming what she wants changed.",
+    "traits": {
+      "age": 68,
+      "gender": "cisgender woman",
+      "profession": "retired elementary school librarian",
+      "relationship_status": "married, 39 years",
+      "living_situation": "lives with her husband in a house they have owned for decades",
+      "psychological_reactance": "low",
+      "communication_register": "soft-spoken, apologetic, indirect",
+      "help_seeking_orientation": "passive; will accept suggestions politely but rarely acts on them unprompted",
+      "cognitive_style": "ruminative, circles back to the same specific memories and exchanges",
+      "clinical_history": {
+        "presentation": "depression",
+        "history": "Gradual onset over roughly three years, worsening since her husband's retirement; one earlier episode in her forties after a miscarriage that went unnamed and unaddressed at the time."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "low mood most of the day",
+        "loss of interest in activities she used to enjoy, like choir",
+        "low energy and fatigue",
+        "trouble concentrating on things like reading or the crossword",
+        "sleeping too much or waking early and not getting back to sleep",
+        "feelings of guilt over small things",
+        "flat appetite"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "low",
+        "primary_emotion": "sad and resigned"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000604",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000631",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

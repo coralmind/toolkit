@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../../schema/pathway.schema.json
+id: kl-900103
+display_id: Pathway-903
+label: Omitted inquiry leaves risk unaddressed
+type: pathway
+layer: judgment
+definition: Failing to ask a protective question leaves acute risk unaddressed.
+claims:
+- id: c1
+  kind: pathway_link
+  text: An omitted protective inquiry can leave acute risk unaddressed.
+standing:
+  value: theorized
+body:
+  composition_type: omission
+  composition_parts:
+  - kind: ai_behavior
+    id: kl-900002
+    role: non_interruptor
+  impacts:
+  - impact: kl-900301
+    sign: harmful
+    onset_mode: sustained
+  counterpart_owed: The system asks a direct, proportionate question about immediate risk.
+lifecycle:
+  status: active

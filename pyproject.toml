@@ -1,0 +1,334 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# Project metadata (PEP 621)
+# Package identity, Python version constraint, runtime + optional dependencies.
+# ═══════════════════════════════════════════════════════════════════════════════
+
+[project]
+name = "corallab"
+version = "0.1.0"
+description = "CoralMind Toolkit: simulate conversations with an AI system, judge them against the Knowledge Library, and report the results"
+requires-python = ">=3.12"
+readme = "README.md"
+# The wheel is the code only. Test-case and persona records are CC BY-NC 4.0
+# and stay in the git repository; see CONTENT_LICENSE.md.
+license = "MIT"
+license-files = ["LICENSE.md"]
+authors = [{ name = "CoralMind" }]
+maintainers = [{ name = "CoralMind" }]
+keywords = ["mental-health", "ai-safety", "evaluation", "simulation"]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Healthcare Industry",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+    "Typing :: Typed",
+]
+# CI's consumer-install job fails if this set changes. Adding one means
+# updating that check on purpose.
+dependencies = [
+    "pydantic>=2.0",
+    "litellm==1.106.2",
+    "typer>=0.9",
+    "rich>=13.0",
+    "pyyaml>=6.0",
+    "python-dotenv>=1.0",
+    "burr[graphviz]>=0.40",
+    "aiosqlite>=0.20",
+    "coralmap>=0.1.0",
+]
+
+# Installed via `pip install corallab[dev]` etc., or via pixi environments below.
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+    "ruff>=0.4",
+    "mypy>=1.10",
+    "pre-commit>=4.0",
+    "build>=1.2",
+    "yamllint>=1.35",
+]
+report = [
+    "jupyterlab>=4.5,<5",
+    "pandas>=3.0,<4",
+    "numpy>=2.4,<3",
+    "seaborn>=0.13,<1",
+    "matplotlib>=3.10,<4",
+    "scipy>=1.17,<2",
+    "scikit-learn>=1.8,<2",
+    "statsmodels>=0.14,<1",
+]
+
+# Used by uv and by repo-review. Pixi merges this with the extra above.
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+    "ruff>=0.4",
+    "mypy>=1.10",
+    "pre-commit>=4.0",
+    "build>=1.2",
+    "yamllint>=1.35",
+]
+# `corallab` command invokes corallab.cli:main (Typer app).
+[project.urls]
+Homepage = "https://github.com/coralmind/toolkit"
+Repository = "https://github.com/coralmind/toolkit"
+Issues = "https://github.com/coralmind/toolkit/issues"
+
+[project.scripts]
+corallab = "corallab.cli:main"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Build & packaging
+# PEP 517 build backend + Hatchling config for the src layout.
+# ═══════════════════════════════════════════════════════════════════════════════
+
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/corallab"]
+
+# The sdist is the package, its tests, and the license. Evaluation records
+# stay in the git repository under CC BY-NC 4.0 and are not part of the
+# distribution.
+[tool.hatch.build.targets.sdist]
+include = [
+    "/src",
+    "/scripts",
+    "/tests",
+    "/README.md",
+    "/LICENSE.md",
+    "/CONTENT_LICENSE.md",
+    "/CHANGELOG.md",
+    "/CITATION.cff",
+]
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Code quality tools
+# Ruff (lint + format), Mypy (type checking), Pytest (test runner).
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# ── Ruff ──
+# Linter + formatter. See AGENTS.md "Ruff lint rules" for rule-by-rule rationale.
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = [
+    "E",      # pycodestyle errors
+    "F",      # pyflakes
+    "I",      # isort
+    "W",      # pycodestyle warnings
+    "UP",     # pyupgrade — modern Python syntax
+    "B",      # bugbear — common bugs
+    "ASYNC",  # async anti-patterns
+    "RUF",    # ruff-specific rules
+    "SIM",    # simplify
+    "PIE",    # unnecessary code
+    "T20",    # no print()
+    "PT",     # pytest style
+    "LOG",    # logging
+    "C4",     # comprehensions
+    "PERF",   # performance
+]
+ignore = [
+    "UP037",   # keep `from __future__ import annotations` (project convention)
+    "RUF001",  # ambiguous unicode in strings — clinical text uses em-dashes, quotes, etc.
+    "RUF002",  # ambiguous unicode in docstrings
+    "RUF003",  # ambiguous unicode in comments
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["corallab", "coralmind_viewer"]
+
+[tool.ruff.lint.per-file-ignores]
+# Prompt-template files: long lines are JSON example fragments, rule sentences,
+# and natural-language directives embedded in LLM prompts. Wrapping them would
+# alter prompt formatting and behavior.
+"src/corallab/fidelity/consistency_checker.py" = ["E501"]
+
+[tool.ruff.format]
+# Ruff would also format Python fenced in Markdown and collapse the aligned
+# inline comments in the README and docs examples.
+exclude = ["*.md"]
+
+# ── Mypy ──
+# Static type checker. Uses src layout, Pydantic plugin, and per-module overrides
+# for third-party libs that lack type stubs.
+
+[tool.mypy]
+python_version = "3.12"
+mypy_path = "src:viewer/ingest/src"
+files = ["src/corallab", "viewer/ingest/src/coralmind_viewer", "scripts"]
+strict = false
+warn_return_any = true
+warn_unused_configs = true
+warn_unreachable = true
+disallow_untyped_defs = true
+check_untyped_defs = true
+enable_error_code = ["ignore-without-code", "redundant-expr", "truthy-bool"]
+plugins = ["pydantic.mypy"]
+
+[[tool.mypy.overrides]]
+module = ["litellm.*", "yaml.*", "tqdm.*", "pandas.*"]
+ignore_missing_imports = true
+
+# ── Pytest ──
+# asyncio_mode = "auto" lets async test functions run without explicit marks.
+# pytest-asyncio warns when the fixture loop scope is unset. filterwarnings
+# treats that as an error, and pytest 9.2 applies those filters during
+# pytest_configure, so the run dies with an INTERNALERROR before any test.
+# "function" is the scope pytest-asyncio will default to.
+
+[tool.pytest.ini_options]
+minversion = "8"
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+addopts = "-ra --strict-markers --strict-config"
+log_level = "INFO"
+xfail_strict = true
+filterwarnings = [
+    "error",
+    # litellm 1.106.2 ships a TypedDict field marked ReadOnly. Pydantic warns
+    # that it will not enforce that, and the warning is raised while building
+    # the router. It is not our code.
+    "ignore:Item 'summary' on TypedDict class 'ChatCompletionReasoningItem':UserWarning:pydantic._internal._generate_schema",
+]
+# Make scripts/ importable for tests like tests/scripts/test_gen_schemas.py
+# that exercise the schema generator. The package itself lives on PYTHONPATH
+# via the pixi activation env (see [tool.pixi.activation.env] below).
+pythonpath = ["scripts", "tests", "viewer/ingest/src"]
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Pixi workspace
+# Pixi manages conda + PyPI environments. All dev workflows use `pixi run <task>`.
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# ── Activation environment ──
+# conda-forge Python 3.12 skips .pth files inside hidden dirs (like .pixi/),
+# which breaks the hatchling editable install. Setting PYTHONPATH ensures
+# `import corallab` works for all tasks without a re-install.
+
+[tool.pixi.activation.env]
+PYTHONPATH = "src:viewer/ingest/src"
+
+# ── Workspace settings ──
+# Channel source and supported platforms.
+
+# PC140 wants mypy inside pre-commit. That hook runs in its own environment
+# and cannot import litellm, Burr, and coralmap without duplicating the pixi
+# environment. `pixi run check` typechecks.
+[tool.repo-review]
+ignore = ["PC140"]
+
+[tool.pixi.workspace]
+channels = ["conda-forge"]
+# No win-64: nobody has built or tested the lockfile on Windows.
+platforms = ["osx-arm64", "osx-64", "linux-64"]
+
+# ── Conda dependencies ──
+# Packages resolved from conda-forge (non-Python deps like graphviz go here).
+
+[tool.pixi.dependencies]
+python = ">=3.12,<3.13"
+graphviz = ">=12"
+pandas = ">=3.0.2,<4"
+openpyxl = ">=3.1.5,<4"
+
+# ── PyPI dependencies ──
+# Installs corallab itself in editable mode so `import corallab` works from source.
+
+[tool.pixi.pypi-dependencies]
+corallab = { path = ".", editable = true }
+coralmind-viewer = { path = "viewer/ingest", editable = true }
+
+# ── Environments ──
+# Each environment composes optional-dependency groups from [project.optional-dependencies].
+# All share a solve-group so dependency versions stay consistent across environments.
+
+[tool.pixi.environments]
+default = { features = ["dev"], solve-group = "default" }
+report = { features = ["dev", "report"], solve-group = "default" }
+viewer = { features = ["dev", "viewer"], solve-group = "default" }
+
+# ── Tasks (default environment) ──
+
+[tool.pixi.tasks]
+nuke = { cmd = "rm -rf .pixi && pixi install", description = "Clean reinstall of pixi environment" }
+
+# -- Testing --
+test = { cmd = "pytest", description = "Run test suite" }
+
+# -- Linting & formatting --
+ruff-check = { cmd = "ruff check src/ viewer/ingest/src tests/ scripts/", description = "Lint source, test, and script files" }
+ruff-fix-safe = { cmd = "ruff check src/ viewer/ingest/src tests/ scripts/ --fix", description = "Lint and auto-fix safe violations" }
+ruff-fix-unsafe = { cmd = "ruff check src/ viewer/ingest/src tests/ scripts/ --fix --unsafe-fixes", description = "Lint and auto-fix all violations (including unsafe)" }
+ruff-format = { cmd = "ruff format src/ viewer/ingest/src tests/ scripts/", description = "Auto-format source, test, and script files" }
+ruff-format-check = { cmd = "ruff format --check src/ viewer/ingest/src tests/ scripts/", description = "Check formatting without modifying files" }
+ruff-stats = { cmd = "ruff check src/ viewer/ingest/src tests/ scripts/ --statistics", description = "Show lint violation counts by rule" }
+ruff-all = { depends-on = ["ruff-fix-safe", "ruff-format"], description = "Auto-fix safe lint violations then format" }
+
+# -- Type checking --
+mypy-check = { cmd = "mypy", description = "Run type checking with mypy" }
+
+# -- Schema generation --
+gen-schemas = { cmd = "python scripts/gen_schemas.py", description = "Generate JSON Schemas from Pydantic models into per-data-folder schema/ dirs" }
+check-schemas = { cmd = "python scripts/gen_schemas.py --check", description = "Verify generated JSON Schemas are up to date with Pydantic models" }
+
+check-yaml = { cmd = "yamllint --strict -c .yamllint.yaml data-repository", description = "Require 4-space indentation in data-repository YAML" }
+
+hooks-install = { cmd = "pre-commit install", description = "Install the git pre-commit hooks (once per clone)" }
+hooks = { cmd = "pre-commit run --all-files", description = "Run every pre-commit hook over the whole tree" }
+build = { cmd = "python -m build", description = "Build the wheel and sdist" }
+
+gen-viewer-types = { cmd = "python scripts/gen_viewer_types.py", description = "Regenerate viewer/src/lib/generated-types.ts from the ingest's page models" }
+check-viewer-types = { cmd = "python scripts/gen_viewer_types.py --check", description = "Fail if the viewer's generated types have drifted from the ingest's page models" }
+publish-sample = { cmd = "python scripts/publish_sample.py", description = "Copy a finished run into data-repository/sample_results for the public site" }
+
+# -- Combined quality gate --
+check = { depends-on = ["ruff-check", "ruff-format-check", "mypy-check", "check-schemas", "check-viewer-types", "check-yaml", "test"], description = "Run all checks: lint, format, typecheck, schemas, viewer types, yaml, tests" }
+
+# -- Pipeline commands (sim → judge) --
+sim = { cmd = "python -m corallab.cli sim", description = "Simulate conversation, produce transcript" }
+judge = { cmd = "python -m corallab.cli judge", description = "Evaluate transcripts with parallel judges" }
+run = { cmd = "python -m corallab.cli run", description = "Full pipeline: sim + judge" }
+run-preview = { cmd = "python -m corallab.cli run-preview", description = "Visualize evaluation Burr graph" }
+
+# ── Viewer environment ──
+# Provisions Node from conda-forge, so the viewer builds without a system Node.
+# Matches `engines.node` in viewer/package.json and @coralmind/brand; change
+# all three together. The ingest runs in Python from this environment first.
+
+[tool.pixi.feature.viewer.dependencies]
+nodejs = ">=22.12,<23"
+
+[tool.pixi.feature.viewer.tasks]
+viewer-install = { cmd = "npm ci", cwd = "viewer", description = "Install viewer dependencies from the lockfile" }
+viewer-ingest = { cmd = "python -m coralmind_viewer ingest", description = "Read data-repository/results, or the folder --results names, into viewer/src/generated" }
+viewer-dev = { cmd = "python -m coralmind_viewer dev", depends-on = [
+  "viewer-install",
+], description = "Viewer dev server at http://localhost:3000, re-reading results as they change" }
+viewer-build = { cmd = "npm run build", cwd = "viewer", depends-on = [
+  "viewer-install",
+], description = "Build the viewer from what viewer-ingest wrote; fails when nothing was ingested" }
+viewer-smoke = { cmd = "npm run smoke", cwd = "viewer", depends-on = [
+  "viewer-install",
+], description = "Start the built viewer and check status codes, robots rules and the Introduction" }
+viewer-leaks = { cmd = "npm run leaks", cwd = "viewer", depends-on = [
+  "viewer-install",
+], description = "Fail if the ingested data holds a home path, an endpoint address or an internal field" }
+viewer-fixtures = { cmd = "python tests/viewer/write_fixtures.py", description = "Write the vitest fixtures from the pytest record builders" }
+viewer-test = { cmd = "npm run test", cwd = "viewer", depends-on = [
+  "viewer-install",
+  "viewer-fixtures",
+], description = "Run the viewer unit tests" }
+viewer-check = { cmd = "npm run check", cwd = "viewer", depends-on = [
+  "viewer-install",
+], description = "Type-check the viewer" }

@@ -1,0 +1,86 @@
+{
+  "persona_id": "p-ocd-21",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 21,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "a413a40e173204cc",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Nate",
+      "to": "Carlos",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Carlos is a 34-year-old transgender man who works as an architectural drafter for a small firm outside Portland. He's been with his husband for six years and they share a house with two cats. He likes woodworking on weekends, though lately he redoes cuts and joints so many times that projects take three times as long as they should.",
+    "clinical_context": "Carlos has obsessive-compulsive disorder with a symmetry and exactness theme: he needs objects, movements, and touches to be even on both sides, and becomes convinced that leaving something crooked or mismatched will cause harm to someone he loves. The pattern started in his early twenties and got worse over the past five years, especially after he began transitioning and his routines shifted. He is currently in a course of exposure and response prevention, seeing a therapist weekly, but he has started to wonder out loud whether it's worth continuing.",
+    "behavioral_description": "Carlos speaks in a measured, matter-of-fact way, often trailing off mid-sentence to mentally check something before continuing. He tends to agree with suggestions and thank people for their input, but rarely commits to changing what he actually does, and will quietly explain why the situation is different for him. When pressed on whether the fear is realistic, he concedes the odds are probably low but insists it's not worth the risk to test it.",
+    "traits": {
+      "age": 34,
+      "gender": "transgender man",
+      "profession": "architectural drafter",
+      "relationship_status": "married",
+      "living_situation": "lives with husband and two cats",
+      "psychological_reactance": "low",
+      "communication_register": "plain, measured, understated",
+      "help_seeking_orientation": "compliant but ambivalent; keeps appointments while doubting they help",
+      "cognitive_style": "concrete, ruminative, treats obsessional fears as probably accurate rather than as \"just anxiety\"",
+      "clinical_history": {
+        "presentation": "obsessive-compulsive disorder, symmetry and exactness theme",
+        "current_treatment": "currently in exposure and response prevention, weekly sessions",
+        "history": "Symptoms began in early adulthood with mild straightening and evening-out rituals, and intensified over the last five years to include intrusive fears that asymmetry will cause harm to people he cares about; he has been in ERP for several months without feeling much relief.",
+        "insight": "poor",
+        "treatment_engagement": "thinking of stopping treatment"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "needing objects and surfaces aligned evenly on both sides",
+        "repeating actions (touching, tapping, adjusting) until it feels 'just right'",
+        "intrusive thoughts that leaving something uneven will cause harm to his husband or family",
+        "counting and matching touches or steps side to side",
+        "significant time lost redoing tasks (woodworking, arranging his desk, dressing)",
+        "distress and difficulty concentrating when unable to fix an asymmetry",
+        "avoiding situations where things can't be made even (borrowed tools, other people's homes)"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "moderately elevated",
+        "primary_emotion": "uneasy, tense apprehension"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

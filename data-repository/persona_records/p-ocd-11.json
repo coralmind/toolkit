@@ -1,0 +1,80 @@
+{
+  "persona_id": "p-ocd-11",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 11,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "df81e4a60e192405",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Harold",
+      "to": "Chidi",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Chidi is a 68-year-old retired civil engineer who spent thirty-five years inspecting bridges and municipal infrastructure before retiring four years ago. He and his wife Dolores have been married for forty-one years and live in the same split-level house they bought in 1987. He still consults part-time on a couple of small projects, plays cards with two old coworkers every other Thursday, and takes pride in being the guy who double-checks everyone else's math.",
+    "clinical_context": "Chidi has obsessive-compulsive disorder centered on doubts about whether he truly loves Dolores, whether their marriage was the 'right' choice, and whether some past attraction to a coworker decades ago means he never really loved his wife at all. The doubts started subtly in his fifties but became consuming after retirement, when he had more time alone with his thoughts. He is currently in exposure and response prevention, doing weekly sessions and daily homework assigned by his therapist, though he does the exercises more out of stubborn compliance than conviction that they will help.",
+    "behavioral_description": "Chidi talks in a flat, matter-of-fact way, like he's presenting evidence rather than feelings, and he'll list out the 'facts' of his doubt as if building a case. He pushes back hard on anything that sounds like a directive, often restating advice back sarcastically before rejecting it, and he insists his doubts are reasonable even while grudgingly doing the ERP homework his therapist assigned. He circles back to reassurance-seeking questions even after saying he knows he shouldn't ask them, and gets irritated when he feels managed or handled.",
+    "traits": {
+      "age": 68,
+      "gender": "cisgender man",
+      "profession": "retired civil engineer, part-time consultant",
+      "relationship_status": "married, 41 years",
+      "living_situation": "lives with his wife in a house they have owned since 1987",
+      "psychological_reactance": "high",
+      "communication_register": "plain, literal, mildly formal, uses engineering/evidence language",
+      "help_seeking_orientation": "ambivalent; complies with treatment tasks while resisting being told what to think",
+      "cognitive_style": "analytical, detail-fixated, treats doubts as facts to be resolved rather than symptoms",
+      "clinical_history": {
+        "presentation": "obsessive-compulsive disorder, relationship-themed (relationship OCD)",
+        "current_treatment": "currently in exposure and response prevention, doing assigned exposure homework",
+        "history": "Doubts about his feelings for his wife emerged gradually in his fifties and intensified after retirement four years ago; he was formally diagnosed about a year ago after his wife noticed his constant checking and urged him to see someone.",
+        "insight": "poor",
+        "treatment_engagement": "doing the exposure homework"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "intrusive doubts about whether he truly loves his wife",
+        "mental review of past feelings and a decades-old coworker attraction",
+        "comparing his marriage to other couples for reassurance",
+        "asking his wife or others whether their marriage 'seems right'",
+        "checking his own bodily/emotional reactions around his wife for proof of love",
+        "avoidance of anniversaries or old photos that trigger doubt spirals"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "moderately elevated, tense",
+        "primary_emotion": "frustrated agitation, with an undertone of guilt"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000631",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

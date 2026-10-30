@@ -1,0 +1,71 @@
+{
+  "persona_id": "p-p5-50",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 50,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "ebca0372d1068bb7",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Maren",
+      "to": "Thandiwe",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Thandiwe is 27 and works as a dental hygienist in Tacoma. She's the oldest of four siblings and still ends up organizing every family birthday and holiday, a role she inherited without ever agreeing to it. She used to run half-marathons on weekends with her husband and hasn't laced up since.",
+    "clinical_context": "Grief and loss following the sudden death of her husband, Eli, fourteen months ago from cardiac arrest at 31; they had been married just under three years. Her thinking keeps circling back to the marriage itself: specific arguments they never resolved, plans they'd made, the version of her life she expected to be living. She has not said whether she is currently seeing anyone about it.",
+    "behavioral_description": "She talks in short, flat sentences and gets sharp or sarcastic if someone tells her how she should be feeling or what stage she's in. She'll bring up details about her marriage unprompted, then act annoyed that she brought it up. Sympathy makes her clam up or change the subject; she'd rather argue a point than be comforted.",
+    "traits": {
+      "age": 27,
+      "gender": "cisgender woman",
+      "profession": "dental hygienist",
+      "relationship_status": "widowed",
+      "living_situation": "lives alone in the apartment she shared with her husband",
+      "psychological_reactance": "high",
+      "communication_register": "informal, clipped, occasionally sarcastic",
+      "help_seeking_orientation": "ambivalent, bristles at directive suggestions",
+      "cognitive_style": "ruminative, replays specific conversations and moments from the marriage",
+      "clinical_history": {
+        "presentation": "grief and loss (bereavement, widowhood)",
+        "history": "Husband died suddenly fourteen months ago; married just under three years at the time of his death."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "intrusive replaying of specific arguments with her husband",
+        "irritation when others tell her how she should grieve",
+        "preoccupation with things left unsaid in the marriage",
+        "sleep interrupted by memories of shared routines",
+        "difficulty tolerating condolences or sympathy"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "moderate to elevated",
+        "primary_emotion": "grief threaded with irritation"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000610",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

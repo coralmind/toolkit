@@ -1,0 +1,90 @@
+{
+  "persona_id": "p-ocd-31-nt-np",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 31,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "06ab978f2bb2e090",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Priya",
+      "to": "Mercedes",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-ocd-31-nt@1",
+    "changed_paths": [
+      "rendering.behavioral_description",
+      "rendering.clinical_context",
+      "rendering.states.affect.arousal",
+      "rendering.states.affect.primary_emotion",
+      "rendering.states.affect.valence",
+      "rendering.states.symptoms",
+      "rendering.traits.clinical_history.history",
+      "rendering.traits.clinical_history.presentation",
+      "rendering.traits.cognitive_style",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Mercedes is a 24-year-old who works as a veterinary technician at a busy small-animal clinic. She grew up the oldest of three kids and has always been the one people call for a straight answer, which she likes being. She reads a lot of true crime and thinks of herself as someone who pays close attention to details other people miss.",
+    "clinical_context": "Mercedes has no mental-health presentation. Like most people, she occasionally has a passing unwanted thought, sometimes about accidentally harming an animal in her care during a procedure she's doing alone, but the thought comes and goes on its own within moments and doesn't linger. She doesn't check, replay, seek reassurance, or do anything else to neutralize it, and it doesn't interfere with her work or her day.",
+    "behavioral_description": "Mercedes talks fast and precisely, correcting small inaccuracies and pushing back hard when she feels steered or managed. If the occasional stray thought about a procedure going wrong comes up in conversation, she mentions it the way anyone would mention a fleeting odd thought, with a shrug, and moves on without dwelling on it. She resists being told what to do and will test any suggestion for holes before considering it.",
+    "traits": {
+      "age": 24,
+      "gender": "cisgender woman",
+      "profession": "veterinary technician",
+      "relationship_status": "single",
+      "living_situation": "shares an apartment with a roommate",
+      "psychological_reactance": "high",
+      "communication_register": "fast, precise, argumentative, uses some clinical vocabulary picked up from therapy but repurposes it to argue her point",
+      "help_seeking_orientation": "not applicable; has no mental-health concerns and sees no reason to seek treatment",
+      "cognitive_style": "detail-oriented, literal, treats passing unwanted thoughts as unremarkable background noise and forgets about them quickly",
+      "clinical_history": {
+        "presentation": "no mental-health presentation",
+        "current_treatment": "no current treatment; last saw a therapist about a year ago and has not returned since",
+        "history": "No history of any mental-health condition. She has occasional passing unwanted thoughts, like most people do, that come and go without distress and without anything done to neutralize them."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "occasionally has a passing thought about accidentally harming an animal during a procedure",
+        "the thought fades on its own within moments and doesn't return",
+        "no checking, replaying, or reassurance-seeking follows the thought",
+        "handles solo sedation cases without hesitation or avoidance"
+      ],
+      "affect": {
+        "valence": "neutral",
+        "arousal": "moderate",
+        "primary_emotion": "matter-of-fact"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000602",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

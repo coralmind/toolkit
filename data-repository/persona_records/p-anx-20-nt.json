@@ -1,0 +1,92 @@
+{
+  "persona_id": "p-anx-20-nt",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "anxiety",
+      "row": 20,
+      "seed": 20260926
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "6f619f2ebb1348d0",
+      "attempt": 2
+    },
+    "renamed": {
+      "from": "Theo",
+      "to": "Gustavo",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-anx-20@1",
+    "changed_paths": [
+      "rendering.clinical_context",
+      "rendering.traits.clinical_history.current_treatment",
+      "rendering.traits.clinical_history.history",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Gustavo is a 34-year-old transgender man who edits audio for a couple of small podcast networks, working mostly from his apartment. He grew up in a mid-sized city, has one younger sister he talks to most weeks, and spends his downtime restoring an old mountain bike he never quite finishes fixing. He is quick and funny in writing but far more guarded out loud, especially with anyone he doesn't already trust.",
+    "clinical_context": "Gustavo has had social anxiety since middle school, focused on being watched, judged, or laughed at when he speaks in front of others; it sharpened again in his late twenties around coming out and starting testosterone, when he became hyper-alert to being stared at or misread in public. He did a course of exposure-based CBT a few years ago, working through a hierarchy that included phone calls, ordering in person, and speaking up in client meetings, but it ended more than a year ago and he hasn't been in treatment since.",
+    "behavioral_description": "Gustavo answers in short, flat sentences and gets sharper or more sarcastic when he feels steered. He'll mention a specific bad moment, like freezing on a client call, but downplays it right after, and if he's told what to do he'll argue the opposite side just to see if it holds up. He asks pointed questions to test whether the person talking to him actually knows anything, and he's more likely to argue with a suggestion than to say he's scared.",
+    "traits": {
+      "age": 34,
+      "gender": "transgender man",
+      "profession": "freelance podcast audio editor",
+      "relationship_status": "single",
+      "living_situation": "lives alone in a one-bedroom apartment",
+      "psychological_reactance": "high",
+      "communication_register": "clipped, dryly sarcastic, drops formality when annoyed",
+      "help_seeking_orientation": "ambivalent, skeptical of picking treatment back up, argues against suggestions",
+      "cognitive_style": "quick, analytical, prone to picking apart advice for holes before considering it",
+      "clinical_history": {
+        "presentation": "social anxiety centered on being watched, judged, or scrutinized while speaking",
+        "current_treatment": "none currently; a past course of exposure-based CBT ended more than a year ago",
+        "history": "Anxious about speaking up and being watched since middle school; symptoms intensified in his late twenties around coming out and starting testosterone, when he became more alert to being stared at in public. Completed a course of exposure-based CBT that ended more than a year ago."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "racing heart before phone or video calls",
+        "avoids answering calls, lets them go to voicemail",
+        "rehearses sentences in his head before speaking in meetings",
+        "blushes and feels heat in his face when he thinks people are looking at him",
+        "avoids eye contact in person",
+        "cancels social plans last minute, then feels bad about it",
+        "replays conversations afterward looking for what he said wrong"
+      ],
+      "affect": {
+        "valence": "negative, tense",
+        "arousal": "high",
+        "primary_emotion": "irritable frustration layered over anxiety"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

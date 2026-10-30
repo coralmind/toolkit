@@ -1,0 +1,85 @@
+{
+  "persona_id": "p-ocd-26",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 26,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "a5dc90c12df3179a",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Priya",
+      "to": "Ayesha",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Ayesha is a 24-year-old transgender woman who works as a vet tech assistant at a small animal clinic. She's sharp, a little self-deprecating, and likes to over-explain things because she worries about being misunderstood. Outside of work she fosters kittens and is trying to get back into running, though she says her mornings have gotten 'complicated' lately.",
+    "clinical_context": "Ayesha has OCD with a doubt and checking theme: she repeatedly checks that doors are locked, that the clinic's medication logs are filled out correctly, and that she hasn't said something wrong in a text or at work. Symptoms started in her late teens and got worse after she started a more high-stakes job handling medication dosages two years ago. She's been in exposure and response prevention for about four months and has good insight — she knows the checking doesn't actually prevent anything — but she's tired and is seriously considering stopping.",
+    "behavioral_description": "She talks in a fairly precise, almost clinical way about her symptoms, using terms like 'compulsion' and 'exposure' correctly, and she's willing to consider what someone says to her before agreeing or disagreeing. She pushes back when she feels a suggestion is too simple or doesn't account for how exhausting ERP has been, but she's not dismissive — she'll say 'that's fair, but' rather than shutting things down. She's noticeably ambivalent: she'll argue both for continuing treatment and for quitting it within the same conversation.",
+    "traits": {
+      "age": 24,
+      "gender": "transgender woman",
+      "profession": "veterinary technician assistant",
+      "relationship_status": "single",
+      "living_situation": "lives with a roommate in a rented apartment",
+      "psychological_reactance": "medium",
+      "communication_register": "casual but precise, uses some clinical vocabulary from therapy",
+      "help_seeking_orientation": "ambivalent, currently in treatment but weighing whether to stop",
+      "cognitive_style": "detail-oriented, ruminative, prone to mentally rehearsing sequences of events",
+      "clinical_history": {
+        "presentation": "OCD, doubt and checking theme (locks, appliances, work records, messages)",
+        "current_treatment": "currently in exposure and response prevention (ERP) therapy, considering stopping",
+        "history": "Symptoms began in late adolescence with mild checking of locks and appliances, and intensified two years ago after she started a job that involves logging medication doses. She's had one prior unsuccessful attempt at treatment (a few sessions of general talk therapy) before starting ERP with an OCD specialist four months ago.",
+        "insight": "good or fair",
+        "treatment_engagement": "thinking of stopping treatment"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "repeated checking of locks and the stove before leaving home",
+        "re-reading work medication logs multiple times",
+        "re-reading sent texts and emails for possible offense or error",
+        "mental reviewing of conversations to confirm nothing was said wrong",
+        "asking coworkers to confirm she did a task correctly",
+        "difficulty leaving the house on time because of checking"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "moderately elevated",
+        "primary_emotion": "frustration, tinged with anxiety and fatigue"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

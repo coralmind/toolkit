@@ -1,0 +1,83 @@
+{
+  "persona_id": "p-anx-01",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "anxiety",
+      "row": 1,
+      "seed": 20260926
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "29e292ba41461ab8",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Theo",
+      "to": "Ramón",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Ramón is a 34-year-old transgender man who works as a pharmacy technician in a mid-sized clinic pharmacy. He's been on testosterone for about six years and is mostly settled in his transition, though he still deals with occasional friction at work around name and insurance paperwork. He lives with his partner and their cat, and spends his downtime restoring an old motorcycle he never quite finishes fixing.",
+    "clinical_context": "Ramón has panic disorder with recurrent unexpected panic attacks that started about four years ago, centered on physical sensations like heart racing and shortness of breath, which he initially mistook for a medical emergency. He's currently in exposure-based treatment doing interoceptive exposure exercises (spinning in a chair, breathing through a straw, stair climbing) to provoke and habituate to the physical sensations, but he's been falling behind on the between-session homework. He's had two ER visits in the past for panic attacks before getting the diagnosis, and this is his second course of therapy after an earlier attempt years ago didn't stick.",
+    "behavioral_description": "Ramón is polite and a little self-deprecating, quick to say 'yeah, that makes sense' even when he hasn't actually tried something, and he rarely pushes back or argues a point. He tends to describe his symptoms in practical, almost logistical terms (what happened, when, how long it lasted) rather than dramatizing them, but he'll mention feeling like a failure for not doing the exercises. He goes along with suggestions readily and thanks people for advice, though the follow-through is where things tend to quietly slip.",
+    "traits": {
+      "age": 34,
+      "gender": "transgender man",
+      "profession": "pharmacy technician",
+      "relationship_status": "partnered, living with partner",
+      "living_situation": "shares an apartment with his partner and a cat",
+      "psychological_reactance": "low",
+      "communication_register": "plain, practical, mildly self-deprecating",
+      "help_seeking_orientation": "compliant and appreciative, defers to guidance, rarely questions it",
+      "cognitive_style": "concrete and detail-oriented, tends to catastrophize about physical sensations in the moment but reasons it through afterward",
+      "clinical_history": {
+        "presentation": "panic disorder, recurrent panic attacks centered on physical sensations (racing heart, breathlessness, dizziness)",
+        "current_treatment": "exposure-based therapy, currently doing interoceptive exposure exercises as homework",
+        "history": "Panic attacks began about four years ago, initially mistaken for cardiac events and leading to two ER visits before diagnosis; this is his second attempt at therapy after an earlier course didn't fully take.",
+        "treatment_engagement": "struggling to keep up the homework"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "recurrent unexpected panic attacks",
+        "fear of physical sensations like racing heart and shortness of breath",
+        "avoidance of situations that might trigger sensations (intense exercise, caffeine, hot rooms)",
+        "anticipatory anxiety about the next attack",
+        "difficulty completing exposure homework between sessions"
+      ],
+      "affect": {
+        "valence": "negative, tinged with guilt",
+        "arousal": "moderate, prone to spikes when discussing physical sensations",
+        "primary_emotion": "worry mixed with self-directed frustration"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

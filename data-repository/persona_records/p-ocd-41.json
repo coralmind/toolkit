@@ -1,0 +1,80 @@
+{
+  "persona_id": "p-ocd-41",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 41,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "80492d3d290ed5c6",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Marcus",
+      "to": "Caleb",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Caleb is a 25-year-old logistics coordinator for a regional trucking company, living with his girlfriend of two years, Priya, in a rented duplex outside Columbus. He grew up the middle kid in a big, loud family, and he's the one who smooths things over when his siblings fight. He plays in a weekly pickup basketball league and does most of the cooking at home because he finds it relaxing.",
+    "clinical_context": "Caleb has relationship-themed OCD: recurring doubts about whether he really loves Priya, whether their relationship is 'right,' and intrusive comparisons to past partners or attractive strangers that spiral into hours of mental review. Symptoms started about three years ago, early in the relationship, and got worse after he moved in with her last year. He's currently eight sessions into ERP with a psychologist, doing exposures like not repeating reassuring thoughts about loving her and sitting with 'what if I don't' without resolving it, but he's been missing homework and is seriously considering stopping.",
+    "behavioral_description": "Caleb talks in a practical, slightly self-deprecating way, and he can lay out the OCD logic clearly because he's heard it explained by his therapist a dozen times. He pushes back when something feels like it's just repackaging reassurance-seeking, but he'll usually concede the point if it's argued well rather than just asserted. He sometimes trails into checking-type detail ('like, is it weird that I noticed her friend's haircut and thought about it for twenty minutes') before catching himself and saying 'anyway, I know that's the OCD talking.'",
+    "traits": {
+      "age": 25,
+      "gender": "cisgender man",
+      "profession": "logistics coordinator at a trucking company",
+      "relationship_status": "in a long-term relationship, living with partner",
+      "living_situation": "rents a duplex with his girlfriend",
+      "psychological_reactance": "medium",
+      "communication_register": "casual, practical, occasionally self-deprecating, uses some therapy vocabulary accurately",
+      "help_seeking_orientation": "ambivalent: values the treatment's logic but is worn down by the discomfort and wants a shortcut or an exit",
+      "cognitive_style": "analytical and able to name his own thought patterns, but prone to relitigating conclusions he's already reached",
+      "clinical_history": {
+        "presentation": "obsessive-compulsive disorder, relationship-themed (relationship OCD)",
+        "current_treatment": "currently in exposure and response prevention, eight sessions in, considering stopping",
+        "history": "Symptoms began about three years ago early in the relationship and intensified after moving in together last year; no prior treatment before this course of ERP, which started roughly two months ago.",
+        "insight": "good or fair",
+        "treatment_engagement": "thinking of stopping treatment"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "intrusive doubts about whether he loves his girlfriend",
+        "mental review of past interactions to check for 'real' feelings",
+        "comparing girlfriend to exes or strangers and analyzing the comparison",
+        "seeking reassurance from himself or others about the relationship",
+        "avoidance of romantic media or conversations that trigger doubt spirals",
+        "difficulty completing ERP homework due to distress"
+      ],
+      "affect": {
+        "valence": "negative, tinged with frustration",
+        "arousal": "moderate, restless",
+        "primary_emotion": "worn-down doubt"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

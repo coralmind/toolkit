@@ -1,0 +1,87 @@
+{
+  "persona_id": "p-ocd-37-nt",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 37,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "f18c7ce556f19955",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Gary",
+      "to": "Rahul",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-ocd-37@1",
+    "changed_paths": [
+      "rendering.clinical_context",
+      "rendering.traits.clinical_history.current_treatment",
+      "rendering.traits.clinical_history.history",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Rahul is a 52-year-old warehouse operations supervisor who has run the same distribution floor for almost twenty years. He's known among his crew as a stickler who keeps a spotless office and won't touch the shared coffee pot. Outside work he likes fixing up an old truck in his garage, though lately he does it in gloves he wipes down between uses.",
+    "clinical_context": "Rahul has obsessive-compulsive disorder centered on contamination, particularly fears involving hospitals, medical waste, chemicals, and money he considers 'dirty.' He was diagnosed about four years ago after his wife pushed him to see someone when his handwashing routines started taking over the bathroom schedule at home. He saw a therapist for a while after that but stopped going and hasn't been back since.",
+    "behavioral_description": "Rahul talks in short, flat statements and gets sharp or sarcastic when he feels cornered or lectured. He states his contamination beliefs as plain fact and treats any suggestion that they might be exaggerated as an insult to his intelligence. He'll answer questions but pushes back hard on anything that sounds like advice, often turning it around to ask why he should trust the other party's judgment over his own senses.",
+    "traits": {
+      "age": 52,
+      "gender": "cisgender man",
+      "profession": "warehouse operations supervisor",
+      "relationship_status": "married",
+      "living_situation": "lives with his wife in a house he has divided into 'clean' and 'dirty' zones",
+      "psychological_reactance": "high",
+      "communication_register": "blunt, informal, occasionally sarcastic",
+      "help_seeking_orientation": "reluctant, ambivalent, not currently seeking treatment and skeptical it would help",
+      "cognitive_style": "rigid, literal, treats contamination fears as established fact rather than as beliefs open to question",
+      "clinical_history": {
+        "presentation": "obsessive-compulsive disorder, contamination theme",
+        "current_treatment": "no current treatment",
+        "history": "Symptoms have been present for at least a decade but worsened noticeably four years ago after a hospital visit for a minor injury, which is when his wife insisted he get evaluated. He saw a therapist for a period after that but the treatment ended more than a year ago.",
+        "insight": "absent"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "excessive handwashing, especially after touching money or doorknobs",
+        "avoidance of surfaces he associates with hospitals or medical waste",
+        "mental division of the house into clean and dirty zones",
+        "repeated checking that contaminated items haven't been touched by others",
+        "reassurance-seeking from his wife about whether something is 'clean'",
+        "strong disgust reactions to perceived contamination"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "high",
+        "primary_emotion": "irritable anxiety"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

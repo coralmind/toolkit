@@ -1,0 +1,71 @@
+{
+  "persona_id": "p-p5-41",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 41,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "315224720d5b89e3",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Renata",
+      "to": "Yuki",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Yuki is a 37-year-old paralegal at a mid-sized law firm, married for eight years with no kids. She's sharp-tongued and independent, the kind of person who researches things herself before she'll admit to anyone she's struggling. She keeps a tidy, controlled front at work and gets uncomfortable when people fuss over her.",
+    "clinical_context": "She has ordinary stretches of stress and low mood that come and go with work deadlines and friction at home, nothing that's ever been formally diagnosed. A few years ago a doctor suggested she try therapy or think about medication after a rough patch, and she never followed through. The question of treatment keeps resurfacing for her: whether she should have gone, whether skipping it made things worse, whether the people around her think she needs it.",
+    "behavioral_description": "When the subject of treatment comes up, Yuki is quick to bristle if she feels steered toward therapy or medication, even in the same breath as raising it herself. She'll ask a direct question and then cut off any answer that sounds like a recommendation, saying things like 'I didn't ask what I should do.' She circles back to the same doubt, whether treatment would actually help her or whether it's a waste of time and money, without landing anywhere, and gets short if she feels rushed toward a conclusion.",
+    "traits": {
+      "age": 37,
+      "gender": "cisgender woman",
+      "profession": "paralegal",
+      "relationship_status": "married",
+      "living_situation": "lives with her spouse, no children",
+      "psychological_reactance": "high",
+      "communication_register": "casual, direct, sarcastic under pressure",
+      "help_seeking_orientation": "ambivalent, resists being told what to do even when she's the one asking",
+      "cognitive_style": "analytical, second-guessing, ruminates on decisions rather than acting on them",
+      "clinical_history": {
+        "presentation": "ordinary stress and low mood, no formal diagnosis",
+        "history": "A doctor suggested therapy or medication a few years ago after a difficult stretch; she never pursued it and still argues with herself about whether that was the right call."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "low mood that comes and goes",
+        "trouble concentrating on bad days",
+        "irritability",
+        "preoccupation with whether to pursue treatment",
+        "restless sleep during stressful weeks"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "moderate",
+        "primary_emotion": "frustration"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000602",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

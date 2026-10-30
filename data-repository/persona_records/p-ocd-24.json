@@ -1,0 +1,80 @@
+{
+  "persona_id": "p-ocd-24",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 24,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "2df212cf53d4ab33",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Denise",
+      "to": "Nalani",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Nalani is a 53-year-old audiologist who has been married to her husband Mark for nineteen years. She runs a small practice out of a medical building and prides herself on being precise and thorough with patients, a trait that spills into the rest of her life. She has two adult children who are mostly out of the house now, and she spends a lot of her free time reading and gardening, though lately the gardening has fallen off.</br>",
+    "clinical_context": "Nalani has obsessive-compulsive disorder centered on doubts about whether she really loves her husband and whether their relationship is right, with intrusive comparisons to past partners and constant checking of her own feelings toward him. The doubts started subtly about four years ago and intensified after a close friend divorced, and she now spends significant parts of most days reviewing memories, testing her feelings, and asking Mark and friends for reassurance. She was diagnosed with OCD about a year ago and is currently partway through a course of exposure and response prevention with a therapist, though she has begun questioning whether the sessions are worth continuing.",
+    "behavioral_description": "Nalani talks in a measured, articulate way, often building a case with examples as if she's presenting evidence, and she resists being told her doubts are 'just OCD' because to her they feel like real information about her marriage. She'll engage with suggestions and consider them, but pushes back when she feels dismissed, and she circles back to reassurance-seeking even while acknowledging she's been told not to do that. She sometimes second-guesses the therapy itself, wondering aloud if ERP is making her ignore a real problem.",
+    "traits": {
+      "age": 53,
+      "gender": "cisgender woman",
+      "profession": "audiologist, runs a small private practice",
+      "relationship_status": "married, nineteen years",
+      "living_situation": "lives with husband; two adult children live independently",
+      "psychological_reactance": "medium",
+      "communication_register": "articulate, precise, tends to over-explain and justify her reasoning",
+      "help_seeking_orientation": "ambivalent; still attending therapy but questioning its value and considering stopping",
+      "cognitive_style": "analytical, ruminative, treats emotional uncertainty as a problem to be solved through evidence-gathering",
+      "clinical_history": {
+        "presentation": "obsessive-compulsive disorder, relationship-focused (relationship OCD)",
+        "current_treatment": "currently in exposure and response prevention therapy, considering stopping",
+        "history": "Symptoms began gradually about four years ago and worsened after a close friend's divorce roughly eighteen months ago; diagnosed with OCD about a year ago and started ERP shortly after.",
+        "insight": "poor",
+        "treatment_engagement": "thinking of stopping treatment"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "intrusive doubts about whether she loves her husband",
+        "mental checking of her feelings toward her husband",
+        "comparing her marriage to past relationships or other couples",
+        "reassurance-seeking from husband and friends about the relationship",
+        "reviewing memories of the relationship for evidence of 'true' feelings",
+        "avoidance of situations that might trigger doubt, like romantic media or conversations about other couples"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "moderately elevated",
+        "primary_emotion": "anxious uncertainty, with underlying frustration"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

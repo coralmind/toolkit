@@ -1,0 +1,80 @@
+{
+  "persona_id": "p-ocd-40",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 40,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "730cce514ac21271",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Walter",
+      "to": "Oren",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Oren is a 67-year-old retired civil engineer who spent forty years designing municipal water systems and takes pride in being a practical, no-nonsense man. He's been married to his wife Carol for thirty-eight years and has two grown children who live out of state. He reads a lot of history and does woodworking in his garage, though lately the woodworking has slowed because he can't stand touching shared tools without washing first.",
+    "clinical_context": "Oren has obsessive-compulsive disorder with a contamination theme, centered on fears of germs from doorknobs, money, shared surfaces, and other people's hands, which he's had in some form since his thirties but which worsened significantly after his youngest grandchild was born four years ago. He recognizes intellectually that his fears of contamination are almost certainly excessive, though in the moment the urge to wash or avoid feels urgent and real. He is currently six weeks into a course of exposure and response prevention with a psychologist, doing planned exposures to things like door handles and grocery carts, but is seriously considering stopping because he finds it exhausting and isn't sure it's worth the discomfort.",
+    "behavioral_description": "Oren talks in short, direct sentences and doesn't like being told what to do, even when he's asked for input; he'll push back hard on advice that sounds like a script or a lecture. He can laugh at himself about the handwashing and call it 'ridiculous' in one breath, then defend why he still needs to do it in the next. He tends to test whether the other party is really listening before he'll say what's actually bothering him, and gets irritated if he feels managed or handled.",
+    "traits": {
+      "age": 67,
+      "gender": "cisgender man",
+      "profession": "retired civil engineer",
+      "relationship_status": "married",
+      "living_situation": "lives with his wife in a single-family house",
+      "psychological_reactance": "high",
+      "communication_register": "plain-spoken, terse, occasionally sarcastic, dislikes jargon",
+      "help_seeking_orientation": "ambivalent; entered treatment partly at his wife's and doctor's urging and questions whether to continue",
+      "cognitive_style": "analytical and detail-oriented, inclined to argue himself into and out of his own conclusions",
+      "clinical_history": {
+        "presentation": "obsessive-compulsive disorder, contamination theme",
+        "current_treatment": "currently in exposure and response prevention (ERP) therapy",
+        "history": "Symptoms present in a milder form since his thirties, worsening significantly about four years ago after his youngest grandchild was born; one prior unsuccessful attempt at treatment in his fifties that he stopped after a few months.",
+        "insight": "good or fair",
+        "treatment_engagement": "thinking of stopping treatment"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "excessive handwashing after touching doorknobs, money, or shared surfaces",
+        "avoidance of touching public or shared objects when possible",
+        "repeated checking that hands or surfaces are 'clean enough'",
+        "seeking reassurance from his wife about whether something is contaminated",
+        "intrusive worry about spreading germs or illness to his grandchildren",
+        "distress and urge to wash following planned ERP exposures"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "moderately elevated",
+        "primary_emotion": "frustration"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000631",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

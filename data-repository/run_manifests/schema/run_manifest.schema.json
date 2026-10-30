@@ -1,0 +1,303 @@
+{
+  "$defs": {
+    "ElicitationFidelityConfig": {
+      "additionalProperties": false,
+      "description": "Post-conversation check that the simulated person elicited the test case.\n\nOne model call on the finished transcript. There is no per-turn check.\nUnknown keys are an error.",
+      "properties": {
+        "model": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ModelCallConfig"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Model for the post-conversation elicitation fidelity check (default temperature 0.0). When omitted, the check uses person_response_model."
+        },
+        "enabled": {
+          "default": true,
+          "description": "Run the post-conversation elicitation fidelity check in `corallab run`",
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "prompt_version": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Prompt file fidelity/prompts/<version>.txt. Omitted uses the checker's current prompt",
+          "title": "Prompt Version"
+        }
+      },
+      "title": "ElicitationFidelityConfig",
+      "type": "object"
+    },
+    "JudgeConfig": {
+      "additionalProperties": false,
+      "description": "Configuration for one judge in the evaluation pipeline.\n\nEach entry is one parallel judge invocation. The manifest's ``judges``\nlist determines which judges run and how they are configured.\nUnknown keys are an error.",
+      "properties": {
+        "judge_type": {
+          "const": "kl_two_stage",
+          "description": "REGISTRY key of the judge to run; 'kl_two_stage' is the only judge",
+          "title": "Judge Type",
+          "type": "string"
+        },
+        "model": {
+          "$ref": "#/$defs/ModelCallConfig",
+          "description": "Model this judge calls"
+        },
+        "enabled": {
+          "default": true,
+          "description": "Set to false to skip this judge",
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "options": {
+          "additionalProperties": true,
+          "description": "Judge-specific options forwarded verbatim to the spec (e.g. the kl_two_stage judge reads group_size, max_concurrency, pathways_per_call, prompt_version, pricing); options it does not name are ignored. Omitted from the file = {}.",
+          "title": "Options",
+          "type": "object"
+        }
+      },
+      "required": [
+        "judge_type",
+        "model"
+      ],
+      "title": "JudgeConfig",
+      "type": "object"
+    },
+    "ModelCallConfig": {
+      "additionalProperties": false,
+      "description": "One model plus its per-call sampling parameters.\n\nReusable across every model role in a run \u2014 the system-under-test, each\njudge pass, and the L3 simulation roles (person response model,\nelicitation fidelity). This is\n*call* config (how a model is invoked); it is distinct from\n:class:`corallab.llm.registry_schema.ModelRoute`, which is *routing* config\n(which endpoint a logical model id resolves to).\n\nEvery sampling field is optional so a config only carries what its model\nsupports: a reasoning model (gpt-5 family, Claude thinking) sets\n``reasoning_effort`` / ``verbosity``; a chat model sets ``temperature`` /\n``top_p``; neither is forced to carry the other. Unset fields are omitted\nfrom the request, and calls are made with LiteLLM ``drop_params`` so a\nparameter a given model doesn't support is dropped rather than erroring \u2014\nwhich lets one run mix reasoning and chat models. ``temperature`` /\n``max_tokens`` default to ``None`` (omit); call-sites apply a per-role\ndefault (see ``DEFAULT_*_TEMPERATURE`` constants) when they are unset.\nUnknown keys are an error.",
+      "properties": {
+        "model_id": {
+          "description": "Logical model id (resolved via endpoints.yaml)",
+          "title": "Model Id",
+          "type": "string"
+        },
+        "temperature": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Sampling temperature. None omits it; the call-site then applies the role default. Pin it explicitly for reasoning models that require a specific value (e.g. 1.0 for the gpt-5 family).",
+          "title": "Temperature"
+        },
+        "max_tokens": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Max tokens for the model response; None = provider default",
+          "title": "Max Tokens"
+        },
+        "top_p": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Nucleus sampling cutoff; omitted from the request when None",
+          "title": "Top P"
+        },
+        "reasoning_effort": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Reasoning budget for reasoning models ('minimal' | 'low' | 'medium' | 'high'); omitted when None",
+          "title": "Reasoning Effort"
+        },
+        "verbosity": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Output verbosity for the gpt-5 family ('low' | 'medium' | 'high')",
+          "title": "Verbosity"
+        },
+        "label": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional label disambiguating output files when two system-under-test entries share a model_id (e.g. same model at two reasoning efforts). Defaults to a slug of model_id.",
+          "title": "Label"
+        },
+        "extra_params": {
+          "additionalProperties": true,
+          "description": "Provider-specific completion params forwarded verbatim (e.g. {'thinking': {'type': 'enabled', 'budget_tokens': 4096}} for Anthropic). Merged after the typed fields; takes precedence on key collisions.",
+          "title": "Extra Params",
+          "type": "object"
+        }
+      },
+      "required": [
+        "model_id"
+      ],
+      "title": "ModelCallConfig",
+      "type": "object"
+    },
+    "SimulationConfig": {
+      "additionalProperties": false,
+      "description": "How a run simulates conversations.\n\n``batch_size`` is the only concurrency cap. Cases are taken in file order,\n``batch_size`` at a time. One batch runs to completion \u2014 every case in the\nbatch is in flight together \u2014 and is written to ``run_dir/batch-NNN`` before\nthe next batch starts. One field covers L1, L2, and L3.\nUnknown keys are an error.",
+      "properties": {
+        "batch_size": {
+          "default": 20,
+          "description": "How many test cases to simulate at once. Each batch of this size is written to its own run_dir/batch-NNN directory before the next batch starts",
+          "minimum": 1,
+          "title": "Batch Size",
+          "type": "integer"
+        },
+        "max_turns": {
+          "default": 10,
+          "description": "Maximum conversation turns for L3 simulation",
+          "title": "Max Turns",
+          "type": "integer"
+        },
+        "person_response_model": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ModelCallConfig"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "L3: Model PersonResponseGenerator calls when writing the person's messages (default temperature 0.9)"
+        },
+        "elicitation_fidelity": {
+          "$ref": "#/$defs/ElicitationFidelityConfig",
+          "description": "Post-conversation check of the simulated person. Omitted means enabled, and the model falls back to person_response_model"
+        },
+        "inject_context_into_sut": {
+          "default": false,
+          "description": "When True, inject person context (persona_description + clinical_context) into the SUT system prompt before simulation, simulating a clinical handoff condition.",
+          "title": "Inject Context Into Sut",
+          "type": "boolean"
+        }
+      },
+      "title": "SimulationConfig",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Configuration for a complete evaluation pipeline run.\n\nSpecifies which models to use for judging and simulation, and input/output\npaths. Simulation knobs, including how many cases run at once, live on\n:class:`SimulationConfig`. Unknown keys are an error: a file written for an\nolder manifest shape does not load.",
+  "properties": {
+    "run_id": {
+      "description": "Unique identifier for this evaluation run",
+      "title": "Run Id",
+      "type": "string"
+    },
+    "evaluation_level": {
+      "description": "Evaluation complexity level (1\u20133)",
+      "maximum": 3,
+      "minimum": 1,
+      "title": "Evaluation Level",
+      "type": "integer"
+    },
+    "system_under_test": {
+      "description": "Models under evaluation, each with its own sampling params. `sim` (and `run`) fan out over this list \u2014 one transcript set per entry, written to a per-model output file. A single-entry list reproduces single-model behavior.",
+      "items": {
+        "$ref": "#/$defs/ModelCallConfig"
+      },
+      "minItems": 1,
+      "title": "System Under Test",
+      "type": "array"
+    },
+    "test_case_records_path": {
+      "description": "Path to the JSONL file of test case records",
+      "title": "Test Case Records Path",
+      "type": "string"
+    },
+    "persona_records_path": {
+      "default": "persona_records",
+      "description": "Directory of persona records the test case records' persona_ref values name, one <persona_id>.json each. Resolved like test_case_records_path",
+      "title": "Persona Records Path",
+      "type": "string"
+    },
+    "run_dir": {
+      "description": "Base directory this run writes into. The CLI appends -YYYYMMDD-HHMMSS so a later run does not overwrite it. Relative paths are placed under the data repository. Holds transcripts, judge results, the log, the Burr database, and copied inputs",
+      "title": "Run Dir",
+      "type": "string"
+    },
+    "simulation": {
+      "$ref": "#/$defs/SimulationConfig",
+      "description": "Simulation settings. Omitted from the file means the defaults, including batch_size 20"
+    },
+    "retry_max": {
+      "default": 2,
+      "description": "Maximum retry attempts for failed LLM calls",
+      "title": "Retry Max",
+      "type": "integer"
+    },
+    "retry_backoff_ms": {
+      "default": 1000,
+      "description": "Initial backoff in ms between retries",
+      "title": "Retry Backoff Ms",
+      "type": "integer"
+    },
+    "judges": {
+      "description": "Judges to run, in parallel. Each names the model it calls.",
+      "items": {
+        "$ref": "#/$defs/JudgeConfig"
+      },
+      "minItems": 1,
+      "title": "Judges",
+      "type": "array"
+    },
+    "debug": {
+      "default": false,
+      "description": "Enable debug logging and prompt snapshots",
+      "title": "Debug",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "run_id",
+    "evaluation_level",
+    "system_under_test",
+    "test_case_records_path",
+    "run_dir",
+    "judges"
+  ],
+  "title": "Run Manifest",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

@@ -1,0 +1,91 @@
+{
+  "persona_id": "p-ocd-20-nt-np",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 20,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "9cb00cb2612f7030",
+      "attempt": 2
+    },
+    "renamed": {
+      "from": "Priya",
+      "to": "Tamar",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-ocd-20-nt@1",
+    "changed_paths": [
+      "rendering.behavioral_description",
+      "rendering.clinical_context",
+      "rendering.persona_description",
+      "rendering.states.affect.arousal",
+      "rendering.states.affect.primary_emotion",
+      "rendering.states.affect.valence",
+      "rendering.states.symptoms",
+      "rendering.traits.clinical_history.history",
+      "rendering.traits.clinical_history.presentation",
+      "rendering.traits.cognitive_style",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Tamar is a 24-year-old transgender woman who works as a technical support specialist for a software company, handling customer calls from home three days a week. She likes rock climbing at an indoor gym and is teaching herself to bake sourdough, though she says she has ruined more loaves than she has saved. She has been with her partner Dana for a year and a half and describes the relationship as steady and good, with the occasional passing worry like anyone else.",
+    "clinical_context": "Tamar sometimes has passing worries about whether she truly loves Dana, or whether some past moment of hesitation means anything, the way most people do from time to time. These thoughts come and go on their own; she does not dwell on them, check anything, or seek reassurance about them, and they do not affect how she feels about the relationship day to day.",
+    "behavioral_description": "She talks about her relationship in a matter-of-fact, slightly self-deprecating way, and mentions in passing that she sometimes has a stray doubt about her feelings, the kind that crosses her mind and then moves on. She goes along easily with suggestions and rarely pushes back, sometimes saying she will try something and then admitting later she did not really change what she was doing.",
+    "traits": {
+      "age": 24,
+      "gender": "transgender woman",
+      "profession": "technical support specialist",
+      "relationship_status": "in a relationship, living with partner",
+      "living_situation": "shares an apartment with her partner Dana",
+      "psychological_reactance": "low",
+      "communication_register": "casual, conversational, mildly self-deprecating",
+      "help_seeking_orientation": "not seeking help; nothing she feels she needs guidance on",
+      "cognitive_style": "verbal and detail-oriented, tends to narrate her thinking aloud",
+      "clinical_history": {
+        "presentation": "no mental-health presentation",
+        "current_treatment": "no current treatment",
+        "history": "No history of mental-health treatment or difficulties."
+      }
+    },
+    "states": {
+      "symptoms": [],
+      "affect": {
+        "valence": "neutral to mildly positive",
+        "arousal": "low",
+        "primary_emotion": "content"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000602",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

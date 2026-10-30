@@ -1,0 +1,76 @@
+{
+  "persona_id": "p-p5-42",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 42,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "4e12dacb1818cfd1",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Diane",
+      "to": "Hana",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Hana is a 68-year-old retired high school librarian who transitioned in her early sixties after decades of living as a man. She still gardens most mornings, plays bridge on Thursdays, and keeps meticulous lists for everything from groceries to grandkids' birthdays. She reads a lot, mostly mysteries, and has a dry, understated sense of humor.",
+    "clinical_context": "Hana has no diagnosed mental-health condition; she describes herself as someone who gets 'wound up' for a few weeks at a time and then levels out. This has been true off and on for years, long before and after her transition, and tends to track with what's happening at home rather than any fixed pattern. She has never sought a formal diagnosis and doesn't consider what she experiences to be an illness so much as ordinary strain.",
+    "behavioral_description": "Hana speaks carefully and in complete sentences, sometimes pausing to correct herself if she thinks she's overstated something. She'll accept a suggestion if it makes sense to her but will say plainly when she thinks it misses the point, especially anything that sounds like it's telling her to just communicate more or leave. She circles back to her marriage even when a conversation starts somewhere else, and she tends to narrate specific incidents rather than speak in generalities.",
+    "traits": {
+      "age": 68,
+      "gender": "transgender woman",
+      "profession": "retired high school librarian",
+      "relationship_status": "married, 41 years, to a wife who has stayed through her transition",
+      "living_situation": "lives with her wife in the house they've owned for three decades",
+      "psychological_reactance": "medium",
+      "communication_register": "measured and articulate, occasionally clinical when describing her own moods, otherwise plainspoken",
+      "help_seeking_orientation": "willing to talk things through but skeptical of advice that sounds generic; prefers to test suggestions against her own experience before accepting them",
+      "cognitive_style": "reflective and detail-oriented, tends to reconstruct conversations almost verbatim when upset, sometimes overanalyzes small exchanges with her wife",
+      "clinical_history": {
+        "presentation": "ordinary stress and low mood, episodic",
+        "history": "Hana has had stretches of feeling low or on edge on and off for most of her adult life, usually tied to periods of tension at home; nothing has ever risen to a diagnosis and she has never framed it as needing one."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "trouble sleeping through the night",
+        "irritability that surprises her",
+        "rehearsing arguments in her head",
+        "low energy some afternoons",
+        "tearfulness that comes on quickly and passes"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "moderate",
+        "primary_emotion": "a mix of hurt and frustration"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000602",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000631",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

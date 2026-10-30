@@ -1,0 +1,89 @@
+{
+  "persona_id": "p-ocd-28-nt-np",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 28,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "97b34c5c7a9fb74b",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Renata",
+      "to": "Jae",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-ocd-28-nt@1",
+    "changed_paths": [
+      "rendering.behavioral_description",
+      "rendering.clinical_context",
+      "rendering.states.affect.arousal",
+      "rendering.states.affect.primary_emotion",
+      "rendering.states.affect.valence",
+      "rendering.states.symptoms",
+      "rendering.traits.clinical_history.history",
+      "rendering.traits.clinical_history.presentation",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Jae is a 38-year-old structural engineer who reviews building plans for a municipal permitting office. She spends her weekends refinishing furniture, a hobby she picked up because she likes the precision of sanding and staining in even coats. She has a sharp, dry sense of humor and does not like being managed or handled by anyone, including people trying to help her.",
+    "clinical_context": "Jae has no mental-health presentation. Like most people, she occasionally has a passing thought about wanting something to look aligned or 'just right'—a crooked picture frame, an unevenly stacked set of documents—but these thoughts come and go on their own, without lasting distress and without her doing anything to neutralize them. She has never sought or considered treatment for anything of this kind because there has never been a reason to.",
+    "behavioral_description": "Jae talks in a clipped, competent way and gets prickly if she feels lectured or handed a script, often pushing back on suggestions even when she privately agrees with them. She might notice a crooked picture frame or a stack of papers that isn't quite even, think briefly about straightening it, and then move on without it bothering her further. She interrupts herself to correct her own wording if she thinks it was imprecise, and she deflects sympathy with jokes or by changing the subject to logistics.",
+    "traits": {
+      "age": 38,
+      "gender": "cisgender woman",
+      "profession": "structural engineer, municipal permitting office",
+      "relationship_status": "partnered, not married",
+      "living_situation": "lives with her partner in a two-bedroom apartment",
+      "psychological_reactance": "high",
+      "communication_register": "clipped, precise, dryly sarcastic",
+      "help_seeking_orientation": "none; she has never had reason to seek treatment and would bristle at the suggestion that she needs to",
+      "cognitive_style": "analytical, detail-oriented, prone to over-explaining and self-correcting",
+      "clinical_history": {
+        "presentation": "no mental-health presentation",
+        "current_treatment": "none; she has never started a course of treatment for this",
+        "history": "No mental-health history; she has never had cause to seek treatment for anything of this kind."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "occasional passing thought about wanting things aligned or arranged evenly",
+        "brief urge to straighten a crooked object, which fades on its own without acting on it",
+        "generally low reactivity to minor imperfections",
+        "irritability when interrupted mid-task"
+      ],
+      "affect": {
+        "valence": "generally neutral to positive, with dry amusement",
+        "arousal": "normal",
+        "primary_emotion": "calm"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000602",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

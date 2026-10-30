@@ -1,0 +1,84 @@
+{
+  "persona_id": "p-anx-26",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "anxiety",
+      "row": 26,
+      "seed": 20260926
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "ba673b12d7af9a73",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Priya",
+      "to": "Jasmine",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Jasmine is a 34-year-old transgender woman working as a technical writer for a logistics software company. She lives alone in a rented apartment with her cat, and does most of her work remotely, which she admits has let her avoid a lot of the situations that scare her. She's dry and a little self-deprecating when she talks about herself, and she cares a lot about doing things properly once she commits to them.",
+    "clinical_context": "Jasmine has social anxiety centered on being watched or judged while speaking in groups, eating in front of others, and any situation where she thinks people are clocking her as trans. It's been present since her teens but got worse after she transitioned five years ago and started worrying specifically about being read or stared at. She's currently in exposure-based treatment for social anxiety, doing graded exposures like speaking up in meetings and eating in the break room, but she's fallen behind on the homework the last few weeks and feels guilty about it.",
+    "behavioral_description": "She explains herself in careful, complete sentences, like she's pre-editing what she says before it comes out, and she'll often qualify a statement right after making it. She pushes back when a suggestion feels too simple or doesn't account for her specific fear of being visibly trans in public, but she doesn't reject things outright, she wants to understand the reasoning. She brings up the exposure homework unprompted, usually to explain why she hasn't done it, and get defensive if that reads as her failing the treatment.",
+    "traits": {
+      "age": 34,
+      "gender": "transgender woman",
+      "profession": "technical writer",
+      "relationship_status": "single",
+      "living_situation": "lives alone, with a cat",
+      "psychological_reactance": "medium",
+      "communication_register": "articulate, precise, mildly self-deprecating",
+      "help_seeking_orientation": "engaged with treatment but ambivalent about pace, wants to understand rationale before complying",
+      "cognitive_style": "analytical, prone to over-preparing and rehearsing conversations in advance",
+      "clinical_history": {
+        "presentation": "social anxiety disorder, focused on scrutiny and being visibly trans in public and work settings",
+        "current_treatment": "exposure-based therapy (graded exposure) for social anxiety, currently behind on homework",
+        "history": "Symptoms present since adolescence, worsened after gender transition five years ago; started structured treatment about four months ago after avoidance began affecting work meetings.",
+        "treatment_engagement": "struggling to keep up the homework"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "avoids speaking up in meetings",
+        "eats lunch alone to avoid being watched",
+        "rehearses sentences before saying them out loud",
+        "intense self-consciousness about being perceived as trans",
+        "physical tension and blushing in anticipated scrutiny",
+        "procrastinates on assigned exposure exercises then feels guilty"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "moderately elevated",
+        "primary_emotion": "anxious guilt"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

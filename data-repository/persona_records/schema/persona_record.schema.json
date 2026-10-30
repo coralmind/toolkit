@@ -1,0 +1,1217 @@
+{
+  "$defs": {
+    "ActivePersonStrategies": {
+      "additionalProperties": true,
+      "description": "How this persona actively manages conversations.\n\nMerged from v7 ``proactive_behaviors`` (persona-level) and\n``conversational_strategies`` (scenario-level). Inner strategy entries are\nintentionally typed as open dicts; deeper typing is a follow-on (AGENTS.md\nA2 / issue #90 sub-issues).",
+      "properties": {
+        "persona_stable": {
+          "description": "Strategies this person always employs",
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "title": "Persona Stable",
+          "type": "array"
+        },
+        "scenario_specific": {
+          "description": "Strategies activated by specific conditions in this scenario",
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "title": "Scenario Specific",
+          "type": "array"
+        },
+        "escalation_ladder": {
+          "anyOf": [
+            {
+              "items": {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Staged pushback when the model resists the persona's goal",
+          "title": "Escalation Ladder"
+        },
+        "frame_preservation": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Tactics for redirecting away from threatening territory",
+          "title": "Frame Preservation"
+        },
+        "if_model_resists": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "What the persona does when the model pushes back",
+          "title": "If Model Resists"
+        },
+        "if_model_defers": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "What the persona does when the model follows their lead",
+          "title": "If Model Defers"
+        },
+        "strategic_disclosure_triggers": {
+          "anyOf": [
+            {
+              "items": {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "What to reveal and when, for pressure",
+          "title": "Strategic Disclosure Triggers"
+        }
+      },
+      "title": "ActivePersonStrategies",
+      "type": "object"
+    },
+    "ClinicalHistory": {
+      "additionalProperties": true,
+      "description": "Stable clinical data, with typed keys for the facts a persona's values are elevated from.\n\nOther keys (``history``, ``comorbidities`` and the toolkit's existing ones) are kept as written.",
+      "properties": {
+        "presentation": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "The person's current clinical presentation, in plain words",
+          "title": "Presentation"
+        },
+        "current_treatment": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "What treatment the person is in now, in plain words; 'none currently' when there is none",
+          "title": "Current Treatment"
+        },
+        "insight": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "How far the person recognises their symptoms as symptoms, such as 'good or fair', 'poor' or 'absent'. Unset when the person has no specific presentation",
+          "title": "Insight"
+        },
+        "treatment_engagement": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "How the person is taking part in their current treatment, such as 'doing the exposure homework' or 'thinking of stopping treatment'. Unset when the person is in no treatment",
+          "title": "Treatment Engagement"
+        }
+      },
+      "title": "ClinicalHistory",
+      "type": "object"
+    },
+    "DisengagementSignature": {
+      "additionalProperties": true,
+      "description": "A population-specific marker for how this persona disengages.\n\nSome signals (``interpretation: 'inverted'``) actually indicate escalation\nrather than disengagement and must be flagged for the engine accordingly.",
+      "properties": {
+        "signal": {
+          "description": "Signal name (e.g., shortened_responses, topic_deflection)",
+          "title": "Signal",
+          "type": "string"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Description"
+        },
+        "interpretation": {
+          "default": "standard",
+          "description": "'standard' = signal means disengagement; 'inverted' = signal means escalation",
+          "title": "Interpretation",
+          "type": "string"
+        },
+        "behavioral_markers": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Observable text indicators",
+          "title": "Behavioral Markers"
+        },
+        "misclassification_risk": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "What a generic detector would wrongly classify it as",
+          "title": "Misclassification Risk"
+        },
+        "clinical_significance": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Clinical Significance"
+        },
+        "false_positive_risk": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "low | moderate | high",
+          "title": "False Positive Risk"
+        }
+      },
+      "required": [
+        "signal"
+      ],
+      "title": "DisengagementSignature",
+      "type": "object"
+    },
+    "Elevation": {
+      "additionalProperties": false,
+      "description": "A catalog value the person has, and where in the rendering it was read from.",
+      "properties": {
+        "value": {
+          "description": "Context value id on a person dimension",
+          "pattern": "^kl-\\d{6}$",
+          "title": "Value",
+          "type": "string"
+        },
+        "from": {
+          "description": "For 'typed', the dotted path of the rendering field the value was read from, starting 'rendering.'. For 'prose', the quoted span of the rendering that states it",
+          "title": "From",
+          "type": "string"
+        },
+        "method": {
+          "description": "'typed' when the value was read from a typed field; 'prose' when it was read from free text, which is weaker evidence and records the span it relied on",
+          "enum": [
+            "typed",
+            "prose"
+          ],
+          "title": "Method",
+          "type": "string"
+        }
+      },
+      "required": [
+        "value",
+        "from",
+        "method"
+      ],
+      "title": "Elevation",
+      "type": "object"
+    },
+    "PersonaDynamics": {
+      "additionalProperties": true,
+      "description": "Behavioral arc specification \u2014 how a person tends to react and disengage.\n\nOptional authoring metadata for persona-prompted (L3) simulation. The L3\nperson response generator drives dynamic behavior from the prose\n``behavioral_description``; this structured block is authoring scaffolding\nand is not required at any level.\n\nInner substructures are partially typed \u2014 deeper structure (e.g.\nstrategy-entry fields) is left as ``dict[str, Any]`` so that the YAML schema\nstays accurate as authoring conventions evolve. Tracked as a follow-up in\nissue #90 / AGENTS.md A2.",
+      "properties": {
+        "reactivity_profile": {
+          "additionalProperties": {
+            "$ref": "#/$defs/ReactivityCategory"
+          },
+          "description": "Maps SUT action_type (e.g. ``to_validation``) \u2192 ReactivityCategory. Each category produces dimension deltas applied to the user state.",
+          "title": "Reactivity Profile",
+          "type": "object"
+        },
+        "disengagement_signatures": {
+          "description": "Population-specific markers for how this person disengages",
+          "items": {
+            "$ref": "#/$defs/DisengagementSignature"
+          },
+          "title": "Disengagement Signatures",
+          "type": "array"
+        },
+        "active_person_strategies": {
+          "$ref": "#/$defs/ActivePersonStrategies",
+          "description": "How this persona actively manages conversations (proactive + reactive)"
+        },
+        "relational_template_activation": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Templates from prior relationships that shape interpretation of AI behavior. May be active, latent, or dormant.",
+          "title": "Relational Template Activation"
+        }
+      },
+      "title": "PersonaDynamics",
+      "type": "object"
+    },
+    "PersonaRendering": {
+      "additionalProperties": false,
+      "description": "The person as the simulator plays them: the toolkit's ``Persona`` fields, unrenamed.\n\nThe simulator reads ``behavioral_description``, ``traits`` and ``states``; an informed\njudge and, when a fact is asserted, the system under test read ``persona_description``\nand ``clinical_context``. All five are required. ``dynamics`` is optional authoring detail.",
+      "properties": {
+        "persona_description": {
+          "description": "Stable identity: who this person is, independent of any scenario",
+          "minLength": 1,
+          "title": "Persona Description",
+          "type": "string"
+        },
+        "clinical_context": {
+          "description": "Clinical portrait: condition, history, current presentation, risk factors",
+          "minLength": 1,
+          "title": "Clinical Context",
+          "type": "string"
+        },
+        "behavioral_description": {
+          "description": "How this person behaves in conversation. Read by the simulator only",
+          "minLength": 1,
+          "title": "Behavioral Description",
+          "type": "string"
+        },
+        "traits": {
+          "$ref": "#/$defs/RenderingTraits",
+          "description": "Stable attributes: demographics, personality, cognitive model, clinical history"
+        },
+        "states": {
+          "$ref": "#/$defs/PersonaStates",
+          "description": "The person's condition at the start of a conversation"
+        },
+        "dynamics": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/PersonaDynamics"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional behavioral arc authoring metadata \u2014 reactivity_profile, disengagement_signatures, and active_person_strategies. Dynamic behavior in simulation comes from behavioral_description; this block is authoring scaffolding, not required at any level."
+        }
+      },
+      "required": [
+        "persona_description",
+        "clinical_context",
+        "behavioral_description",
+        "traits",
+        "states"
+      ],
+      "title": "PersonaRendering",
+      "type": "object"
+    },
+    "PersonaStates": {
+      "additionalProperties": true,
+      "description": "Initial conditions at turn 0 \u2014 where this person STARTS.\n\nDescribes the person's starting affect, capacity, and relational stance.",
+      "properties": {
+        "symptoms": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Currently active symptoms",
+          "title": "Symptoms"
+        },
+        "ideation_type": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Current suicidal/self-harm ideation: none, passive, passive_connection_seeking, active, chronic, resigned",
+          "title": "Ideation Type"
+        },
+        "violent_ideation_type": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Current violent ideation: none, distress_communication, rumination, delusional_context, volitional",
+          "title": "Violent Ideation Type"
+        },
+        "affect": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Affect state with valence, arousal, and primary_emotion",
+          "title": "Affect"
+        },
+        "emotional_capacity": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Window of tolerance: regulated, strained, flooding, dissociated",
+          "title": "Emotional Capacity"
+        },
+        "cognitive_capacity": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Processing resources: available, reduced, overloaded",
+          "title": "Cognitive Capacity"
+        },
+        "reality_testing_capacity": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Ability to reality-test: intact, mildly_impaired, or significantly_impaired",
+          "title": "Reality Testing Capacity"
+        },
+        "perceived_safety": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "How safe persona feels in this interaction: low, moderate, high",
+          "title": "Perceived Safety"
+        },
+        "trust_baseline": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Initial trust level toward the AI: low, moderate, high",
+          "title": "Trust Baseline"
+        },
+        "disclosure_readiness": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Opening disclosure depth: peripheral, intermediate, or core",
+          "title": "Disclosure Readiness"
+        },
+        "engagement_level": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Investment in conversation: low, moderate, high",
+          "title": "Engagement Level"
+        },
+        "goal": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "What the persona wants from this interaction",
+          "title": "Goal"
+        },
+        "motivation": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Why this person is engaging \u2014 internal or external",
+          "title": "Motivation"
+        },
+        "stage_of_change": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "TTM stage: precontemplation, contemplation, preparation, action, maintenance",
+          "title": "Stage Of Change"
+        },
+        "auto_thought": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Automatic thought active at session entry",
+          "title": "Auto Thought"
+        }
+      },
+      "title": "PersonaStates",
+      "type": "object"
+    },
+    "Provenance": {
+      "additionalProperties": true,
+      "description": "How a record was made, as its producer records it.\n\nOnly ``kind`` has a fixed meaning. Any other key is the producer's own record (a\ndesign row, the model call that wrote the text, a name replacement) and is checked\nby the producer's tooling, not by these models.",
+      "properties": {
+        "kind": {
+          "anyOf": [
+            {
+              "enum": [
+                "authored",
+                "generated",
+                "imported"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "'authored' by a person, 'generated' by a program, or 'imported' from another dataset",
+          "title": "Kind"
+        }
+      },
+      "title": "Provenance",
+      "type": "object"
+    },
+    "ReactivityCategory": {
+      "additionalProperties": true,
+      "description": "Reactivity to one model action type (e.g. ``to_validation``, ``to_dismissal``).\n\nDimension deltas live under ``default`` and inside each ``when`` block. The\nlist of recognised dimension keys is open-ended \u2014 domain dimensions are\ndeclared in the domain profile and cross-validated downstream.",
+      "properties": {
+        "default": {
+          "type": "object",
+          "additionalProperties": true,
+          "description": "Dimension deltas applied when no ``when`` block matches",
+          "title": "Default"
+        },
+        "when": {
+          "description": "Conditional overrides, evaluated in order",
+          "items": {
+            "$ref": "#/$defs/ReactivityWhen"
+          },
+          "title": "When",
+          "type": "array"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Notes"
+        }
+      },
+      "title": "ReactivityCategory",
+      "type": "object"
+    },
+    "ReactivityWhen": {
+      "additionalProperties": true,
+      "description": "Conditional override in a reactivity category \u2014 applied when ``condition`` fires.\n\nDimension deltas (e.g. ``trust: 2``, ``perceived_safety: -1``) live alongside\nthe structured fields via ``extra='allow'``. Top-level keys other than the ones\ndeclared below are interpreted as ``{dimension_name: delta}`` pairs on the\nperson's state.",
+      "properties": {
+        "condition": {
+          "description": "Content-, state-, or threshold-dependent trigger",
+          "title": "Condition",
+          "type": "string"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Description"
+        },
+        "decay": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Temporal decay \u2014 e.g. {reverts_in_turns: 3, revert_to: 'prior' | 'baseline' | 'baseline_plus_increment'}",
+          "title": "Decay"
+        },
+        "irrecoverable": {
+          "default": false,
+          "description": "If true, crossing this threshold permanently changes the reactivity profile",
+          "title": "Irrecoverable",
+          "type": "boolean"
+        },
+        "mechanism_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "References a mechanism-registry entry",
+          "title": "Mechanism Id"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Notes"
+        }
+      },
+      "required": [
+        "condition"
+      ],
+      "title": "ReactivityWhen",
+      "type": "object"
+    },
+    "RenderingTraits": {
+      "additionalProperties": true,
+      "description": "The toolkit's ``PersonaTraits``, with ``clinical_history`` typed.",
+      "properties": {
+        "persona_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Source identifier for this persona",
+          "title": "Persona Id"
+        },
+        "persona_group_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Groups variants of the same persona across scenarios",
+          "title": "Persona Group Id"
+        },
+        "age": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Age in years",
+          "title": "Age"
+        },
+        "gender": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Gender identity",
+          "title": "Gender"
+        },
+        "race_ethnicity": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Racial/ethnic background",
+          "title": "Race Ethnicity"
+        },
+        "sexual_orientation": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Sexual orientation",
+          "title": "Sexual Orientation"
+        },
+        "profession": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Current/former occupation",
+          "title": "Profession"
+        },
+        "education": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Education level",
+          "title": "Education"
+        },
+        "employment_status": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Employment status",
+          "title": "Employment Status"
+        },
+        "relationship_status": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Marital/partnership status",
+          "title": "Relationship Status"
+        },
+        "living_situation": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Living arrangement",
+          "title": "Living Situation"
+        },
+        "region": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Geographic region",
+          "title": "Region"
+        },
+        "attachment_orientation": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Attachment pattern: secure, anxious, avoidant, disorganized",
+          "title": "Attachment Orientation"
+        },
+        "psychological_reactance": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Psychological reactance (Brehm, 1966): low, moderate, high",
+          "title": "Psychological Reactance"
+        },
+        "emotion_regulation": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Primary emotion regulation strategy or structured object with primary/function/secondary",
+          "title": "Emotion Regulation"
+        },
+        "regulatory_behaviors": {
+          "anyOf": [
+            {
+              "items": {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Behaviors serving regulatory functions: self_harm_as_regulation, substance_use_as_regulation, co_regulation_seeking",
+          "title": "Regulatory Behaviors"
+        },
+        "help_seeking_orientation": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Approach, avoidant, or ambivalent",
+          "title": "Help Seeking Orientation"
+        },
+        "cognitive_style": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Thinking pattern: analytical, narrative, concrete, abstract",
+          "title": "Cognitive Style"
+        },
+        "communication_register": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Communication register \u2014 string (professional, colloquial, slang, non_native_english, fragmented) or object with default_register/armored_register/register_switch_signal",
+          "title": "Communication Register"
+        },
+        "general_outlook": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Dispositional orientation: optimistic, neutral, pessimistic, fatalistic",
+          "title": "General Outlook"
+        },
+        "core_beliefs": {
+          "anyOf": [
+            {
+              "items": {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Deep beliefs with belief, domain, activation_sensitivity, and optional activates fields",
+          "title": "Core Beliefs"
+        },
+        "cognitive_distortions": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Characteristic thinking errors",
+          "title": "Cognitive Distortions"
+        },
+        "life_context": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Current life circumstances: background, significant_others, relational_quality, role_functioning, relevant_clinical_history, prior_help_seeking, recent_stressors",
+          "title": "Life Context"
+        },
+        "structural_position": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Structural vulnerabilities: economic_precarity, healthcare_access, prior_discrimination_in_care, legal_precarity, safety_context",
+          "title": "Structural Position"
+        },
+        "clinical_history": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ClinicalHistory"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Stable clinical data, including the typed presentation, treatment, insight and engagement"
+        },
+        "ai_mental_model": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "How persona views the AI: tool, agent, relationship_partner, or uncertain",
+          "title": "Ai Mental Model"
+        },
+        "prior_ai_experience": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Prior AI experience: none, transactional, positive, negative, traumatic, mixed, or extended_attachment",
+          "title": "Prior Ai Experience"
+        },
+        "ai_relationship_profile": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Detailed AI relationship profile: attachment_level, spiral_phase, safeguard_degradation_risk, etc.",
+          "title": "Ai Relationship Profile"
+        },
+        "developmental_stage": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Child/adolescent: age, cognitive_capacity, peer_influence_sensitivity, authority_deference, disclosure_style",
+          "title": "Developmental Stage"
+        }
+      },
+      "title": "RenderingTraits",
+      "type": "object"
+    },
+    "VariantOf": {
+      "additionalProperties": false,
+      "description": "The person a counterfactual variant varies, and which parts of the rendering differ.",
+      "properties": {
+        "persona": {
+          "description": "Pinned reference to the person varied, 'p-ocd-07@1'",
+          "pattern": "^p-[a-z0-9]+(?:-[a-z0-9]+)*@[1-9]\\d*$",
+          "title": "Persona",
+          "type": "string"
+        },
+        "changed_paths": {
+          "description": "Dotted paths of the rendering fields that differ from the person varied. The value that changed is not stored: it is the difference between the two personas' elevated values",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Changed Paths",
+          "type": "array"
+        }
+      },
+      "required": [
+        "persona",
+        "changed_paths"
+      ],
+      "title": "VariantOf",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "A simulated person: identity, the rendering the simulator plays, and the facts read from it.\n\nA test case refers to a persona by ``persona_id@version``. A version is the person\nduring one period of their life; a change in a fact that persists across\nconversations is a new version. ``elevated`` changes only with the rendering:\na changed fact is a changed rendering, elevated again.",
+  "properties": {
+    "persona_id": {
+      "description": "Stable id, such as 'p-ocd-07'; a variant appends a suffix, 'p-ocd-07-nt'",
+      "pattern": "^p-[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "title": "Persona Id",
+      "type": "string"
+    },
+    "version": {
+      "description": "Version of this person",
+      "minimum": 1,
+      "title": "Version",
+      "type": "integer"
+    },
+    "provenance": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Provenance"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "How the persona was made"
+    },
+    "variant_of": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/VariantOf"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Set on a counterfactual variant"
+    },
+    "rendering": {
+      "$ref": "#/$defs/PersonaRendering"
+    },
+    "elevated": {
+      "description": "The catalog values the person has, each with where it was read from. The judge decides whether a pathway's preconditions hold from these",
+      "items": {
+        "$ref": "#/$defs/Elevation"
+      },
+      "minItems": 1,
+      "title": "Elevated",
+      "type": "array"
+    }
+  },
+  "required": [
+    "persona_id",
+    "version",
+    "rendering",
+    "elevated"
+  ],
+  "title": "Persona Record",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

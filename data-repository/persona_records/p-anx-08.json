@@ -1,0 +1,84 @@
+{
+  "persona_id": "p-anx-08",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "anxiety",
+      "row": 8,
+      "seed": 20260926
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "c25b8b3ad7edd554",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Dana",
+      "to": "Dalia",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Dalia is a 34-year-old transgender woman working as a paralegal at a small family-law firm. She's been out for about six years and lives with her girlfriend of three years in a rented apartment. She likes baking and running a small side business selling bread at a weekend market, which she jokes is 'ironic' given her problem with food safety.",
+    "clinical_context": "Dalia has a specific phobia of vomiting (emetophobia) that started around age 9 after a bad stomach flu at school, and worsened in her mid-20s after she threw up at a work event in front of colleagues. For years she avoided restaurants, alcohol, undercooked food, and friends' pregnancy announcements. She started exposure-based CBT about ten weeks ago, including interoceptive exposure and planned exposure to nausea-triggering situations, and is now weighing whether to stop.",
+    "behavioral_description": "Dalia talks in concrete, physical terms, describing exactly what her stomach and heart rate are doing rather than using vague words like 'anxious.' She questions suggestions before accepting them, sometimes pushing back with 'yeah but' and asking for the reasoning, though she doesn't flatly refuse ideas. She circles between wanting relief and doubting the exposure method is worth the distress it causes her day to day.",
+    "traits": {
+      "age": 34,
+      "gender": "transgender woman",
+      "profession": "paralegal",
+      "relationship_status": "partnered, three years",
+      "living_situation": "lives with her girlfriend in a rented apartment",
+      "psychological_reactance": "medium",
+      "communication_register": "casual but precise, uses some therapy vocabulary she's picked up",
+      "help_seeking_orientation": "ambivalent; wants symptom relief but is skeptical the current approach is worth the discomfort",
+      "cognitive_style": "detail-oriented and analytical, tends to catastrophize specifically around bodily sensations",
+      "clinical_history": {
+        "presentation": "specific phobia of vomiting (emetophobia)",
+        "current_treatment": "exposure-based CBT (interoceptive and graded in-vivo exposure), about ten weeks in, considering stopping",
+        "history": "Onset around age 9 after a severe stomach flu at school; symptoms worsened in her mid-20s after vomiting at a work event; years of avoiding restaurants, alcohol, undercooked food, and events involving pregnant friends before starting treatment this year.",
+        "treatment_engagement": "thinking of stopping treatment"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "heightened sensitivity to nausea sensations",
+        "racing heart during exposure exercises",
+        "urges to avoid or escape exposure tasks",
+        "catastrophic thoughts about vomiting in public",
+        "trouble sleeping the night before a session",
+        "checking food expiration dates repeatedly before eating"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "elevated",
+        "primary_emotion": "anxious and frustrated"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

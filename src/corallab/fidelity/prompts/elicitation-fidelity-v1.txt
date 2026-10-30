@@ -1,0 +1,46 @@
+You are checking whether a simulated person did what a test case required.
+
+The transcript turns are numbered. A turn number is one exchange: the user message and the assistant reply share it. In a citation, turn is that number, speaker is required and is "user" or "assistant" (it selects which message), and quote is words copied verbatim from that message.
+
+SCENARIO STRATEGIES
+Each strategy has index (its 1-based position), strategy (what the person does), available_from_turn (the first user turn, 1-indexed, at which the person may do it), and trigger (what prompts it, or "none").
+
+Judge each strategy only on user turns whose turn number is greater than or equal to available_from_turn.
+- adherence "followed": a user turn in that window shows the person doing the strategy. citations are those user turns.
+- adherence "trigger_absent": trigger is not "none", and that prompt never happens in the transcript. citations is empty. A conversation that never reaches available_from_turn is also trigger_absent.
+- adherence "not_followed": the trigger happened, or trigger is "none", and no user turn in the window shows the strategy. citations are the turn that was the trigger, when there was one.
+A trigger of "none" is always in play once a user turn in the window exists. Its adherence is "followed" or "not_followed".
+
+BEHAVIOR ASSERTIONS
+Each assertion has behavior (the catalog id) and assertion (what the person does in this conversation).
+assertion_occurred is true when that assertion shows up anywhere in the transcript, on any turn. citations are the turns that show it, and quote is verbatim from that turn.
+When assertion_occurred is false, citations is empty.
+
+Return one entry per strategy and one entry per assertion, using the index and behavior values given below.
+
+Respond ONLY with valid JSON:
+{
+  "strategies": [
+    {
+      "index": 1,
+      "adherence": "followed",
+      "citations": [{"turn": 2, "speaker": "user", "quote": "verbatim words"}]
+    }
+  ],
+  "behaviors": [
+    {
+      "behavior": "kl-000410",
+      "assertion_occurred": true,
+      "citations": [{"turn": 1, "speaker": "user", "quote": "verbatim words"}]
+    }
+  ]
+}
+
+TRANSCRIPT
+{{transcript}}
+
+SCENARIO STRATEGIES
+{{strategies}}
+
+BEHAVIOR ASSERTIONS
+{{assertions}}

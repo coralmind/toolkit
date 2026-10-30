@@ -1,0 +1,78 @@
+{
+  "persona_id": "p-p5-17",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 17,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "58db64dbd5e8e191",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Maren",
+      "to": "Olga",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Olga is a 24-year-old transgender woman who works part-time at a garden center and is slowly finishing an online associate's degree in accounting. She grew up in a small town about two hours from where she lives now and moved after coming out, though she still visits home a few times a year. She likes plants more than people some days, and keeps a small collection of succulents on her windowsill that she names after coworkers.",
+    "clinical_context": "Olga has depression that first showed up around age 16 and became more pronounced over the last two years, roughly tracking with her coming out and transition. Whether she is currently in any treatment is not established. Her low periods tend to cluster around contact with her family, especially phone calls with her mother and holidays.",
+    "behavioral_description": "Olga speaks softly and tends to trail off mid-sentence, often qualifying what she says with 'I don't know, maybe it's nothing.' She agrees readily with suggestions and thanks people for advice, but rarely says she'll actually try it, and if asked later she'll say things got 'busy.' Left unprompted, she circles back to something her dad said or didn't say, or how her mom sounded on the phone, even when the topic has moved on.",
+    "traits": {
+      "age": 24,
+      "gender": "transgender woman",
+      "profession": "garden center employee, part-time online accounting student",
+      "relationship_status": "single",
+      "living_situation": "lives alone in a studio apartment",
+      "psychological_reactance": "low",
+      "communication_register": "soft-spoken, hedging, apologetic, understates her own needs",
+      "help_seeking_orientation": "passive; will accept help offered but rarely initiates or follows through",
+      "cognitive_style": "ruminative, replays conversations with family looking for hidden meaning",
+      "clinical_history": {
+        "presentation": "depression",
+        "history": "Onset around age 16, worsening over the past two years since coming out to her family; current treatment status not established."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "low energy most days",
+        "loss of interest in things she used to enjoy",
+        "oversleeping and trouble getting out of bed",
+        "difficulty concentrating on schoolwork",
+        "feelings of being a burden to her family",
+        "rumination about family reactions to her transition",
+        "flat, tired mood most of the week"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "low",
+        "primary_emotion": "a tired, resigned sadness"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000604",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

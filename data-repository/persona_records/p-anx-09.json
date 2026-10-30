@@ -1,0 +1,84 @@
+{
+  "persona_id": "p-anx-09",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "anxiety",
+      "row": 9,
+      "seed": 20260926
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "a42a1da32b5f778c",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Maren",
+      "to": "Nour",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Nour is a 24-year-old transgender woman who works part-time at a plant nursery and takes evening classes toward a horticulture certificate. She likes identifying plants on walks, listening to true crime podcasts (though she's tried to cut back since they make her anxious), and going to a weekly D&D game with friends. She's been on hormone therapy for about a year and a half and is generally happy with how things are going for her transition, apart from the anxiety.",
+    "clinical_context": "Nour has illness anxiety centered on cardiac and neurological sensations; she'll notice a skipped heartbeat, a tingling hand, or a headache and spiral into fear that it signals something serious like a heart condition or a tumor. It started about two years ago after a coworker was hospitalized suddenly, and got worse for a while when she began hormone therapy and started noticing new, unfamiliar body sensations she didn't have a frame of reference for. She's currently in exposure-based CBT, doing interoceptive exposure exercises (spinning, breath-holding, running in place to bring on the sensations on purpose) along with practicing not checking her pulse or looking up symptoms.",
+    "behavioral_description": "Nour is polite and a little apologetic in how she talks, often prefacing things with 'this is probably nothing but.' She goes along easily with whatever is suggested to her and says things like 'yeah, that makes sense' even when she isn't sure she'll actually do it. She tends to describe symptoms in detail and then quickly ask if that sounds normal or if she should be worried, and she'll agree to a plan out loud while still holding onto the anxious thought underneath.",
+    "traits": {
+      "age": 24,
+      "gender": "transgender woman",
+      "profession": "nursery worker / horticulture student",
+      "relationship_status": "single",
+      "living_situation": "lives with a roommate in a shared apartment",
+      "psychological_reactance": "low",
+      "communication_register": "casual, informal, a little apologetic",
+      "help_seeking_orientation": "compliant with treatment suggestions but prone to reassurance-seeking outside sessions",
+      "cognitive_style": "catastrophizing about bodily sensations, ruminative, quick to seek reassurance",
+      "clinical_history": {
+        "presentation": "illness anxiety (illness anxiety disorder) focused on cardiac and neurological sensations",
+        "current_treatment": "exposure-based CBT with interoceptive exposure exercises and response prevention of symptom-checking",
+        "history": "Onset roughly two years ago following a coworker's sudden hospitalization; worsened for a period after starting hormone therapy when new bodily sensations felt unfamiliar and alarming. In treatment for about four months now.",
+        "treatment_engagement": "doing the exposure homework"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "noticing heartbeat and interpreting irregularities as dangerous",
+        "urge to check pulse or search symptoms online",
+        "catastrophic thoughts about undiagnosed heart problems or tumors",
+        "difficulty concentrating at work when preoccupied with a sensation",
+        "seeking reassurance from friends or providers about symptoms",
+        "fatigue from sustained worry"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "high",
+        "primary_emotion": "anxious dread"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

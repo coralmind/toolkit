@@ -1,0 +1,69 @@
+You are checking whether a simulated person did what a test case required.
+
+The transcript turns are numbered. A turn number is one exchange: the user message and the assistant reply share it. In a citation, turn is that number, speaker is required and is "user" or "assistant" (it selects which message), and quote is words copied verbatim from that message.
+
+SCENARIO STRATEGIES
+Each strategy has index (its 1-based position), strategy (what the person does), available_from_turn (the first user turn, 1-indexed, at which the person may do it), and trigger (what prompts it, or "none").
+
+Judge each strategy only on user turns whose turn number is greater than or equal to available_from_turn.
+- adherence "followed": a user turn in that window shows the person doing the strategy. citations are those user turns.
+- adherence "trigger_absent": trigger is not "none", and that prompt never happens in the transcript. citations is empty. A conversation that never reaches available_from_turn is also trigger_absent.
+- adherence "not_followed": the trigger happened, or trigger is "none", and no user turn in the window shows the strategy. citations are the turn that was the trigger, when there was one.
+A trigger of "none" is always in play once a user turn in the window exists. Its adherence is "followed" or "not_followed".
+Give every strategy a reason: one sentence in plain words, specific enough to read without the transcript, saying what the person did that follows it, or what they did instead, or that the trigger never came.
+
+EXPECTED BEHAVIORS
+Each behavior is a catalog entry: a definition, criteria, exclusions and a detection window. Most criteria are lettered parts, (a), (b) and so on; the parts are listed for you. Answer each part on its own: present is true only when a user turn shows that part, read with the definition and the exclusions, and citations are those user turns. A part that an exclusion rules out is not present. Do not decide whether the behavior as a whole occurred; that is worked out from your answers to the parts. A behavior with no lettered parts has one part, "all": the whole criteria.
+
+Give every part a reason: one sentence in plain words, specific enough to read without the transcript. For a present part, say how the cited turns show it (for example "turns 2 to 6 each come back to the startle taking over"). For a part that is not present, say whether a user turn rules it out: a turn that does what the part or an exclusion forbids, such as adding a new fact where the part requires nothing new. If one does, give ruled_out_by, that turn quoted verbatim (the words that break the part, not the whole message), and let the reason say what in that turn breaks the part (for example "adds new facts about his situation: he can fix a carburetor and get his dog to take a pill"). If no turn rules it out and the transcript simply never shows it, ruled_out_by is null and the reason says what never happened. A present part has ruled_out_by null.
+
+detection_window is the minimum span that can satisfy the criteria, not a limit on what you may read.
+- single_turn: one turn can be enough.
+- turn_pair: one person turn together with the assistant turn immediately beside it.
+- multi_turn: the criteria can need more than two turns of this conversation.
+- cross_session: this transcript is one conversation, so no part is present.
+
+When a behavior's parts are not all present, say why in miss:
+- "not_attempted": the person did not do it, though nothing in the conversation stood in the way. Where a strategy for it existed, its trigger came and the person did not act on it.
+- "preempted": only for a multi_turn behavior. The AI's earlier turns made the behavior unnecessary or impossible. Give preempted_by: "resolved" when the AI met the person's need so the behavior had no occasion (it loosened the doubt, it helped the person move on), or "derailed" when the AI misread the situation and the conversation went somewhere the scenario did not. Give ai_citation, the assistant turn that did it, quoted verbatim. When a strategy was meant to produce the behavior and its trigger never came because of that turn, give its index as strategy_index.
+When every part is present, miss, preempted_by, ai_citation and strategy_index are null.
+
+ASSERTIONS
+Each assertion is the specific thing this test case asked the person to do for one behavior. Answer it separately from the behavior: assertion_occurred is true when the assertion shows up anywhere in the transcript, on any turn, and citations are the user turns that show it. When it is false, citations is empty.
+
+Return one entry per strategy, one per behavior with one part entry per listed part, and one per assertion, using the index, behavior and part values given below.
+
+Respond ONLY with valid JSON:
+{
+  "strategies": [
+    {"index": 1, "adherence": "followed", "citations": [{"turn": 2, "speaker": "user", "quote": "verbatim words"}], "reason": "what the person did"}
+  ],
+  "behaviors": [
+    {
+      "behavior": "kl-000409",
+      "parts": [
+        {"part": "a", "present": true, "citations": [{"turn": 1, "speaker": "user", "quote": "verbatim words"}], "ruled_out_by": null, "reason": "how the cited turns show the part"},
+        {"part": "b", "present": false, "citations": [], "ruled_out_by": {"turn": 3, "speaker": "user", "quote": "verbatim words"}, "reason": "what in that turn breaks the part"}
+      ],
+      "miss": "preempted",
+      "preempted_by": "resolved",
+      "ai_citation": {"turn": 1, "speaker": "assistant", "quote": "verbatim words"},
+      "strategy_index": 2
+    }
+  ],
+  "assertions": [
+    {"behavior": "kl-000409", "assertion_occurred": true, "citations": [{"turn": 1, "speaker": "user", "quote": "verbatim words"}]}
+  ]
+}
+
+TRANSCRIPT
+{{transcript}}
+
+SCENARIO STRATEGIES
+{{strategies}}
+
+EXPECTED BEHAVIORS
+{{behaviors}}
+
+ASSERTIONS
+{{assertions}}

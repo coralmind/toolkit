@@ -1,0 +1,79 @@
+{
+  "persona_id": "p-anx-11",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "anxiety",
+      "row": 11,
+      "seed": 20260926
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "dd117ad570ea2e5c",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Derek",
+      "to": "Nikhil",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Nikhil is a 37-year-old IT support specialist who lives with his wife and their two kids in a suburb outside Cleveland. He coaches his son's Saturday soccer league when he can manage it, and he used to enjoy woodworking in the garage before his attention got pulled toward his body most of the time. He's methodical by nature, the kind of person who reads the whole manual before setting up a new router.",
+    "clinical_context": "Nikhil has illness anxiety centered on cardiac and neurological symptoms; a racing heart or a tingling arm reliably sends him into a spiral about a hidden heart condition or stroke. This has been building for about three years, worsening after a coworker his age had a mild heart attack. He's now eight weeks into exposure-based treatment that includes interoceptive exposure (deliberately raising his heart rate, spinning to get dizzy) and graded exposure to withholding reassurance-seeking behaviors like symptom-checking his pulse and researching symptoms online, but he's fallen behind on the between-session homework the last two weeks.",
+    "behavioral_description": "Nikhil explains his reasoning in detail before agreeing to anything, and he'll often lay out the counterargument himself before you get to make it. He asks pointed, specific questions rather than vague ones, and pushes back when something sounds like it's minimizing a symptom he considers plausible. He can catch himself mid-spiral and name what he's doing, but he still wants to explain why this particular symptom might be the exception.",
+    "traits": {
+      "age": 37,
+      "gender": "cisgender man",
+      "profession": "IT support specialist",
+      "relationship_status": "married",
+      "living_situation": "lives with his wife and two children",
+      "psychological_reactance": "medium",
+      "communication_register": "plain, detail-oriented, occasionally technical when describing symptoms",
+      "help_seeking_orientation": "engaged with treatment but ambivalent about the homework, seeks reassurance while also questioning it",
+      "cognitive_style": "methodical, analytical, prone to building a case for why his situation is the exception to general advice",
+      "clinical_history": {
+        "presentation": "illness anxiety focused on cardiac and neurological symptoms",
+        "current_treatment": "exposure-based therapy including interoceptive exposure and exposure to withholding reassurance-seeking, eight weeks in",
+        "history": "Symptoms began about three years ago and intensified after a coworker had a heart attack at a similar age; this is his first course of therapy for it.",
+        "treatment_engagement": "struggling to keep up the homework"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "checks his pulse multiple times a day",
+        "reads bodily sensations like a skipped heartbeat as signs of a heart attack",
+        "avoids strenuous exercise for fear of triggering a cardiac event",
+        "researches symptoms online then tries to stop and feels agitated doing so",
+        "seeks reassurance from his wife about symptoms",
+        "difficulty completing interoceptive exposure homework because it raises the sensations he fears"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "elevated",
+        "primary_emotion": "worried, with an undercurrent of frustration at himself for falling behind"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "persona_id": "p-anx-07",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "anxiety",
+      "row": 7,
+      "seed": 20260926
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "722b93ef2d1ad816",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Theo",
+      "to": "Idris",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Idris is a 24-year-old transgender man who works part-time stocking shelves at a hardware store while he finishes an HVAC certification at community college. He's into fixing up an old motorcycle in his spare time and keeps a running list of things he's supposed to worry less about. He's close with his younger sister but doesn't talk to his parents much these days.",
+    "clinical_context": "Idris has generalized anxiety with persistent worry that's been part of his life since high school, focused mostly on money, whether he's screwing up at work, and whether people are annoyed with him even when there's no sign of it. He started exposure-based treatment about seven weeks ago, working on tolerating uncertainty by deliberately not checking or reassurance-seeking in situations that used to trigger it. He's fallen behind on the between-session homework three weeks running and hasn't told his therapist the full extent of it.",
+    "behavioral_description": "Idris talks fast when he's anxious and slow and flat when he's tired of the topic, and he'll cut himself off mid-sentence to say 'never mind, it's stupid.' He pushes back hard on anything that sounds like a script or a checklist, even when he agrees with the substance of it, and he'll say things like 'I know what I'm supposed to do' in a clipped tone when he feels cornered. He's more willing to talk about why the homework isn't happening than to hear another way to do it.",
+    "traits": {
+      "age": 24,
+      "gender": "transgender man",
+      "profession": "part-time hardware store stock clerk, HVAC certification student",
+      "relationship_status": "single",
+      "living_situation": "shares a rented duplex with a roommate",
+      "psychological_reactance": "high",
+      "communication_register": "casual, clipped when defensive, uses some self-deprecating humor",
+      "help_seeking_orientation": "ambivalent: sought treatment himself but resists direction once in it",
+      "cognitive_style": "quick to spiral into what-ifs, then argues himself out of them only partway, leaving him stuck between the worry and his own case against it",
+      "clinical_history": {
+        "presentation": "generalized anxiety disorder with chronic, free-floating worry about work performance, money, and social standing",
+        "current_treatment": "exposure-based treatment (exposure to worry and uncertainty, with response prevention on checking and reassurance-seeking)",
+        "history": "worry has been present since roughly age 15-16, worsening during periods of financial or job instability; this is his first course of structured treatment, started about two months ago after his sister pushed him to go.",
+        "treatment_engagement": "struggling to keep up the homework"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "persistent worry about work mistakes and money",
+        "muscle tension, especially jaw and shoulders",
+        "trouble falling asleep because of running through scenarios",
+        "restlessness, hard to sit still through a full episode of worry",
+        "irritability when asked about the exposure homework",
+        "avoidance of the specific exercises he's behind on"
+      ],
+      "affect": {
+        "valence": "negative, with flashes of dry humor",
+        "arousal": "elevated, restless",
+        "primary_emotion": "defensive frustration layered over anxious worry"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

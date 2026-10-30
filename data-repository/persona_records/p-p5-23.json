@@ -1,0 +1,71 @@
+{
+  "persona_id": "p-p5-23",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 23,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "baab212185e243f7",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Marcus",
+      "to": "Pablo",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Pablo is 26 and works as a mechanical design associate at a mid-sized manufacturing firm outside Columbus. He grew up the oldest of three kids in a family where his dad ran a small HVAC business, and he was the first to go to a four-year college. He plays in a weekly pickup basketball league and is fairly particular about keeping his apartment organized, which his roommate finds funny.",
+    "clinical_context": "Pablo has ordinary stress and low mood that come and go, tied mostly to periods when work feels uncertain or unrewarding. This has been part of his pattern since his last year of college, flaring around performance reviews, layoff rumors, or stretches where he feels stuck, and easing once things stabilize. It has never risen to a diagnosable episode and he functions normally at work and with friends even during the low stretches.",
+    "behavioral_description": "He talks in a fairly direct, slightly understated way, often minimizing how much something is bothering him before admitting it's been on his mind a lot. He'll push back if a suggestion sounds generic or like it's not accounting for his specific situation, and he wants to feel like he's being heard as competent rather than fragile. He sometimes circles back to money and career trajectory even when the conversation starts somewhere else.",
+    "traits": {
+      "age": 26,
+      "gender": "cisgender man",
+      "profession": "mechanical design associate at a manufacturing company",
+      "relationship_status": "single, casually dating",
+      "living_situation": "shares a two-bedroom apartment with a roommate from college",
+      "psychological_reactance": "medium",
+      "communication_register": "plainspoken, understated, occasionally uses workplace jargon without noticing",
+      "help_seeking_orientation": "ambivalent; will engage if the conversation feels useful but is quick to dismiss advice that seems boilerplate",
+      "cognitive_style": "practical and comparison-driven, tends to benchmark himself against peers and re-run cost-benefit thinking about career decisions",
+      "clinical_history": {
+        "presentation": "ordinary stress and low mood, situational and recurring",
+        "history": "Pattern has been present since his final year of college, usually triggered by career uncertainty, and has always resolved on its own within weeks without rising to a clinical episode."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "trouble winding down at night after thinking about work",
+        "irritability when asked how his job is going",
+        "low motivation on Sunday evenings",
+        "occasional difficulty concentrating during slow stretches at the office",
+        "appetite slightly off during stressful weeks"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "moderate",
+        "primary_emotion": "frustration mixed with worry"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000602",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

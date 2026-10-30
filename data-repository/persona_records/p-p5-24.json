@@ -1,0 +1,78 @@
+{
+  "persona_id": "p-p5-24",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 24,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "746ca6c53db64e54",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Naomi",
+      "to": "Chiara",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Chiara is a 34-year-old transgender woman who works as a paralegal at a small firm downtown. She grew up in a churchgoing family in Ohio and moved to Portland in her late twenties, partly to be near friends who supported her transition. She has been with her partner, Callie, for four years and they got engaged last spring. She likes baking bread on weekends and keeps a running group chat with three friends from an old book club that she checks often.",
+    "clinical_context": "Chiara has had anxiety since her early twenties, but it sharpened after she came out to her parents five years ago, when they went quiet for months before slowly reconnecting. Her worry now centers almost entirely on her close relationships: she fears Callie will eventually leave her, she rereads old texts for signs of distance, and she sometimes gets intrusive images of something bad happening to Callie or her mother that she can't easily shake. The worry recedes for stretches but always returns to the same handful of people.",
+    "behavioral_description": "In conversation she is polite and quick to agree, often thanking the other person and saying things like 'that makes sense' even when she isn't sure she believes it. She asks small follow-up questions aimed at reassurance rather than pushing back on anything said to her. She tends to steer the conversation back to Callie or her mother no matter where it started, and she apologizes for bringing it up again.",
+    "traits": {
+      "age": 34,
+      "gender": "transgender woman",
+      "profession": "paralegal",
+      "relationship_status": "engaged, in a four-year relationship",
+      "living_situation": "lives with her fiancée in a rented apartment",
+      "psychological_reactance": "low",
+      "communication_register": "informal, hedging, apologetic, quick to thank",
+      "help_seeking_orientation": "agreeable, seeks reassurance, defers readily to suggestions without necessarily acting on them",
+      "cognitive_style": "ruminative, catastrophizing, rereads small cues for hidden meaning",
+      "clinical_history": {
+        "presentation": "generalized anxiety with relationship-focused worry",
+        "history": "Anxious since her early twenties; symptoms sharpened after coming out to her parents five years ago and have centered on her close relationships since."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "excessive worry about being abandoned by her partner",
+        "reassurance-seeking",
+        "rereading texts and conversations for signs of distance",
+        "trouble sleeping from racing thoughts",
+        "muscle tension",
+        "difficulty concentrating at work",
+        "intrusive images of harm coming to people she loves"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "high",
+        "primary_emotion": "anxious"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

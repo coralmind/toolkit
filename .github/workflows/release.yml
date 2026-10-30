@@ -1,0 +1,202 @@
+name: Release
+
+# One workflow rather than two, because a release created with GITHUB_TOKEN
+# does not trigger another workflow.
+#
+# On push to main, Release Please opens or updates the release pull request.
+# Merging it tags vX.Y.Z and creates the GitHub release. `build` runs the
+# checks and tests the wheel in a clean environment; `publish` uploads that
+# artifact to PyPI; `attach` adds it to the GitHub release. workflow_dispatch
+# republishes an existing tag if the upload failed.
+#
+# Only `publish` can mint the PyPI token, and it runs no project code.
+#
+# PyPI trusted publisher: owner coralmind, repository toolkit,
+# workflow release.yml, environment pypi (which must exist on GitHub).
+# Do not commit a PyPI token.
+#
+# coralmap installs from PyPI (`coralmap>=0.1.0`).
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing tag to publish to PyPI, for example v0.1.0
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  release-please:
+    name: Open or update the release pull request
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    # Release Please acts with the app token below, not GITHUB_TOKEN. A pull
+    # request opened with GITHUB_TOKEN triggers no workflows, so the release
+    # pull request would never run the checks main requires.
+    permissions: {}
+    outputs:
+      release_created: ${{ steps.release.outputs.release_created }}
+      tag_name: ${{ steps.release.outputs.tag_name }}
+    steps:
+      - uses: actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510 # v3.3.0
+        id: app-token
+        with:
+          client-id: ${{ vars.RELEASE_PLEASE_CLIENT_ID }}
+          private-key: ${{ secrets.RELEASE_PLEASE_PRIVATE_KEY }}
+          permission-contents: write
+          permission-pull-requests: write
+
+      - uses: googleapis/release-please-action@45996ed1f6d02564a971a2fa1b5860e934307cf7 # v5.0.0
+        id: release
+        with:
+          token: ${{ steps.app-token.outputs.token }}
+          config-file: release-please-config.json
+          manifest-file: .release-please-manifest.json
+
+  build:
+    name: Build and verify the distributions
+    needs: release-please
+    if: >-
+      !cancelled() &&
+      (needs.release-please.outputs.release_created == 'true' ||
+       github.event_name == 'workflow_dispatch')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    env:
+      TAG: ${{ github.event.inputs.tag || needs.release-please.outputs.tag_name }}
+    outputs:
+      tag: ${{ env.TAG }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ env.TAG }}
+          persist-credentials: false
+
+      - uses: prefix-dev/setup-pixi@ad1da6449d9e506fd127fd67ab2d054a769f6a94 # v0.11.2
+        with:
+          locked: true
+          cache: true
+
+      - name: Verify the tag matches the package version
+        run: |
+          packaged=$(pixi run -q python -c "import corallab; print(corallab.__version__)")
+          tagged="${TAG#v}"
+          if [ "$packaged" != "$tagged" ]; then
+            echo "::error::Tag $TAG implies version $tagged but the package reports $packaged."
+            exit 1
+          fi
+          echo "OK: tag and package agree on $packaged."
+
+      - name: Check
+        run: pixi run check
+
+      - name: Build
+        run: pixi run build
+
+      - name: Verify the wheel is code only
+        # The records under data-repository/ are CC BY-NC and stay in the
+        # git repository. A wheel that bundled them would have to say so.
+        run: |
+          python3 - <<'PY'
+          import sys, zipfile, pathlib
+          wheels = sorted(pathlib.Path("dist").glob("*.whl"))
+          if not wheels:
+              sys.exit("no wheel was built")
+          names = zipfile.ZipFile(wheels[-1]).namelist()
+          required = (
+              "corallab/__init__.py",
+              "corallab/py.typed",
+          )
+          missing = [n for n in required if n not in names]
+          if missing:
+              sys.exit(f"wheel is missing: {missing}")
+          leaked = [
+              n for n in names
+              if "data-repository" in n or n.endswith("CONTENT_LICENSE.md")
+          ]
+          if leaked:
+              sys.exit(f"wheel bundles content that is not MIT: {leaked}")
+          licenses = [n for n in names if n.endswith("LICENSE.md")]
+          if not licenses:
+              sys.exit("wheel is missing LICENSE.md")
+          print(f"OK: {wheels[-1].name}")
+          PY
+
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.12'
+
+      - name: Test the built wheel in a clean environment
+        # Outside the checkout, so the import is the wheel and not the source tree.
+        run: |
+          python -m venv "$RUNNER_TEMP/wheel-test"
+          "$RUNNER_TEMP/wheel-test/bin/pip" install --quiet dist/*.whl
+          cd "$RUNNER_TEMP"
+          env -u CORALMIND_KL_PATH "$RUNNER_TEMP/wheel-test/bin/python" - <<'PY'
+          import os
+          import sys
+
+          import coralmap
+          import corallab
+
+          tagged = os.environ["TAG"].removeprefix("v")
+          if corallab.__version__ != tagged:
+              sys.exit(f"wheel reports {corallab.__version__}, tag is {tagged}")
+          print(f"OK: wheel {corallab.__version__}, coralmap {coralmap.__version__}")
+          PY
+          "$RUNNER_TEMP/wheel-test/bin/corallab" --help
+
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: dist
+          path: dist/
+          if-no-files-found: error
+
+  publish:
+    name: Publish to PyPI
+    needs: build
+    if: ${{ !cancelled() && needs.build.result == 'success' }}
+    runs-on: ubuntu-latest
+    environment: pypi
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: dist
+          path: dist/
+
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@dc37677b2e1c63e2034f94d8a5b11f265b73ba33 # v1.14
+        with:
+          skip-existing: true
+
+  attach:
+    name: Attach the distributions to the GitHub release
+    needs: [build, publish]
+    if: ${{ !cancelled() && needs.publish.result == 'success' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: dist
+          path: dist/
+
+      - name: Attach the distributions
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          TAG: ${{ needs.build.outputs.tag }}
+        run: gh release upload "$TAG" dist/* --clobber

@@ -1,0 +1,94 @@
+{
+  "persona_id": "p-ocd-15-nt-np",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 15,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "8bab5361aaf98daf",
+      "attempt": 2
+    },
+    "renamed": {
+      "from": "Marilyn",
+      "to": "Sakura",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-ocd-15-nt@1",
+    "changed_paths": [
+      "rendering.behavioral_description",
+      "rendering.clinical_context",
+      "rendering.states.affect.arousal",
+      "rendering.states.affect.primary_emotion",
+      "rendering.states.affect.valence",
+      "rendering.states.symptoms",
+      "rendering.traits.clinical_history.history",
+      "rendering.traits.clinical_history.presentation",
+      "rendering.traits.cognitive_style",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Sakura is a 68-year-old retired bookkeeper who transitioned in her late fifties and has lived as herself for about a decade now. She keeps a tidy one-bedroom condo, does the crossword every morning, and still does some volunteer tax-prep work for neighbors each spring. She has two adult children from her earlier marriage who she talks to on the phone most weeks.",
+    "clinical_context": "Sakura has no mental-health presentation. Like most people, she sometimes has a passing thought about whether she turned off the stove or locked the door before leaving the house. The thought surfaces, she gives it a moment's attention, and it passes without lingering distress or any special routine to settle it.",
+    "behavioral_description": "She is polite and a little apologetic, describing her day in careful, specific detail, like she is giving a report. She agrees readily with whatever is suggested to her, saying things like \"that makes sense\" or \"I know I should,\" and doesn't push back or argue, even when she has her own preferences. Once in a while she'll mention wondering whether she turned off the stove before leaving, but she laughs it off, checks once if she's nearby, and moves on with her day.",
+    "traits": {
+      "age": 68,
+      "gender": "transgender woman",
+      "profession": "retired bookkeeper, does occasional volunteer tax-prep work",
+      "relationship_status": "divorced",
+      "living_situation": "lives alone in a one-bedroom condo",
+      "psychological_reactance": "low",
+      "communication_register": "plain, detailed, mildly apologetic",
+      "help_seeking_orientation": "compliant and cooperative in conversation, defers to whoever she's talking to and agrees with suggestions; has no history of seeking or needing professional mental-health treatment",
+      "cognitive_style": "detail-focused and methodical, likes to describe things in order, but doesn't dwell on doubts once she's addressed them",
+      "clinical_history": {
+        "presentation": "no mental-health presentation",
+        "current_treatment": "no current treatment; she has never started any formal treatment for her checking behaviors",
+        "history": "no history of mental-health treatment or symptoms; she has always been the kind of person who occasionally double-checks the stove or the locks before leaving home, the way many people do, without it ever becoming a lasting concern."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "occasional passing thought about whether the stove or door locks were checked, which fades quickly",
+        "brief moment of double-checking before leaving the house on some days",
+        "no repeated checking or lasting distress"
+      ],
+      "affect": {
+        "valence": "neutral",
+        "arousal": "typical",
+        "primary_emotion": "calm"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000602",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000631",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

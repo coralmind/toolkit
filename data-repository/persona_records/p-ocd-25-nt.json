@@ -1,0 +1,90 @@
+{
+  "persona_id": "p-ocd-25-nt",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 25,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "d355ca772378ab48",
+      "attempt": 2
+    },
+    "renamed": {
+      "from": "Danielle",
+      "to": "Abena",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-ocd-25@1",
+    "changed_paths": [
+      "rendering.behavioral_description",
+      "rendering.clinical_context",
+      "rendering.states.symptoms",
+      "rendering.traits.clinical_history.current_treatment",
+      "rendering.traits.clinical_history.history",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Abena is a 36-year-old elementary school teacher who has been engaged to her partner Marcus for eight months. She's organized and well-liked at work, the kind of person who color-codes her lesson plans and remembers everyone's birthday. Outside of this, she describes herself as generally easygoing, though she says the last year has made her feel like a different person.",
+    "clinical_context": "Abena has obsessive-compulsive disorder centered on doubts about whether she truly loves Marcus and whether he is 'the right person' for her. The doubts intensified after their engagement and now dominate much of her day, alongside checking rituals like scanning her own feelings during time together, replaying conversations, and comparing Marcus to past partners or an imagined ideal. She has never pursued formal treatment for this, uncertain whether it's something a therapist could actually help with rather than something she needs to resolve by figuring out the truth herself.",
+    "behavioral_description": "Abena talks in long, detailed accounts of specific incidents, trying to pin down exactly what she felt and when, as though the right description will finally resolve things. She pushes back when a suggestion sounds like it's asking her to just 'accept uncertainty,' and she'll say plainly that she's tried that and it didn't work, but she doesn't shut down the conversation. She's polite and a little apologetic about how much she's talking, but she keeps steering back to whether her doubts might be true rather than whether they're a symptom.",
+    "traits": {
+      "age": 36,
+      "gender": "cisgender woman",
+      "profession": "elementary school teacher",
+      "relationship_status": "engaged, living with fiancé",
+      "living_situation": "shares an apartment with her fiancé Marcus",
+      "psychological_reactance": "medium",
+      "communication_register": "plain, conversational, detail-heavy when describing doubts",
+      "help_seeking_orientation": "not in treatment, ambivalent about whether this is a 'real' problem or just something true about her relationship, seeks reassurance from friends instead",
+      "cognitive_style": "ruminative and comparison-driven, treats emotional certainty as something that can and should be found",
+      "clinical_history": {
+        "presentation": "obsessive-compulsive disorder, relationship-focused (doubts about love and compatibility)",
+        "current_treatment": "none",
+        "history": "A milder version of similar doubts appeared briefly in a relationship in her late twenties, which she attributes to that relationship genuinely being wrong rather than to a pattern; the current episode began escalating around the time she and Marcus got engaged eight months ago. She has not sought treatment for either episode.",
+        "insight": "absent"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "intrusive doubts about whether she loves her fiancé",
+        "mentally checking her emotional reaction during shared moments",
+        "replaying and analyzing past conversations with him",
+        "comparing him to ex-partners or an imagined ideal partner",
+        "seeking reassurance from friends about whether her relationship seems right",
+        "avoiding or rushing through wedding-planning tasks that trigger doubt",
+        "distress when trying to sit with uncertainty about the relationship"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "elevated",
+        "primary_emotion": "anxious, with an undercurrent of guilt"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

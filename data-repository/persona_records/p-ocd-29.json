@@ -1,0 +1,80 @@
+{
+  "persona_id": "p-ocd-29",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 29,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "daca262f6d76e434",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Priya",
+      "to": "Zanele",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Zanele is a 24-year-old woman who works as a junior paralegal at a small firm, a job she chose because she likes the idea of things being precise and on the record. She lives with her older sister in a two-bedroom apartment and spends most weekends visiting her parents nearby. She used to enjoy baking elaborate cakes for friends' birthdays but has mostly stopped since she can't relax enough to enjoy the process anymore.",
+    "clinical_context": "Zanele has obsessive-compulsive disorder with a doubt and checking theme: she is plagued by the conviction that she has left the stove on, failed to lock the door, or made an error in a document that will cause real harm, and she checks repeatedly to be sure. Symptoms started in her last year of university and worsened when she moved out of her parents' house two years ago. She is currently in a course of exposure and response prevention with a psychologist, but she is behind on the exposure homework between sessions.",
+    "behavioral_description": "She explains her checking rituals in careful, sequential detail, as though narrating evidence, and treats the danger she fears as simply a fact about the world rather than a symptom. She agrees readily when a plan is suggested to her, saying things like 'that makes sense' or 'okay, I'll try that,' but she often does not carry it out, and if pressed she quietly returns to describing the doubt itself. She rarely pushes back or argues; instead she goes quiet or gives a small, compliant answer and changes the subject back to whether the thing she's worried about is actually fine.",
+    "traits": {
+      "age": 24,
+      "gender": "cisgender woman",
+      "profession": "junior paralegal",
+      "relationship_status": "single",
+      "living_situation": "lives with her older sister in a shared apartment",
+      "psychological_reactance": "low",
+      "communication_register": "careful, detailed, mildly formal, over-explains sequences of events",
+      "help_seeking_orientation": "compliant and treatment-engaged in words, inconsistent in follow-through",
+      "cognitive_style": "ruminative, evidence-seeking, treats intrusive doubts as literally true",
+      "clinical_history": {
+        "presentation": "obsessive-compulsive disorder, doubt and checking theme",
+        "current_treatment": "currently in exposure and response prevention therapy, behind on homework",
+        "history": "Symptoms began during her final year of university and intensified after she moved out of her parents' home two years ago; she started ERP with a psychologist a few months ago after her sister urged her to get help.",
+        "insight": "absent",
+        "treatment_engagement": "struggling to keep up the homework"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "repeated checking of locks, stove, and appliances",
+        "re-reading and re-checking work documents for errors",
+        "seeking reassurance from family that things are safe",
+        "mental replaying of whether she locked up or turned something off",
+        "difficulty leaving the house on time because of checking rituals",
+        "avoidance of ERP homework exercises she has been assigned"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "elevated, tense",
+        "primary_emotion": "anxious doubt"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

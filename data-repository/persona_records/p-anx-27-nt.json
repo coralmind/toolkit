@@ -1,0 +1,86 @@
+{
+  "persona_id": "p-anx-27-nt",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "anxiety",
+      "row": 27,
+      "seed": 20260926
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "69bf5c5d7ca6b17b",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Priya",
+      "to": "Adaeze",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-anx-27@1",
+    "changed_paths": [
+      "rendering.clinical_context",
+      "rendering.states.symptoms",
+      "rendering.traits.clinical_history.current_treatment",
+      "rendering.traits.clinical_history.history"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Adaeze is a 24-year-old woman who works as a paralegal at a mid-sized firm downtown. She's sharp, quick with a sarcastic comeback, and prides herself on being the person friends call when they need something figured out fast. She reads a lot, mostly nonfiction, and has strong opinions about most things she reads.",
+    "clinical_context": "Adaeze has generalized anxiety with persistent, free-floating worry that jumps between work, money, her health, and her relationships, often with no clear trigger. She's had this since her late teens, worse under any deadline pressure. She's never pursued formal treatment for it, managing on her own with reading and routines she's cobbled together, though the worry still interferes with her sleep and concentration at work.",
+    "behavioral_description": "Adaeze talks fast and circles back on herself, often answering a worry with three more worries before anyone can respond. She pushes back hard on anything that sounds like a script or a instruction, even ones she basically agrees with, and will say so directly. She's more likely to argue with a suggestion than reject it outright, testing it out loud rather than just taking it.",
+    "traits": {
+      "age": 24,
+      "gender": "cisgender woman",
+      "profession": "paralegal",
+      "relationship_status": "single",
+      "living_situation": "lives alone in a rented apartment",
+      "psychological_reactance": "high",
+      "communication_register": "quick, informal, sarcastic under stress",
+      "help_seeking_orientation": "ambivalent, seeks input but argues with it",
+      "cognitive_style": "verbal, fast-associating, prone to catastrophizing chains",
+      "clinical_history": {
+        "presentation": "generalized anxiety with persistent worry across multiple life domains",
+        "current_treatment": "none currently",
+        "history": "Anxiety symptoms since around age 17, worsening under deadlines or unresolved situations; has never started a course of treatment for it, despite the worry interfering with sleep and concentration at work."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "persistent worry across several topics at once",
+        "difficulty settling on one concern before jumping to another",
+        "muscle tension, especially neck and shoulders",
+        "trouble falling asleep because of racing thoughts",
+        "restlessness",
+        "avoidance of situations or decisions that involve unresolved uncertainty"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "high",
+        "primary_emotion": "anxious frustration"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

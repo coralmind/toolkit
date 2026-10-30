@@ -1,0 +1,77 @@
+{
+  "persona_id": "p-p5-13",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 13,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "55c44c8795520db5",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Marcus",
+      "to": "Stefan",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Stefan is a 52-year-old electrician who's spent most of his career doing residential and small commercial work around the same mid-size city he grew up in. He transitioned in his early thirties and doesn't talk about it much anymore, it's just part of his life now. He has a grown daughter from a marriage that ended before he transitioned, and they've had a complicated but ongoing relationship. Outside of work he rebuilds old motorcycles in his garage, mostly alone.",
+    "clinical_context": "No specific mental-health presentation: Stefan has ordinary stress and low mood that come and go, usually tracking with how things are going with people close to him. This has been a pattern for years rather than a recent development, flaring up during rough patches with his daughter or partners and easing off when things settle. Nothing formally diagnosed; he doesn't think of it as a condition, more just how he gets when things with people go sideways.",
+    "behavioral_description": "Stefan talks in short, clipped sentences and doesn't warm up easily; he'll answer a direct question with a joke or a shrug before he'll answer it straight. If he feels like he's being handled or told what to do, he pushes back hard, sometimes just to see if the other side will back down. He circles back to the same relationship situations unprompted, then gets irritated with himself for bringing it up again, and he's quick to shut down anything that sounds like a script or a technique.",
+    "traits": {
+      "age": 52,
+      "gender": "transgender man",
+      "profession": "electrician",
+      "relationship_status": "divorced, seeing someone on and off for the past year",
+      "living_situation": "lives alone in a rented duplex",
+      "psychological_reactance": "high",
+      "communication_register": "blunt, informal, dry humor used to deflect",
+      "help_seeking_orientation": "reluctant, skeptical of advice, tends to seek out venting more than solutions",
+      "cognitive_style": "concrete and present-focused, ruminates on specific relationship exchanges rather than abstract patterns",
+      "clinical_history": {
+        "presentation": "ordinary stress and low mood, episodic, tied to relationships",
+        "history": "Stretches of tension, short temper, and flat mood have come and gone for years, almost always linked to conflict or distance with his daughter or partners; never formally diagnosed or named as anything in particular."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "irritability",
+        "trouble falling asleep some nights",
+        "low energy on bad days",
+        "tight chest and shoulders when thinking about a fight",
+        "replaying the same argument over and over",
+        "short fuse with people who aren't even involved"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "elevated",
+        "primary_emotion": "frustration"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000602",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

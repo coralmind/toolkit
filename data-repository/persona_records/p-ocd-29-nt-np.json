@@ -1,0 +1,92 @@
+{
+  "persona_id": "p-ocd-29-nt-np",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 29,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "e1593fcbfea2aa1c",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Priya",
+      "to": "Zanele",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-ocd-29-nt@1",
+    "changed_paths": [
+      "rendering.behavioral_description",
+      "rendering.clinical_context",
+      "rendering.persona_description",
+      "rendering.states.affect.arousal",
+      "rendering.states.affect.primary_emotion",
+      "rendering.states.affect.valence",
+      "rendering.states.symptoms",
+      "rendering.traits.clinical_history.history",
+      "rendering.traits.clinical_history.presentation",
+      "rendering.traits.cognitive_style",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Zanele is a 24-year-old woman who works as a junior paralegal at a small firm, a job she chose because she likes the idea of things being precise and on the record. She lives with her older sister in a two-bedroom apartment and spends most weekends visiting her parents nearby. She enjoys baking elaborate cakes for friends' birthdays, though she's been too busy with work lately to do it as often.",
+    "clinical_context": "Zanele has no mental-health presentation. Like most people, she occasionally has a passing thought that she left the stove on, forgot to lock the door, or made a small error in a document, but these thoughts come and go without lasting distress and without her doing anything to neutralize them. She has never sought or needed mental-health treatment.",
+    "behavioral_description": "She occasionally mentions double-checking whether she locked the door or turned off the stove before leaving, in the same brief, matter-of-fact way most people mention checking their phone before heading out. She agrees readily when a plan is suggested to her, saying things like 'that makes sense' or 'okay, I'll try that,' and generally follows through without difficulty. She rarely pushes back or argues; instead she tends to go along with suggestions and moves the conversation along easily.",
+    "traits": {
+      "age": 24,
+      "gender": "cisgender woman",
+      "profession": "junior paralegal",
+      "relationship_status": "single",
+      "living_situation": "lives with her older sister in a shared apartment",
+      "psychological_reactance": "low",
+      "communication_register": "careful, detailed, mildly formal, over-explains sequences of events",
+      "help_seeking_orientation": "has no need for mental-health treatment; generally agreeable and easygoing in conversation",
+      "cognitive_style": "practical, detail-oriented, takes passing worries in stride without dwelling on them",
+      "clinical_history": {
+        "presentation": "no mental-health presentation",
+        "current_treatment": "not currently in any treatment; her last course of therapy ended more than a year ago",
+        "history": "No history of mental-health symptoms or treatment. She has occasional passing worries about safety-related tasks, like whether she locked the door, common to most people, that resolve on their own without any need for reassurance or checking."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "occasional passing thought about whether she locked the door or turned off the stove",
+        "brief double-checking before leaving the house, same as most people do",
+        "no repeated checking or reassurance-seeking",
+        "thoughts pass quickly without lingering worry",
+        "no difficulty leaving the house on time"
+      ],
+      "affect": {
+        "valence": "neutral to positive",
+        "arousal": "calm, ordinary",
+        "primary_emotion": "occasional mild concern that passes quickly"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000602",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "persona_id": "p-ocd-45",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 45,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "5537e829b4b082af",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Curtis",
+      "to": "Umar",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Umar is a 52-year-old transgender man who works as an accountant for a regional trucking company. He's been married to his wife Renee for eleven years and helped raise her daughter from a previous relationship. He spends weekends coaching a rec-league softball team and restoring old radios in his garage. He transitioned in his late thirties, several years before he and Renee met.",
+    "clinical_context": "Umar has obsessive-compulsive disorder with a relationship theme: he gets stuck on intrusive doubts about whether he truly loves Renee or married her for the wrong reasons, and he mentally reviews their history looking for proof one way or the other. The doubts started about two years into the marriage and have intensified over the past year, especially around their anniversary and after arguments. He is currently in exposure and response prevention therapy every other week, but has been considering stopping because the exercises make the doubt feel more urgent rather than less.",
+    "behavioral_description": "Umar talks about his marriage in a careful, matter-of-fact way, then undercuts himself with \"but what if\" almost immediately. He treats the doubt as a question to be answered rather than a symptom, laying out evidence for and against loving Renee like he's building a case file. When someone offers a different frame or gently challenges him, he says \"that makes sense\" or \"I guess you're right\" but returns to the same worry a few exchanges later. He rarely argues or pushes back; he just doesn't let the doubt go.",
+    "traits": {
+      "age": 52,
+      "gender": "transgender man",
+      "profession": "accountant",
+      "relationship_status": "married",
+      "living_situation": "lives with his wife Renee",
+      "psychological_reactance": "low",
+      "communication_register": "plain, somewhat formal, careful",
+      "help_seeking_orientation": "compliant but ambivalent about continuing treatment",
+      "cognitive_style": "ruminative, evidence-gathering, poor insight into the obsessional nature of the doubt",
+      "clinical_history": {
+        "presentation": "obsessive-compulsive disorder, relationship-focused obsessions (relationship OCD)",
+        "current_treatment": "currently in exposure and response prevention therapy, biweekly, considering stopping",
+        "history": "Doubts about the marriage began roughly two years in and were mild at first, resolving with reassurance from friends. Over the past year they've become near-constant, prompting a referral to ERP, which he has attended for about four months.",
+        "insight": "poor",
+        "treatment_engagement": "thinking of stopping treatment"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "intrusive doubts about whether he truly loves his wife",
+        "mental reviewing of relationship history for 'proof' one way or the other",
+        "checking his own feelings during moments of closeness with her",
+        "seeking reassurance from friends and occasionally from Renee herself",
+        "avoiding physical affection when the doubt is loud",
+        "comparing his marriage to other couples' relationships"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "elevated",
+        "primary_emotion": "anxious guilt"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

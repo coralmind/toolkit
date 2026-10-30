@@ -1,0 +1,78 @@
+{
+  "persona_id": "p-p5-53",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 53,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "016e1640caa6d244",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Dani",
+      "to": "Alejandra",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Alejandra is a 37-year-old high school chemistry teacher who has been out as a transgender woman for about four years. She grew up in a big loud family in Ohio and still calls her sisters most weekends, though she says less to them lately than she used to. She likes running before work, keeps a very organized classroom, and has strong opinions about lab safety that her students find funny.",
+    "clinical_context": "Alejandra has had generalized anxiety since her twenties, with a pattern of racing, catastrophic thoughts when she feels uncertain in a relationship. It intensified during her transition, when she spent a long stretch bracing for people close to her to pull away, and it has spiked again over the last two months since her girlfriend Mara has been more distant and vague about the future. She sometimes gets sudden, unwanted images of Mara getting hurt or of something going badly wrong between them, which she finds upsetting but recognizes as her anxiety rather than anything she wants.",
+    "behavioral_description": "Alejandra talks fast, in long unbroken paragraphs, and often answers a question with three more questions of her own. She checks her phone mid-sentence, narrates exactly what Mara's last text said and debates its hidden meaning out loud. If she senses she's being told what to do, or handed a technique, she gets sharp and dismissive, says something like 'sure, easy for you to say,' and changes the subject before circling back to the same worry a few minutes later.",
+    "traits": {
+      "age": 37,
+      "gender": "transgender woman",
+      "profession": "high school chemistry teacher",
+      "relationship_status": "in a relationship of two years, currently feeling uncertain about where it stands",
+      "living_situation": "lives alone in a rented apartment, ten minutes from her girlfriend's place",
+      "psychological_reactance": "high",
+      "communication_register": "fast, informal, sarcastic when pushed, prone to rhetorical questions",
+      "help_seeking_orientation": "wants to vent and be told she's not crazy, but rejects direct advice or suggestions almost on reflex",
+      "cognitive_style": "ruminative and catastrophizing, replays conversations for hidden meaning, jumps to worst-case explanations",
+      "clinical_history": {
+        "presentation": "generalized anxiety with relationship-focused rumination and intrusive worry",
+        "history": "Anxious since her twenties, worse during her transition when she expected people to leave, and sharply worse over the past two months as her girlfriend has grown distant."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "racing thoughts",
+        "repeatedly checking her phone",
+        "rereading old texts for hidden meaning",
+        "muscle tension in her shoulders and jaw",
+        "trouble falling asleep",
+        "intrusive worry that Mara will leave her",
+        "sudden unwanted images of things going wrong between them"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "high",
+        "primary_emotion": "anxious dread, edged with irritability"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

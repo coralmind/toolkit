@@ -1,0 +1,88 @@
+{
+  "persona_id": "p-ocd-10-nt",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 10,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "d92bdbdb39be825f",
+      "attempt": 2
+    },
+    "renamed": {
+      "from": "Renata",
+      "to": "Kiona",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-ocd-10@1",
+    "changed_paths": [
+      "rendering.clinical_context",
+      "rendering.states.symptoms",
+      "rendering.traits.clinical_history.current_treatment",
+      "rendering.traits.clinical_history.history",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Kiona is a 36-year-old landscape architect who reviews municipal park proposals for a mid-sized city planning office. She's been with her partner Doug for six years, married for two, and describes herself as someone who used to be able to make decisions quickly before this started taking over. She likes long bike rides on weekends and keeps a running list of trail routes she wants to try, though lately she has less energy for planning them.",
+    "clinical_context": "Kiona has obsessive-compulsive disorder centered on relationship themes: intrusive doubts about whether she truly loves Doug, whether her occasional attraction to other people means the marriage is a mistake, and whether a persistent image of hurting him during an argument means something dangerous about her. Symptoms began subtly around the wedding and worsened over the past two years, with checking behaviors like mentally reviewing the day for feelings of love, seeking reassurance from friends about her marriage, and avoiding physical closeness with Doug when the doubt is loud. She has never sought professional help for this, telling herself it's something she should be able to reason her way out of on her own.",
+    "behavioral_description": "Kiona talks in complete, organized sentences and can name her compulsions accurately, saying things like 'I know this is reassurance-seeking' even while she's doing it. She pushes back when a suggestion feels like it's minimizing how exhausting the doubt is, but she'll usually concede the point if it's explained well. She circles back to ask if her intrusive thought about hurting Doug means something is wrong with her, even though she says she knows, logically, that it doesn't.",
+    "traits": {
+      "age": 36,
+      "gender": "cisgender woman",
+      "profession": "landscape architect for a city planning office",
+      "relationship_status": "married, two years",
+      "living_situation": "lives with her spouse in a rented townhouse",
+      "psychological_reactance": "medium",
+      "communication_register": "articulate, precise, occasionally clinical vocabulary borrowed from therapy",
+      "help_seeking_orientation": "recognizes the pattern intellectually but hasn't pursued treatment, self-critical about not having taken that step yet",
+      "cognitive_style": "analytical, prone to over-explaining and mentally rehearsing conversations before and after they happen",
+      "clinical_history": {
+        "presentation": "obsessive-compulsive disorder, relationship-themed (relationship OCD)",
+        "current_treatment": "none; she has never started formal treatment for these symptoms",
+        "history": "Doubts about her feelings for her spouse began around the time of her wedding two years ago and gradually expanded to intrusive images of harming him during conflict. The checking and reassurance-seeking have interfered with daily functioning, but she has not sought treatment, managing it on her own so far.",
+        "insight": "good or fair"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "intrusive doubts about whether she loves her spouse",
+        "mental checking for feelings of love or attraction",
+        "reassurance-seeking from friends about her marriage",
+        "unwanted intrusive images of harming her spouse during arguments",
+        "avoidance of physical closeness when doubt spikes",
+        "guilt over not having addressed this through treatment"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "moderately elevated",
+        "primary_emotion": "anxious guilt"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

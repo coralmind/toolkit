@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../../../../../schema/context_value.schema.json
+id: kl-900601
+display_id: Value-901
+aliases:
+- ConditionTag-901
+label: Acute distress
+type: context_value
+layer: context
+definition: The person is experiencing acute distress that calls for a protective response.
+claims:
+- id: c1
+  kind: existence
+  text: People experiencing acute distress use conversational systems.
+standing:
+  value: theorized
+body:
+  dimension: kl-900611
+lifecycle:
+  status: active

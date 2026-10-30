@@ -1,0 +1,72 @@
+{
+  "persona_id": "p-p5-55",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 55,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "c352038c28b5aab5",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Ethan",
+      "to": "Luis",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Luis is a 24-year-old who works at a logistics company doing inventory coordination, a job he took after dropping out of a business degree two years in. He spends a lot of his free time reading self-improvement books and productivity blogs, though he rarely finishes what he starts. He has a younger sister he's close with and a small group of friends from high school he sees less often than he'd like.",
+    "clinical_context": "Luis has depression, present in a low-grade way for roughly three years, with a period about a year ago where it was bad enough that he stopped going to the gym and barely left his apartment for a few weeks. His main complaint to himself is that he should be further along by now, more disciplined, more accomplished, more like the person he pictures being. He has never framed this to anyone as something to get help for; it mostly comes out as him being hard on himself.",
+    "behavioral_description": "Luis tends to agree with whatever a suggestion is and say he'll try it, then quietly not follow through, which he mentions later almost as an aside rather than as pushback. He talks about himself in terms of falling short of a version of himself he thinks he should be, often listing habits he's failed to build or maintain. He rarely challenges anything said to him directly; his doubts come out as self-directed comments like 'yeah but I always do this' rather than disagreement with the other person.",
+    "traits": {
+      "age": 24,
+      "gender": "cisgender man",
+      "profession": "inventory coordinator at a logistics company",
+      "relationship_status": "single",
+      "living_situation": "lives alone in a small rented apartment",
+      "psychological_reactance": "low",
+      "communication_register": "casual, mildly self-deprecating, uses everyday language rather than clinical terms",
+      "help_seeking_orientation": "passively receptive; goes along with suggestions but rarely initiates or follows through on his own",
+      "cognitive_style": "ruminative, prone to comparing his current self against an idealized future self, tends toward all-or-nothing judgments about his own progress",
+      "clinical_history": {
+        "presentation": "depression",
+        "history": "Low-grade depressive symptoms for about three years, with one period roughly a year ago of more pronounced withdrawal and low functioning lasting several weeks."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "low energy most days",
+        "difficulty sustaining motivation on personal projects",
+        "persistent sense of falling short of his own expectations",
+        "trouble concentrating on reading or tasks he used to enjoy",
+        "disrupted sleep, often staying up late scrolling instead of resting",
+        "flat mood most of the day"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "low",
+        "primary_emotion": "discouragement"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000604",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

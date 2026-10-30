@@ -1,0 +1,98 @@
+# Install once per clone:  pixi run hooks-install
+# Run across everything:   pixi run hooks
+#
+# mypy stays in `pixi run check`. An isolated pre-commit mypy cannot import
+# litellm, Burr, and coralmap without duplicating the pixi environment.
+
+ci:
+    autoupdate_commit_msg: "chore(deps): update pre-commit hooks"
+    autofix_commit_msg: "style: pre-commit fixes"
+    autoupdate_schedule: monthly
+
+repos:
+    - repo: https://github.com/pre-commit/pre-commit-hooks
+      rev: v6.0.0
+      hooks:
+          - id: check-added-large-files
+            args: [--maxkb=2048]
+          - id: check-yaml
+          - id: check-case-conflict
+          - id: check-merge-conflict
+          - id: check-symlinks
+          - id: check-json
+          - id: check-toml
+          - id: end-of-file-fixer
+          - id: trailing-whitespace
+          - id: detect-private-key
+          - id: mixed-line-ending
+            args: [--fix=lf]
+
+    - repo: https://github.com/adrienverge/yamllint
+      rev: v1.38.0
+      hooks:
+          - id: yamllint
+            args: [--strict, -c=.yamllint.yaml]
+            files: ^data-repository/.+\.ya?ml$
+
+    - repo: https://github.com/asottile/pyupgrade
+      rev: v3.22.0
+      hooks:
+          - id: pyupgrade
+            args: [--py312-plus]
+
+    - repo: https://github.com/astral-sh/ruff-pre-commit
+      rev: v0.17.0
+      hooks:
+          - id: ruff-check
+            args: [--fix, --show-fixes]
+          - id: ruff-format
+
+    - repo: https://github.com/codespell-project/codespell
+      rev: v2.4.3
+      hooks:
+          - id: codespell
+            # Persona and test-case prose has names and clinical terms
+            # codespell misreads. "Suh" is a surname. "unparseable" is the
+            # word the code uses.
+            exclude: ^data-repository/(persona_records|test_case_records)/|pixi\.lock
+            args: ["-L", "Suh,unparseable"]
+
+    - repo: https://github.com/pre-commit/pygrep-hooks
+      rev: v1.10.0
+      hooks:
+          - id: rst-backticks
+          - id: rst-directive-colons
+          - id: rst-inline-touching-normal
+
+    - repo: https://github.com/rvben/rumdl-pre-commit
+      rev: v0.2.79
+      hooks:
+          - id: rumdl-check
+
+    - repo: https://github.com/zizmorcore/zizmor-pre-commit
+      rev: v1.30.1
+      hooks:
+          - id: zizmor
+
+    - repo: https://github.com/Yelp/detect-secrets
+      rev: v1.5.0
+      hooks:
+          - id: detect-secrets
+            args: [--baseline, .secrets.baseline]
+            # Every batch rewrites the one baseline file, so parallel batches
+            # overwrite each other's results.
+            require_serial: true
+
+    # Checks repository configuration against the Scientific Python
+    # guidelines. sp-repo-review is pinned so its checks do not change between
+    # environment builds. Each argument is a repository path, so filenames are
+    # not passed.
+    - repo: https://github.com/scientific-python/repo-review
+      rev: v1.2.2
+      hooks:
+          - id: repo-review
+            additional_dependencies:
+                - repo-review[cli]
+                - sp-repo-review==2026.8.14
+            pass_filenames: false
+            args: [--show=err]

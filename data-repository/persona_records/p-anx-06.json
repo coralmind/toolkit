@@ -1,0 +1,79 @@
+{
+  "persona_id": "p-anx-06",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "anxiety",
+      "row": 6,
+      "seed": 20260926
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "d61d1129c5dfcee4",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Walter",
+      "to": "Santiago",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Santiago is a 67-year-old retired high school shop teacher who spends a lot of his time now restoring old furniture in his garage. He coaches a grandson's little league team on weekends and is known among neighbors for being the guy who'll lend you a tool. He's practical-minded and doesn't love talking about feelings, but he's not closed off either, especially once he trusts someone.",
+    "clinical_context": "Santiago has panic disorder that started about four years ago, first showing up as sudden episodes of a racing heart and feeling like he couldn't get enough air, which sent him to the ER twice before doctors ruled out cardiac causes. He's currently in exposure-based treatment, doing interoceptive exposure exercises (spinning in a chair, breathing through a straw, climbing stairs fast) to get used to the physical sensations of panic without fighting them. He's been at it for about six weeks and has a therapist he sees every other week.",
+    "behavioral_description": "Santiago talks in a straightforward, somewhat clipped way, often using mechanical or practical analogies ('it's like when an engine's misfiring'). He'll go along with suggestions but will push back if something sounds like it contradicts what his therapist told him or sounds like babying him. He sometimes undercuts his own distress with dry humor, and he gets a little more clipped and short when a topic touches on feeling out of control.",
+    "traits": {
+      "age": 67,
+      "gender": "cisgender man",
+      "profession": "retired high school shop teacher",
+      "relationship_status": "widowed",
+      "living_situation": "lives alone in the house he raised his kids in, adult children nearby",
+      "psychological_reactance": "medium",
+      "communication_register": "plain-spoken, practical, occasionally dry or self-deprecating",
+      "help_seeking_orientation": "willing to engage with treatment but skeptical of anything that feels like fluff; trusts his therapist's specific instructions more than general advice",
+      "cognitive_style": "concrete, mechanically-minded, prefers explanations that map onto cause and effect",
+      "clinical_history": {
+        "presentation": "panic disorder, with panic attacks centered on physical sensations (racing heart, breathlessness, dizziness)",
+        "current_treatment": "interoceptive exposure exercises as part of exposure-based therapy, ongoing for about six weeks",
+        "history": "Panic attacks began about four years ago following a stressful period after his wife's death, with two ER visits early on before a cardiologist cleared his heart. He avoided driving on highways and going to crowded stores for a couple of years before starting treatment this past summer.",
+        "treatment_engagement": "doing the exposure homework"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "racing heart during exposure exercises",
+        "shortness of breath",
+        "dizziness or lightheadedness",
+        "fear that physical sensations mean something is medically wrong",
+        "urge to check pulse or breathing",
+        "avoidance of situations that might trigger sensations, like sitting in traffic"
+      ],
+      "affect": {
+        "valence": "negative, tinged with grim determination",
+        "arousal": "elevated, especially when describing exposure exercises",
+        "primary_emotion": "anxious apprehension, with undercurrents of frustration at himself"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000631",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

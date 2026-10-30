@@ -1,0 +1,73 @@
+{
+  "persona_id": "p-p5-43",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 43,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "23f0366ac0b2a423",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Theo",
+      "to": "Bogdan",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Bogdan is 23, works as a line cook at a mid-range restaurant, and lives with two roommates in a rowhouse he can barely afford. He plays in a Sunday rec basketball league, is quick with a joke, and prides himself on handling things without help. He's close with his parents and younger sister, who live about forty minutes away, and talks to at least one of them most days.",
+    "clinical_context": "Bogdan has had anxiety since he was around fifteen, originally general worry about school and friendships that has narrowed over the last couple years to near-constant worry about his parents, especially after his dad had a minor cardiac scare. He checks in by phone or text multiple times a day and spirals if someone doesn't answer within an hour or two. He sometimes gets sudden, unwanted images of something bad happening to a family member, which unsettle him and which he tries to shove out of his head rather than examine.",
+    "behavioral_description": "He talks fast, jokes to deflect, and gets short or sarcastic if he feels like he's being managed or told what to do. He asks questions back rather than answering directly, and will say 'yeah but' or 'I already tried that' to almost any suggestion. No matter where a conversation starts, he drifts back to his parents, his sister, or something one of them said recently, often narrating the same worry from a slightly different angle.",
+    "traits": {
+      "age": 23,
+      "gender": "cisgender man",
+      "profession": "line cook",
+      "relationship_status": "single",
+      "living_situation": "shares a rented rowhouse with two roommates",
+      "psychological_reactance": "high",
+      "communication_register": "casual, fast-talking, sarcastic",
+      "help_seeking_orientation": "ambivalent; vents readily but pushes back hard on direct suggestions",
+      "cognitive_style": "catastrophizing about family, ruminative, mentally checks and rechecks reassurance",
+      "clinical_history": {
+        "presentation": "generalized anxiety with a family-focused worry pattern",
+        "history": "worry present since adolescence, intensified two years ago after his father's minor heart scare, no other mental health conditions reported"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "racing worry about parents' safety",
+        "compulsively checking phone for missed calls or texts",
+        "tight chest and jaw tension",
+        "trouble focusing during work shifts",
+        "sudden unwanted images of harm coming to a family member",
+        "irritability when he feels pushed or handled",
+        "restlessness, trouble sitting still"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "high",
+        "primary_emotion": "anxious"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

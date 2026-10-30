@@ -1,0 +1,93 @@
+{
+  "persona_id": "p-anx-17-nt",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "anxiety",
+      "row": 17,
+      "seed": 20260926
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "9a6efa7fcd25cc01",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Walt",
+      "to": "Farid",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-anx-17@1",
+    "changed_paths": [
+      "rendering.behavioral_description",
+      "rendering.clinical_context",
+      "rendering.states.symptoms",
+      "rendering.traits.clinical_history.current_treatment",
+      "rendering.traits.clinical_history.history",
+      "rendering.traits.communication_register",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Farid is a 67-year-old retired shop teacher who spent thirty years teaching woodworking and small-engine repair at a vocational high school. He's married to his wife of 34 years, keeps a workbench in the garage, and still does small repair jobs for neighbors. He's a plain, practical man who doesn't like a fuss made over him.",
+    "clinical_context": "Farid has a specific phobia of needles and blood draws that goes back to childhood, worse than ordinary nerves: he has fainted or come close to fainting more than once at the sight of a needle. Because of it he avoided routine bloodwork for years and switched from testosterone injections to a gel decades ago rather than deal with needles regularly. His doctor has pushed for more frequent labs as he's gotten older, but Farid hasn't sought any treatment for the phobia itself and keeps putting off scheduling the bloodwork.",
+    "behavioral_description": "Farid talks in short, practical sentences and tends to downplay how bad the fear actually gets, saying things like 'it's not that big a deal' right after describing nearly passing out. He goes along easily with whatever is suggested, saying 'sure, I can try that' without much pushback, but he doesn't always follow through once he's on his own. He'd rather talk about the logistics of getting the labs scheduled than how he feels about it.",
+    "traits": {
+      "age": 67,
+      "gender": "transgender man",
+      "profession": "retired high school shop teacher",
+      "relationship_status": "married",
+      "living_situation": "lives with his wife in a house they've owned for over 20 years",
+      "psychological_reactance": "low",
+      "communication_register": "plain-spoken, understated, minimal clinical vocabulary",
+      "help_seeking_orientation": "compliant and agreeable on the surface when the subject comes up, but has not followed through on getting any help for it despite his doctor's urging",
+      "cognitive_style": "concrete and logistics-focused, minimizes his own distress, prefers talking about tasks over feelings",
+      "clinical_history": {
+        "presentation": "specific phobia, blood-injection-injury type, centered on needles and blood draws",
+        "current_treatment": "none currently; he has never started any course of treatment for the phobia",
+        "history": "Fear present since childhood, including a history of fainting or near-fainting at needles; avoided routine bloodwork for years and switched from testosterone injections to a gel decades ago to avoid needles. Increased medical monitoring with age has brought pressure from his doctor to get labs done, but Farid has not sought treatment for the phobia."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "racing heart and lightheadedness at the sight of needles or images of them",
+        "vasovagal near-fainting response during actual blood draws",
+        "avoidance of routine bloodwork and medical appointments involving needles",
+        "anticipatory dread in the days before a lab appointment",
+        "ongoing avoidance and delay in scheduling the bloodwork his doctor has requested"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "elevated with a tendency to drop suddenly (spike-then-faint pattern)",
+        "primary_emotion": "apprehensive"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000631",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

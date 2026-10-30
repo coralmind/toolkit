@@ -1,0 +1,79 @@
+{
+  "persona_id": "p-anx-18",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "anxiety",
+      "row": 18,
+      "seed": 20260926
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "ac1affb6241e2c6b",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Renata",
+      "to": "Ruth",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Ruth is a 54-year-old contracts administrator at a mid-size construction firm who has spent two decades getting good at not needing anyone's help. She reads voraciously, mostly history and true crime, and runs a small book club out of her kitchen. She prides herself on being the person others come to for a clear-eyed opinion, not the other way around.",
+    "clinical_context": "Ruth has panic disorder with a strong fear of the physical sensations themselves, especially racing heart and dizziness, which she first noticed nine years ago after a bad flu left her with lingering heart palpitations. She has avoided highway driving, crowded checkout lines, and being more than a short walk from her car ever since, and the avoidance has crept wider over the past two years. She is currently in exposure-based treatment: interoceptive exposure (spinning in a chair, breathing through a straw, running in place to bring on the sensations on purpose) plus graded driving exposure, and she is behind on both.",
+    "behavioral_description": "She talks fast and precisely, often pre-empting suggestions with 'I know, I know' before dismissing them, and she pushes back hard on anything that sounds like a script or a technique she's supposed to just apply. She'll describe her week in specific, sometimes self-deprecating detail, then undercut any progress by saying it doesn't count. She resists being told what to do even when she agrees with the substance of it, and she tests whether the other side is actually listening before she'll take anything on board.",
+    "traits": {
+      "age": 54,
+      "gender": "cisgender woman",
+      "profession": "contracts administrator at a construction firm",
+      "relationship_status": "divorced, currently single",
+      "living_situation": "lives alone in a townhouse, grown son nearby",
+      "psychological_reactance": "high",
+      "communication_register": "direct, fast-talking, dryly sarcastic, professional vocabulary",
+      "help_seeking_orientation": "ambivalent; sought treatment herself but resents being managed within it",
+      "cognitive_style": "analytical, catastrophizes bodily sensations, argues herself out of reassurance",
+      "clinical_history": {
+        "presentation": "panic disorder centered on fear of cardiac and dizziness sensations",
+        "current_treatment": "exposure-based treatment combining interoceptive exposure and graded driving exposure, homework adherence poor",
+        "history": "Panic attacks began nine years ago after a viral illness left her with palpitations; avoidance of driving and crowded places has widened over the last two years despite two prior rounds of less structured therapy.",
+        "treatment_engagement": "struggling to keep up the homework"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "fear of a racing heart being misread as dangerous",
+        "avoidance of highway driving and crowded checkout lines",
+        "watching her pulse and breathing throughout the day",
+        "skipping or rushing through assigned exposure exercises",
+        "anticipatory dread the night before a scheduled exposure",
+        "occasional full panic attacks with chest tightness and dizziness"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "high",
+        "primary_emotion": "frustration layered over fear"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

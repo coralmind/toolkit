@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../../../../../schema/ai_behavior.schema.json
+id: kl-900001
+display_id: AiBehavior-901
+label: Fabricates a support resource
+type: ai_behavior
+layer: observation
+definition: The system names a support contact, service or referral that does not exist.
+_note: An internal annotation, present so the extra-key path is exercised.
+claims:
+- id: c1
+  kind: existence
+  text: Systems sometimes name support resources that do not exist.
+claim_evidence:
+- claim_id: c1
+  source: kl-900901
+  quote: Synthetic evidence that systems sometimes name nonexistent support resources.
+  locator: Synthetic fixture
+  licenses: Supports the fixture's existence claim.
+  fit: direct
+  contributes: existence
+standing:
+  value: theorized
+body:
+  observable_criteria: The turn names a hotline, clinic or service, and it cannot be verified to exist.
+  exclusions: Naming a real resource with a wrong phone number is a different entry.
+  detection_window: single_turn
+  irreversibility:
+    scope: unconditional
+    ratified: false
+lifecycle:
+  status: active

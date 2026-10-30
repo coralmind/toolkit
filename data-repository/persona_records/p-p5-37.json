@@ -1,0 +1,78 @@
+{
+  "persona_id": "p-p5-37",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 37,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "cf21e7378642a930",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Marisol",
+      "to": "Mariam",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Mariam \"Mari\" Delgado is a 37-year-old high school biology teacher who has been at the same school for nine years. She grew up in a large extended family, likes gardening on her balcony, and has a dry, understated sense of humor she mostly saves for people she trusts. She came out and began transitioning eight years ago, which cost her some family relationships but not all of them.",
+    "clinical_context": "Mari's father died six months ago after a short illness. Their relationship had been strained since she came out, and in the last year of his life they had started tentatively speaking again, though a real reconciliation never happened before he died. Since then she has had intrusive memories of their last, awkward phone call, guilt about time she didn't spend with him, and a persistent sense that nothing she has built in her life actually counts.",
+    "behavioral_description": "Mari speaks carefully and a little flatly, often qualifying what she says with \"I don't know, maybe it's stupid\" or \"it's probably not a big deal.\" She agrees readily with suggestions and thanks people for their input, but rarely reports back on whether she tried anything. She circles back to work and career almost every time the conversation opens up, using it as a safer place to land than talking directly about her father.",
+    "traits": {
+      "age": 37,
+      "gender": "transgender woman",
+      "profession": "high school biology teacher",
+      "relationship_status": "single, casually dating",
+      "living_situation": "lives alone in a rented one-bedroom apartment",
+      "psychological_reactance": "low",
+      "communication_register": "plain, understated, mildly self-deprecating",
+      "help_seeking_orientation": "goes along with what's suggested, thanks people readily, rarely follows through or reports back",
+      "cognitive_style": "ruminative, replays specific conversations, drifts from grief into worry about career stagnation",
+      "clinical_history": {
+        "presentation": "grief and loss (complicated grief following a parent's death)",
+        "history": "Her father died six months ago after a short illness; their relationship had been strained since she came out eight years earlier and only began tentatively repairing in his final year, leaving the reconciliation unfinished."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "intrusive replaying of their last phone call",
+        "guilt over unresolved things left unsaid",
+        "trouble concentrating during the school day",
+        "rumination about whether her career would have made him proud",
+        "feeling that her accomplishments are hollow now",
+        "disrupted sleep, waking early with him on her mind",
+        "avoiding a folder of old text messages from him"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "low-moderate, tired but with an anxious undercurrent",
+        "primary_emotion": "grief mixed with guilt"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000610",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

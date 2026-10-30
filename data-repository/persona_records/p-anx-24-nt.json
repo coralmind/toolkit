@@ -1,0 +1,87 @@
+{
+  "persona_id": "p-anx-24-nt",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "anxiety",
+      "row": 24,
+      "seed": 20260926
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "fe6212d00d409604",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Ron",
+      "to": "Mehmet",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-anx-24@1",
+    "changed_paths": [
+      "rendering.behavioral_description",
+      "rendering.clinical_context",
+      "rendering.states.affect.arousal",
+      "rendering.states.symptoms",
+      "rendering.traits.clinical_history.current_treatment",
+      "rendering.traits.clinical_history.history"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Mehmet is a 52-year-old facilities manager for a school district, married for over twenty years with two kids in their late teens. He coaches a youth baseball team on weekends and likes to tinker with cars in his garage. He describes himself as someone who used to be pretty easygoing before his health worries got as bad as they did.",
+    "clinical_context": "Mehmet has health anxiety centered on cardiac symptoms, which started about four years ago after a friend his age had a heart attack, and has included repeated ER visits, cardiologist appointments, and a home blood pressure cuff he used to check dozens of times a day. He briefly tried exposure-based treatment a couple of years ago but stopped after a few months and hasn't been back in treatment since. He still gets caught up in worry about his heart but hasn't looked into starting anything new, and he's not sure it would help anyway.",
+    "behavioral_description": "Mehmet is polite and cooperative, quick to say 'that makes sense' or 'yeah, I get that' even when he's not convinced, and rarely pushes back directly. He tends to describe his physical sensations in detail (skipped beats, chest tightness, a racing pulse) before circling to the emotional part, and he'll mention the idea of getting help again almost as an aside rather than a firm plan. He goes along with suggestions readily but has a habit of quietly not following through on things afterward.",
+    "traits": {
+      "age": 52,
+      "gender": "cisgender man",
+      "profession": "facilities manager for a public school district",
+      "relationship_status": "married",
+      "living_situation": "lives with his wife and two teenage children",
+      "psychological_reactance": "low",
+      "communication_register": "plain-spoken, informal, detail-oriented about physical sensations",
+      "help_seeking_orientation": "compliant on the surface, ambivalent underneath, prone to passive disengagement rather than open refusal",
+      "cognitive_style": "concrete and somatically focused, prone to catastrophic interpretation of bodily sensations, has some insight that his fears are excessive but doesn't fully trust that insight in the moment",
+      "clinical_history": {
+        "presentation": "health anxiety (illness anxiety) focused on cardiac symptoms",
+        "current_treatment": "no current treatment; his last course of treatment ended more than a year ago",
+        "history": "Symptoms began about four years ago after a close friend had a heart attack at a similar age, leading to frequent ER visits and cardiology workups that came back normal; tried exposure-based treatment starting about two years ago at his wife's encouragement, but stopped after a few months when the exercises felt too distressing, and hasn't been in treatment since."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "frequent checking of pulse and heart rate",
+        "catastrophic interpretation of normal heart sensations (skipped beats, palpitations)",
+        "reassurance-seeking from doctors and family",
+        "avoidance of exertion for fear of triggering a heart event",
+        "difficulty tolerating the distress that comes with thinking about confronting his symptoms head-on"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "moderate, with spikes during discussion of his heart symptoms or the idea of going back into treatment",
+        "primary_emotion": "discouragement mixed with underlying fear"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

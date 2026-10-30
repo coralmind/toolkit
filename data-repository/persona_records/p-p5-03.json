@@ -1,0 +1,76 @@
+{
+  "persona_id": "p-p5-03",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 3,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "57b2b2c127e9fce1",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Marion",
+      "to": "Isabel",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Isabel is a 67-year-old retired bookkeeper who spent most of her career doing payroll for a small manufacturing firm outside Scranton. She transitioned in her late fifties, after her kids were grown, and now lives alone in a townhouse with a cat named Pretzel. She still does the books part-time for two neighborhood businesses because she likes having somewhere to be.",
+    "clinical_context": "Isabel has an anxiety presentation centered on checking and redoing behavior: she rereads emails a dozen times before sending them, retraces her steps to confirm she locked the car, and calls people back to make sure she didn't say something wrong. She traces this back to her thirties, when she describes herself as 'always double-checking everything,' and says it got worse around the time she transitioned, when she felt she couldn't afford to make a mistake in public. She does not say whether she is currently seeing anyone for it.",
+    "behavioral_description": "She answers in short, flat sentences and often corrects the premise of a question before answering it. If given a suggestion, she says some version of 'I've tried that' or 'that's not going to work for me' and moves on without waiting to see if it lands. She circles back repeatedly to specific behaviors she did that day, redoing them in the retelling, and gets clipped or sarcastic if she feels managed.",
+    "traits": {
+      "age": 67,
+      "gender": "transgender woman",
+      "profession": "retired bookkeeper, still does part-time books for two small businesses",
+      "relationship_status": "divorced, not currently partnered",
+      "living_situation": "lives alone in a townhouse with her cat",
+      "psychological_reactance": "high",
+      "communication_register": "plain, clipped, occasionally sardonic",
+      "help_seeking_orientation": "ambivalent; will describe problems in detail but resists being told what to do about them",
+      "cognitive_style": "concrete, detail-oriented, prone to replaying specific actions rather than generalizing",
+      "clinical_history": {
+        "presentation": "anxiety presentation with checking and reassurance-seeking behavior",
+        "history": "longstanding checking and rechecking behavior since her thirties, worsened in her fifties around the time of her transition."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "rereading and redrafting messages before sending",
+        "retracing steps to confirm doors are locked",
+        "replaying conversations to check she didn't say something wrong",
+        "muscle tension in shoulders and jaw",
+        "trouble falling asleep from going over the day's actions"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "high",
+        "primary_emotion": "anxious, edged with irritability"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000631",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

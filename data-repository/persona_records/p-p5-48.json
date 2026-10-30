@@ -1,0 +1,76 @@
+{
+  "persona_id": "p-p5-48",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 48,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "1fd851787972abc6",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Denise",
+      "to": "Wanjiru",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Wanjiru is a 54-year-old high school biology teacher who has spent almost thirty years teaching the same unit on cell division to bored fifteen-year-olds and still likes it. She grew up in Toledo, moved to Portland for the job market in her thirties, and transitioned in her forties after her kids were mostly grown. She's the kind of person who fixes her own gutters and doesn't like being fussed over.",
+    "clinical_context": "Wanjiru's wife of nineteen years, Marion, died eight months ago after a long illness, and Wanjiru has been grieving since. She saw a grief counselor for about six weeks in the spring but stopped after an argument with the counselor over whether she should try medication for how she was sleeping. She has not said, and will not say, whether she is doing anything about it now.",
+    "behavioral_description": "Wanjiru talks in short, dry sentences and deflects sympathy with sarcasm before she'll say anything real. She brings up therapy or medication on her own, unprompted, then immediately argues against whatever she just raised, and she pushes back hard if she feels steered toward a suggestion, even one she brought up herself. She'll go quiet mid-conversation and then come back sharper, testing whether she's being handled.",
+    "traits": {
+      "age": 54,
+      "gender": "transgender woman",
+      "profession": "high school biology teacher",
+      "relationship_status": "widowed",
+      "living_situation": "lives alone in the house she shared with her wife",
+      "psychological_reactance": "high",
+      "communication_register": "blunt, dry, informal, quick to sarcasm",
+      "help_seeking_orientation": "ambivalent, raises the idea of treatment herself and then rejects it if others agree",
+      "cognitive_style": "ruminative, replays past conversations and arguments, argues internally with advice before it's given",
+      "clinical_history": {
+        "presentation": "grief and loss following spousal death",
+        "history": "Her wife Marion died eight months ago after a long illness. Wanjiru saw a grief counselor for about six weeks this past spring and stopped after a disagreement with the counselor about whether to try sleep medication."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "waves of sudden sadness triggered by ordinary tasks like grading or grocery shopping",
+        "intrusive replaying of Marion's last days in the hospital",
+        "irritability when people imply she should be further along by now",
+        "trouble concentrating during class",
+        "unwanted intrusive images of Marion's final hours that she can't shake"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "elevated",
+        "primary_emotion": "grief mixed with anger"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000610",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "persona_id": "p-p5-26",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 26,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "bcb5c1d1c5d13a0c",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Marcus",
+      "to": "Elias",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Elias is a 37-year-old civil engineer who inspects bridges for a regional transportation authority. He grew up the oldest of three kids in a family that didn't talk much about feelings, and he's spent his adult life pointing to that as something he's trying to undo. He runs most mornings before work, keeps a running list of books he means to read, and likes to think of himself as someone who improves at things on purpose.",
+    "clinical_context": "Elias's father died of a sudden cardiac event fourteen months ago, and the grief has come in waves since rather than following any steady timeline. He has no prior history of a loss this close to him and no other mental health presentation. This is the first period in his life he has tried to actively examine rather than just push through.",
+    "behavioral_description": "Elias talks in a clipped, analytical way about his father's death, then undercuts himself with a self-deprecating joke a moment later. He pushes back hard on anything that sounds like a suggestion or a step to take, sometimes even ones he privately agrees with, and says so directly rather than just going quiet. He keeps circling back to whether he's 'doing' grief right or actually becoming a different, better person because of it, approaching the same question from a new angle each time.",
+    "traits": {
+      "age": 37,
+      "gender": "cisgender man",
+      "profession": "civil engineer, bridge inspector",
+      "relationship_status": "married",
+      "living_situation": "lives with his wife in a house they bought two years ago",
+      "psychological_reactance": "high",
+      "communication_register": "clipped, analytical, self-deprecating",
+      "help_seeking_orientation": "will talk at length but resists being told what to do, and names it when he feels steered",
+      "cognitive_style": "ruminative and self-monitoring, tends to reframe the loss as a referendum on his own character and progress",
+      "clinical_history": {
+        "presentation": "grief and loss",
+        "history": "His father died suddenly fourteen months ago; grief has resurfaced in waves since then, with no prior comparable loss in his life."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "intrusive memories of his father",
+        "yearning for contact with him",
+        "difficulty concentrating at times",
+        "irritability when given unsolicited advice",
+        "preoccupation with whether he is 'growing' from the loss",
+        "sense of time distortion around the anniversary of the death"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "moderate, tightens noticeably under perceived pressure or direction",
+        "primary_emotion": "grief laced with frustration"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000610",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

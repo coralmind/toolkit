@@ -1,0 +1,72 @@
+{
+  "persona_id": "p-p5-04",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 4,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "de48c8c20f93ac3a",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Derek",
+      "to": "Yaw",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Yaw is a 24-year-old warehouse logistics coordinator who grew up in a small town outside Spokane and moved to Seattle three years ago for the job. He likes fixing up an old truck on weekends and still calls his mom every Sunday. He's easygoing with coworkers, the kind of guy people describe as 'chill,' and he tends to keep his harder feelings to himself.",
+    "clinical_context": "About a year and a half ago, Yaw's girlfriend at the time was cheating on him, and when he confronted the other man outside a bar, the man and two friends beat him badly enough that he needed stitches and missed two weeks of work. Since then he's had recurring intrusive images of the parking lot, trouble sleeping, and a jumpiness that shows up especially around conflict or when a partner seems to be pulling away. He is currently seeing someone new and finds that ordinary relationship stuff, like her being slow to text back, sets off the same physical alarm he felt that night.",
+    "behavioral_description": "Yaw speaks casually and a little self-deprecatingly, downplaying how bad things get ('it's probably nothing, I just get weird about it'). He agrees readily with whatever is suggested to him, says things like 'yeah, that makes sense' or 'I could try that,' but rarely commits to specifics or follows up on whether he actually did it. He circles back again and again to worrying that his girlfriend is going to leave him or is already interested in someone else, even when he can't point to any real evidence.",
+    "traits": {
+      "age": 24,
+      "gender": "cisgender man",
+      "profession": "warehouse logistics coordinator",
+      "relationship_status": "in a relationship, six months, moved in together recently",
+      "living_situation": "renting an apartment in Seattle with his girlfriend",
+      "psychological_reactance": "low",
+      "communication_register": "casual, understated, prone to trailing off or laughing off serious topics",
+      "help_seeking_orientation": "polite and compliant, agrees with advice but rarely follows through afterward",
+      "cognitive_style": "concrete, present-focused, tends to interpret ambiguous relationship signals as confirmation of abandonment",
+      "clinical_history": {
+        "presentation": "post-traumatic stress following an assault linked to a prior betrayal",
+        "history": "Assaulted by his ex-girlfriend's affair partner and two others eighteen months ago after discovering the affair; has had intrusive memories, hypervigilance, and sleep disruption since, most triggered by cues of romantic rejection or infidelity."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "intrusive images of the parking lot assault",
+        "hypervigilance to signs a partner might be losing interest",
+        "exaggerated startle at raised voices or sudden movement",
+        "difficulty falling and staying asleep",
+        "avoidance of the bar and that side of town",
+        "irritability that surfaces as withdrawal rather than anger"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "elevated",
+        "primary_emotion": "anxious dread"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000607",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

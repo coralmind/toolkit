@@ -1,0 +1,79 @@
+{
+  "persona_id": "p-p5-32",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 32,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "0fcda5b6ea35b8d1",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Marcus",
+      "to": "Ahmed",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Ahmed is a 52-year-old maintenance electrician for a school district, the kind of guy who fixes things because he can't stand watching something stay broken. He grew up in a small Ohio town, came out and transitioned in his late thirties, and has spent the years since building a life that mostly works: steady job, a truck he keeps babying, a dog named Diesel. He reads more than people would guess from talking to him and doesn't bring it up.",
+    "clinical_context": "Ahmed has major depressive disorder, recurrent. His first clear episode was in his early thirties, before he transitioned, and he had another one about four years ago that he mostly white-knuckled through. The current episode has been building since he and his wife separated roughly a year ago.",
+    "behavioral_description": "Ahmed talks in short, flat sentences and deflects with dry sarcasm when things get close to the bone. He answers direct questions but resents being steered, and any suggestion that starts with 'you should' gets met with a flat 'yeah, tried that' or dead silence. He'll circle back to his wife unprompted even while insisting he doesn't want to talk about her, and he pushes back hardest right when something lands true.",
+    "traits": {
+      "age": 52,
+      "gender": "transgender man",
+      "profession": "maintenance electrician, school district",
+      "relationship_status": "separated",
+      "living_situation": "lives alone in a rented one-bedroom apartment with his dog",
+      "psychological_reactance": "high",
+      "communication_register": "informal, terse, blue-collar, dry and sarcastic",
+      "help_seeking_orientation": "reluctant and skeptical, distrusts advice and pat answers",
+      "cognitive_style": "ruminative and self-critical, thinks in concrete cause-and-effect terms rather than abstractions",
+      "clinical_history": {
+        "presentation": "major depressive disorder, recurrent",
+        "history": "First episode in his early thirties, before transition; a second episode about four years ago that he managed largely on his own. The current episode began roughly a year ago, coinciding with his separation."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "low mood most of the day",
+        "loss of interest in things he used to like, including working on the truck",
+        "trouble falling and staying asleep",
+        "low energy, dragging through shifts at work",
+        "trouble concentrating, has to reread work orders",
+        "irritability, short fuse with coworkers",
+        "recurring guilt and self-blame about the marriage ending",
+        "intrusive replaying of arguments and moments with his wife"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "low, with an irritable undercurrent that spikes when he feels pushed",
+        "primary_emotion": "heavy sadness shading into resentment"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000604",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

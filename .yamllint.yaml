@@ -1,0 +1,15 @@
+# Indentation only. endpoints.yaml is written with 4-space keys.
+# GitHub workflows are 2-space and are checked by zizmor, not here.
+yaml-files:
+  - "*.yaml"
+  - "*.yml"
+
+ignore: |
+  .github/
+  .pixi/
+
+rules:
+  indentation:
+    spaces: 4
+    indent-sequences: false
+    check-multi-line-strings: false

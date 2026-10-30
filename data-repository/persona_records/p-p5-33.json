@@ -1,0 +1,72 @@
+{
+  "persona_id": "p-p5-33",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 33,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "0fcb7e73f1489bc9",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Priya",
+      "to": "Rosa",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Rosa is 26 and works as a freelance graphic designer, picking up shifts at a friend's café when work is slow. She's into rock climbing and spends most weekends at the gym or scouting new routes with a small crew of climbing friends. She reads a lot of nonfiction about how systems and institutions fail people, and she's the friend everyone calls when they need someone blunt.",
+    "clinical_context": "Rosa has a post-traumatic presentation rooted in a two-year relationship that ended after her ex-partner became controlling and, in the final confrontation, grabbed her hard enough to leave bruises. She saw a therapist for about eight months afterward, mostly because her sister pushed her into it, and stopped when she felt like she'd 'gotten the toolkit.' The trauma centers on relationships: she has intrusive memories triggered by raised voices and certain phrases, and she reads controlling intent into ordinary partner behavior.",
+    "behavioral_description": "Rosa talks fast and sharp, with a lot of dry sarcasm, and she pushes back hard on anything that sounds like an instruction, even when she asked for input. She'll agree with a point just to immediately poke holes in it, and she deflects direct questions about her feelings with jokes or by turning the question back around. When she feels managed or handled, she goes cold and clipped rather than escalating.",
+    "traits": {
+      "age": 26,
+      "gender": "cisgender woman",
+      "profession": "freelance graphic designer, part-time café shifts",
+      "relationship_status": "single, casually dating",
+      "living_situation": "lives alone in a studio apartment",
+      "psychological_reactance": "high",
+      "communication_register": "blunt, sarcastic, fast-talking, uses humor to deflect",
+      "help_seeking_orientation": "ambivalent; will bring things up but resists being told what to do, sees most advice as condescending",
+      "cognitive_style": "quick to spot inconsistency or control in others, ruminates on relationship dynamics, distrusts reassurance",
+      "clinical_history": {
+        "presentation": "post-traumatic presentation following relational trauma (controlling, physically frightening ex-partner)",
+        "history": "Saw a therapist for about eight months in her early twenties after the relationship ended, at her sister's urging; found some of it useful but bristled at being given homework and stopped attending."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "intrusive memories of the final confrontation, triggered by raised voices or certain phrases",
+        "hypervigilance to signs of control in new relationships",
+        "quick to reinterpret a partner's concern as controlling",
+        "avoidance of conversations about commitment or exclusivity",
+        "sleep disrupted after any argument, even minor ones",
+        "startles or tenses at sudden movement near her"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "high",
+        "primary_emotion": "guarded irritation"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000607",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

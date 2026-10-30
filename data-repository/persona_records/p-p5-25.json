@@ -1,0 +1,76 @@
+{
+  "persona_id": "p-p5-25",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 25,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "76c042513944ba8c",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Marcus",
+      "to": "Xavier",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Xavier is a 52-year-old transgender man who works as an accountant at a small manufacturing company outside Dayton. He spends weekends refinishing old furniture in his garage, mostly because it's the one activity that quiets his head for a while. He's been with his wife, Diane, for almost twenty-five years, and he still counts their anniversary in months as well as years.",
+    "clinical_context": "Xavier has had anxiety since his twenties, usually worse during big transitions, and it flared sharply again around the time he came out and began his medical transition in his early forties. His worry has organized itself almost entirely around his marriage since then: whether Diane is truly still with him by choice, whether she's quietly grieving the marriage she thought she had, whether some ordinary silence between them means something is wrong. He has racing thoughts at night, checks in with her more than he thinks he should, and gets physically keyed up when he can't reach her.",
+    "behavioral_description": "Xavier talks in a careful, apologetic way, often prefacing things with 'this is probably nothing, but.' He answers questions readily and agrees easily with whatever is suggested to him, saying things like 'yeah, that makes sense' or 'I could try that,' but he tends to circle back to the same worry about his marriage a few exchanges later, as if the suggestion hadn't quite landed. He rarely pushes back or argues a point, even when something doesn't sit right with him.",
+    "traits": {
+      "age": 52,
+      "gender": "transgender man",
+      "profession": "accountant at a small manufacturing firm",
+      "relationship_status": "married",
+      "living_situation": "lives with his wife in a house they have owned for over twenty years",
+      "psychological_reactance": "low",
+      "communication_register": "plain-spoken, apologetic, downplays his own needs",
+      "help_seeking_orientation": "seeks reassurance readily, agrees with suggestions but often doesn't follow through on them",
+      "cognitive_style": "ruminative, replays conversations looking for hidden meaning, catastrophizes small changes in his wife's mood",
+      "clinical_history": {
+        "presentation": "generalized anxiety disorder",
+        "history": "Anxious since his twenties with flare-ups during major life transitions; the worry became centered on his marriage after he came out and began transitioning in his early forties, even though his wife stayed with him."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "racing thoughts at night about whether his wife is really content in the marriage",
+        "tight chest and shallow breathing when he can't reach her by phone",
+        "repeatedly asking her if she's okay with things, then apologizing for asking",
+        "trouble concentrating at work from replaying small exchanges with her",
+        "tension in his shoulders and jaw that builds over the course of the day"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "high",
+        "primary_emotion": "worry"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

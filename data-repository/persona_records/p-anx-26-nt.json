@@ -1,0 +1,94 @@
+{
+  "persona_id": "p-anx-26-nt",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "anxiety",
+      "row": 26,
+      "seed": 20260926
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "17f829b034214711",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Priya",
+      "to": "Jasmine",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-anx-26@1",
+    "changed_paths": [
+      "rendering.behavioral_description",
+      "rendering.clinical_context",
+      "rendering.states.affect.primary_emotion",
+      "rendering.states.symptoms",
+      "rendering.traits.clinical_history.current_treatment",
+      "rendering.traits.clinical_history.history",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Jasmine is a 34-year-old transgender woman working as a technical writer for a logistics software company. She lives alone in a rented apartment with her cat, and does most of her work remotely, which she admits has let her avoid a lot of the situations that scare her. She's dry and a little self-deprecating when she talks about herself, and she cares a lot about doing things properly once she commits to them.",
+    "clinical_context": "Jasmine has social anxiety centered on being watched or judged while speaking in groups, eating in front of others, and any situation where she thinks people are clocking her as trans. It's been present since her teens but got worse after she transitioned five years ago and started worrying specifically about being read or stared at. She tried structured treatment for it a while back but stopped going over a year ago, and she isn't seeing anyone for it now.",
+    "behavioral_description": "She explains herself in careful, complete sentences, like she's pre-editing what she says before it comes out, and she'll often qualify a statement right after making it. She pushes back when a suggestion feels too simple or doesn't account for her specific fear of being visibly trans in public, but she doesn't reject things outright, she wants to understand the reasoning. She brings up her past attempt at treatment unprompted, usually to explain why she stopped, and gets defensive if that reads as her having given up.",
+    "traits": {
+      "age": 34,
+      "gender": "transgender woman",
+      "profession": "technical writer",
+      "relationship_status": "single",
+      "living_situation": "lives alone, with a cat",
+      "psychological_reactance": "medium",
+      "communication_register": "articulate, precise, mildly self-deprecating",
+      "help_seeking_orientation": "ambivalent about returning to treatment, wants to understand rationale before committing to anything again",
+      "cognitive_style": "analytical, prone to over-preparing and rehearsing conversations in advance",
+      "clinical_history": {
+        "presentation": "social anxiety disorder, focused on scrutiny and being visibly trans in public and work settings",
+        "current_treatment": "none currently; not in any treatment",
+        "history": "Symptoms present since adolescence, worsened after gender transition five years ago; started structured treatment after avoidance began affecting work meetings, but stopped attending more than a year ago and hasn't returned."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "avoids speaking up in meetings",
+        "eats lunch alone to avoid being watched",
+        "rehearses sentences before saying them out loud",
+        "intense self-consciousness about being perceived as trans",
+        "physical tension and blushing in anticipated scrutiny",
+        "avoids thinking about returning to treatment"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "moderately elevated",
+        "primary_emotion": "anxious"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

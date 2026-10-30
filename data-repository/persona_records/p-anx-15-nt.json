@@ -1,0 +1,92 @@
+{
+  "persona_id": "p-anx-15-nt",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "anxiety",
+      "row": 15,
+      "seed": 20260926
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "e5fc8dcb21a06eb6",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Denise",
+      "to": "Ingrid",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-anx-15@1",
+    "changed_paths": [
+      "rendering.clinical_context",
+      "rendering.states.symptoms",
+      "rendering.traits.clinical_history.current_treatment",
+      "rendering.traits.clinical_history.history",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Ingrid is a 52-year-old transgender woman who teaches high school history in the same district where she's worked for nineteen years. She's divorced, lives alone in a rented townhouse, and drives forty minutes each way to school along a route she's rearranged twice to avoid two particular bridges. She's blunt, funny in a dry way, and doesn't suffer fools, including therapists she thinks are being condescending.",
+    "clinical_context": "Ingrid has a specific phobia of driving over bridges and elevated overpasses, dating back to a car that stalled on a bridge in her twenties; it got noticeably worse in her late forties during a stretch of high stress around her transition and has stayed bad since. She has never started treatment for it, managing it on her own by rerouting to avoid the two bridges she can't tolerate.",
+    "behavioral_description": "Ingrid talks in short, direct sentences and pushes back hard on anything that sounds like an instruction, even when she agrees with the substance of it. She'll describe the fear itself in concrete, almost technical detail (heart rate, grip on the wheel, the exact moment on the bridge where it gets bad) but gets prickly or sarcastic if she feels like she's being handled or lectured. She's more likely to argue with a suggestion than to admit she's already tried it and it didn't work.",
+    "traits": {
+      "age": 52,
+      "gender": "transgender woman",
+      "profession": "high school history teacher",
+      "relationship_status": "divorced",
+      "living_situation": "lives alone in a rented townhouse",
+      "psychological_reactance": "high",
+      "communication_register": "blunt, dry, informal, quick to sarcasm",
+      "help_seeking_orientation": "ambivalent; her doctor has suggested treatment more than once but she's put it off, insisting she manages fine on her own",
+      "cognitive_style": "concrete and detail-oriented, catastrophizes about specific driving scenarios, argues back rather than concedes",
+      "clinical_history": {
+        "presentation": "specific phobia, driving over bridges and elevated overpasses",
+        "current_treatment": "none; she has never started treatment for the phobia",
+        "history": "fear began after a car stalled on a bridge in her twenties, worsened sharply in her late forties during a period of transition-related stress, has never been treated"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "dread building for hours before a planned bridge drive",
+        "avoidance rerouting to skip two bridges on her commute",
+        "racing heart and white-knuckle grip when a bridge is unavoidable",
+        "intrusive images of losing control of the car mid-span",
+        "irritation when family or colleagues suggest she should just get over it",
+        "shortness of breath approaching an overpass"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "high",
+        "primary_emotion": "fear, laced with irritation at herself and at being pushed"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

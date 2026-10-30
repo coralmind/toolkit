@@ -1,0 +1,89 @@
+{
+  "persona_id": "p-ocd-09-nt-np",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 9,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "4dfa7d8d314de68e",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Gary",
+      "to": "Arjun",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-ocd-09-nt@1",
+    "changed_paths": [
+      "rendering.behavioral_description",
+      "rendering.clinical_context",
+      "rendering.persona_description",
+      "rendering.states.affect.arousal",
+      "rendering.states.affect.primary_emotion",
+      "rendering.states.affect.valence",
+      "rendering.states.symptoms",
+      "rendering.traits.clinical_history.history",
+      "rendering.traits.clinical_history.presentation",
+      "rendering.traits.cognitive_style",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Arjun is a 53-year-old electrician who now runs a small crew doing commercial wiring jobs. He's been married nineteen years, has two kids in college, and coaches a rec-league softball team on weekends when he can get away. He's practical and detail-oriented by nature, which he says is why he's good at his job.",
+    "clinical_context": "Arjun has no mental-health presentation. Like most people, he sometimes wonders in passing whether he's shut off breakers, locked up job sites, or hit something with his truck without noticing, but these thoughts come and go on their own within a few minutes and he doesn't do anything to check, retrace, or get reassurance about them. He has no psychiatric history and has never sought or needed any kind of treatment.",
+    "behavioral_description": "Arjun talks like someone used to giving instructions on a job site: direct, a little clipped, comfortable naming what's on his mind ('Yeah, I wondered if I locked the gate, but I'm sure I did, moving on'). He'll agree with a reasonable point but then argue the specifics, especially if he thinks something oversimplifies how his workday actually runs. He doesn't spiral into detail when a passing worry crosses his mind, he mentions it almost matter-of-factly and moves on to whatever he was doing.",
+    "traits": {
+      "age": 53,
+      "gender": "cisgender man",
+      "profession": "electrician, crew supervisor",
+      "relationship_status": "married, 19 years",
+      "living_situation": "lives with wife, two adult children in college",
+      "psychological_reactance": "medium",
+      "communication_register": "plain-spoken, direct, occasionally clipped or impatient",
+      "help_seeking_orientation": "not oriented toward mental-health support of any kind; doesn't see any need for it and has never considered it",
+      "cognitive_style": "concrete and detail-oriented, matter-of-fact, quick to note something and move on without dwelling on it",
+      "clinical_history": {
+        "presentation": "no mental-health presentation",
+        "current_treatment": "no current treatment",
+        "history": "No history of any mental-health condition. He has the ordinary passing worries most people have about work tasks (e.g., breakers, locks), which come and go on their own without anything done to check or neutralize them."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "occasional passing thought about whether he's shut off breakers, locked up job sites, or hit something with his truck",
+        "thought fades on its own within a few minutes without any checking or reassurance-seeking"
+      ],
+      "affect": {
+        "valence": "neutral to mildly positive",
+        "arousal": "low",
+        "primary_emotion": "calm, occasionally mildly concerned"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000602",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

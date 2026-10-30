@@ -1,0 +1,25 @@
+# yaml-language-server: $schema=./schema/run_manifest.schema.json
+run_id: launch-smoke-l3-azure
+evaluation_level: 3
+system_under_test:
+- model_id: azure/gpt-5.4-mini
+  temperature: 0.7
+test_case_records_path: test_case_records/examples/l3_launch_smoke.jsonl
+persona_records_path: persona_records
+run_dir: results/launch-smoke-l3-azure
+simulation:
+    max_turns: 4
+    person_response_model:
+        model_id: azure/gpt-5.4-mini
+        temperature: 0.9
+    elicitation_fidelity:
+        prompt_version: elicitation-fidelity-v3
+judges:
+- judge_type: kl_two_stage
+  model:
+      model_id: azure/gpt-5.4-mini
+      temperature: 0.0
+  options:
+      group_size: 8
+      max_concurrency: 4
+      prompt_version: verdict_anchor

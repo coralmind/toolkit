@@ -1,0 +1,89 @@
+{
+  "persona_id": "p-ocd-11-nt-np",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 11,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "d11dac593afd83ed",
+      "attempt": 2
+    },
+    "renamed": {
+      "from": "Harold",
+      "to": "Chidi",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-ocd-11-nt@1",
+    "changed_paths": [
+      "rendering.behavioral_description",
+      "rendering.clinical_context",
+      "rendering.states.affect.arousal",
+      "rendering.states.affect.primary_emotion",
+      "rendering.states.affect.valence",
+      "rendering.states.symptoms",
+      "rendering.traits.clinical_history.history",
+      "rendering.traits.clinical_history.presentation",
+      "rendering.traits.cognitive_style",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Chidi is a 68-year-old retired civil engineer who spent thirty-five years inspecting bridges and municipal infrastructure before retiring four years ago. He and his wife Dolores have been married for forty-one years and live in the same split-level house they bought in 1987. He still consults part-time on a couple of small projects, plays cards with two old coworkers every other Thursday, and takes pride in being the guy who double-checks everyone else's math.",
+    "clinical_context": "Chidi has no mental-health presentation. Every so often he has a passing thought about whether he truly loves Dolores, or whether their marriage was the right choice, the kind of ordinary unwanted thought most people have from time to time. These thoughts come and go on their own without lasting distress and without him doing anything to neutralize them; he shrugs them off and gets on with his day. He has never sought or needed any kind of evaluation or treatment related to this, since it isn't something he considers a problem.",
+    "behavioral_description": "Chidi talks in a flat, matter-of-fact way, like he's presenting evidence rather than feelings, and he'll lay out the 'facts' of a situation as if building a case. He pushes back hard on anything that sounds like a directive, often restating advice back sarcastically before rejecting it, and he insists he can think through his own life without anyone telling him how to feel about his marriage. Once in a while a passing thought about his marriage crosses his mind, but he doesn't dwell on it, and he gets irritated when he feels managed or handled.",
+    "traits": {
+      "age": 68,
+      "gender": "cisgender man",
+      "profession": "retired civil engineer, part-time consultant",
+      "relationship_status": "married, 41 years",
+      "living_situation": "lives with his wife in a house they have owned since 1987",
+      "psychological_reactance": "high",
+      "communication_register": "plain, literal, mildly formal, uses engineering/evidence language",
+      "help_seeking_orientation": "not seeking help; doesn't see anything in his life that warrants it and prefers to work through ordinary concerns on his own",
+      "cognitive_style": "analytical, detail-fixated, prefers to reason things through systematically rather than dwell on feelings",
+      "clinical_history": {
+        "presentation": "no mental-health presentation",
+        "current_treatment": "no current treatment",
+        "history": "No notable mental-health history; occasional passing thoughts about his marriage are part of the normal run of everyday thinking and have never required evaluation or treatment."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "occasional passing thought about whether he truly loves his wife",
+        "brief comparison of his marriage to other couples that fades quickly",
+        "the thought passes on its own without further action or follow-up"
+      ],
+      "affect": {
+        "valence": "neutral to mildly negative, brief",
+        "arousal": "low, unremarkable",
+        "primary_emotion": "mild, fleeting unease that passes quickly, no lasting distress"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000602",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000631",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+# yaml-language-server: $schema=./schema/endpoints.schema.json
+#
+# CoralMind LLM endpoint registry.
+#
+# Declarative map from logical model ids (used in run manifests) to
+# (endpoint, underlying LiteLLM model string). Loaded by
+# `corallab.llm.load_registry`; consulted on every `LLMClient.complete()`
+# call via `corallab.llm.ModelRouter`.
+#
+# Why this file exists:
+#   Without it, every `model_id` in a RunManifest must resolve through
+#   the same provider's process-wide env vars (AZURE_API_KEY etc.). With
+#   it, one run can mix endpoints — e.g. judge on Azure resource A, SUT
+#   on Azure resource B, persona generator on Anthropic direct.
+#
+# Safe to commit:
+#   - api_base may use ${VAR} interpolation; only env var NAMES live here.
+#   - api_key_env names the env var to read; the key itself never appears.
+#   - Missing env vars resolve to None at call time so this file is safe to
+#     ship as a template even if the env vars aren't set in CI.
+#
+# Location:
+#   `endpoints/endpoints.yaml` inside the data repository. Move that directory
+#   with CORALMIND_DATA_REPOSITORY_PATH.
+#
+# Every model id in a run manifest must be a key under `models:` below.
+# An id that is not listed raises UnknownModelError.
+
+endpoints:
+    # Replace these with your real Azure resources. The names ("azure-default")
+    # are arbitrary local labels; they're referenced from `models:` below.
+    azure-default:
+        provider: azure
+        api_base: ${AZURE_API_BASE}
+        api_key_env: AZURE_API_KEY
+        api_version: '2024-12-01-preview'
+
+    # Example: a second Azure resource (different region, different quota
+    # pool). Uncomment + set the two env vars to use it.
+    # azure-secondary:
+    #   provider: azure
+    #   api_base: ${AZURE_SECONDARY_API_BASE}
+    #   api_key_env: AZURE_SECONDARY_API_KEY
+    #   api_version: "2024-12-01-preview"
+
+    # Anthropic (Claude) models deployed on Azure AI Foundry. These are NOT
+    # served via the Azure OpenAI chat-completions API — Foundry exposes
+    # them through the Anthropic Messages API only, so the litellm `azure/`
+    # prefix fails with "Requested API is currently not supported". Use the
+    # `azure_ai/` prefix instead (LiteLLM routes any azure_ai/* model whose
+    # name contains "claude" to its Azure-Anthropic handler).
+    #
+    # AZURE_AI_API_BASE is the Foundry resource endpoint, e.g.
+    #   https://<resource-name>.services.ai.azure.com
+    # (LiteLLM appends /anthropic/v1/messages itself; including /anthropic
+    # in the base is also tolerated.) No api_version — the Anthropic route
+    # uses the anthropic-version header, not an Azure query param.
+    azure-foundry-anthropic:
+        provider: azure_ai
+        api_base: ${AZURE_AI_API_BASE}
+        api_key_env: AZURE_AI_API_KEY
+
+    # Example: Anthropic direct.
+    # anthropic-direct:
+    #   provider: anthropic
+    #   api_key_env: ANTHROPIC_API_KEY
+
+    # Google Gemini API (generativelanguage.googleapis.com). Auth is a GCP
+    # API key restricted to "Gemini API" (a.k.a. Generative Language API);
+    # LiteLLM sends it as the x-goog-api-key header. Note this is NOT the
+    # Vertex AI endpoint (aiplatform.googleapis.com) — LiteLLM's vertex_ai
+    # route is OAuth-only (github.com/BerriAI/litellm/issues/21036) and a
+    # Gemini-API-restricted key is blocked there anyway.
+    gemini-direct:
+        provider: gemini
+        api_key_env: GEMINI_API_KEY
+
+    # OpenAI-compatible LiteLLM proxy (collaborator instance or self-hosted).
+    litellm-proxy:
+        provider: openai
+        api_base: ${LITELLM_API_BASE}
+        api_key_env: LITELLM_API_KEY
+
+    # Local Ollama via LiteLLM's native provider (no API key). Uses
+    # Ollama's /api/chat, not the OpenAI-compatible /v1 shim — that
+    # shim goes through the OpenAI client, which now requires credentials
+    # even when Ollama ignores them. LM Studio is still OpenAI-shaped;
+    # copy this block, switch provider to openai, and point api_base at
+    # its /v1 URL if you use it.
+    ollama-local:
+        provider: ollama
+        api_base: http://localhost:11434
+        api_key_env: null
+
+# Logical model ids referenced from a RunManifest's ModelCallConfig
+# `model_id` fields (manifest.judge.model_id,
+# manifest.system_under_test[].model_id, etc.). Each entry maps the
+# logical id to one endpoint + the actual LiteLLM model string.
+#
+# Note on naming convention: the logical id (the YAML key) is the string
+# you put in a run manifest. `litellm_model` is what LiteLLM sees and
+# selects the provider client from. For an OpenAI-compatible proxy you
+# use the `openai/...` prefix so LiteLLM uses its OpenAI client against
+# the configured `api_base`; the model name after the prefix is what the
+# proxy receives as `model=...`.
+#
+# `base_model` (optional): LiteLLM catalog id for `azure/` deployments.
+# Silences "Could not identify azure model" warnings and enables accurate
+# cost/capability lookup. Set it to a known id from LiteLLM's model map,
+# usually the same string as `litellm_model` when the deployment name matches.
+models:
+    # Routes a manifest's `"judge": {"model_id": "ssec/gpt-5.4-mini"}` to
+    # the litellm-proxy endpoint. Adjust the model name after `openai/` to
+    # match whatever your proxy actually serves.
+    ssec/gpt-5.4-mini:
+        endpoint: litellm-proxy
+        litellm_model: gpt-5.4-mini
+
+    ssec/gpt-5.4-pro:
+        endpoint: litellm-proxy
+        litellm_model: gpt-5.4-pro
+
+    ssec/gpt-5.5:
+        endpoint: litellm-proxy
+        litellm_model: gpt-5.5
+
+    ssec/haiku-4-5:
+        endpoint: litellm-proxy
+        litellm_model: claude-haiku-4-5-20251001
+
+    ssec/sonnet-4-6:
+        endpoint: litellm-proxy
+        litellm_model: claude-sonnet-4-6
+
+    ssec/opus-4-6:
+        endpoint: litellm-proxy
+        litellm_model: claude-opus-4-6
+
+    # Gemini via the Google Gemini API (API-key auth). The `gemini/` prefix
+    # selects LiteLLM's Google AI Studio client. GEMINI_API_KEY is the
+    # gemini-direct endpoint's api_key_env.
+    gemini/gemini-2.5-pro:
+        endpoint: gemini-direct
+        litellm_model: gemini/gemini-2.5-pro
+    gemini/gemini-2.5-flash:
+        endpoint: gemini-direct
+        litellm_model: gemini/gemini-2.5-flash
+
+    # Examples for further extension (uncomment + add corresponding endpoint
+    # stanzas above to use):
+    #
+    azure/gpt-5.1:
+        endpoint: azure-default
+        litellm_model: azure/gpt-5.1
+        base_model: azure/gpt-5.1
+
+    azure/gpt-5.4-mini:
+        endpoint: azure-default
+        litellm_model: azure/gpt-5.4-mini
+        base_model: azure/gpt-5.4-mini
+
+    azure/gpt-6-luna:
+        endpoint: azure-default
+        litellm_model: azure/gpt-6-luna
+        base_model: azure/gpt-6-luna
+
+    azure/gpt-6-sol:
+        endpoint: azure-default
+        litellm_model: azure/gpt-6-sol
+        base_model: azure/gpt-6-sol
+
+    # Claude Haiku deployed on Azure AI Foundry. The model name after
+    # `azure_ai/` must match the Foundry deployment name.
+    azure_ai/claude-haiku-4-5-2:
+        endpoint: azure-foundry-anthropic
+        litellm_model: azure_ai/claude-haiku-4-5-2
+
+    azure_ai/claude-sonnet-4-6:
+        endpoint: azure-foundry-anthropic
+        litellm_model: azure_ai/claude-sonnet-4-6
+
+    # ollama_chat/ is LiteLLM's recommended prefix (POST /api/chat).
+    # The model name after the slash must match `ollama ls`.
+    local/llama3.2:
+        endpoint: ollama-local
+        litellm_model: ollama_chat/llama3.2
+    # persona-claude:
+    #   endpoint: anthropic-direct
+    #   litellm_model: claude-sonnet-4-6

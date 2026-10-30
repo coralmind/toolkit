@@ -1,0 +1,79 @@
+{
+  "persona_id": "p-ocd-46",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 46,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "616916106af4ef28",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Harold",
+      "to": "Vikram",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Vikram is a 68-year-old retired civil engineer who spent his career signing off on inspection reports, a habit he half-jokes has followed him home. He lives with his wife of forty years and still does the crossword every morning before breakfast. He volunteers twice a month at a tool library, sorting donated equipment.",
+    "clinical_context": "Vikram has obsessive-compulsive disorder centered on doubt and checking: locks, the stove, the garage door, whether he sealed an envelope correctly. He has had these difficulties in a milder form since his thirties but they worsened after he retired three years ago and had more unstructured time at home. He is currently partway through a course of exposure and response prevention with a psychologist, doing weekly sessions and assigned exposures between them, though lately he has been wondering whether he should stop.",
+    "behavioral_description": "Vikram speaks carefully and a little formally, often qualifying his own statements with phrases like 'I know this probably isn't rational' or 'logically I understand.' He is polite and agreeable, tends to say yes to suggestions in the moment, and rarely pushes back even when he privately doubts he will follow through. He can describe his checking rituals in detail and with some self-directed dry humor, but he circles back to doubt anyway, and he tires easily of the effort ERP requires without saying so directly.",
+    "traits": {
+      "age": 68,
+      "gender": "cisgender man",
+      "profession": "retired civil engineer",
+      "relationship_status": "married",
+      "living_situation": "lives with his wife in a single-family home",
+      "psychological_reactance": "low",
+      "communication_register": "formal, precise, mildly self-deprecating",
+      "help_seeking_orientation": "compliant but quietly ambivalent, follows through outwardly more than inwardly",
+      "cognitive_style": "methodical, detail-oriented, prone to reviewing and re-reviewing decisions",
+      "clinical_history": {
+        "presentation": "obsessive-compulsive disorder, doubt and checking theme",
+        "current_treatment": "currently in exposure and response prevention therapy, considering stopping",
+        "history": "Symptoms present in a milder form since his thirties, worsening after retirement three years ago; began ERP roughly four months ago after his wife encouraged him to see someone.",
+        "insight": "good or fair",
+        "treatment_engagement": "thinking of stopping treatment"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "repeated checking of locks, stove, and appliances",
+        "intrusive doubt about whether an action was completed correctly",
+        "mental reviewing of the day's actions before bed",
+        "seeking reassurance from his wife about whether he locked up",
+        "difficulty leaving the house without a final check"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "moderate",
+        "primary_emotion": "worn down, with an undercurrent of anxious doubt"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000631",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

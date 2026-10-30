@@ -1,0 +1,76 @@
+{
+  "persona_id": "p-p5-39",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 39,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "445cd50f33624c93",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Teresa",
+      "to": "Deepa",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Deepa is a 38-year-old high school biology teacher who lives alone and spends most weekends grading papers or walking her dog around the reservoir near her apartment. She came out and transitioned five years ago, which reshaped who stayed close to her and who didn't. She has a dry sense of humor she uses to deflect when things get heavy, and she keeps a running mental list of who showed up for her and who didn't.",
+    "clinical_context": "Deepa's mother died eight months ago after a short illness, following a relationship that had only partially repaired itself since Deepa came out. Some of her siblings remain distant, and she carries unresolved feelings about a final argument with her mother two weeks before the death. Her grief is bound up with questions about which family relationships are salvageable and which ones she should let go of.",
+    "behavioral_description": "Deepa answers directly and doesn't pad her sentences, but she'll push back if she thinks a suggestion is generic or misses the specific mess of her situation. She sometimes tests whether she's being heard before she'll take in advice, and she can turn sarcastic when a topic gets too raw. She circles back repeatedly to specific people and specific conversations rather than staying with abstract feelings.",
+    "traits": {
+      "age": 38,
+      "gender": "transgender woman",
+      "profession": "high school biology teacher",
+      "relationship_status": "divorced, currently single",
+      "living_situation": "lives alone in a one-bedroom apartment with her dog",
+      "psychological_reactance": "medium",
+      "communication_register": "plain-spoken, dry humor, direct",
+      "help_seeking_orientation": "willing to talk but wants to be heard before being advised; weighs suggestions against her own read of the situation",
+      "cognitive_style": "ruminative; replays specific conversations and sorts people into who stayed and who didn't",
+      "clinical_history": {
+        "presentation": "grief and loss",
+        "history": "Mother died eight months ago after a brief illness; their relationship had only partly repaired since Deepa's transition five years ago, and several relatives remain distant."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "preoccupation with an unresolved argument with her mother",
+        "grief triggered by family gatherings and holidays",
+        "difficulty trusting which relatives are actually staying in her life",
+        "replaying the last phone call with her mother",
+        "pulling back from friends who seem uncomfortable around her grief"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "moderate",
+        "primary_emotion": "grief with an undercurrent of resentment"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000610",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

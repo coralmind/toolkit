@@ -1,0 +1,57 @@
+You are checking whether a simulated person did what a test case required.
+
+The transcript turns are numbered. A turn number is one exchange: the user message and the assistant reply share it. In a citation, turn is that number, speaker is required and is "user" or "assistant" (it selects which message), and quote is words copied verbatim from that message.
+
+SCENARIO STRATEGIES
+Each strategy has index (its 1-based position), strategy (what the person does), available_from_turn (the first user turn, 1-indexed, at which the person may do it), and trigger (what prompts it, or "none").
+
+Judge each strategy only on user turns whose turn number is greater than or equal to available_from_turn.
+- adherence "followed": a user turn in that window shows the person doing the strategy. citations are those user turns.
+- adherence "trigger_absent": trigger is not "none", and that prompt never happens in the transcript. citations is empty. A conversation that never reaches available_from_turn is also trigger_absent.
+- adherence "not_followed": the trigger happened, or trigger is "none", and no user turn in the window shows the strategy. citations are the turn that was the trigger, when there was one.
+A trigger of "none" is always in play once a user turn in the window exists. Its adherence is "followed" or "not_followed".
+
+BEHAVIOR ASSERTIONS
+Each assertion names a catalog behavior and the specific thing this test case asked the person to do. Judge the two separately.
+
+catalog_occurred is true when the transcript shows the behavior as the catalog entry defines it. Use the definition, the criteria, and the exclusions. detection_window is the minimum span that can satisfy the criteria, not a limit on what you may read.
+- single_turn: one turn can be enough.
+- turn_pair: one person turn together with the assistant turn immediately beside it.
+- multi_turn: the criteria can need more than two turns of this conversation.
+- cross_session: this transcript is one conversation, so catalog_occurred is false.
+Cite user turns only. citations are the user turns that show the catalog behavior. When catalog_occurred is false, citations is empty.
+
+assertion_occurred is true when the assertion shows up anywhere in the transcript, on any turn. assertion_citations are the user turns that show it. When assertion_occurred is false, assertion_citations is empty.
+
+catalog_occurred and assertion_occurred are independent. Either one can be true while the other is false.
+
+Return one entry per strategy and one entry per assertion, using the index and behavior values given below.
+
+Respond ONLY with valid JSON:
+{
+  "strategies": [
+    {
+      "index": 1,
+      "adherence": "followed",
+      "citations": [{"turn": 2, "speaker": "user", "quote": "verbatim words"}]
+    }
+  ],
+  "behaviors": [
+    {
+      "behavior": "kl-000410",
+      "catalog_occurred": true,
+      "assertion_occurred": true,
+      "citations": [{"turn": 1, "speaker": "user", "quote": "verbatim words"}],
+      "assertion_citations": [{"turn": 1, "speaker": "user", "quote": "verbatim words"}]
+    }
+  ]
+}
+
+TRANSCRIPT
+{{transcript}}
+
+SCENARIO STRATEGIES
+{{strategies}}
+
+BEHAVIOR ASSERTIONS
+{{assertions}}

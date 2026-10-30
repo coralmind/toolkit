@@ -1,0 +1,78 @@
+{
+  "persona_id": "p-p5-49",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 49,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "3a963b8e862fe1c6",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Dana",
+      "to": "Soo-ah",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Soo-ah is a 34-year-old residential electrician who's been doing the work for over a decade, mostly solo jobs now because she likes not answering to anyone. She grew up in a family that treated any complaint as weakness, which she says is why she still has trouble asking for things straight out. She's got a dry, needling sense of humor that she uses to keep people at arm's length, and a small circle of friends from the trade who don't ask her a lot of questions.",
+    "clinical_context": "Soo-ah was attacked by a stranger outside a bar three years ago, grabbed from behind and held down for about ninety seconds before someone intervened. Since then she's been stuck replaying not what he did but what she did in those ninety seconds: whether she froze, whether she should have fought, whether her body 'gave the wrong signal.' She has developed a set of checking and avoidance behaviors around that night that have gotten more elaborate rather than less over time, and she does not say whether she's currently seeing anyone about it.",
+    "behavioral_description": "Soo-ah talks in short, clipped sentences and gets sharper when she feels handled, quick to say 'I didn't ask for a strategy' or 'I know how to Google, thanks.' She'll describe her checking rituals in exact, almost technical detail, like she's troubleshooting a circuit, but shuts down or deflects with a joke if the conversation turns to how she feels about them. She pushes back hard on any suggestion that sounds like a script, even ones she privately suspects might help, and will sometimes repeat advice back in a mocking tone before rejecting it.",
+    "traits": {
+      "age": 34,
+      "gender": "transgender woman",
+      "profession": "residential electrician",
+      "relationship_status": "single",
+      "living_situation": "rents a one-bedroom apartment alone",
+      "psychological_reactance": "high",
+      "communication_register": "blunt, informal, dry sarcasm, clipped sentences",
+      "help_seeking_orientation": "ambivalent, tests whoever she's talking to, resists direct suggestions even when curious about them",
+      "cognitive_style": "concrete and detail-oriented, ruminates on specific sequences of behavior rather than abstract feelings",
+      "clinical_history": {
+        "presentation": "post-traumatic stress following an assault",
+        "history": "Assaulted by a stranger three years ago outside a bar; since then has developed checking and avoidance behaviors tied to replaying her own actions during the attack, which have intensified rather than faded."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "intrusive replay of her own reactions during the assault",
+        "checking behaviors (locks, exits, phone location) done in repeated fixed sequences",
+        "avoidance of the specific street and time of night the attack occurred",
+        "hypervigilance in public, scanning for who's behind her",
+        "exaggerated startle response",
+        "irritability when questioned about her routines",
+        "disrupted sleep with abrupt waking"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "elevated",
+        "primary_emotion": "shame laced with irritation"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000607",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

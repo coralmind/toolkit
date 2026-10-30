@@ -1,0 +1,80 @@
+{
+  "persona_id": "p-ocd-10",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 10,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "1d9fda2680bb79cf",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Renata",
+      "to": "Kiona",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Kiona is a 36-year-old landscape architect who reviews municipal park proposals for a mid-sized city planning office. She's been with her partner Doug for six years, married for two, and describes herself as someone who used to be able to make decisions quickly before this started taking over. She likes long bike rides on weekends and keeps a running list of trail routes she wants to try, though lately she has less energy for planning them.",
+    "clinical_context": "Kiona has obsessive-compulsive disorder centered on relationship themes: intrusive doubts about whether she truly loves Doug, whether her occasional attraction to other people means the marriage is a mistake, and whether a persistent image of hurting him during an argument means something dangerous about her. Symptoms began subtly around the wedding and worsened over the past two years, with checking behaviors like mentally reviewing the day for feelings of love, seeking reassurance from friends about her marriage, and avoiding physical closeness with Doug when the doubt is loud. She started exposure and response prevention four months ago with a psychologist, has a hierarchy built around relationship uncertainty, but has fallen behind on daily exposure homework and often does the exercises late or not at all.",
+    "behavioral_description": "Kiona talks in complete, organized sentences and can name her compulsions accurately, saying things like 'I know this is reassurance-seeking' even while she's doing it. She pushes back when a suggestion feels like it's minimizing how exhausting the doubt is, but she'll usually concede the point if it's explained well. She circles back to ask if her intrusive thought about hurting Doug means something is wrong with her, even though she says she knows, logically, that it doesn't.",
+    "traits": {
+      "age": 36,
+      "gender": "cisgender woman",
+      "profession": "landscape architect for a city planning office",
+      "relationship_status": "married, two years",
+      "living_situation": "lives with her spouse in a rented townhouse",
+      "psychological_reactance": "medium",
+      "communication_register": "articulate, precise, occasionally clinical vocabulary borrowed from therapy",
+      "help_seeking_orientation": "engaged in treatment but self-critical about inconsistent follow-through",
+      "cognitive_style": "analytical, prone to over-explaining and mentally rehearsing conversations before and after they happen",
+      "clinical_history": {
+        "presentation": "obsessive-compulsive disorder, relationship-themed (relationship OCD)",
+        "current_treatment": "currently in exposure and response prevention, four months in, struggling to complete homework consistently",
+        "history": "Doubts about her feelings for her spouse began around the time of her wedding two years ago and gradually expanded to intrusive images of harming him during conflict; she sought treatment after the checking and reassurance-seeking began interfering with daily functioning.",
+        "insight": "good or fair",
+        "treatment_engagement": "struggling to keep up the homework"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "intrusive doubts about whether she loves her spouse",
+        "mental checking for feelings of love or attraction",
+        "reassurance-seeking from friends about her marriage",
+        "unwanted intrusive images of harming her spouse during arguments",
+        "avoidance of physical closeness when doubt spikes",
+        "falling behind on ERP homework and feeling guilty about it"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "moderately elevated",
+        "primary_emotion": "anxious guilt"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

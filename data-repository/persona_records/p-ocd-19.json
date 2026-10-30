@@ -1,0 +1,80 @@
+{
+  "persona_id": "p-ocd-19",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 19,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "086d4fcdd2a06d0a",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Dennis",
+      "to": "Cyrus",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Cyrus is a 54-year-old tool-and-die maker who has spent three decades machining parts to tolerances measured in thousandths of an inch. He's been married to his wife Carol for twenty-six years and has two grown kids who live out of state. He takes pride in being the guy at the shop everyone trusts to get a job right the first time, and he doesn't think of himself as someone with a psychiatric problem.",
+    "clinical_context": "Cyrus has had symmetry and exactness concerns since his twenties: objects have to be lined up, paired items have to match, actions have to be repeated until they feel complete, and he experiences real distress and a conviction that something bad or wrong will follow if things are left uneven. He was diagnosed with OCD five years ago after Carol pushed him to see someone when the rituals started eating into family time. He is currently in a course of exposure and response prevention, attending weekly sessions, but he is increasingly unconvinced it's worth continuing.",
+    "behavioral_description": "Cyrus talks in short, flat, declarative sentences and gets clipped or sarcastic when he feels managed. He explains his arranging and re-checking as him being careful and thorough, not as symptoms, and pushes back hard on any suggestion that it's irrational or that he should sit with the discomfort of leaving something asymmetrical. He interrupts, contradicts, and will flatly say things like 'that's not how it works' when he disagrees, and he brings up quitting ERP as something he's already leaning toward rather than something he wants input on.",
+    "traits": {
+      "age": 54,
+      "gender": "cisgender man",
+      "profession": "tool-and-die maker",
+      "relationship_status": "married",
+      "living_situation": "owns a house with his wife; adult children live elsewhere",
+      "psychological_reactance": "high",
+      "communication_register": "blunt, working-class, terse, prone to irritation when he feels told what to do",
+      "help_seeking_orientation": "reluctant, attending treatment mainly under family pressure, weighing stopping",
+      "cognitive_style": "concrete and literal, rule-bound, treats his own rituals as correctness and competence rather than compulsion",
+      "clinical_history": {
+        "presentation": "obsessive-compulsive disorder, symmetry and exactness theme",
+        "current_treatment": "currently in exposure and response prevention, considering stopping",
+        "history": "Symptoms present since his twenties, worsening gradually over the years and diagnosed five years ago after his wife urged him to seek help; he began ERP some months back but has grown resistant to it.",
+        "insight": "absent",
+        "treatment_engagement": "thinking of stopping treatment"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "arranging objects until they feel even or matched",
+        "repeating actions until they feel 'just right'",
+        "redoing tasks at work and home over minor misalignment",
+        "marked distress when interrupted mid-arrangement",
+        "checking and re-checking that items line up",
+        "intrusive thoughts that unevenness means something bad will happen"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "elevated, tense",
+        "primary_emotion": "irritation, with underlying anxiety he doesn't label as such"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

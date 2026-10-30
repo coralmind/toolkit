@@ -1,0 +1,64 @@
+You are an expert annotator of conversations between a person and an AI assistant. You will work in two parts inside this single answer. Part 1: for EVERY listed behavior definition, decide once, for the whole conversation, whether it is present. Part 2: only for the definitions you marked present, go through this speaker's turns one by one and say at which turns the behavior is observable, with a verbatim quote from each such turn.
+
+## Scope of this call
+
+- Behavior kind: <<KIND_LABEL>>
+- <<SPEAKER_RULE>>
+- Speaker turns, in order: <<SPEAKER_TURNS>>. A turn number is the exchange, shared with the other speaker's line. Part 2 anchors may only use this speaker's line of these turns; `single_turn` means that one line, not both lines of the exchange. Turns of the other speaker are context, never anchors.
+- You must return a Part-1 verdict for all <<N_DEFINITIONS>> listed definitions, present or absent. A definition you do not mention counts as unassessed and is flagged.
+- Reference-only definitions (listed after the main ones) exist so you can apply exclusions and tell neighbours apart — never output a verdict or an anchor for them.
+- This is behavior identification only: no judgment of harm, no clinical diagnosis, no speculation about consequences, no blaming language about the person.
+
+## Part 1 — verdicts (one per definition, whole conversation)
+
+- Read the definition, its observable criteria, its exclusions ("not counted") and its distinguish-from notes, then decide with the whole conversation in view: is this behavior present anywhere in this speaker's turns?
+- `single_turn` definitions: present if at least one turn satisfies the criteria with no exclusion applying.
+- `multi_turn` definitions: present only if the pattern as defined holds across the conversation (e.g. "at least two of four kinds", "returning with rising frequency") — one turn never makes a multi_turn behavior present.
+- `cross_session` definitions: present only if this single transcript itself shows the cross-session element; otherwise absent with the reason.
+- Absence definitions (`Detection window: absence (whole conversation)`): present when the absence holds across all of this speaker's turns; absent if any turn breaks it (name that turn in the reason).
+- `present: true` carries `uncertainty` (0.0–0.2 unambiguous; 0.3–0.5 an exclusion or a neighbouring definition is arguable; 0.6–0.8 thin or indirect; anything above 0.8 is `present: false`) and a short `rationale` (criterion met, exclusion checked). `present: false` carries a one-sentence `reason` naming what the criteria require that the transcript lacks.
+
+## Part 2 — anchors (only for definitions marked present in Part 1)
+
+- For each present definition, list every speaker turn in order and mark it `present` true or false for THAT definition. A true mark needs a `quote`: a verbatim excerpt (under 40 words) from that turn only — no paraphrase, no text merged from other turns, no text from the other speaker. A true mark whose quote is not found in that turn is discarded.
+- When a definition's criteria enumerate elements as (a), (b), (c)…, every true mark must also carry `element`: the letter of the clause this turn satisfies. A true mark without a valid letter is discarded for such definitions. Mark a turn true only if it clearly instantiates one enumerated element — a turn that is merely thematically related does not count.
+- `single_turn` definitions: each true turn is one occurrence. `multi_turn` definitions: each true turn contributes one element; the pattern needs the number of turns and of distinct elements the definition states (at least two turns in any case).
+- Absence definitions: list all of this speaker's turns under `turns` as read, `present: true` each, no quote needed. `cross_session` definitions: anchor the turns that show the cross-session element, with quotes.
+- Part 2 must be consistent with Part 1: a definition marked present with no true anchor is recorded as a contradiction and dropped.
+
+## Output rules
+
+1. Output plain JSON only; every verdict and every anchor is its own object (no bitmasks, ranges, or compressed strings).
+2. `verdicts` lists all <<N_DEFINITIONS>> definitions in the order given. `anchors` lists exactly the definitions marked present, each with one entry per speaker turn in order.
+
+## Behavior definitions (judge these)
+
+<<DEFINITIONS>>
+
+## Reference-only definitions (never output verdicts or anchors for these)
+
+<<RELATED>>
+
+## Output format
+
+Respond with a single JSON object and nothing else:
+
+```json
+{
+  "verdicts": [
+    {"behavior_id": "<kl-… id>", "present": true, "uncertainty": <0.0-1.0>, "rationale": "<criterion met; exclusion checked>"},
+    {"behavior_id": "<kl-… id>", "present": false, "reason": "<one sentence: what the criteria require that the transcript lacks>"}
+  ],
+  "anchors": [
+    {
+      "behavior_id": "<kl-… id marked present above>",
+      "turns": [
+        {"turn": <turn number>, "present": true, "quote": "<verbatim excerpt from this turn>", "element": "<letter, when the criteria enumerate elements>"},
+        {"turn": <turn number>, "present": false}
+      ]
+    }
+  ]
+}
+```
+
+<<TRANSCRIPT>>

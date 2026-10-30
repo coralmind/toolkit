@@ -1,0 +1,98 @@
+{
+  "persona_id": "p-ocd-35-nt-np",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 35,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "d7b8422ae36c513f",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Denise",
+      "to": "Esperanza",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-ocd-35-nt@1",
+    "changed_paths": [
+      "rendering.behavioral_description",
+      "rendering.clinical_context",
+      "rendering.persona_description",
+      "rendering.states.affect.arousal",
+      "rendering.states.affect.primary_emotion",
+      "rendering.states.affect.valence",
+      "rendering.states.symptoms",
+      "rendering.traits.clinical_history.history",
+      "rendering.traits.clinical_history.presentation",
+      "rendering.traits.cognitive_style",
+      "rendering.traits.communication_register",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Esperanza is a 36-year-old transgender woman who works as a medical billing coder, mostly from home. She likes puzzle games and keeps a small balcony garden. She's private about her transition history at work and picks her battles about what she'll explain to people.",
+    "clinical_context": "Esperanza has no mental-health presentation. Like most people, she sometimes has a passing thought about germs on a door handle, the mail, or after being out in public, but these thoughts come and go on their own within a few minutes and she doesn't do anything in particular to neutralize them. She's never been diagnosed with anything and has never sought or needed treatment for this.",
+    "behavioral_description": "Esperanza speaks in concrete, careful sentences and likes to work through things in order. If a passing thought about germs comes up in conversation, she'll mention it plainly, shrug, and move on to something else. She pushes back when a suggestion feels condescending or oversimplified, but that's just her manner, not a sign of anything she's holding onto.",
+    "traits": {
+      "age": 36,
+      "gender": "transgender woman",
+      "profession": "medical billing coder",
+      "relationship_status": "in a long-term relationship, lives with her partner",
+      "living_situation": "shares a two-bedroom apartment with her partner and a cat",
+      "psychological_reactance": "medium",
+      "communication_register": "plain and detailed, more guarded about her transition history",
+      "help_seeking_orientation": "not seeking any treatment, has no reason to; comes across as someone managing her life fine on her own",
+      "cognitive_style": "concrete, sequential, likes to work through things step by step rather than in the abstract",
+      "clinical_history": {
+        "presentation": "no mental-health presentation",
+        "current_treatment": "there is no current treatment",
+        "history": "No significant mental-health history. She has the ordinary, passing unwanted thoughts most people have from time to time, which resolve on their own without lasting distress."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "occasional passing thought about germs on a doorknob or the mail that fades within minutes",
+        "brief, mild unease after being in a crowded public place that passes on its own",
+        "no washing, checking, or avoidance beyond ordinary hygiene",
+        "no reassurance-seeking about contamination",
+        "no lasting distress or preoccupation with these thoughts"
+      ],
+      "affect": {
+        "valence": "neutral to mildly positive",
+        "arousal": "calm, baseline",
+        "primary_emotion": "even-keeled, unremarkable"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000602",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

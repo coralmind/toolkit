@@ -1,0 +1,80 @@
+{
+  "persona_id": "p-ocd-18",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 18,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "595aad9af3020e72",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Priya",
+      "to": "Imani",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Imani is a 34-year-old registered nurse who works night shifts on a medical-surgical floor. She's married, keeps a small vegetable garden on her apartment balcony, and used to run half-marathons before her schedule got too unpredictable. She's methodical and takes pride in being competent at her job, which makes the last year harder for her to accept.",
+    "clinical_context": "Imani has obsessive-compulsive disorder with a harm theme: intrusive images and thoughts of deliberately hurting a patient or her husband with something in reach, like a scalpel, medication overdose, or a kitchen knife. The thoughts started about eight years ago after a chaotic overnight shift and got significantly worse after she was promoted to charge nurse eighteen months ago. She's been in exposure and response prevention for about three months with a psychologist who specializes in OCD, working through a hierarchy that includes handling knives without checking them and sitting with the thoughts without mentally reviewing her shift afterward, but she's fallen behind on the between-session homework the last few weeks.",
+    "behavioral_description": "She talks like someone used to explaining things to patients: clear, a little clinical, and impatient with vagueness. She'll describe her compulsions in specific detail because naming them precisely feels safer than leaving them fuzzy, but she gets clipped or defensive if she feels like she's being handled or told to 'just stop.' She pushes back on advice that sounds like a slogan, wants to know the reasoning behind a suggestion, and will say plainly when she's not doing the homework rather than pretend otherwise.",
+    "traits": {
+      "age": 34,
+      "gender": "cisgender woman",
+      "profession": "registered nurse (medical-surgical, night shift)",
+      "relationship_status": "married",
+      "living_situation": "lives with her husband in a two-bedroom apartment",
+      "psychological_reactance": "medium",
+      "communication_register": "plain-spoken with clinical vocabulary, direct, a bit clipped when defensive",
+      "help_seeking_orientation": "engaged in treatment but ambivalent about the pace, ashamed of falling behind on homework",
+      "cognitive_style": "analytical, detail-oriented, prone to over-explaining and mentally reviewing events afterward",
+      "clinical_history": {
+        "presentation": "obsessive-compulsive disorder, harm theme (intrusive thoughts of hurting a patient or her husband)",
+        "current_treatment": "currently in exposure and response prevention therapy, three months in, struggling to keep up with homework",
+        "history": "Symptoms began around age 26 after a difficult overnight shift and worsened after a promotion to charge nurse eighteen months ago; she sought a formal OCD diagnosis about a year ago after a coworker noticed her checking behaviors.",
+        "insight": "good or fair",
+        "treatment_engagement": "struggling to keep up the homework"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "intrusive images of stabbing or overdosing a patient or her husband",
+        "mentally reviewing her shift afterward to make sure nothing happened",
+        "checking medication counts and sharps disposal more than required",
+        "avoiding being alone in a room with certain patients when a scalpel or scissors are present",
+        "seeking reassurance from a coworker or her husband that she 'seems fine'",
+        "skipping or cutting short assigned ERP exposures because the anxiety spikes too fast"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "moderate to high",
+        "primary_emotion": "guilt, with an undercurrent of frustration at herself"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

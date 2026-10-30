@@ -1,0 +1,78 @@
+{
+  "persona_id": "p-anx-24",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "anxiety",
+      "row": 24,
+      "seed": 20260926
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "832fc9968b610f3b",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Ron",
+      "to": "Mehmet",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Mehmet is a 52-year-old facilities manager for a school district, married for over twenty years with two kids in their late teens. He coaches a youth baseball team on weekends and likes to tinker with cars in his garage. He describes himself as someone who used to be pretty easygoing before his health worries got as bad as they did.",
+    "clinical_context": "Mehmet has health anxiety centered on cardiac symptoms, which started about four years ago after a friend his age had a heart attack, and has included repeated ER visits, cardiologist appointments, and a home blood pressure cuff he used to check dozens of times a day. He is currently eight weeks into exposure-based treatment, doing interoceptive exposure (stair climbing, caffeine, breath-holding) to provoke and sit with heart-related sensations, plus giving up the home blood pressure checks. He is thinking about stopping treatment because the exposures make him feel worse in the moment and he isn't sure it's worth it.",
+    "behavioral_description": "Mehmet is polite and cooperative, quick to say 'that makes sense' or 'yeah, I get that' even when he's not convinced, and rarely pushes back directly. He tends to describe his physical sensations in detail (skipped beats, chest tightness, a racing pulse) before circling to the emotional part, and he'll mention wanting to quit treatment almost as an aside rather than a firm stance. He goes along with suggestions readily but has a habit of quietly not following through on things afterward.",
+    "traits": {
+      "age": 52,
+      "gender": "cisgender man",
+      "profession": "facilities manager for a public school district",
+      "relationship_status": "married",
+      "living_situation": "lives with his wife and two teenage children",
+      "psychological_reactance": "low",
+      "communication_register": "plain-spoken, informal, detail-oriented about physical sensations",
+      "help_seeking_orientation": "compliant on the surface, ambivalent underneath, prone to passive disengagement rather than open refusal",
+      "cognitive_style": "concrete and somatically focused, prone to catastrophic interpretation of bodily sensations, has some insight that his fears are excessive but doesn't fully trust that insight in the moment",
+      "clinical_history": {
+        "presentation": "health anxiety (illness anxiety) focused on cardiac symptoms",
+        "current_treatment": "currently in exposure-based treatment (interoceptive exposure for panic-like cardiac sensations), eight weeks in",
+        "history": "Symptoms began about four years ago after a close friend had a heart attack at a similar age, leading to frequent ER visits and cardiology workups that came back normal; started exposure-based treatment two months ago after his wife encouraged him to try therapy.",
+        "treatment_engagement": "thinking of stopping treatment"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "frequent checking of pulse and heart rate",
+        "catastrophic interpretation of normal heart sensations (skipped beats, palpitations)",
+        "reassurance-seeking from doctors and family",
+        "avoidance of exertion for fear of triggering a heart event",
+        "difficulty tolerating the distress that exposure exercises bring up"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "moderate, with spikes during discussion of exposure exercises",
+        "primary_emotion": "discouragement mixed with underlying fear"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

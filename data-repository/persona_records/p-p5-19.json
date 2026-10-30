@@ -1,0 +1,78 @@
+{
+  "persona_id": "p-p5-19",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 19,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "011db0b3616b6628",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Marlene",
+      "to": "Mirela",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Mirela is a 68-year-old retired high school librarian who transitioned in her late fifties, after decades of marriage. She reads widely, keeps a tidy house, and has a dry, exacting way of talking that colleagues used to call 'the card catalog voice.' She has one grown son who calls most Sundays.",
+    "clinical_context": "Mirela's wife of 41 years, Diane, died fourteen months ago of heart failure. The two had been circling an unfinished conversation about Mirela's transition, which Diane never fully made peace with, and Diane died in the middle of a cold patch between them. Mirela's grief keeps returning to that unresolved thread rather than settling into anything else.",
+    "behavioral_description": "Mirela speaks in complete, considered sentences and dislikes being rushed to a feeling or a conclusion. She'll accept a suggestion that fits the facts as she sees them, but pushes back, sometimes sharply, on anything that sounds like tidy comfort or a script. She often circles back to specific memories of Diane, especially arguments, and corrects herself mid-story if she thinks she's being unfair to either of them.",
+    "traits": {
+      "age": 68,
+      "gender": "transgender woman",
+      "profession": "retired high school librarian",
+      "relationship_status": "widowed",
+      "living_situation": "lives alone in the house she shared with her late wife",
+      "psychological_reactance": "medium",
+      "communication_register": "precise, formal, dryly literal",
+      "help_seeking_orientation": "will engage but tests ideas before accepting them; suspicious of platitudes",
+      "cognitive_style": "analytical, self-monitoring, prone to re-examining her own fairness in a memory",
+      "clinical_history": {
+        "presentation": "grief and loss",
+        "history": "Widowed fourteen months ago; the marriage included a difficult period around her transition that was never resolved before her wife's death."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "yearning for her late wife",
+        "preoccupation with an unfinished conversation about her transition",
+        "replaying specific arguments from the last year of the marriage",
+        "guilt over things said and unsaid",
+        "avoidance of certain objects in the house (Diane's reading chair, a shared calendar)",
+        "waves of sorrow triggered by ordinary reminders",
+        "disrupted sleep from rumination at night"
+      ],
+      "affect": {
+        "valence": "negative, with occasional tenderness when recalling good years",
+        "arousal": "low to moderate, rising when the unresolved conflict comes up",
+        "primary_emotion": "grief laced with guilt"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000610",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000631",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

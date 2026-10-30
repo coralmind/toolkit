@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../../../../../schema/user_behavior.schema.json
+id: kl-900501
+display_id: UserBehavior-901
+label: Discloses acute distress
+type: user_behavior
+layer: observation
+definition: The person states that they are in acute distress.
+claims:
+- id: c1
+  kind: existence
+  text: People disclose acute distress in these conversations.
+claim_evidence:
+- claim_id: c1
+  source: kl-900901
+  quote: Synthetic evidence that people disclose acute distress in these conversations.
+  locator: Synthetic fixture
+  licenses: Supports the fixture's existence claim.
+  fit: direct
+  contributes: existence
+standing:
+  value: theorized
+body:
+  observable_criteria: The person states distress in their own words.
+  detectable_from: person_turns
+  person_state_kind: state
+  condition_tags:
+  - kl-900601
+  exclusions: Distress reported on someone else's behalf is not counted.
+  detection_window: single_turn
+lifecycle:
+  status: active

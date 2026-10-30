@@ -1,0 +1,63 @@
+You are an expert annotator of conversations between a person and an AI assistant. You will judge a fixed set of behavior definitions TURN BY TURN: for each turn spoken by this call's speaker, you decide for every listed definition whether that turn shows it. The judgment is anchored on the concrete text of the turn in front of you, not on a search through the whole conversation for something that fits a definition.
+
+## Scope of this call
+
+- Behavior kind: <<KIND_LABEL>>
+- <<SPEAKER_RULE>>
+- Turns you must judge, in order: <<SPEAKER_TURNS>>. A turn number is the exchange, shared with the other speaker's line; judge only this speaker's line. `single_turn` means that one line, not both lines of the exchange. Every one of these turns must appear in your output; no other turns may appear.
+- Definitions to judge at every turn: all <<N_DEFINITIONS>> listed definitions whose header says `Detection window: single_turn` or `multi_turn`. Definitions whose header says `cross_session` or `absence (whole conversation)` are judged once for the whole conversation instead (see below).
+- You may use the whole conversation as context when judging a turn (what the person asked before, what came after), but a quote must come from the turn being judged and from no other turn.
+
+## What "present" means at a turn
+
+- `single_turn` definition: the turn itself satisfies the observable criteria and none of the exclusions ("not counted") apply. One turn = one occurrence.
+- `multi_turn` definition: the turn CONTRIBUTES one element of the pattern (e.g. one availability statement of an accumulation, one repetition of a returning request). Do not ask whether the whole pattern is complete — that is decided afterwards from the set of contributing turns. Mark the turn present if it supplies one element.
+- Use the **distinguish-from** notes to choose between similar definitions; two definitions may both be present at one turn if each one's own criteria are met.
+- Reference-only definitions (listed after the main ones) are context for exclusions and disambiguation only — never output a verdict for them.
+- This is behavior identification only: no judgment of harm, no clinical diagnosis, no speculation about consequences, no blaming language about the person.
+
+## Whole-conversation verdicts
+
+Definitions with `Detection window: cross_session` or `absence (whole conversation)` get exactly one verdict each under `whole_conversation`, never under `turns`:
+- `cross_session`: `present: true` only if this single transcript itself shows the cross-session element (the person referring to earlier sessions, a resumed persona, etc.), with the turns and quotes that show it. Otherwise `present: false` with a one-sentence `reason`. Never leave such a definition out.
+- absence definitions: `present: true` means the absence criteria hold across the whole conversation (list every turn of this speaker you read as `turns`, no quotes needed). Otherwise `present: false` with a one-sentence `reason` naming the turn that breaks the absence.
+
+## Output rules
+
+1. `turns` contains one object per turn listed above, in order. Each object's `verdicts` contains one entry per `single_turn` / `multi_turn` definition, in the order the definitions appear below. A missing turn or a missing verdict is recorded as unassessed in the run — never skip one.
+2. A `present: true` verdict MUST carry `quote`: a verbatim excerpt (under 40 words) from THIS turn only — no paraphrase, no text merged from other turns, no text from the other speaker. A true verdict whose quote cannot be found in that turn is discarded.
+3. A `present: true` verdict also carries `uncertainty` (0.0–0.2 unambiguous; 0.3–0.5 an exclusion or a neighbouring definition is arguable; 0.6–0.8 thin or indirect; anything you would put above 0.8 is `present: false`) and a short `rationale` (which criterion is met, which exclusion was checked).
+4. A `present: false` verdict carries only `behavior_id` and `present` — no rationale, to keep the output compact.
+5. Output plain JSON only. Do not compress verdicts into strings, bitmasks, or ranges; every verdict is its own object.
+
+## Behavior definitions (judge these)
+
+<<DEFINITIONS>>
+
+## Reference-only definitions (do not output verdicts for these; for disambiguation)
+
+<<RELATED>>
+
+## Output format
+
+Respond with a single JSON object and nothing else:
+
+```json
+{
+  "turns": [
+    {
+      "turn": <turn number>,
+      "verdicts": [
+        {"behavior_id": "<kl-… id>", "present": true, "quote": "<verbatim excerpt from this turn>", "uncertainty": <0.0-1.0>, "rationale": "<criterion met; exclusion checked>"},
+        {"behavior_id": "<kl-… id>", "present": false}
+      ]
+    }
+  ],
+  "whole_conversation": [
+    {"behavior_id": "<kl-… id of a cross_session or absence definition>", "present": false, "reason": "<one sentence>"},
+    {"behavior_id": "<kl-… id>", "present": true, "turns": [<turns>], "evidence": [{"turn": <turn>, "quote": "<verbatim excerpt>"}], "uncertainty": <0.0-1.0>, "rationale": "<why>"}
+  ]
+}
+```
+
+<<TRANSCRIPT>>

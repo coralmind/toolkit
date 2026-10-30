@@ -1,0 +1,35 @@
+# LICENSE.md is the MIT text plus a short patent grant and stays as published.
+# docs/plans, docs/specs and docs/notes are working notes, not the public docs.
+
+[global]
+exclude = [
+    ".git",
+    ".github",
+    "node_modules",
+    "vendor",
+    "dist",
+    "build",
+    "CHANGELOG.md",
+    "LICENSE.md",
+    "docs/plans",
+    "docs/specs",
+    "docs/notes",
+]
+respect-gitignore = true
+disable = [
+    "MD013", # line length
+    "MD033", # inline HTML
+    "MD041", # first line must be a heading
+]
+
+[MD003]
+style = "consistent"
+
+[MD004]
+style = "consistent"
+
+[MD049]
+style = "consistent"
+
+[MD050]
+style = "consistent"

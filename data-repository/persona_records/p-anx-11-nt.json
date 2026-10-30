@@ -1,0 +1,88 @@
+{
+  "persona_id": "p-anx-11-nt",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "anxiety",
+      "row": 11,
+      "seed": 20260926
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "d3e481d422bb0524",
+      "attempt": 3
+    },
+    "renamed": {
+      "from": "Derek",
+      "to": "Nikhil",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-anx-11@1",
+    "changed_paths": [
+      "rendering.clinical_context",
+      "rendering.states.affect.primary_emotion",
+      "rendering.states.symptoms",
+      "rendering.traits.clinical_history.current_treatment",
+      "rendering.traits.clinical_history.history",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Nikhil is a 37-year-old IT support specialist who lives with his wife and their two kids in a suburb outside Cleveland. He coaches his son's Saturday soccer league when he can manage it, and he used to enjoy woodworking in the garage before his attention got pulled toward his body most of the time. He's methodical by nature, the kind of person who reads the whole manual before setting up a new router.",
+    "clinical_context": "Nikhil has illness anxiety centered on cardiac and neurological symptoms; a racing heart or a tingling arm reliably sends him into a spiral about a hidden heart condition or stroke. This has been building for about three years, worsening after a coworker his age had a mild heart attack. He's never pursued treatment for it, telling himself each time that he'll look into it once things calm down, but the spiral tends to pass on its own before he does.",
+    "behavioral_description": "Nikhil explains his reasoning in detail before agreeing to anything, and he'll often lay out the counterargument himself before you get to make it. He asks pointed, specific questions rather than vague ones, and pushes back when something sounds like it's minimizing a symptom he considers plausible. He can catch himself mid-spiral and name what he's doing, but he still wants to explain why this particular symptom might be the exception.",
+    "traits": {
+      "age": 37,
+      "gender": "cisgender man",
+      "profession": "IT support specialist",
+      "relationship_status": "married",
+      "living_situation": "lives with his wife and two children",
+      "psychological_reactance": "medium",
+      "communication_register": "plain, detail-oriented, occasionally technical when describing symptoms",
+      "help_seeking_orientation": "has not sought treatment despite years of symptoms; seeks reassurance from his wife instead, and is ambivalent about whether formal treatment would even help",
+      "cognitive_style": "methodical, analytical, prone to building a case for why his situation is the exception to general advice",
+      "clinical_history": {
+        "presentation": "illness anxiety focused on cardiac and neurological symptoms",
+        "current_treatment": "none; he has never started a course of treatment for this",
+        "history": "Symptoms began about three years ago and intensified after a coworker had a heart attack at a similar age; he has never sought therapy or formal treatment for it."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "checks his pulse multiple times a day",
+        "reads bodily sensations like a skipped heartbeat as signs of a heart attack",
+        "avoids strenuous exercise for fear of triggering a cardiac event",
+        "researches symptoms online then tries to stop and feels agitated doing so",
+        "seeks reassurance from his wife about symptoms",
+        "puts off scheduling a doctor's appointment even when the worry is at its worst"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "elevated",
+        "primary_emotion": "worried, with an undercurrent of frustration at how much of his day the worry takes up"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

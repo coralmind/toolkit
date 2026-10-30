@@ -1,0 +1,72 @@
+{
+  "persona_id": "p-p5-29",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 29,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "ad3648d57a485b73",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Marcus",
+      "to": "Sergei",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Sergei Delgado is 39, an electrician who runs his own small contracting business outside Tacoma. He's married with two kids, ages 9 and 12, and coaches his son's rec-league baseball team on weekends. He's the guy friends call when something breaks, practical and even-keeled most of the time.",
+    "clinical_context": "Grief and loss, centered on his father's sudden death eight months ago from a heart attack. His father was 66, healthy as far as anyone knew, and died in the yard doing yardwork; Sergei found him. Since then Sergei has had unpredictable waves of intense emotion that he says come out of nowhere and don't match how he thought he'd handle this.",
+    "behavioral_description": "Sergei talks in short, practical sentences and often steers toward logistics before he'll say what he's actually feeling. He pushes back on anything that sounds like a script or a platitude, but he'll consider a suggestion if it's specific and he can picture doing it. He circles back more than once to the same complaint: that the crying and the flooded feeling show up at the worst times and he can't find the pattern, and that unsettles him more than the sadness itself.",
+    "traits": {
+      "age": 39,
+      "gender": "cisgender man",
+      "profession": "electrician, owns a small contracting business",
+      "relationship_status": "married",
+      "living_situation": "lives with wife and two children",
+      "psychological_reactance": "medium",
+      "communication_register": "plain, practical, understated; drops into short clipped sentences when emotion rises",
+      "help_seeking_orientation": "will engage if something feels concrete and useful, skeptical of anything that sounds scripted or vague",
+      "cognitive_style": "concrete and solution-oriented, uncomfortable sitting in open-ended reflection for long",
+      "clinical_history": {
+        "presentation": "grief and loss",
+        "history": "His father died suddenly eight months ago; Sergei found him. No prior losses of this kind in his life, and the intensity and unpredictability of his emotional reactions since then have been new and disorienting for him."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "sudden crying spells with no clear trigger",
+        "feeling emotionally flooded or overwhelmed at random moments",
+        "difficulty predicting what will set off a wave of grief",
+        "intrusive images of finding his father",
+        "irritability when emotion surges unexpectedly",
+        "exhaustion after emotional episodes"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "variable, spikes of high arousal followed by flatness",
+        "primary_emotion": "grief"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000610",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

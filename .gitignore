@@ -1,0 +1,98 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Test / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Cache directories
+.mypy_cache/
+.ruff_cache/
+.rumdl_cache/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE. settings.json is shared project config; everything else is personal.
+.vscode/*
+!.vscode/settings.json
+.idea/
+
+# Build artifacts
+dist/
+build/
+site/
+
+# Pipeline runtime artifacts
+*.progress.json
+*.tmp
+
+
+# Runtime logs and results. New runs write under data-repository/results.
+# The repo-root path stays ignored for runs created before that move.
+/results/
+/data-repository/results/
+*.log
+
+# Backup files
+*.bak
+
+# Private/local Cursor context (stakeholder notes, personal rules) — never commit
+.cursor/**/*.local.mdc
+.cursor/**/*.local.md
+
+# Temp working directory
+temp/
+
+# Node
+node_modules/
+
+# Judge/sim trace logs (large debug artifacts, kept local, not versioned)
+*.trace.jsonl
+
+# pixi environments
+.pixi/*
+!.pixi/config.toml
+
+# Local agent notes
+.superpowers/
+
+# The results viewer (Next.js). viewer/ has no .gitignore of its own.
+viewer/node_modules/
+viewer/.next/
+viewer/.vercel/
+viewer/next-env.d.ts
+*.tsbuildinfo
+
+# Next.js rewrites these on every build.
+viewer/AGENTS.md
+viewer/CLAUDE.md
+
+# Written by the ingest and by the vitest fixture step.
+viewer/src/generated/
+viewer/tests/fixtures/generated/
+
+# Published sample runs keep only the files pages read: never logs or Burr databases.
+# Their trace files are published, unlike every other trace.
+data-repository/sample_results/**/*.burr.db
+!data-repository/sample_results/**/*.trace.jsonl

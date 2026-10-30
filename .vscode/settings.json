@@ -1,0 +1,10 @@
+{
+    "python-envs.defaultEnvManager": "renan-r-santos.pixi-code:pixi",
+    "python-envs.defaultPackageManager": "renan-r-santos.pixi-code:pixi",
+    "json.schemas": [
+        {
+            "fileMatch": ["/data-repository/persona_records/*.json"],
+            "url": "./data-repository/persona_records/schema/persona_record.schema.json"
+        }
+    ]
+}

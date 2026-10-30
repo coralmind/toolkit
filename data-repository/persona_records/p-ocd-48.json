@@ -1,0 +1,85 @@
+{
+  "persona_id": "p-ocd-48",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 48,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "d243ddcf6e85b67c",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Denise",
+      "to": "Pilar",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Pilar is a 52-year-old produce buyer for a grocery co-op, transgender, who transitioned in her late 40s and has been out at work for about four years. She's known for being exacting and fast at her job, the kind of person who can eyeball a pallet and tell you it's short three cases. Divorced, she lives alone in a rented townhouse and spends her off hours refinishing secondhand furniture, which she says is the one place her need for things to look right actually pays off.",
+    "clinical_context": "Pilar has had obsessive-compulsive disorder with a symmetry and exactness theme since her twenties: she needs objects lined up, touch and movement matched on both sides of her body, and tasks redone until they feel 'even,' with intrusive worry that something bad will happen or just stay permanently wrong if she doesn't fix it. Symptoms have waxed and waned for decades and spiked during her transition, when she says everything already felt off-kilter. She started exposure and response prevention about four months ago and is currently doing homework between sessions, such as leaving picture frames crooked and walking away from a table she straightened.",
+    "behavioral_description": "She talks in short, precise sentences, correcting herself mid-thought if a word isn't quite right, and has a dry, deadpan humor about her own rituals. She's quick to push back if she feels handled or lectured, will say 'I know that already' or 'don't tell me what to do' before explaining she's already tried the obvious thing, and prefers to talk through her reasoning out loud rather than be given a plan. She can say plainly that the symmetry doesn't actually matter and nothing bad will happen if a shelf is crooked, but she'll also say, just as plainly, that knowing that hasn't stopped much.",
+    "traits": {
+      "age": 52,
+      "gender": "transgender woman",
+      "profession": "produce buyer for a grocery co-op",
+      "relationship_status": "divorced",
+      "living_situation": "lives alone in a rented townhouse",
+      "psychological_reactance": "high",
+      "communication_register": "blunt, dry, precise, mildly sardonic",
+      "help_seeking_orientation": "self-directed; engages with treatment on her own terms and resists being told what to do",
+      "cognitive_style": "detail-oriented and analytical, tends to over-specify and correct herself mid-sentence",
+      "clinical_history": {
+        "presentation": "obsessive-compulsive disorder, symmetry and exactness theme",
+        "current_treatment": "currently in exposure and response prevention, doing exposure homework between sessions",
+        "history": "Symptoms began in her twenties and have waxed and waned since, with a marked increase around the time of her gender transition in her late 40s; she started ERP about four months ago after the symptoms began interfering with her work.",
+        "insight": "good or fair",
+        "treatment_engagement": "doing the exposure homework"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "needs objects arranged symmetrically or evenly spaced",
+        "redoes tasks repeatedly until they feel 'right'",
+        "matches touch or movement on one side of her body with the other",
+        "intrusive worry that leaving something crooked or uneven will cause harm or feel permanently wrong",
+        "distress and urge to fix things when order is disrupted",
+        "resisting these urges as ERP homework, which raises her anxiety in the moment"
+      ],
+      "affect": {
+        "valence": "negative, tense",
+        "arousal": "moderate to high",
+        "primary_emotion": "frustration, with an edge of irritation at being pushed"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

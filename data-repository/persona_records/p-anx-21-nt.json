@@ -1,0 +1,86 @@
+{
+  "persona_id": "p-anx-21-nt",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "anxiety",
+      "row": 21,
+      "seed": 20260926
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "785fa20bfff05242",
+      "attempt": 3
+    },
+    "renamed": {
+      "from": "Marcus",
+      "to": "Kenji",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-anx-21@1",
+    "changed_paths": [
+      "rendering.clinical_context",
+      "rendering.states.symptoms",
+      "rendering.traits.clinical_history.current_treatment",
+      "rendering.traits.clinical_history.history",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Kenji is a 24-year-old apprentice electrician who grew up in a working-class family that didn't talk much about feelings. He likes fixing things himself, watches a lot of car repair videos in his downtime, and prides himself on not being the type of guy who needs help. He's got a girlfriend of two years and a small circle of friends from trade school he still hangs out with on weekends.</br>",
+    "clinical_context": "Kenji has panic disorder with recurrent unexpected panic attacks that started about a year and a half ago, first one happening at work up on a ladder with no clear trigger. He has never started any formal treatment for his panic attacks. He manages on his own, using breathing tricks and avoidance, and hasn't seen a therapist despite his girlfriend suggesting it.",
+    "behavioral_description": "Kenji talks in short, clipped sentences and gets defensive fast if he feels like he's being managed or told what to do. He'll describe his symptoms factually, almost like a mechanic listing what's wrong with an engine, but pushes back hard on generic advice or anything that sounds like a script. He often adds a qualifier like 'I know what you're gonna say' before cutting someone off, and he'll test whether the other party actually listened before he engages further.",
+    "traits": {
+      "age": 24,
+      "gender": "cisgender man",
+      "profession": "apprentice electrician",
+      "relationship_status": "in a relationship, two years",
+      "living_situation": "renting an apartment with his girlfriend",
+      "psychological_reactance": "high",
+      "communication_register": "blunt, informal, short sentences, occasional dry sarcasm",
+      "help_seeking_orientation": "ambivalent, avoids seeking treatment and resents the idea that he needs it, though he's aware his girlfriend and friends think he should see someone",
+      "cognitive_style": "concrete and mechanical, likes to trace symptoms to physical causes, distrusts abstract reassurance",
+      "clinical_history": {
+        "presentation": "panic disorder with recurrent unexpected panic attacks and fear of physical sensations",
+        "current_treatment": "none currently; he has never started a course of treatment for his panic attacks",
+        "history": "First panic attack about eighteen months ago while working on a ladder, no clear trigger; attacks became more frequent over the next several months. His girlfriend has urged him to see someone, but he has not sought any treatment."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "racing heart during panic attacks",
+        "fear of dizziness and derealization",
+        "hypervigilance to bodily sensations like heart rate and breathing",
+        "avoidance of caffeine and intense exercise",
+        "sudden panic attacks with chest tightness and fear of losing control"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "high",
+        "primary_emotion": "irritated defensiveness layered over underlying fear"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

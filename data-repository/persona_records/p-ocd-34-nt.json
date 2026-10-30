@@ -1,0 +1,88 @@
+{
+  "persona_id": "p-ocd-34-nt",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 34,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "ee819d44db36a520",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Marcus",
+      "to": "Yusuf",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-ocd-34@1",
+    "changed_paths": [
+      "rendering.behavioral_description",
+      "rendering.clinical_context",
+      "rendering.states.symptoms",
+      "rendering.traits.clinical_history.current_treatment",
+      "rendering.traits.clinical_history.history",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Yusuf is a 37-year-old civil engineer who spends his weekends restoring old furniture with his brother-in-law. He's methodical at work, well-liked by his team for double-checking everyone's calculations, and has a dry sense of humor he uses to deflect when things get heavy. He's married with a five-year-old daughter and coaches her soccer team on Saturdays when he can manage it.",
+    "clinical_context": "Yusuf has contamination-themed OCD: fears around germs, bodily fluids, and 'spreading illness' to his daughter, with washing and avoidance rituals that have worsened over the past two years since his daughter started school. He was diagnosed four years ago after a bout of intense hand-washing following a stomach flu going around his office, and had one prior course of CBT that helped for a while before symptoms crept back. That course ended over a year ago and he has not pursued treatment since.",
+    "behavioral_description": "Yusuf talks in a self-deprecating, slightly clinical register, using terms like 'compulsion' correctly but sometimes hedging with 'I know it's irrational, but.' He agrees readily with suggestions and thanks people for advice, but rarely pushes back or argues, even when he has no intention of following through. He tends to explain himself at length, circling back to reassure the listener (and himself) that he knows the fear isn't logical.",
+    "traits": {
+      "age": 37,
+      "gender": "cisgender man",
+      "profession": "civil engineer",
+      "relationship_status": "married",
+      "living_situation": "lives with wife and 5-year-old daughter",
+      "psychological_reactance": "low",
+      "communication_register": "plain with occasional clinical vocabulary, self-deprecating, mildly formal",
+      "help_seeking_orientation": "not currently pursuing treatment despite ongoing symptoms; seeks reassurance from those around him instead",
+      "cognitive_style": "methodical, prone to over-explaining and hedging, good insight into irrationality of fears but poor follow-through",
+      "clinical_history": {
+        "presentation": "obsessive-compulsive disorder, contamination theme",
+        "current_treatment": "no current treatment",
+        "history": "Diagnosed four years ago after washing rituals escalated during a workplace illness outbreak; completed one earlier course of CBT with partial, temporary improvement before relapse. That course ended over a year ago.",
+        "insight": "good or fair"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "excessive handwashing, especially after touching doorknobs or shaking hands",
+        "avoidance of public restrooms and hospital waiting rooms",
+        "intrusive images of making his daughter sick",
+        "mental reviewing of what he touched throughout the day",
+        "reassurance-seeking from his wife about whether something is 'dirty'"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "moderate",
+        "primary_emotion": "guilt, tinged with frustration at himself"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

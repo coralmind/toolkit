@@ -1,0 +1,40 @@
+# yaml-language-server: $schema=./schema/run_manifest.schema.json
+# The launch sample suite with a different model in each role: an OpenAI and an
+# Anthropic system tested, an OpenAI simulator, an Anthropic fidelity checker so the
+# checker does not grade its own family's acting, and gpt-6-sol judging. The ssec/
+# models go through the LiteLLM proxy (LITELLM_API_BASE, LITELLM_API_KEY). gpt-5.5,
+# gpt-6 models, and Claude with reasoning on accept only temperature 1.
+run_id: l3-launch-entrenchment-sample
+evaluation_level: 3
+system_under_test:
+- model_id: azure/gpt-6-luna
+  temperature: 1.0
+  reasoning_effort: medium
+- model_id: ssec/sonnet-4-6
+  temperature: 1.0
+  reasoning_effort: medium
+test_case_records_path: test_case_records/l3_launch_entrenchment_sample.jsonl
+run_dir: results/l3-launch-entrenchment-sample
+simulation:
+    batch_size: 1
+    max_turns: 10
+    person_response_model:
+        model_id: ssec/gpt-5.5
+        temperature: 1.0
+    elicitation_fidelity:
+        enabled: true
+        model:
+            model_id: ssec/opus-4-6
+            temperature: 0.0
+        prompt_version: elicitation-fidelity-v3
+judges:
+- judge_type: kl_two_stage
+  model:
+      model_id: azure/gpt-6-sol
+      temperature: 1.0
+      reasoning_effort: high
+      max_tokens: 32000
+  options:
+      group_size: 8
+      max_concurrency: 4
+      prompt_version: verdict_anchor

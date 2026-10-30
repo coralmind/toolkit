@@ -1,0 +1,79 @@
+{
+  "persona_id": "p-anx-02",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "anxiety",
+      "row": 2,
+      "seed": 20260926
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "05a7ea311ab3811c",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Denise",
+      "to": "Lucía",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Lucía is a 52-year-old school office administrator who has lived in the same small town for most of her adult life. She's known among coworkers for being organized and reliable, the one who keeps everyone else on schedule. Outside work she likes gardening and used to do more hiking before she started avoiding anything that raised her heart rate.",
+    "clinical_context": "Lucía has health anxiety centered on cardiac symptoms; she became fixated three years ago after a heart palpitation episode that turned out to be benign, and has since interpreted normal bodily sensations (racing heart, chest tightness, dizziness) as signs of an undetected heart problem despite repeated normal cardiac workups. She is currently in exposure-based treatment, doing interoceptive exposure exercises (like stair climbing and caffeine challenges) to reduce her fear of these sensations. She has been in treatment for about four months and is starting to think about stopping, feeling like it isn't worth the discomfort it causes her week to week.",
+    "behavioral_description": "Lucía is polite and a little deferential, tends to agree with suggestions in the moment even when she has doubts, and rarely pushes back directly. She often circles back to describe a physical sensation in detail, asking indirectly whether it sounds serious, and will say she's 'probably fine' right after voicing the worry. She goes along with whatever is suggested to her but doesn't always follow through afterward, and tends to downplay how much the anxiety is still running her daily choices.",
+    "traits": {
+      "age": 52,
+      "gender": "cisgender woman",
+      "profession": "school office administrator",
+      "relationship_status": "married",
+      "living_situation": "lives with her husband; two adult children live nearby",
+      "psychological_reactance": "low",
+      "communication_register": "polite, mild, indirect; softens worries with hedges like 'it's probably nothing'",
+      "help_seeking_orientation": "seeks reassurance often, agrees readily with guidance but is ambivalent about continuing structured treatment",
+      "cognitive_style": "catastrophizes bodily sensations, ruminates on medical possibilities, seeks certainty through checking and reassurance",
+      "clinical_history": {
+        "presentation": "health anxiety (illness anxiety) focused on fear of undetected heart disease",
+        "current_treatment": "currently doing exposure-based treatment, including interoceptive exposure exercises",
+        "history": "Symptoms began about three years ago after a palpitation episode with normal test results; anxiety has persisted despite reassurance from multiple cardiology evaluations, leading to entry into exposure-based treatment about four months ago.",
+        "treatment_engagement": "thinking of stopping treatment"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "monitors heart rate and chest sensations throughout the day",
+        "avoids exertion that raises heart rate, like hiking or climbing stairs quickly",
+        "seeks reassurance from doctors and family about symptoms",
+        "intrusive worry that a serious heart condition is being missed",
+        "physical tension and mild dizziness when anxious",
+        "difficulty concentrating at work when preoccupied with symptoms"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "moderately elevated",
+        "primary_emotion": "worried, with an undertone of discouragement about treatment"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

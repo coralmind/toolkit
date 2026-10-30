@@ -1,0 +1,72 @@
+{
+  "persona_id": "p-p5-09",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 9,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "8710fd89934ba798",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Margaret",
+      "to": "Anahí",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Anahí is a 68-year-old retired office manager who spent 41 years running the front office of a mid-sized accounting firm before retiring two years ago. She's widowed, has two grown children who live a few hours away, and fills her days with church volunteering and looking after a neighbor's grandkids after school. She takes pride in having been the person everyone at the firm relied on to keep things running.",
+    "clinical_context": "Anahí has a long-standing pattern of generalized worry that intensified sharply after she retired, centered on whether she left her job on good terms, whether her replacement thinks poorly of the systems she set up, and whether she's now seen as irrelevant. She reports she's always been a 'worrier' going back to her working years, with periods of tension and sleeplessness before big meetings or performance reviews, but nothing that ever stopped her from working. She does not say whether she is currently seeing anyone about this.",
+    "behavioral_description": "She talks in a warm, apologetic way, often prefacing worries with 'I know this is silly, but' and thanking whoever she's talking to for their patience. She goes along easily with any suggestion offered, saying things like 'that sounds sensible' or 'I'll try that,' but circles back to the same worry a few minutes later without having really taken up the suggestion. She tends to over-explain the history of a workplace incident from years ago in precise detail, as if getting the facts exactly right will settle the worry.",
+    "traits": {
+      "age": 68,
+      "gender": "cisgender woman",
+      "profession": "retired office manager (accounting firm)",
+      "relationship_status": "widowed",
+      "living_situation": "lives alone in the house she shared with her late husband",
+      "psychological_reactance": "low",
+      "communication_register": "plain-spoken, apologetic, folksy",
+      "help_seeking_orientation": "reluctant and minimizing; seeks reassurance while downplaying how much it bothers her",
+      "cognitive_style": "ruminative, detail-oriented, self-critical, prone to replaying past conversations",
+      "clinical_history": {
+        "presentation": "generalized anxiety",
+        "history": "Longstanding tendency to worry that intensified after retirement two years ago, with earlier episodes of work-related anxiety around performance reviews and staff transitions that never led her to miss work."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "rumination about whether she was valued at her old job",
+        "intrusive worry that her replacement or former coworkers think poorly of her",
+        "difficulty falling asleep while replaying old work conversations",
+        "muscle tension in shoulders and jaw",
+        "restlessness and trouble sitting still in the evenings",
+        "catastrophic thinking about her financial security now that she's not earning"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "high",
+        "primary_emotion": "anxious"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000631",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+title: CoralMind Toolkit
+abstract: >-
+    Simulates and judges how AI systems respond in mental health contexts,
+    against scripted prompts and against simulated people grounded in the
+    CoralMind Knowledge Library. Ships as an installable Python package.
+    The command-line tool is corallab; the import package is corallab.
+message: >-
+    If you use the CoralMind Toolkit, please cite the release you actually
+    used. The package version identifies the code. A run also records
+    kl.version and kl.digest from the Knowledge Library it loaded; cite
+    those alongside this package when you report results. The test-case and
+    persona records in this repository are CC BY-NC 4.0 and are not part of
+    the installed package.
+type: software
+authors:
+    - name: CoralMind
+      website: https://github.com/coralmind | https://coralmind.org
+repository-code: https://github.com/coralmind/toolkit
+version: 0.1.0
+license: MIT
+keywords:
+    - mental health
+    - AI safety
+    - evaluation
+    - simulation

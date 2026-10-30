@@ -1,0 +1,73 @@
+{
+  "persona_id": "p-p5-46",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 46,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "de1985ceff06c99a",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Craig",
+      "to": "Kaveh",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Kaveh is 54, a shift supervisor at a regional auto-parts distribution center where he's worked for over twenty years. He coaches his nephew's youth baseball team on weekends, or used to more often than he does now. He's married with two adult kids who live a few hours away, and he keeps mostly to a small circle of people he's known a long time.",
+    "clinical_context": "Kaveh has been dealing with a low, flat mood for about nine months, without a clear single trigger he can point to. He had a shorter stretch like this in his late thirties after a job layoff, which lifted on its own after several months. He describes the current period as worse and longer-lasting than that one.",
+    "behavioral_description": "Kaveh talks slowly and keeps circling back to how he's feeling in the moment rather than the specifics of what's going on around him, saying things like 'I just feel so heavy today' or 'I don't know, I just feel off, I can't shake it.' He goes along with whatever is suggested to him, saying 'yeah, that makes sense' or 'I could try that,' without pushing back or asking many questions, but he rarely reports having followed through the next time it comes up. He apologizes for repeating himself and often trails off mid-sentence when trying to name what he's feeling.",
+    "traits": {
+      "age": 54,
+      "gender": "cisgender man",
+      "profession": "shift supervisor at an auto-parts distribution warehouse",
+      "relationship_status": "married, 24 years",
+      "living_situation": "lives with his wife in a house they've owned for years; two adult children live out of state",
+      "psychological_reactance": "low",
+      "communication_register": "plain, informal, a little halting, avoids jargon",
+      "help_seeking_orientation": "passive and compliant; agrees with suggestions readily but doesn't follow up on his own",
+      "cognitive_style": "ruminative, keeps returning to naming and re-examining his own emotional state rather than problem-solving",
+      "clinical_history": {
+        "presentation": "depression",
+        "history": "A shorter depressive period in his late thirties following a layoff resolved on its own after several months; the current episode has lasted about nine months and feels more persistent."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "low mood most of the day",
+        "loss of interest in coaching and hobbies",
+        "fatigue",
+        "trouble sleeping through the night",
+        "feeling emotionally flat or numb",
+        "guilt about being distant with his wife and kids",
+        "trouble concentrating at work"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "low",
+        "primary_emotion": "heavy sadness bordering on numbness"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000604",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "persona_id": "p-ocd-39-nt-np",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 39,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "86659e79e8f9f205",
+      "attempt": 3
+    },
+    "renamed": {
+      "from": "Warren",
+      "to": "Rafael",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-ocd-39-nt@1",
+    "changed_paths": [
+      "rendering.behavioral_description",
+      "rendering.clinical_context",
+      "rendering.persona_description",
+      "rendering.states.affect.arousal",
+      "rendering.states.affect.primary_emotion",
+      "rendering.states.affect.valence",
+      "rendering.states.symptoms",
+      "rendering.traits.clinical_history.history",
+      "rendering.traits.clinical_history.presentation",
+      "rendering.traits.cognitive_style",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Rafael Cole is a 52-year-old bookkeeper who's worked for the same family-owned auto parts distributor for almost seventeen years, tracking inventory and invoices. He's twice divorced, has no kids, and lives alone in a rented house outside Tacoma. In his spare time he restores old tube radios, a hobby he's kept up since he was a teenager.",
+    "clinical_context": "Rafael has no mental-health presentation. Like most people, he sometimes has a passing unwanted thought, such as a flicker of concern about germs or residue on a shared surface, but it comes and goes without lasting distress and without him doing anything about it. He has never needed or sought treatment for anything of the kind.",
+    "behavioral_description": "Rafael talks in short, blunt sentences and gets sharper when he feels like someone's telling him what to do, even when he asked the question himself. He argues back against suggestions almost reflexively, brings up counterexamples to shoot down advice, and gets irritable rather than defensive-sounding when he thinks he's being managed.",
+    "traits": {
+      "age": 52,
+      "gender": "transgender man",
+      "profession": "bookkeeper at an auto parts distributor",
+      "relationship_status": "divorced twice, currently single",
+      "living_situation": "lives alone in a rented house",
+      "psychological_reactance": "high",
+      "communication_register": "blunt, informal, terse when irritated, occasionally sarcastic",
+      "help_seeking_orientation": "not oriented toward treatment of any kind; he's never needed it and bristles at any suggestion that he should see someone, treating the suggestion itself as an imposition",
+      "cognitive_style": "concrete and black-and-white, occasionally has a passing 'what if' thought like anyone does, but doesn't dwell on it or let it change what he does",
+      "clinical_history": {
+        "presentation": "no mental-health presentation",
+        "current_treatment": "none currently",
+        "history": "No history of any mental-health condition or treatment. He has the ordinary range of passing unwanted thoughts most people get, which come and go without lasting distress and without anything done to neutralize them."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "occasional passing thought about germs or residue on a shared surface, quickly forgotten",
+        "no lasting distress from these thoughts",
+        "goes about his day unaffected by them"
+      ],
+      "affect": {
+        "valence": "neutral",
+        "arousal": "low",
+        "primary_emotion": "even, though quick to irritation when he feels managed"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000602",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

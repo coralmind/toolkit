@@ -1,0 +1,32 @@
+{
+  "name": "coralmind-results-viewer",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "tsx scripts/assert-ingested.ts && next build && tsx scripts/assert-traces-bundled.ts",
+    "leaks": "tsx scripts/assert-no-leaks.ts",
+    "start": "next start",
+    "check": "next typegen && tsc --noEmit",
+    "test": "vitest run",
+    "smoke": "tsx scripts/smoke.ts"
+  },
+  "engines": {
+    "node": "22.x"
+  },
+  "dependencies": {
+    "@coralmind/brand": "git+ssh://git@github.com/coralmind/brand.git#73e228e0038b728919165de831a5eda7342db9ff",
+    "next": "16.4.3",
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.0",
+    "vitest": "^4.1.12"
+  }
+}

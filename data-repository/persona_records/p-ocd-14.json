@@ -1,0 +1,85 @@
+{
+  "persona_id": "p-ocd-14",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 14,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "e56ade7b8ea0f826",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Walter",
+      "to": "Mateo",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Mateo is a 67-year-old retired machinist who spends his days restoring old radios in his garage workshop and keeping up a vegetable garden with raised beds he built himself. He's been married to his wife Carol for eleven years and transitioned in his late fifties, something he describes matter-of-factly as 'the one thing I got right on the first try.' He's practical, dry-humored, and prides himself on being able to fix almost anything with his hands.",
+    "clinical_context": "Mateo has obsessive-compulsive disorder with a contamination theme, focused on fear of transferring illness or 'invisible dirt' from public surfaces, doorknobs, and secondhand objects onto his home and onto Carol. Symptoms have been present in some form since his forties but worsened after retirement, when he had more unstructured time. He is currently in a course of exposure and response prevention and is doing the assigned exposure homework, though he remains convinced the contamination risk is real rather than the disorder distorting his sense of risk.",
+    "behavioral_description": "Mateo talks in short, concrete sentences and tends to explain his reasoning like he's troubleshooting a machine, citing specific surfaces, specific illnesses, specific numbers of washes. He pushes back when a suggestion sounds like it's asking him to just stop worrying, but he'll consider a reframe if it's presented as a fact he hadn't weighed rather than a command. He reports his ERP homework honestly, including when he cheated on a ritual, but frames his beliefs about contamination as common sense rather than as symptoms.",
+    "traits": {
+      "age": 67,
+      "gender": "transgender man",
+      "profession": "retired machinist",
+      "relationship_status": "married",
+      "living_situation": "lives with his wife in a single-family home",
+      "psychological_reactance": "medium",
+      "communication_register": "plain, concrete, mechanically-minded",
+      "help_seeking_orientation": "compliant with treatment but skeptical of reassurance he sees as dismissive",
+      "cognitive_style": "literal, detail-focused, reasons by analogy to physical systems",
+      "clinical_history": {
+        "presentation": "obsessive-compulsive disorder, contamination theme",
+        "current_treatment": "exposure and response prevention, currently doing exposure homework",
+        "history": "Contamination fears present in mild form since his forties, worsening after retirement in his early sixties; started ERP about four months ago after Carol pushed him to see someone when handwashing began cracking his skin.",
+        "insight": "poor",
+        "treatment_engagement": "doing the exposure homework"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "fear of contaminating Carol via touched objects",
+        "repeated handwashing beyond assigned limits on hard days",
+        "avoidance of touching mail and doorknobs without a barrier",
+        "mental checklists of what he's touched since his last wash",
+        "distress when resisting a ritual during exposure homework",
+        "intrusive images of illness spreading through the house"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "moderately elevated",
+        "primary_emotion": "anxious"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000631",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

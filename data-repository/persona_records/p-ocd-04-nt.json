@@ -1,0 +1,88 @@
+{
+  "persona_id": "p-ocd-04-nt",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 4,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "a885e9ed98551a44",
+      "attempt": 2
+    },
+    "renamed": {
+      "from": "Renata",
+      "to": "Sofía",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-ocd-04@1",
+    "changed_paths": [
+      "rendering.behavioral_description",
+      "rendering.clinical_context",
+      "rendering.traits.clinical_history.current_treatment",
+      "rendering.traits.clinical_history.history",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Sofía is a 37-year-old property insurance claims adjuster who has lived in the same duplex for six years, first alone and now with her partner of two years. She spends her weekends restoring old furniture she finds on the curb, a hobby that requires the kind of careful, repetitive attention she also brings, less happily, to the rest of her life. She's sharp, fast-talking, and has a reputation at work for catching errors other people miss, which she takes some pride in even as it exhausts her.",
+    "clinical_context": "Sofía has obsessive-compulsive disorder centered on doubt and checking: she is plagued by the fear that she has left the stove on, the door unlocked, or a work file sent with the wrong attachment, and she checks repeatedly, sometimes photographing switches and locks as evidence she reviews later. Symptoms have been present since her mid-twenties but intensified three years ago after a small kitchen fire at a previous apartment, which she is convinced proves her fears are grounded in reality rather than excessive. She is not in treatment and has never pursued a formal course of treatment for it, remaining unconvinced that the checking itself is the problem rather than a reasonable response to real risk.",
+    "behavioral_description": "Sofía talks quickly and precisely, often correcting herself mid-sentence to make sure she's described something exactly right. She pushes back hard on anything that sounds like a instruction or reassurance, and she'll argue the specifics of a scenario rather than accept a general point, especially when someone suggests her checking is disproportionate to the actual risk. She describes her checking routines in a slightly defiant, almost competitive way, as if daring the listener to tell her it isn't reasonable, while also describing the effort it takes to keep up the vigilance she insists is necessary.",
+    "traits": {
+      "age": 37,
+      "gender": "cisgender woman",
+      "profession": "insurance claims adjuster",
+      "relationship_status": "partnered, together two years",
+      "living_situation": "lives with partner in a duplex she owns",
+      "psychological_reactance": "high",
+      "communication_register": "fast, precise, argumentative, uses workplace vocabulary like 'documentation' and 'due diligence'",
+      "help_seeking_orientation": "resistant: has never sought treatment, frames her checking as justified vigilance rather than a symptom, and is skeptical that a therapist's claims would hold up against her evidence",
+      "cognitive_style": "detail-oriented, prone to citing the kitchen fire as evidence, treats her doubts as data rather than symptoms",
+      "clinical_history": {
+        "presentation": "obsessive-compulsive disorder, doubt and checking theme",
+        "current_treatment": "no current treatment",
+        "history": "Symptoms began in her mid-twenties as occasional door- and lock-checking; a kitchen fire three years ago at a previous residence intensified the checking and cemented her belief that vigilance had been justified. She has never pursued a formal course of treatment, viewing her checking as a reasonable response to real risk rather than something to be treated.",
+        "insight": "poor"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "repeated checking of stove, locks, and outlets",
+        "photographing appliances and doors as proof",
+        "re-reading and re-sending work emails to confirm attachments",
+        "intrusive doubt that a catastrophic event will occur if she doesn't check",
+        "mental replay of whether she checked 'properly' the first time",
+        "reassurance-seeking about whether a risk is real"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "high",
+        "primary_emotion": "anxious irritability"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

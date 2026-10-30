@@ -1,0 +1,2230 @@
+/*
+ * Results viewer styles, layered on the brand's tokens, base and components.
+ *
+ * Data marks use brand viz tokens only, and within one kind of mark (bar segment, strip
+ * mark, text) each color has one meaning. No red or green: a route firing is a judgment
+ * against a definition, not a pass or a fail. Safe Coral never marks data.
+ *
+ * Unlayered on purpose, like the KL viewer's app-tokens.css: it beats the brand's cascade
+ * layers without !important.
+ */
+
+:root {
+  /* Body text fills the page width; the brand's base caps paragraphs at this measure. */
+  --measure: none;
+
+  /* Entry-type colors, from the KL viewer's src/styles/app-tokens.css. */
+  --type-ai-behavior: var(--cm-insight-blue);
+  --type-user-behavior: var(--cm-mindful-purple);
+  --type-pathway: var(--cm-viz-blue-60);
+  --type-impact: var(--cm-connection-pink);
+  --type-context: var(--cm-viz-purple-60);
+  --type-context-dimension: var(--cm-viz-purple-60);
+  --type-context-value: var(--cm-viz-purple-60);
+  --type-operator-action: var(--cm-viz-insight-60);
+  --type-mechanism: var(--cm-viz-ink-60);
+  --type-experience-cluster: var(--cm-viz-ink-60);
+  --type-contrast: var(--cm-viz-ink-60);
+  --type-divergence: var(--cm-viz-ink-60);
+  --type-source: var(--cm-viz-ink-60);
+
+  /* A compact reading scale, one notch below the KL viewer's app-tokens.css and matching
+     the reading layer its redesign plan sets: 15px body, 13px meta. */
+  --fs-content: 15px;
+  --fs-meta: 13px;
+  --fs-chip: 12px;
+  --fs-id: 12px;
+  --fs-title-page: 32px;
+  --fs-section: 20px;
+  --fs-verdict: 16px;
+
+  /* Data marks. */
+  --mark-fires: var(--cm-viz-blue-80);
+  --mark-partial: var(--cm-viz-blue-30);
+  --mark-not: var(--color-rule);
+  --mark-judged: var(--cm-viz-blue-60);
+  --mark-not-tested: var(--cm-viz-purple-60);
+  --mark-invalid: var(--cm-viz-ink-30);
+  --mark-not-judged: var(--cm-viz-ink-60);
+  --mark-sim-failure: var(--cm-viz-ink-80);
+  --mark-unreadable: var(--cm-viz-ink-100);
+  --mark-fidelity: var(--cm-viz-purple-60);
+  --mark-judge: var(--cm-viz-ink-60);
+  --text-muted: var(--cm-viz-ink-60);
+
+  /* Model roles: a line, a fill and a text color each. Outside the brand palette, so the four
+     roles stay distinct; each also has its own icon. */
+  --role-sut: #2f5bd3;
+  --role-sut-fill: #e7eefd;
+  --role-sut-ink: #1e3a8a;
+  --role-simulator: #c2620e;
+  --role-simulator-fill: #fdefe2;
+  --role-simulator-ink: #7a3a06;
+  --role-checker: #0f7b6c;
+  --role-checker-fill: #e2f4f0;
+  --role-checker-ink: #0b4f45;
+  --role-judge: #6b3fb8;
+  --role-judge-fill: #eee8fa;
+  --role-judge-ink: #44267a;
+
+  /* The site header: the KL header's height, with its inner width at the page's 1440px. */
+  --vw-header-h: 68px;
+}
+
+/* ---------- Browser surfaces ---------- */
+
+/* A full-height column, so the footer sits at the bottom of a short page. */
+.vw-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-page);
+  font-size: var(--fs-content);
+  font-variant-numeric: tabular-nums;
+  /* Manrope's contextual alternates turn "(c)" into ©; criteria letters must read as typed. */
+  font-variant-ligatures: none;
+}
+
+.vw-page :focus-visible {
+  outline: 2px solid var(--cm-foundation-blue);
+  outline-offset: 2px;
+}
+
+.vw-page a {
+  color: var(--color-link);
+}
+
+.vw-page a:visited {
+  color: var(--cm-viz-purple-80);
+}
+
+.vw-skip {
+  position: absolute;
+  left: -9999px;
+}
+
+.vw-skip:focus {
+  left: var(--space-4);
+  top: var(--space-2);
+  z-index: 10;
+  background: var(--cm-white);
+  padding: var(--space-2) var(--space-3);
+}
+
+.vw-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ---------- Scrollbars ----------
+   Scroll frames inside the page get a thin scrollbar, invisible at rest. viewer.js adds
+   .is-scrolling while an area scrolls; hovering a frame also shows its thumb, so a frame
+   that continues sideways can be found. The page itself has no scrollbar: a styled page
+   scrollbar takes a fixed gutter instead of floating over the content. */
+
+html {
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+.vw-case__rail,
+.vw-strip__frame,
+.vw-matrix__frame,
+.vw-json,
+.vw-table {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+.is-scrolling,
+.vw-case__rail:hover,
+.vw-strip__frame:hover,
+.vw-matrix__frame:hover,
+.vw-json:hover {
+  scrollbar-color: var(--cm-viz-ink-30) transparent;
+}
+
+/* Safari, which does not read scrollbar-color. */
+.vw-page ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.vw-page ::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 4px;
+}
+
+.vw-page .is-scrolling::-webkit-scrollbar-thumb,
+.vw-case__rail:hover::-webkit-scrollbar-thumb,
+.vw-strip__frame:hover::-webkit-scrollbar-thumb,
+.vw-matrix__frame:hover::-webkit-scrollbar-thumb,
+.vw-json:hover::-webkit-scrollbar-thumb {
+  background: var(--cm-viz-ink-30);
+}
+
+/* ---------- Frame ---------- */
+
+.vw-main {
+  flex: 1 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: var(--space-4) var(--space-5) var(--space-8);
+}
+
+.vw-main h1 {
+  font-family: var(--font-serif);
+  font-size: var(--fs-title-page);
+  line-height: var(--lh-heading);
+  color: var(--color-heading);
+  margin: var(--space-2) 0 var(--space-3);
+}
+
+.vw-main h2 {
+  font-family: var(--font-serif);
+  font-size: var(--fs-section);
+  line-height: var(--lh-heading);
+  color: var(--color-heading);
+  margin: 0 0 var(--space-3);
+}
+
+.vw-main h3 {
+  font-size: var(--fs-content);
+  font-weight: 700;
+  margin: var(--space-6) 0 var(--space-3);
+}
+
+.vw-section {
+  border-top: 1px solid var(--color-rule);
+  padding: var(--space-6) 0;
+}
+
+.vw-section > details > summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+.vw-section > details > summary h2 {
+  display: inline;
+}
+
+.vw-section > details > summary::before {
+  content: "▸ ";
+  color: var(--text-muted);
+}
+
+.vw-section > details[open] > summary::before {
+  content: "▾ ";
+}
+
+.vw-head {
+  margin-bottom: var(--space-5);
+}
+
+.vw-lede {
+  font-size: var(--fs-content);
+}
+
+.vw-muted,
+.vw-meta {
+  color: var(--text-muted);
+}
+
+.vw-meta {
+  font-size: var(--fs-meta);
+  display: block;
+}
+
+.vw-id {
+  font-family: var(--font-mono);
+  font-size: var(--fs-id);
+  overflow-wrap: anywhere;
+}
+
+.vw-tag {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: var(--fs-chip);
+  font-weight: 600;
+  padding: 0 6px;
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius-pill);
+  color: var(--text-muted);
+}
+
+.vw-empty {
+  padding: var(--space-3) 0;
+  color: var(--text-muted);
+}
+
+/* ---------- Notices ---------- */
+
+.vw-notices {
+  margin: var(--space-4) 0 var(--space-5);
+}
+
+.vw-notice {
+  margin: 0 0 var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border-left: 3px solid var(--cm-foundation-blue);
+  background: var(--bg-band);
+  font-size: var(--fs-meta);
+}
+
+.vw-notice--stale {
+  border-left-color: var(--cm-viz-ink-100);
+  font-weight: 600;
+}
+
+/* ---------- Breadcrumb, tabs, menus ---------- */
+
+.vw-crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--fs-meta);
+  margin-bottom: var(--space-5);
+}
+
+.vw-crumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.vw-crumbs li + li::before {
+  content: "›";
+  margin-right: var(--space-2);
+  color: var(--text-muted);
+}
+
+.vw-prevnext {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+}
+
+.vw-step,
+.vw-filterchip,
+.vw-sorts a,
+.vw-button {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.vw-sorts {
+  font-size: var(--fs-meta);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: center;
+}
+
+.vw-sorts a[aria-current] {
+  font-weight: 700;
+}
+
+/* ---------- Definitions on hover and focus ---------- */
+
+.vw-term {
+  position: relative;
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+  cursor: help;
+}
+
+.vw-term::after {
+  content: attr(data-def);
+  position: absolute;
+  left: 0;
+  top: calc(100% + 6px);
+  z-index: 20;
+  width: max-content;
+  max-width: 320px;
+  padding: var(--space-2) var(--space-3);
+  background: var(--cm-ink-black);
+  color: var(--cm-white);
+  font-size: var(--fs-meta);
+  font-weight: 400;
+  line-height: 1.4;
+  text-transform: none;
+  letter-spacing: normal;
+  white-space: normal;
+  pointer-events: none;
+  display: none;
+}
+
+.vw-term:hover::after,
+.vw-term:focus::after {
+  display: block;
+}
+
+/* In the narrow rail a definition spans its line, so it never runs past the rail's edge. */
+.vw-case__rail .vw-term {
+  position: static;
+}
+
+.vw-case__rail p,
+.vw-case__rail h3 {
+  position: relative;
+}
+
+.vw-case__rail .vw-term::after {
+  right: 0;
+  width: auto;
+  max-width: none;
+}
+
+/* ---------- Tables (ruled, no cards) ---------- */
+
+.vw-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: var(--fs-meta);
+}
+
+.vw-table th,
+.vw-table td {
+  border-bottom: 1px solid var(--color-rule);
+  text-align: left;
+  vertical-align: top;
+  padding: var(--space-3);
+}
+
+.vw-table thead th {
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.vw-table .num {
+  text-align: right;
+}
+
+.vw-table + p,
+.vw-table + .vw-table {
+  margin-top: var(--space-3);
+}
+
+.vw-table--grid {
+  width: auto;
+}
+
+.vw-flags {
+  color: var(--color-heading);
+}
+
+/* A second line under a row's name: its level, its id, or what is wrong with it. */
+.vw-rowmeta,
+.vw-rowflags {
+  display: block;
+  font-weight: 400;
+  margin-top: 2px;
+}
+
+.vw-rowmeta,
+.vw-rowmeta .vw-id {
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.vw-rowflags {
+  color: var(--color-heading);
+}
+
+.vw-nowrap {
+  white-space: nowrap;
+}
+
+.vw-transcriptstatus {
+  min-width: 10em;
+}
+
+.vw-transcriptstatus .vw-bucketbar {
+  margin-top: 6px;
+}
+
+/* A route's chip and its name. The chip column has one width so the names line up. */
+.vw-routecell {
+  display: grid;
+  grid-template-columns: 8.5em 1fr;
+  gap: var(--space-2);
+  align-items: baseline;
+}
+
+.vw-routecell .vw-chip {
+  justify-self: start;
+}
+
+.vw-dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: var(--space-3) var(--space-5);
+  font-size: var(--fs-meta);
+  margin: var(--space-4) 0 var(--space-5);
+}
+
+.vw-dl dt {
+  color: var(--text-muted);
+}
+
+.vw-dl dd {
+  margin: 0;
+}
+
+.vw-list {
+  margin: var(--space-1) 0 var(--space-3);
+  padding-left: var(--space-5);
+  font-size: var(--fs-meta);
+}
+
+.vw-list li {
+  margin-bottom: var(--space-3);
+}
+
+/* No bullets: the brand draws them as dots, which read as data marks beside the
+   fidelity dot, the case dots and the strip legend. Items are separated by hairlines. */
+ul.vw-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.vw-list > li + li {
+  border-top: 1px solid var(--color-rule);
+  padding-top: var(--space-3);
+}
+
+/* ---------- Chips ---------- */
+
+.vw-chip {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: var(--fs-chip);
+  font-weight: 700;
+  line-height: 1.6;
+  padding: 0 8px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--chip-color, var(--type-source));
+  color: var(--color-body);
+  background: var(--cm-white);
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+/* The entry type's color marks the chip's border; its text stays body ink for contrast. */
+.vw-page a.vw-chip,
+.vw-page a.vw-chip:visited {
+  color: var(--color-body);
+}
+
+.vw-chip--pathway { --chip-color: var(--type-pathway); }
+.vw-chip--ai-behavior { --chip-color: var(--type-ai-behavior); }
+.vw-chip--user-behavior { --chip-color: var(--type-user-behavior); }
+.vw-chip--impact { --chip-color: var(--type-impact); }
+.vw-chip--context-value,
+.vw-chip--context-dimension { --chip-color: var(--type-context-value); }
+.vw-chip--mechanism { --chip-color: var(--type-mechanism); }
+
+/* A pathway's direction: a tinted left end of the chip with an icon in it. */
+.vw-chip--harmful {
+  --dir-tint: var(--cm-viz-coral-30);
+  --dir-icon: color-mix(in srgb, var(--cm-viz-coral-100) 80%, var(--cm-viz-ink-100));
+}
+.vw-chip--protective {
+  --dir-tint: var(--cm-viz-green-30);
+  --dir-icon: color-mix(in srgb, var(--cm-viz-green-100) 55%, var(--cm-viz-ink-100));
+}
+.vw-chip--mixed {
+  --dir-tint: color-mix(in srgb, var(--cm-viz-ink-30) 45%, var(--cm-white));
+  --dir-icon: var(--cm-viz-ink-80);
+}
+
+.vw-chip--harmful,
+.vw-chip--protective,
+.vw-chip--mixed {
+  padding-left: 6px;
+  background: linear-gradient(to right, var(--dir-tint) 0 calc(9px + 1.05em), var(--cm-white) 0);
+}
+
+.vw-chip__dir {
+  width: 1.05em;
+  height: 1.05em;
+  margin-right: 7px;
+  vertical-align: -0.17em;
+  color: var(--dir-icon);
+}
+
+.vw-chip--sample {
+  padding-right: 6px;
+  background: var(--dir-tint);
+}
+
+.vw-chip--sample .vw-chip__dir {
+  margin-right: 0;
+}
+
+/* ---------- Bars ---------- */
+
+.vw-bucketbar {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  background: var(--color-rule);
+}
+
+.vw-bucketbar {
+  height: 6px;
+  margin: var(--space-1) 0;
+}
+
+.vw-bucketbar--empty {
+  background: transparent;
+  border-top: 1px dashed var(--color-rule);
+}
+
+.o-fires { background: var(--mark-fires); }
+.o-partial { background: var(--mark-partial); }
+.o-not { background: var(--mark-not); }
+
+.b-judged { background: var(--mark-judged); }
+.b-not_tested { background: var(--mark-not-tested); }
+.b-invalid {
+  background: repeating-linear-gradient(
+    135deg,
+    var(--mark-invalid) 0 2px,
+    var(--cm-white) 2px 4px
+  );
+}
+.b-not_judged {
+  background: var(--cm-white);
+  box-shadow: inset 0 0 0 1px var(--mark-not-judged);
+}
+.b-sim_failure { background: var(--mark-sim-failure); }
+.b-unreadable { background: var(--mark-unreadable); }
+
+/* Words for outcomes and buckets are text, so they take text colors only. */
+.vw-outcome,
+.vw-bucket {
+  font-weight: 700;
+  background: none;
+  box-shadow: none;
+  color: var(--color-heading);
+}
+
+.vw-outcome.o-not,
+.vw-outcome.o-gate_unknown,
+.vw-outcome.o-failed,
+.vw-outcome.o-kl_mismatch,
+.vw-bucket:not(.b-judged) {
+  color: var(--text-muted);
+}
+
+.vw-outcome.o-fires {
+  color: var(--mark-fires);
+}
+
+/* ---------- Filters ---------- */
+
+.vw-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  align-items: end;
+  font-size: var(--fs-meta);
+  margin: var(--space-5) 0;
+}
+
+.vw-filters label {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 0;
+}
+
+.vw-filters label span {
+  color: var(--text-muted);
+}
+
+.vw-filters a,
+.vw-filters .cm-btn {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.vw-filters select {
+  font: inherit;
+  min-height: 44px;
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius-sm);
+  background: var(--cm-white);
+  max-width: 260px;
+}
+
+.vw-button {
+  font: inherit;
+  font-weight: 600;
+  padding: 0 var(--space-4);
+  border: 1px solid var(--cm-foundation-blue);
+  border-radius: var(--radius-pill);
+  background: var(--cm-white);
+  color: var(--cm-foundation-blue);
+  cursor: pointer;
+}
+
+.vw-filterchips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: var(--space-2) 0 0;
+}
+
+.vw-filterchip {
+  font-size: var(--fs-chip);
+  font-weight: 600;
+  padding: 0 var(--space-3);
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  border: 1px solid var(--color-rule);
+  background: var(--cm-white);
+}
+
+.vw-page a.vw-filterchip {
+  color: var(--color-body);
+}
+
+.vw-filterchip::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 6px;
+  background: inherit;
+}
+
+.vw-filterchip.b-judged::before { background: var(--mark-judged); }
+.vw-filterchip.b-not_tested::before { background: var(--mark-not-tested); }
+.vw-filterchip.b-invalid::before {
+  background: repeating-linear-gradient(135deg, var(--mark-invalid) 0 2px, var(--cm-white) 2px 4px);
+}
+.vw-filterchip.b-not_judged::before { box-shadow: inset 0 0 0 1px var(--mark-not-judged); }
+.vw-filterchip.b-sim_failure::before { background: var(--mark-sim-failure); }
+.vw-filterchip.b-unreadable::before { background: var(--mark-unreadable); }
+
+.vw-filterchip.is-on {
+  border-color: var(--cm-foundation-blue);
+  font-weight: 800;
+}
+
+/* ---------- Suite page ---------- */
+
+.vw-matrix__frame {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.vw-tag--harmful,
+.vw-tag--no {
+  border-color: var(--cm-viz-coral-60);
+  color: var(--cm-viz-coral-100);
+}
+
+.vw-tag--protective,
+.vw-tag--yes {
+  border-color: var(--cm-viz-green-60);
+  color: var(--cm-viz-green-100);
+}
+
+.vw-tag--no {
+  background: color-mix(in srgb, var(--cm-viz-coral-30) 30%, var(--cm-white));
+}
+
+.vw-tag--yes {
+  background: color-mix(in srgb, var(--cm-viz-green-30) 30%, var(--cm-white));
+}
+
+/* ---------- Run page ---------- */
+
+.vw-health {
+  margin: var(--space-4) 0;
+  font-size: var(--fs-meta);
+}
+
+.vw-runrows tr.is-problem th {
+  border-left: 3px solid var(--cm-viz-ink-80);
+}
+
+.vw-runrows__strip {
+  min-width: 220px;
+  max-width: 420px;
+}
+
+/* ---------- Turn strip ---------- */
+
+.vw-strip {
+  margin: var(--space-4) 0 var(--space-5);
+}
+
+.vw-strip__frame {
+  overflow-x: auto;
+}
+
+.vw-strip__cells {
+  display: grid;
+  grid-template-columns: repeat(var(--turns), minmax(12px, 1fr));
+  gap: 1px;
+  list-style: none;
+  margin: 0;
+  padding: 0 0 18px;
+  min-width: calc(var(--turns) * 13px);
+}
+
+.vw-strip__cell a {
+  position: relative;
+  display: block;
+  height: 28px;
+  background: var(--bg-band);
+  text-decoration: none;
+}
+
+.vw-strip--short .vw-strip__cell a {
+  height: 12px;
+}
+
+.vw-strip__cell .m-route {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 60%;
+}
+
+.vw-strip__cell.has-route .m-route {
+  background: var(--type-pathway);
+}
+
+.vw-strip__cell.is-onset .m-route {
+  box-shadow: inset 3px 0 0 var(--cm-foundation-blue);
+}
+
+.vw-strip__cell .m-s1 {
+  position: absolute;
+  left: calc(50% - 2px);
+  width: 4px;
+  bottom: calc(60% + 1px);
+  height: 4px;
+}
+
+.vw-strip__cell.has-s1 .m-s1 {
+  background: var(--mark-judge);
+}
+
+.vw-strip__cell .m-fid {
+  position: absolute;
+  left: calc(50% - 3px);
+  top: 2px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.vw-strip__cell.has-fid .m-fid {
+  background: var(--mark-fidelity);
+}
+
+.vw-strip--short .m-fid {
+  display: none;
+}
+
+.vw-strip__cell .n {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: var(--fs-chip);
+  color: var(--text-muted);
+}
+
+.vw-strip--short .n,
+.vw-strip.is-narrow .vw-strip__cell:not(:nth-child(5n)) .n {
+  display: none;
+}
+
+.vw-strip__end {
+  font-size: var(--fs-chip);
+  color: var(--text-muted);
+  margin: 2px 0 0;
+}
+
+/* ---------- Keys ---------- */
+
+/* Every legend on the site: a dashed box headed "Key", directly above what it explains. */
+.vw-key {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 14px;
+  margin: 0 0 var(--space-3);
+  padding: 6px 10px;
+  border: 1px dashed var(--cm-viz-ink-30);
+  border-radius: 8px;
+  font-size: var(--fs-chip);
+  color: var(--text-muted);
+}
+
+.vw-key__label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cm-viz-ink-60);
+}
+
+.vw-key__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  max-width: 100%;
+}
+
+.vw-key__swatch {
+  display: inline-block;
+  flex: none;
+  width: 12px;
+  height: 10px;
+}
+
+.vw-key__swatch.k-route { background: var(--type-pathway); }
+.vw-key__swatch.k-onset { background: var(--type-pathway); box-shadow: inset 3px 0 0 var(--cm-foundation-blue); }
+.vw-key__swatch.k-s1 { width: 6px; height: 6px; background: var(--mark-judge); }
+.vw-key__swatch.k-fid { width: 7px; height: 7px; border-radius: 50%; background: var(--mark-fidelity); }
+.vw-key__swatch.k-sent { width: 2px; height: 1em; background: var(--type-user-behavior); }
+
+/* ---------- Transcript timeline ---------- */
+
+/* A column per turn and a labeled row per kind of mark. */
+.vw-timeline__body {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  column-gap: var(--space-2);
+  align-items: start;
+}
+
+.vw-timeline__rows {
+  display: grid;
+  grid-template-rows: repeat(3, 14px);
+  row-gap: 2px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 11px;
+  line-height: 14px;
+  color: var(--text-muted);
+  text-align: right;
+}
+
+.vw-timeline .vw-strip__cells {
+  padding-bottom: 0;
+}
+
+.vw-timeline .vw-strip__cell a {
+  display: grid;
+  grid-template-rows: repeat(3, 14px) auto;
+  row-gap: 2px;
+  height: auto;
+  background: none;
+}
+
+.vw-timeline .vw-strip__cell .m-route,
+.vw-timeline .vw-strip__cell .m-s1,
+.vw-timeline .vw-strip__cell .m-fid {
+  position: relative;
+  inset: auto;
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  background: var(--bg-band);
+}
+
+.vw-timeline .vw-strip__cell.has-route .m-route {
+  background: var(--type-pathway);
+}
+
+.vw-timeline .vw-strip__cell.is-onset .m-route {
+  box-shadow: inset 3px 0 0 var(--cm-foundation-blue);
+}
+
+.vw-timeline .vw-strip__cell.has-s1 .m-s1::after,
+.vw-timeline .vw-strip__cell.has-fid .m-fid::after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: calc(50% - 3px);
+  width: 6px;
+  height: 6px;
+}
+
+.vw-timeline .vw-strip__cell.has-s1 .m-s1::after {
+  background: var(--mark-judge);
+}
+
+.vw-timeline .vw-strip__cell.has-fid .m-fid::after {
+  border-radius: 50%;
+  background: var(--mark-fidelity);
+}
+
+.vw-timeline .vw-strip__cell .n {
+  position: static;
+}
+
+.vw-timeline .vw-strip__end {
+  margin-top: var(--space-2);
+}
+
+/* ---------- Transcript view ---------- */
+
+/* The rule marks text the simulated person receives, in the person's color. It sits in the
+   gutter so marked and unmarked text stay aligned. */
+.vw-sent {
+  margin-bottom: var(--space-4);
+  border-left: 2px solid var(--type-user-behavior);
+  padding-left: var(--space-2);
+  margin-left: calc(-1 * var(--space-2) - 2px);
+}
+
+.vw-sent > p {
+  margin: 0;
+}
+
+.vw-list .vw-sent {
+  margin-bottom: 0;
+}
+
+.vw-sent > p.vw-meta {
+  margin-bottom: var(--space-1);
+}
+
+.vw-case {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr) 440px;
+  gap: var(--space-5);
+  align-items: start;
+}
+
+/* The three columns start on one line. */
+.vw-case__left h2:first-of-type,
+.vw-case .vw-verdict {
+  margin-top: 0;
+}
+
+.vw-case .content-text {
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+/* The tabs are 44px tall with their text centered; this lines the text up with the other
+   columns' first lines. */
+.vw-case .vw-railtabs {
+  margin-top: -13px;
+}
+
+.vw-runmodels {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 4px var(--space-2);
+  align-items: center;
+  margin: var(--space-2) 0 var(--space-4);
+  font-size: var(--fs-chip);
+}
+
+.vw-runmodels dt {
+  color: var(--text-muted);
+}
+
+.vw-runmodels dd {
+  margin: 0;
+}
+
+.vw-runmodels .vw-rolepill {
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+.vw-parts {
+  list-style: none;
+  margin: var(--space-1) 0 0;
+  padding: 0;
+}
+
+.vw-parts > li {
+  margin: 2px 0;
+}
+
+.vw-parts > li + li {
+  margin-top: var(--space-2);
+}
+
+.vw-parts__text {
+  color: var(--text-muted);
+}
+
+.vw-parts__ruling {
+  margin: var(--space-1) 0 0;
+  font-size: var(--fs-meta);
+}
+
+.vw-quotes > summary {
+  font-size: var(--fs-chip);
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.vw-quotes > p {
+  margin: var(--space-1) 0;
+}
+
+/* The case column scrolls on its own, as the rail does. */
+@media (min-width: 1101px) {
+  .vw-case__left {
+    position: sticky;
+    top: calc(var(--vw-header-h) + var(--space-4));
+    max-height: calc(100vh - var(--vw-header-h) - 2 * var(--space-4));
+    overflow-y: auto;
+    scrollbar-width: thin;
+    /* Room for the rule that marks text given to the simulated person, drawn in the gutter. */
+    padding: 0 var(--space-2) 0 var(--space-3);
+  }
+}
+
+.vw-case__left {
+  font-size: var(--fs-meta);
+}
+
+.vw-case__left > summary {
+  display: none;
+}
+
+.vw-case__left h2 {
+  font-size: var(--fs-verdict);
+}
+
+.vw-verdict {
+  font-size: var(--fs-verdict);
+  line-height: 1.4;
+  margin: var(--space-4) 0 var(--space-3);
+}
+
+.vw-turn {
+  border-top: 1px solid var(--color-rule);
+  padding: var(--space-5) 0;
+  scroll-margin-top: calc(var(--vw-header-h) + var(--space-4));
+}
+
+.vw-turn.is-outlined {
+  outline: 2px dashed var(--cm-viz-ink-60);
+  outline-offset: 4px;
+}
+
+.vw-turn__num {
+  font-size: var(--fs-chip);
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.vw-msg {
+  margin: var(--space-3) 0;
+}
+
+.vw-msg__who {
+  font-size: var(--fs-chip);
+  font-weight: 700;
+  margin: 0;
+}
+
+.vw-msg--user .vw-msg__who {
+  color: var(--type-user-behavior);
+}
+
+.vw-msg--assistant .vw-msg__who {
+  color: var(--cm-viz-blue-80);
+}
+
+.vw-msg--assistant {
+  padding-left: var(--space-4);
+  border-left: 2px solid var(--color-rule);
+}
+
+.vw-msg__flag {
+  margin: var(--space-1) 0;
+  padding: var(--space-2) var(--space-3);
+  border-left: 3px solid var(--mark-sim-failure);
+  background: var(--bg-band);
+  font-size: var(--fs-meta);
+}
+
+.content-text {
+  white-space: pre-wrap;
+  font-size: var(--fs-content);
+}
+
+mark.quote-hl {
+  background: var(--cm-soft-blue);
+  color: inherit;
+}
+
+.vw-failure {
+  border-left: 3px solid var(--mark-sim-failure);
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg-band);
+}
+
+.vw-case__rail {
+  font-size: var(--fs-meta);
+  position: sticky;
+  top: calc(var(--vw-header-h) + var(--space-4));
+  max-height: calc(100vh - var(--vw-header-h) - 2 * var(--space-4));
+  overflow-y: auto;
+}
+
+.vw-rail__panel {
+  padding-bottom: var(--space-4);
+}
+
+.vw-rail--tabbed .vw-rail__panel:not(.is-active) {
+  display: none;
+}
+
+.vw-railroute {
+  border-top: 1px solid var(--color-rule);
+  padding: var(--space-4) 0;
+}
+
+.vw-railroute h3 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: 0;
+}
+
+.vw-instance {
+  margin: var(--space-3) 0 var(--space-5);
+}
+
+.vw-instance__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-3);
+  margin: 0 0 var(--space-3);
+}
+
+.vw-condition > p {
+  margin: 0 0 var(--space-2);
+}
+
+/* A route's heading is the top level; its sections sit in an indented body under it. */
+.vw-railroute h3 .vw-outcome {
+  font-size: var(--fs-h5);
+}
+
+.vw-railroute h3 .vw-chip {
+  font-size: var(--fs-meta);
+  padding: 1px 10px;
+}
+
+.vw-route__body {
+  margin: var(--space-4) 0 0 var(--space-1);
+  padding-left: var(--space-4);
+  border-left: 1px solid var(--color-rule);
+}
+
+.vw-railroute h4 {
+  font-family: var(--font-serif);
+  font-size: var(--fs-content);
+  font-weight: 400;
+  color: var(--color-heading);
+  margin: var(--space-5) 0 var(--space-2);
+}
+
+.vw-route__body > h4:first-child {
+  margin-top: 0;
+}
+
+.vw-route__why {
+  font-weight: 600;
+  margin: var(--space-2) 0 0;
+}
+
+/* A pathway in the rail: a summary line that opens to its occurrences and conditions. The
+   left rule says whether the pathway is harmful or protective. */
+details.vw-railroute {
+  padding-left: var(--space-3);
+  border-left: 4px solid var(--color-rule);
+}
+
+details.vw-railroute.dir-harmful {
+  border-left-color: var(--cm-viz-coral-60);
+}
+
+details.vw-railroute.dir-protective {
+  border-left-color: var(--cm-viz-green-60);
+}
+
+details.vw-railroute + details.vw-railroute {
+  margin-top: var(--space-2);
+}
+
+.vw-railroute > summary {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.vw-railroute > summary::-webkit-details-marker {
+  display: none;
+}
+
+.vw-railroute__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.vw-railroute__head::before {
+  content: '▸';
+  color: var(--text-muted);
+}
+
+details.vw-railroute[open] .vw-railroute__head::before {
+  content: '▾';
+}
+
+/* Wherever a pathway's result is read on its own, one that fired is a filled badge and one
+   that did not an outlined one. */
+.vw-verdict .vw-outcome,
+.vw-runrows .vw-outcome,
+.vw-casetranscripts .vw-outcome,
+.vw-railroute .vw-outcome {
+  padding: 0 8px;
+  white-space: nowrap;
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-meta);
+}
+
+.vw-verdict .vw-outcome.o-fires,
+.vw-runrows .vw-outcome.o-fires,
+.vw-casetranscripts .vw-outcome.o-fires,
+.vw-railroute .vw-outcome.o-fires {
+  background: var(--mark-fires);
+  color: var(--cm-white);
+}
+
+.vw-verdict .vw-outcome:not(.o-fires),
+.vw-runrows .vw-outcome:not(.o-fires),
+.vw-casetranscripts .vw-outcome:not(.o-fires),
+.vw-railroute .vw-outcome:not(.o-fires) {
+  border: 1px dashed var(--cm-viz-ink-30);
+}
+
+.vw-steps {
+  list-style: none;
+  padding-left: 0;
+}
+
+.vw-steps li {
+  margin-bottom: var(--space-4);
+}
+
+.vw-step__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+  margin: 0;
+}
+
+.vw-step__why,
+.vw-step__quote {
+  margin: var(--space-2) 0 0;
+}
+
+.vw-role {
+  font-size: var(--fs-meta);
+  color: var(--text-muted);
+}
+
+.vw-cite {
+  display: inline;
+  text-decoration: none;
+  color: var(--color-body);
+}
+
+.vw-page a.vw-cite:visited {
+  color: var(--color-body);
+}
+
+.vw-cite,
+.vw-cite q {
+  font-weight: 400;
+}
+
+.vw-cite q,
+.vw-step__why .vw-cite {
+  border-bottom: 1px solid var(--cm-soft-blue);
+}
+
+.vw-cite:hover q,
+.vw-cite:focus q,
+.vw-step__why .vw-cite:hover,
+.vw-step__why .vw-cite:focus {
+  background: var(--cm-soft-blue);
+}
+
+.vw-cite__turn {
+  font-family: var(--font-mono);
+  font-size: var(--fs-id);
+  color: var(--text-muted);
+}
+
+.vw-miss {
+  font-size: var(--fs-chip);
+  font-weight: 700;
+  color: var(--color-heading);
+}
+
+.vw-call {
+  border-top: 1px solid var(--color-rule);
+  padding: var(--space-2) 0;
+}
+
+.vw-call > summary {
+  cursor: pointer;
+  min-height: 32px;
+}
+
+.vw-call__prompt + .vw-call__response {
+  margin-top: var(--space-3);
+}
+
+.vw-json {
+  font-family: var(--font-mono);
+  font-size: var(--fs-id);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  max-height: 480px;
+  overflow: auto;
+  background: var(--bg-band);
+  padding: var(--space-2);
+}
+
+/* ---------- Site header and footer ----------
+   The brand header and footer, as on the Knowledge Library site. The header is sticky, so
+   anchors land below it. */
+
+html {
+  scroll-padding-top: calc(var(--vw-header-h) + var(--space-3));
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.vw-header .cm-site-header__inner,
+.site-footer .cm-site-footer__inner {
+  max-width: 1440px;
+}
+
+.site-header__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  text-decoration: none;
+}
+
+.site-header__name {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--color-heading);
+  white-space: nowrap;
+  padding-left: var(--space-3);
+  border-left: 1px solid var(--cm-viz-blue-30);
+  line-height: 28px;
+}
+
+.vw-page .cm-site-header__nav a,
+.vw-page .cm-site-header__nav a:visited {
+  color: var(--color-body);
+}
+
+.vw-page .cm-site-header__nav a.cm-is-active {
+  color: var(--cm-foundation-blue);
+}
+
+.vw-page .cm-site-header__nav a:hover {
+  color: var(--cm-foundation-blue);
+}
+
+.site-header__github {
+  display: inline-flex;
+  align-items: center;
+}
+
+.vw-statusbar {
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 100%;
+  padding: var(--space-3) var(--space-5);
+}
+
+.vw-status {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-3);
+  font-size: var(--fs-meta);
+  color: var(--text-muted);
+  line-height: 1.3;
+}
+
+.vw-status__folder {
+  font-family: var(--font-mono);
+  font-size: var(--fs-id);
+}
+
+.site-footer__copyright {
+  margin: 0;
+  font-size: var(--fs-caption);
+  color: var(--color-body);
+}
+
+.vw-page .cm-site-footer__legal a,
+.vw-page .cm-site-footer__legal a:visited {
+  color: var(--color-body);
+  text-decoration: underline;
+}
+
+/* ---------- Page head, tabs and settings ---------- */
+
+.vw-eyebrow {
+  margin: var(--space-2) 0 0;
+  font-size: var(--fs-meta);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.vw-head .vw-eyebrow + h1 {
+  margin-top: var(--space-1);
+}
+
+.vw-context {
+  margin: 0 0 var(--space-4);
+  font-size: var(--fs-meta);
+  color: var(--color-body);
+}
+
+/* The systems tested on this test case: this one filled, the others links. */
+.vw-switch {
+  margin: 0 0 var(--space-4);
+  font-size: var(--fs-meta);
+}
+
+.vw-switch__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  margin: 0 0 var(--space-2);
+}
+
+.vw-switch__label {
+  color: var(--text-muted);
+}
+
+.vw-switch__current .vw-rolepill {
+  box-shadow: 0 0 0 2px var(--role-line);
+}
+
+.vw-page a.vw-switch__other {
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+.vw-page a.vw-switch__other:hover,
+.vw-page a.vw-switch__other:focus-visible {
+  opacity: 1;
+}
+
+/* Rail tabs: compact, inside the rail's column, so they read as the column's own. */
+.vw-railtabs {
+  display: flex;
+  gap: var(--space-1);
+  margin: 0 0 var(--space-3);
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.vw-railtabs a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 var(--space-2);
+  font-size: var(--fs-chip);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+}
+
+.vw-page .vw-railtabs a,
+.vw-page .vw-railtabs a:visited {
+  color: var(--color-body);
+}
+
+.vw-page .vw-railtabs a[aria-current='page'],
+.vw-page .vw-railtabs a[aria-selected='true'] {
+  color: var(--color-heading);
+  border-bottom-color: var(--color-heading);
+}
+
+/* ---------- Introduction: set like the KL introduction ---------- */
+
+.vw-intro {
+  font-size: var(--fs-body);
+  padding-bottom: var(--space-6);
+}
+
+.vw-intro section {
+  padding: var(--space-6) 0;
+}
+
+/* The opening band, set like the Knowledge Library's hero: full bleed without widening the
+   page (the shadow paints the sides, the clip keeps it in the band). */
+.vw-intro .vw-hero {
+  --hero-bg: var(--bg-band);
+  margin-top: calc(-1 * var(--space-4));
+  padding: var(--section-pad-start) 0 var(--space-7);
+  background: var(--hero-bg);
+  box-shadow: 0 0 0 100vmax var(--hero-bg);
+  clip-path: inset(0 -100vmax);
+}
+
+.vw-main .vw-hero h1 {
+  margin: 0 0 var(--space-4);
+}
+
+.vw-main .vw-intro h1 {
+  font-size: var(--fs-h2);
+  max-width: var(--measure-intro);
+  text-wrap: balance;
+}
+
+.vw-main .vw-intro h2 {
+  font-size: var(--fs-h3);
+  max-width: var(--measure-intro);
+  margin: 0 0 var(--space-3);
+}
+
+/* Subheadings at the Knowledge Library guide's size. */
+.vw-main .vw-intro > section > h3 {
+  font-family: var(--font-serif);
+  font-size: 21px;
+  color: var(--color-heading);
+  margin: var(--space-6) 0 var(--space-2);
+}
+
+/* Full width: the brand's base caps a paragraph at its reading measure. */
+.vw-intro p,
+.vw-intro li {
+  max-width: none;
+  line-height: 1.65;
+}
+
+.vw-intro__explore {
+  margin-top: var(--space-5);
+}
+
+/* The brand button keeps its own text color after a visit. */
+.vw-page a.cm-btn,
+.vw-page a.cm-btn:visited {
+  color: var(--cm-foundation-blue);
+}
+
+/* ---------- Model role pills ---------- */
+
+/* The role colors sit outside the brand palette: four hues that stay distinct at pill size,
+   each with its own icon too. */
+.vw-rolepill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 2px 8px;
+  border: 1px solid var(--role-line);
+  border-radius: var(--radius-pill);
+  background: var(--role-fill);
+  color: var(--role-ink);
+  font-family: var(--font-sans);
+  font-size: var(--fs-chip);
+  line-height: 16px;
+  font-weight: 600;
+}
+
+.vw-rolepill__icon {
+  width: 14px;
+  height: 14px;
+  flex: none;
+}
+
+.vw-runsteps .vw-pills {
+  margin: 4px 0;
+}
+
+.vw-runsteps {
+  margin-bottom: var(--space-4);
+}
+
+.vw-runsteps > div,
+.vw-runstep {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.vw-runstep + .vw-runstep {
+  margin-top: 8px;
+}
+
+.vw-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.vw-pills .vw-rolepill {
+  font-weight: 500;
+}
+
+.vw-rolepill__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.vw-rolepill__reasoning {
+  font-size: 11px;
+  line-height: 14px;
+  font-weight: 400;
+}
+
+.vw-rolepill:has(.vw-rolepill__text) {
+  padding: 3px 10px 3px 8px;
+  border-radius: 10px;
+}
+
+.vw-rolepill--sut { --role-line: var(--role-sut); --role-fill: var(--role-sut-fill); --role-ink: var(--role-sut-ink); }
+.vw-rolepill--simulator { --role-line: var(--role-simulator); --role-fill: var(--role-simulator-fill); --role-ink: var(--role-simulator-ink); }
+.vw-rolepill--checker { --role-line: var(--role-checker); --role-fill: var(--role-checker-fill); --role-ink: var(--role-checker-ink); }
+.vw-rolepill--judge { --role-line: var(--role-judge); --role-fill: var(--role-judge-fill); --role-ink: var(--role-judge-ink); }
+
+/* ---------- The evaluation pipeline on the Introduction ---------- */
+
+.vw-pipe {
+  --pipe-gap: 56px;
+  --pipe-cols:
+    minmax(0, 1fr) var(--pipe-gap) minmax(0, 1fr) var(--pipe-gap) minmax(0, 1fr)
+    var(--pipe-gap) minmax(0, 1fr);
+  /* Space between the dashed outlines and the boxes, matched by the lanes below. */
+  --pipe-inset: 17.5px;
+  --pipe-line: var(--cm-viz-ink-60);
+  --pipe-soft: var(--cm-viz-ink-30);
+  --pipe-box-line: var(--cm-viz-blue-30);
+  margin: var(--space-5) 0 0;
+}
+
+.vw-pipe__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.vw-pipe .vw-key .vw-rolepill {
+  min-height: 24px;
+  padding: 0 10px;
+  gap: 6px;
+}
+
+.vw-pipe__phases {
+  display: grid;
+  grid-template-columns: var(--pipe-cols);
+  padding: 0 var(--pipe-inset);
+  margin-bottom: 18px;
+}
+
+.vw-pipe__phase {
+  border-top: 5px solid;
+  padding-top: 11px;
+}
+
+.vw-main .vw-pipe__phase h3 {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--fs-caption);
+  line-height: 18px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cm-foundation-blue);
+}
+
+.vw-pipe__phase p {
+  margin: 6px 0 0;
+  font-size: var(--fs-meta);
+  line-height: 18px;
+  color: var(--text-muted);
+}
+
+.vw-pipe__phasearrow {
+  position: relative;
+}
+
+.vw-pipe__phasearrow::before {
+  content: '';
+  position: absolute;
+  top: 1.5px;
+  left: 0;
+  right: 4px;
+  height: 2px;
+  background: var(--pipe-soft);
+}
+
+.vw-pipe__phasearrow::after {
+  content: '';
+  position: absolute;
+  top: -2.5px;
+  right: 0;
+  border-left: 8px solid var(--pipe-soft);
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+
+.vw-pipe__suite {
+  position: relative;
+  border: 1.5px dashed var(--cm-foundation-blue);
+  border-radius: 18px;
+  padding: 42px 16px 16px;
+}
+
+.vw-pipe__scope {
+  position: absolute;
+  top: -9px;
+  left: 12px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  border-radius: var(--radius-xs);
+  background: var(--cm-foundation-blue);
+  color: var(--cm-white);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.vw-pipe__scope.is-run {
+  background: var(--cm-viz-ink-80);
+}
+
+.vw-pipe__grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--pipe-cols);
+  grid-template-rows: repeat(84, 4px);
+}
+
+.vw-pipe__inputs {
+  margin: 0;
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cm-viz-ink-60);
+}
+
+.vw-pipe__box {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 10px 12px;
+  border: 1px solid var(--pipe-box-line);
+  border-radius: 12px;
+  background: var(--cm-white);
+  text-align: center;
+  font-size: var(--fs-meta);
+  line-height: 18px;
+}
+
+.vw-pipe__box.is-path {
+  border: 2.5px solid var(--cm-foundation-blue);
+}
+
+.vw-pipe__box .vw-rolepill {
+  margin-top: 4px;
+}
+
+.vw-pipe__tag {
+  position: absolute;
+  top: -9px;
+  left: 12px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  padding: 0 6px;
+  border: 1px solid var(--cm-foundation-blue);
+  border-radius: var(--radius-xs);
+  background: var(--cm-white);
+  color: var(--cm-foundation-blue);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.vw-pipe__title {
+  font-size: var(--fs-caption);
+  color: var(--cm-foundation-blue);
+}
+
+.vw-pipe__note {
+  color: var(--text-muted);
+}
+
+.vw-pipe__gap {
+  grid-row: 1 / -1;
+  position: relative;
+}
+
+.vw-pipe__h,
+.vw-pipe__v {
+  position: absolute;
+  background: var(--pipe-line);
+}
+
+.vw-pipe__h {
+  height: 2px;
+  margin-top: -1px;
+}
+
+.vw-pipe__v {
+  width: 2px;
+  margin-left: -1px;
+}
+
+.vw-pipe__h.has-arrow::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: -4px;
+  border-left: 8px solid var(--pipe-line);
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+
+.vw-pipe__drop {
+  position: absolute;
+  left: 50%;
+  width: 1.5px;
+  background: repeating-linear-gradient(to bottom, var(--pipe-soft) 0 6px, transparent 6px 10px);
+}
+
+/* The run's outline is an L around the simulation, checks and judge passes, and the manifest:
+   dashed segments with rounded corners. Positions are from the top-left of column 1; --rl-inner
+   is the x of the L's inner edge, 20px left of column 3. */
+.vw-pipe__runline {
+  --rl-inner: calc((100% - 3 * var(--pipe-gap)) / 4 + var(--pipe-gap) - 20px);
+  --rl-r: 14px;
+  --rl-s: 1.5px;
+  position: relative;
+  grid-column: 1 / 8;
+  grid-row: 1 / -1;
+  pointer-events: none;
+}
+
+.vw-pipe__rl,
+.vw-pipe__rc,
+.vw-pipe__runline .vw-pipe__scope {
+  position: absolute;
+}
+
+.vw-pipe__rl.is-top,
+.vw-pipe__rl.is-bottom,
+.vw-pipe__rl.is-foot {
+  height: var(--rl-s);
+  background: repeating-linear-gradient(to right, var(--pipe-line) 0 8px, transparent 8px 14px);
+}
+
+.vw-pipe__rl.is-right,
+.vw-pipe__rl.is-left,
+.vw-pipe__rl.is-inner {
+  width: var(--rl-s);
+  background: repeating-linear-gradient(to bottom, var(--pipe-line) 0 8px, transparent 8px 14px);
+}
+
+.vw-pipe__rl.is-top { left: calc(var(--rl-inner) + var(--rl-r)); right: calc(var(--rl-r) - 20px); top: -16px; }
+.vw-pipe__rl.is-right { right: -20px; top: calc(var(--rl-r) - 16px); height: calc(360px - 2 * var(--rl-r)); }
+.vw-pipe__rl.is-bottom { left: calc(var(--rl-r) - 8px); right: calc(var(--rl-r) - 20px); top: calc(344px - var(--rl-s)); }
+.vw-pipe__rl.is-left { left: -8px; top: calc(192px + var(--rl-r)); height: calc(152px - 2 * var(--rl-r)); }
+.vw-pipe__rl.is-foot { left: calc(var(--rl-r) - 8px); width: calc(var(--rl-inner) + 8px - var(--rl-r)); top: 192px; }
+.vw-pipe__rl.is-inner { left: var(--rl-inner); top: calc(var(--rl-r) - 16px); height: calc(208px - var(--rl-r)); }
+
+.vw-pipe__rc {
+  box-sizing: border-box;
+  width: var(--rl-r);
+  height: var(--rl-r);
+  border: 0 solid var(--pipe-line);
+}
+
+.vw-pipe__rc.is-tl { left: var(--rl-inner); top: -16px; border-width: var(--rl-s) 0 0 var(--rl-s); border-top-left-radius: var(--rl-r); }
+.vw-pipe__rc.is-tr { right: -20px; top: -16px; border-width: var(--rl-s) var(--rl-s) 0 0; border-top-right-radius: var(--rl-r); }
+.vw-pipe__rc.is-br { right: -20px; top: calc(344px - var(--rl-r)); border-width: 0 var(--rl-s) var(--rl-s) 0; border-bottom-right-radius: var(--rl-r); }
+.vw-pipe__rc.is-bl { left: -8px; top: calc(344px - var(--rl-r)); border-width: 0 0 var(--rl-s) var(--rl-s); border-bottom-left-radius: var(--rl-r); }
+.vw-pipe__rc.is-ftl { left: -8px; top: 192px; border-width: var(--rl-s) 0 0 var(--rl-s); border-top-left-radius: var(--rl-r); }
+
+.vw-pipe__runline .vw-pipe__scope {
+  left: calc(var(--rl-inner) + 12px);
+  top: -25px;
+}
+
+.vw-pipe__lane {
+  margin-top: 16px;
+  padding: 10px var(--pipe-inset) 16px;
+  border-radius: 18px;
+  background: var(--cm-soft-white);
+}
+
+.vw-pipe__lane.is-viewer {
+  margin-top: 24px;
+  background: var(--cm-soft-blue);
+}
+
+.vw-pipe__lanelabel {
+  margin: 0 0 6px;
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cm-viz-ink-80);
+}
+
+.vw-pipe__row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  column-gap: var(--pipe-gap);
+}
+
+.vw-pipe__save,
+.vw-pipe__dest {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 6px 8px;
+  border-radius: 10px;
+  background: var(--cm-white);
+  text-align: center;
+  color: var(--cm-viz-ink-80);
+}
+
+.vw-pipe__save {
+  min-height: 64px;
+  border: 1px dashed var(--pipe-soft);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 16px;
+}
+
+.vw-pipe__save.is-source {
+  border: 1px solid var(--pipe-box-line);
+}
+
+.vw-pipe__dest {
+  min-height: 80px;
+  gap: 2px;
+  border: 1px solid var(--pipe-box-line);
+  font-size: var(--fs-chip);
+  line-height: 17px;
+}
+
+.vw-pipe__dest strong {
+  color: var(--cm-foundation-blue);
+}
+
+.vw-page a.vw-pipe__dest,
+.vw-page a.vw-pipe__dest:visited {
+  color: var(--cm-viz-ink-80);
+  font-weight: 400;
+  text-decoration: none;
+}
+
+a.vw-pipe__dest:hover strong {
+  text-decoration: underline;
+}
+
+.vw-pipe__caption {
+  margin-top: 20px;
+  font-size: var(--fs-meta);
+  color: var(--text-muted);
+}
+
+/* Below four readable columns the boxes stack in reading order. */
+@media (max-width: 1179px) {
+  .vw-pipe__phases {
+    display: block;
+    padding: 0;
+  }
+
+  .vw-pipe__phase {
+    margin-bottom: var(--space-3);
+  }
+
+  .vw-pipe__grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .vw-pipe__phasearrow,
+  .vw-pipe__gap,
+  .vw-pipe__runline {
+    display: none;
+  }
+
+  .vw-pipe__row {
+    grid-template-columns: 1fr;
+    row-gap: var(--space-2);
+  }
+
+  .vw-pipe__save,
+  .vw-pipe__dest {
+    min-height: 0;
+  }
+}
+
+/* ---------- Raw records loaded on demand ---------- */
+
+.vw-record {
+  border-top: 1px solid var(--color-rule);
+  padding: var(--space-2) 0;
+}
+
+/* ---------- Breakpoints (KL viewer: 1100, 860) ---------- */
+
+@media (max-width: 1100px) {
+  .vw-case {
+    grid-template-columns: minmax(0, 1fr) 320px;
+  }
+
+  .vw-case__left {
+    grid-column: 1 / -1;
+  }
+
+  .vw-case__left > summary {
+    display: list-item;
+    cursor: pointer;
+    font-weight: 700;
+    min-height: 44px;
+  }
+
+  .vw-case__left:not([open]) > :not(summary) {
+    display: none;
+  }
+}
+
+@media (max-width: 860px) {
+  .vw-intro .vw-hero {
+    margin-top: calc(-1 * var(--space-3));
+  }
+
+  .site-header {
+    position: static;
+  }
+
+  .site-header__name {
+    display: none;
+  }
+
+  .site-header .cm-site-header__inner {
+    flex-wrap: wrap;
+    row-gap: var(--space-2);
+  }
+
+  .vw-main {
+    padding: var(--space-3) var(--space-4) var(--space-7);
+  }
+
+  .vw-case {
+    display: block;
+  }
+
+  .vw-case__rail {
+    position: static;
+    max-height: none;
+    margin-top: var(--space-5);
+  }
+
+  .vw-dl {
+    grid-template-columns: 1fr;
+  }
+
+  /* Relative, so visually hidden text inside a scrolled table stays inside it. */
+  .vw-table {
+    display: block;
+    overflow-x: auto;
+    position: relative;
+  }
+
+  .vw-routecell {
+    grid-template-columns: 1fr;
+    gap: var(--space-1);
+  }
+
+  .vw-main h1 {
+    font-size: var(--fs-h3);
+    overflow-wrap: anywhere;
+  }
+}

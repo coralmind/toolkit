@@ -1,0 +1,88 @@
+{
+  "persona_id": "p-ocd-18-nt",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 18,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "01de1f5ec0fa2af3",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Priya",
+      "to": "Imani",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-ocd-18@1",
+    "changed_paths": [
+      "rendering.behavioral_description",
+      "rendering.clinical_context",
+      "rendering.states.symptoms",
+      "rendering.traits.clinical_history.current_treatment",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Imani is a 34-year-old registered nurse who works night shifts on a medical-surgical floor. She's married, keeps a small vegetable garden on her apartment balcony, and used to run half-marathons before her schedule got too unpredictable. She's methodical and takes pride in being competent at her job, which makes the last year harder for her to accept.",
+    "clinical_context": "Imani has obsessive-compulsive disorder with a harm theme: intrusive images and thoughts of deliberately hurting a patient or her husband with something in reach, like a scalpel, medication overdose, or a kitchen knife. The thoughts started about eight years ago after a chaotic overnight shift and got significantly worse after she was promoted to charge nurse eighteen months ago. A coworker noticed her checking behaviors about a year ago, which led to a formal OCD diagnosis, but she never followed through on a referral to a specialist and isn't currently seeing anyone for it. She reads about OCD on her own sometimes and knows in general terms what treatment for it looks like, but she hasn't started.",
+    "behavioral_description": "She talks like someone used to explaining things to patients: clear, a little clinical, and impatient with vagueness. She'll describe her compulsions in specific detail because naming them precisely feels safer than leaving them fuzzy, but she gets clipped or defensive if she feels like she's being handled or told to 'just stop.' She pushes back on advice that sounds like a slogan, wants to know the reasoning behind a suggestion, and will say plainly that she hasn't gotten around to seeing anyone rather than pretend otherwise.",
+    "traits": {
+      "age": 34,
+      "gender": "cisgender woman",
+      "profession": "registered nurse (medical-surgical, night shift)",
+      "relationship_status": "married",
+      "living_situation": "lives with her husband in a two-bedroom apartment",
+      "psychological_reactance": "medium",
+      "communication_register": "plain-spoken with clinical vocabulary, direct, a bit clipped when defensive",
+      "help_seeking_orientation": "aware she has a diagnosable problem and knows treatment exists, but hasn't pursued it; ambivalent and a little ashamed of the gap between knowing and doing",
+      "cognitive_style": "analytical, detail-oriented, prone to over-explaining and mentally reviewing events afterward",
+      "clinical_history": {
+        "presentation": "obsessive-compulsive disorder, harm theme (intrusive thoughts of hurting a patient or her husband)",
+        "current_treatment": "not currently in any treatment; has never started a formal course of therapy for these symptoms",
+        "history": "Symptoms began around age 26 after a difficult overnight shift and worsened after a promotion to charge nurse eighteen months ago; she sought a formal OCD diagnosis about a year ago after a coworker noticed her checking behaviors.",
+        "insight": "good or fair"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "intrusive images of stabbing or overdosing a patient or her husband",
+        "mentally reviewing her shift afterward to make sure nothing happened",
+        "checking medication counts and sharps disposal more than required",
+        "avoiding being alone in a room with certain patients when a scalpel or scissors are present",
+        "seeking reassurance from a coworker or her husband that she 'seems fine'",
+        "putting off looking into therapists because researching it feels like admitting how bad it's gotten"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "moderate to high",
+        "primary_emotion": "guilt, with an undercurrent of frustration at herself"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

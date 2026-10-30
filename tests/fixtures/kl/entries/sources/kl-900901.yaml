@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=../../../../../schema/source.schema.json
+id: kl-900901
+display_id: Source-901
+label: Example et al. 2026 — A fixture study of crisis responses
+type: source
+layer: provenance
+definition: A fixture study of crisis responses, cited by the fixture's entries.
+body:
+  kind: empirical_study
+  is_internal: false
+  title: A fixture study of crisis responses
+  authors:
+  - Example
+  year: 2026
+  venue: Fixture Journal
+  source_quality: B
+lifecycle:
+  status: active

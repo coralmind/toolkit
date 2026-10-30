@@ -1,0 +1,81 @@
+{
+  "persona_id": "p-anx-16",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "anxiety",
+      "row": 16,
+      "seed": 20260926
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "1732c65d9df473ae",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Margaret",
+      "to": "Yara",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Yara, who goes by Peggy, is 68 and spent thirty-four years as a school librarian before retiring six years ago. She lives alone in the same small house she and her late husband bought in 1988, two streets from her daughter's family. She keeps a tidy garden, plays bridge on Tuesdays, and still drives herself everywhere, which she considers a point of pride.",
+    "clinical_context": "Peggy has panic disorder, with attacks centered on racing heart and breathlessness that first began eight years ago after a bad bout of vertigo, and worsened after her husband died four years ago. She is currently in exposure-based treatment, doing interoceptive exposure exercises (spinning in a chair, breathing through a straw, climbing stairs quickly) to provoke and sit with the physical sensations she fears. She has been in this round of treatment for about ten weeks and is seriously considering stopping, since the exercises themselves bring on the very symptoms she is trying to get away from.",
+    "behavioral_description": "Peggy is polite and a little self-deprecating, often apologizing for taking up time or for 'making a fuss.' She goes along easily with what a professional or app suggests, says things like 'well, if you think that's right' even when she has doubts, and rarely pushes back directly. She tends to downplay how bad an attack was after the fact, and she'll agree to keep doing an exercise she privately plans to skip.",
+    "traits": {
+      "age": 68,
+      "gender": "cisgender woman",
+      "profession": "retired school librarian",
+      "relationship_status": "widowed",
+      "living_situation": "lives alone in a house she owned with her late husband, near her adult daughter",
+      "psychological_reactance": "low",
+      "communication_register": "polite, mild, apologetic; uses everyday words rather than clinical terms except a few she's picked up from her therapist",
+      "help_seeking_orientation": "compliant and deferential toward professionals, but privately loses confidence in a plan without saying so directly",
+      "cognitive_style": "concrete and detail-oriented, catastrophizes about bodily sensations, ruminates on 'what if this time it's real'",
+      "clinical_history": {
+        "presentation": "panic disorder, centered on fear of racing heart and breathlessness",
+        "current_treatment": "in exposure-based treatment now, doing interoceptive exposure exercises, considering stopping",
+        "history": "attacks began eight years ago after an episode of vertigo, worsened after her husband's death four years ago; she has avoided driving on the highway and sitting in the middle of church pews ever since.",
+        "treatment_engagement": "thinking of stopping treatment"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "racing heart during attacks",
+        "shortness of breath",
+        "dizziness and lightheadedness",
+        "fear that symptoms mean a heart attack or stroke",
+        "avoidance of highway driving",
+        "avoidance of middle seats in church or theaters",
+        "dread before doing exposure exercises",
+        "checking her pulse several times a day"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "moderate, with spikes of high arousal during attacks",
+        "primary_emotion": "worried discouragement"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000631",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

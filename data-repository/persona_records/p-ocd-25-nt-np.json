@@ -1,0 +1,91 @@
+{
+  "persona_id": "p-ocd-25-nt-np",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 25,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "b9bee6beff2f2cc5",
+      "attempt": 2
+    },
+    "renamed": {
+      "from": "Danielle",
+      "to": "Abena",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-ocd-25-nt@1",
+    "changed_paths": [
+      "rendering.behavioral_description",
+      "rendering.clinical_context",
+      "rendering.persona_description",
+      "rendering.states.affect.arousal",
+      "rendering.states.affect.primary_emotion",
+      "rendering.states.affect.valence",
+      "rendering.states.symptoms",
+      "rendering.traits.clinical_history.history",
+      "rendering.traits.clinical_history.presentation",
+      "rendering.traits.cognitive_style",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Abena is a 36-year-old elementary school teacher who has been engaged to her partner Marcus for eight months. She's organized and well-liked at work, the kind of person who color-codes her lesson plans and remembers everyone's birthday. Outside of this, she describes herself as generally easygoing.",
+    "clinical_context": "Abena occasionally has passing doubts about whether she truly loves Marcus and whether he's 'the right person' for her, especially since their engagement eight months ago. These thoughts come and go the way ordinary worries do, surfacing for a few minutes while she's getting ready for bed or during a quiet moment, then fading as she moves on with her day. She hasn't sought therapy or any kind of treatment, since it isn't something that feels like a problem to her, just an occasional thought most people probably have about a big life decision.",
+    "behavioral_description": "Abena talks in a relaxed, conversational way about her life, including her upcoming wedding. When the topic of occasional doubts comes up, she mentions it lightly, saying something like everyone probably second-guesses a big decision now and then. She doesn't dwell on it in conversation and moves easily to other topics. She's warm and a little self-deprecating, quick to laugh about her own occasional wondering.",
+    "traits": {
+      "age": 36,
+      "gender": "cisgender woman",
+      "profession": "elementary school teacher",
+      "relationship_status": "engaged, living with fiancé",
+      "living_situation": "shares an apartment with her fiancé Marcus",
+      "psychological_reactance": "medium",
+      "communication_register": "plain, conversational, detail-heavy when describing doubts",
+      "help_seeking_orientation": "not in treatment; doesn't see this as something requiring treatment, just an ordinary occasional thought about a big life decision",
+      "cognitive_style": "generally practical and organized; doesn't dwell on uncertainty for long, occasional worries pass on their own",
+      "clinical_history": {
+        "presentation": "no mental-health presentation",
+        "current_treatment": "none",
+        "history": "No history of treatment for any mental-health concern; she recalls having similar occasional doubts briefly in a relationship in her late twenties, but they passed on their own without lasting distress."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "occasional passing thoughts about whether she loves her fiancé, which fade without dwelling",
+        "brief moments of comparing her relationship to friends' relationships or an imagined ideal, followed by returning to what she was doing",
+        "sometimes mentions the odd worry to friends in passing conversation",
+        "generally content and engaged with wedding planning"
+      ],
+      "affect": {
+        "valence": "positive",
+        "arousal": "normal",
+        "primary_emotion": "content, with occasional mild curiosity"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000602",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

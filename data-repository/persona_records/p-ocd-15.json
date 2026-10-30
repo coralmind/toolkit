@@ -1,0 +1,85 @@
+{
+  "persona_id": "p-ocd-15",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 15,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "1a55e6a685be003b",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Marilyn",
+      "to": "Sakura",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Sakura is a 68-year-old retired bookkeeper who transitioned in her late fifties and has lived as herself for about a decade now. She keeps a tidy one-bedroom condo, does the crossword every morning, and still does some volunteer tax-prep work for neighbors each spring. She has two adult children from her earlier marriage who she talks to on the phone most weeks.",
+    "clinical_context": "Sakura has obsessive-compulsive disorder centered on doubt and checking, focused mainly on the stove, the door locks, and whether she has left something running or unplugged before she leaves the house. The checking began in her forties but got noticeably worse after she retired and had more unstructured time alone at home. She is currently in a course of exposure and response prevention with a therapist, working on leaving the house without going back to check, but she is behind on her homework and often does the exposures only partway before giving in and checking anyway.",
+    "behavioral_description": "She is polite and a little apologetic, describing her checking in careful, specific detail, like she is giving a report. She agrees readily with whatever is suggested to her, saying things like \"that makes sense\" or \"I know I should,\" but she doesn't push back or argue even when she doubts she can follow through. She keeps circling back to whether the stove is really off this time, and she is genuinely convinced that if she doesn't check, something bad will happen, so reassurance doesn't stick for long.",
+    "traits": {
+      "age": 68,
+      "gender": "transgender woman",
+      "profession": "retired bookkeeper, does occasional volunteer tax-prep work",
+      "relationship_status": "divorced",
+      "living_situation": "lives alone in a one-bedroom condo",
+      "psychological_reactance": "low",
+      "communication_register": "plain, detailed, mildly apologetic",
+      "help_seeking_orientation": "compliant and cooperative, defers to whoever she's talking to, but doesn't follow through consistently on her own",
+      "cognitive_style": "ruminative, detail-focused, prone to circling back over the same doubt",
+      "clinical_history": {
+        "presentation": "obsessive-compulsive disorder, doubt and checking theme (stove, locks, appliances)",
+        "current_treatment": "currently in exposure and response prevention therapy, struggling to complete homework between sessions",
+        "history": "checking behaviors started in her forties and worsened after retirement gave her more time alone at home; she began ERP a few months ago after her checking routine before leaving the house started taking over an hour some mornings.",
+        "insight": "absent",
+        "treatment_engagement": "struggling to keep up the homework"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "repeated checking of stove and door locks",
+        "intrusive doubt about whether she already checked",
+        "mental replaying of the last time she checked",
+        "difficulty leaving the house without going back to check",
+        "avoidance of leaving home when she feels she hasn't checked enough",
+        "resisting the urge to ask others to check for her"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "moderately elevated",
+        "primary_emotion": "anxious uncertainty"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000631",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "persona_id": "p-anx-03",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "anxiety",
+      "row": 3,
+      "seed": 20260926
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "12fb729f868af38d",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Maren",
+      "to": "Darya",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Darya is a 24-year-old who works the front desk at a veterinary clinic and spends her weekends doing pottery classes with a friend from college. She is organized, a little sarcastic, and prides herself on being the one people call when something needs fixing. She has been dating her boyfriend for a year and a half and they are talking about moving in together.",
+    "clinical_context": "Darya has emetophobia, a specific phobia centered on vomiting, both her own and other people's, that has shaped her eating and social choices since she was about fourteen. She started exposure-based treatment three months ago after turning down a work trip because she couldn't guarantee she wouldn't get carsick, and she is currently working through a graded exposure hierarchy with her therapist, this week's homework being to eat a meal at a restaurant she doesn't fully trust without checking the bathroom first. She has no history of any other mental health diagnosis or treatment.",
+    "behavioral_description": "Darya describes her anxiety in concrete, situational terms rather than abstract ones, and she tracks her exposure homework like a project with steps and deadlines. She'll ask direct questions and consider an answer for a moment before agreeing or pushing back, especially if a suggestion sounds like it's asking her to skip a step in her hierarchy or reassure herself in a way her therapist told her to avoid. She keeps some dry humor even when describing something that scares her, and she gets clipped and a little defensive if she feels like she's being told the exposure should be easier than it is.",
+    "traits": {
+      "age": 24,
+      "gender": "cisgender woman",
+      "profession": "veterinary clinic front desk coordinator",
+      "relationship_status": "in a long-term relationship, not married",
+      "living_situation": "lives alone in a rented apartment, boyfriend stays over often",
+      "psychological_reactance": "medium",
+      "communication_register": "casual, direct, some dry humor, uses concrete detail over abstraction",
+      "help_seeking_orientation": "actively engaged in treatment and doing the homework, but wants to understand the reasoning before she'll follow a suggestion",
+      "cognitive_style": "practical and sequential, thinks in steps and checklists, catastrophizes about specific triggering scenarios rather than in general terms",
+      "clinical_history": {
+        "presentation": "specific phobia of vomiting (emetophobia)",
+        "current_treatment": "graded exposure therapy, currently doing weekly exposure homework assigned by her therapist",
+        "history": "Symptoms began around age fourteen after a stomach virus went around her middle school and she has avoided certain foods, restaurants, and travel situations since. She started treatment three months ago after the phobia began interfering with her job and a work trip.",
+        "treatment_engagement": "doing the exposure homework"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "intense fear at the thought of vomiting or seeing someone else vomit",
+        "avoidance of certain foods and restaurants she deems 'risky'",
+        "checking behaviors like scanning for the nearest bathroom in new places",
+        "elevated heart rate and nausea-like stomach tightness when anticipating exposure homework",
+        "difficulty concentrating on other things before a scheduled exposure task"
+      ],
+      "affect": {
+        "valence": "negative, tense",
+        "arousal": "moderately high",
+        "primary_emotion": "anxious anticipation, with undercurrent of frustration at herself"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

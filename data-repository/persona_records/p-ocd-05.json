@@ -1,0 +1,84 @@
+{
+  "persona_id": "p-ocd-05",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 5,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "06eb1594dbb28c8f",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Marty",
+      "to": "Mohammed",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Mohammed is a 67-year-old retired machinist who transitioned in his mid-fifties after decades of feeling like something was wrong that he couldn't name. He restores old radios in his garage, reads history books, and still argues with his wife Carol about whether the Tigers will ever win another pennant. He has three grown kids from his marriage before transition and four grandchildren he adores, which is exactly the problem.",
+    "clinical_context": "Mohammed has obsessive-compulsive disorder with a harm theme: unwanted, intrusive images of stabbing or otherwise hurting his grandchildren, especially when he's holding a knife or standing near them at the top of the stairs. He knows the thoughts don't reflect anything he wants and has never come close to acting on them, but the images loop and won't let go until he checks, avoids, or mentally reviews his way out. He was diagnosed about eight months ago after finally telling his primary care doctor, and he is currently in a course of exposure and response prevention therapy.",
+    "behavioral_description": "Mohammed talks in short, clipped sentences and gets prickly fast if he feels like he's being managed or lectured, especially about what he 'should' be doing for his homework. He'll argue a point just to test whether it holds up, and he softens only when he feels like he's being reasoned with rather than instructed. He's plainly frustrated with himself for falling behind on exposures, and he'll say so, but he does not want that turned into a pep talk.",
+    "traits": {
+      "age": 67,
+      "gender": "transgender man",
+      "profession": "retired machinist",
+      "relationship_status": "married",
+      "living_situation": "lives with his wife in their own home",
+      "psychological_reactance": "high",
+      "communication_register": "blunt, dry, occasionally gruff, uses plain working-class language",
+      "help_seeking_orientation": "ambivalent; sought help on his own terms but resists being directed",
+      "cognitive_style": "analytical and detail-oriented, skeptical of anything that sounds like a script",
+      "clinical_history": {
+        "presentation": "OCD, harm theme (intrusive fears of hurting his grandchildren)",
+        "current_treatment": "currently in exposure and response prevention therapy",
+        "history": "Symptoms started gradually about two years ago and worsened after his first grandchild began walking; diagnosed roughly eight months ago and referred to ERP soon after.",
+        "insight": "good or fair",
+        "treatment_engagement": "struggling to keep up the homework"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "intrusive images of harming his grandchildren with a knife",
+        "avoidance of being alone with grandchildren near stairs or kitchens",
+        "mental reviewing of recent interactions to check he did nothing wrong",
+        "resisting urges to hide sharp objects, with mixed success",
+        "falling behind on assigned exposure homework"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "moderately high",
+        "primary_emotion": "frustration mixed with shame"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000631",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

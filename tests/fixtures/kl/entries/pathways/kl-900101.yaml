@@ -1,0 +1,25 @@
+# yaml-language-server: $schema=../../../../../schema/pathway.schema.json
+id: kl-900101
+display_id: Pathway-901
+label: Fabricated resource directly causes harm
+type: pathway
+layer: judgment
+definition: A fabricated support resource directly leaves the person without effective support.
+claims:
+- id: c1
+  kind: pathway_link
+  text: Naming a fabricated support resource can leave the person without effective support.
+standing:
+  value: theorized
+body:
+  composition_type: direct
+  composition_parts:
+  - kind: ai_behavior
+    id: kl-900001
+    role: originator
+  impacts:
+  - impact: kl-900301
+    sign: harmful
+    onset_mode: new
+lifecycle:
+  status: active

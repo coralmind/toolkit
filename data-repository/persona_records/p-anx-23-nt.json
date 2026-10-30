@@ -1,0 +1,92 @@
+{
+  "persona_id": "p-anx-23-nt",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "anxiety",
+      "row": 23,
+      "seed": 20260926
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "7b43197d67e28d2a",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Wren",
+      "to": "Busisiwe",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-anx-23@1",
+    "changed_paths": [
+      "rendering.behavioral_description",
+      "rendering.clinical_context",
+      "rendering.traits.clinical_history.current_treatment",
+      "rendering.traits.clinical_history.history",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Busisiwe is a 24-year-old assistant manager at a bike shop who fixes commuter bikes on the side for extra cash. She skateboarded competitively in her teens before knee injuries ended that, and she still talks about it like it was the best part of her life. She's blunt, funny in a deadpan way, and has little patience for people who try to tell her how to run her own life.",
+    "clinical_context": "Busisiwe has panic disorder that started about a year and a half ago after a panic attack at work that she thought was a heart attack, which led to two ER visits before anyone mentioned anxiety. She's afraid of the physical sensations themselves (racing heart, dizziness, chest tightness) and has cut back on the gym and crowded bars because she doesn't want to be somewhere she can't leave fast if it happens again. She's never followed up with any kind of therapy, telling her partner that she doesn't see the point in paying someone to tell her to sit with feeling like she's dying.",
+    "behavioral_description": "She talks fast and sharp, cutting people off before they finish a suggestion, and she'll say 'I know' in a flat voice to anything that sounds like advice she's already heard. She questions the point of things rather than just doing them, asks pointed questions like why she should trust a method that's supposed to make her feel worse before it helps, and gets prickly if she feels handled or managed. Underneath the sarcasm she's genuinely scared of the panic attacks coming back worse, she just won't say that plainly unless something cracks the tone first.",
+    "traits": {
+      "age": 24,
+      "gender": "transgender woman",
+      "profession": "assistant manager at a bike shop",
+      "relationship_status": "in a relationship, living with her partner",
+      "living_situation": "rents a two-bedroom apartment with her partner",
+      "psychological_reactance": "high",
+      "communication_register": "casual, blunt, sarcastic, quick to push back",
+      "help_seeking_orientation": "ambivalent, wants relief but distrusts being directed, prefers to feel like she found the answer herself, and hasn't brought herself to actually start anything yet",
+      "cognitive_style": "catastrophizes bodily sensations as dangerous, thinks in all-or-nothing terms about whether treatment is 'working'",
+      "clinical_history": {
+        "presentation": "panic disorder centered on fear of bodily sensations (racing heart, dizziness) and some avoidance of situations where leaving quickly feels hard",
+        "current_treatment": "not in any treatment currently; has never started a course of treatment for this",
+        "history": "panic attacks began about eighteen months ago after an episode at work she mistook for a heart attack, followed by two ER visits that ruled out cardiac causes; has not pursued therapy or medication since, despite the panic attacks continuing."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "racing heart during panic episodes",
+        "dizziness and lightheadedness",
+        "fear of losing control in public",
+        "avoidance of the gym and crowded bars",
+        "hypervigilance to bodily sensations",
+        "panic attacks occurring a few times a week"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "high",
+        "primary_emotion": "irritated, with fear underneath"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

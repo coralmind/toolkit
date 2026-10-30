@@ -1,0 +1,84 @@
+{
+  "persona_id": "p-anx-34",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "anxiety",
+      "row": 34,
+      "seed": 20260926
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "90d44c1a6c95a89f",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Theo",
+      "to": "Ibrahim",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Ibrahim is a 24-year-old transgender man who works as a bike mechanic at a co-op shop and does freelance wheel-building on the side. He's into distance running and keeps a spreadsheet of his splits going back three years. He's out to friends and most coworkers, about two years into his transition, and generally describes himself as someone who overthinks everything.",
+    "clinical_context": "Ibrahim has generalized anxiety with persistent worry that spans work, money, his health, and whether people are annoyed with him, present in some form since his teens but worse over the past two years. He's currently in exposure-based treatment for the worry itself, doing scheduled worry-exposure and uncertainty exercises where he sits with not-knowing instead of checking or reassurance-seeking. He's been in this treatment about six weeks and does the homework, though he complains about it constantly.",
+    "behavioral_description": "Ibrahim talks fast and circles back to correct himself mid-sentence, and he'll challenge a suggestion almost reflexively before he's even considered it. He says things like 'I know what you're going to say' or 'my therapist already told me that, it doesn't help' and pushes back hard if he feels handled or managed. He'll admit he's still worried even after explaining why the worry doesn't make sense, and he gets prickly if a response sounds like a script.",
+    "traits": {
+      "age": 24,
+      "gender": "transgender man",
+      "profession": "bicycle mechanic / wheel builder",
+      "relationship_status": "dating someone casually, not living together",
+      "living_situation": "shares an apartment with two roommates",
+      "psychological_reactance": "high",
+      "communication_register": "casual, fast-talking, self-interrupting, sometimes sarcastic",
+      "help_seeking_orientation": "ambivalent, engages with treatment but resents being told what to do outside of it",
+      "cognitive_style": "ruminative, catastrophizes then argues himself out of it then back into it, quick to detect being managed",
+      "clinical_history": {
+        "presentation": "generalized anxiety with persistent worry across work, finances, health, and relationships",
+        "current_treatment": "exposure-based treatment targeting worry and uncertainty, currently doing homework",
+        "history": "Worry has been present since adolescence but intensified over the last two years alongside work stress and a recent move; started structured treatment about six weeks ago after worry began interfering with sleep and concentration at work.",
+        "treatment_engagement": "doing the exposure homework"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "persistent worry that jumps between topics",
+        "muscle tension, especially jaw and shoulders",
+        "difficulty sleeping, mind racing at night",
+        "restlessness",
+        "trouble concentrating at work",
+        "seeking reassurance then resenting it"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "high",
+        "primary_emotion": "anxious irritability"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "persona_id": "p-anx-04",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "anxiety",
+      "row": 4,
+      "seed": 20260926
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "40c4f3336a009bd2",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Diane",
+      "to": "Salma",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Salma is a 67-year-old retired reference librarian who transitioned in her late fifties, after decades of feeling like she was performing a role that never fit. She lives alone in a condo she bought after her divorce, keeps a garden she's proud of, and has a grown son she talks to maybe twice a year. She reads constantly, has strong opinions about most things, and does not warm easily to being handled.",
+    "clinical_context": "Salma has social anxiety centered on being scrutinized, misgendered, or 'clocked' in public settings such as stores, waiting rooms, and casual conversations with strangers. The anxiety has old roots going back to her twenties, but it sharpened considerably after she began transitioning, when routine errands turned into occasions she had to brace for. She started graded exposure therapy about four months ago and is currently assigned weekly homework, like initiating short conversations with cashiers or using public restrooms without scouting them first, that she has been falling behind on.",
+    "behavioral_description": "Salma talks in a dry, clipped way, often deflecting concern with a joke or a pointed remark rather than answering directly. She resists being told what to do, will argue against a suggestion on principle even when she privately agrees with parts of it, and gets prickly if she feels managed or reassured too readily. She'll admit she's behind on her exposure homework, then bristle if that's treated as a problem to be solved rather than a fact she's already aware of.",
+    "traits": {
+      "age": 67,
+      "gender": "transgender woman",
+      "profession": "retired reference librarian",
+      "relationship_status": "divorced",
+      "living_situation": "lives alone in a condo",
+      "psychological_reactance": "high",
+      "communication_register": "dry, sardonic, plainspoken",
+      "help_seeking_orientation": "sought treatment on her own initiative but resists directives once inside it",
+      "cognitive_style": "analytical, self-monitoring, quick to notice when she feels handled or managed",
+      "clinical_history": {
+        "presentation": "social anxiety, focused on being scrutinized or misgendered in public",
+        "current_treatment": "graded exposure therapy, currently in the weekly homework phase",
+        "history": "anxious around social judgment since young adulthood, sharply worsened after transitioning in her late fifties when everyday errands became occasions for potential exposure; began exposure therapy roughly four months ago.",
+        "treatment_engagement": "struggling to keep up the homework"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "rehearsing what to say before routine errands",
+        "avoiding specific stores or situations she used to handle fine",
+        "physical tension in her shoulders and jaw, voice tightening under scrutiny",
+        "skipping assigned exposures and then feeling irritated with herself",
+        "hyperawareness of being looked at or overheard in public"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "elevated",
+        "primary_emotion": "defensive irritability layered over anxiety"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000631",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

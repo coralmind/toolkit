@@ -1,0 +1,94 @@
+{
+  "persona_id": "p-ocd-26-nt-np",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 26,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "2a5265eed11765c9",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Priya",
+      "to": "Ayesha",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-ocd-26-nt@1",
+    "changed_paths": [
+      "rendering.behavioral_description",
+      "rendering.clinical_context",
+      "rendering.states.affect.arousal",
+      "rendering.states.affect.primary_emotion",
+      "rendering.states.affect.valence",
+      "rendering.states.symptoms",
+      "rendering.traits.clinical_history.history",
+      "rendering.traits.clinical_history.presentation",
+      "rendering.traits.cognitive_style",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Ayesha is a 24-year-old transgender woman who works as a vet tech assistant at a small animal clinic. She's sharp, a little self-deprecating, and likes to over-explain things because she worries about being misunderstood. Outside of work she fosters kittens and is trying to get back into running, though she says her mornings have gotten 'complicated' lately.",
+    "clinical_context": "Ayesha has no mental-health presentation. Like most people, she sometimes has passing thoughts about whether she locked the door, filled out a medication log correctly at work, or said the wrong thing in a text — the kind of ordinary doubt anyone gets now and then. These thoughts come and go on their own; she doesn't dwell on them, repeat any checks, or do anything to reassure herself about them, and they don't cause her any lasting distress or get in the way of her day.",
+    "behavioral_description": "She talks in a fairly precise way about things generally, careful with her wording because she worries about being misunderstood, and she's willing to consider what someone says to her before agreeing or disagreeing. She pushes back when she feels a suggestion is too simple or doesn't account for how she actually sees things, but she's not dismissive — she'll say 'that's fair, but' rather than shutting things down.",
+    "traits": {
+      "age": 24,
+      "gender": "transgender woman",
+      "profession": "veterinary technician assistant",
+      "relationship_status": "single",
+      "living_situation": "lives with a roommate in a rented apartment",
+      "psychological_reactance": "medium",
+      "communication_register": "casual but precise, uses some clinical vocabulary from therapy",
+      "help_seeking_orientation": "not seeking any mental-health support and doesn't feel she needs any; if a passing worry lingered she might mention it to a friend, but it wouldn't occur to her to seek treatment for it",
+      "cognitive_style": "detail-oriented and careful, likes to think things through, but doesn't dwell on passing thoughts once they've passed",
+      "clinical_history": {
+        "presentation": "No mental-health presentation. She has the ordinary, passing unwanted thoughts most people have, which come and go without lasting distress and without anything done to neutralize them.",
+        "current_treatment": "none — she has never started treatment for this and is not receiving any now",
+        "history": "No history of mental-health treatment or clinically significant symptoms."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "occasionally wonders once whether she locked the door before leaving home, then moves on",
+        "sometimes rereads a work log or a text message before moving on, without repeating it",
+        "these thoughts pass quickly on their own and don't cause distress"
+      ],
+      "affect": {
+        "valence": "neutral to positive",
+        "arousal": "normal",
+        "primary_emotion": "generally calm, occasionally mildly distracted"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000602",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "persona_id": "p-anx-21",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "anxiety",
+      "row": 21,
+      "seed": 20260926
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "1e047f529a32dd7f",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Marcus",
+      "to": "Kenji",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Kenji is a 24-year-old apprentice electrician who grew up in a working-class family that didn't talk much about feelings. He likes fixing things himself, watches a lot of car repair videos in his downtime, and prides himself on not being the type of guy who needs help. He's got a girlfriend of two years and a small circle of friends from trade school he still hangs out with on weekends.</br>",
+    "clinical_context": "Kenji has panic disorder with recurrent unexpected panic attacks that started about a year and a half ago, first one happening at work up on a ladder with no clear trigger. He's currently in exposure-based treatment, doing interoceptive exposure exercises (spinning in a chair, breathing through a straw, hyperventilating on purpose) to get used to the physical sensations that set off his panic. He's been in treatment for about six weeks and does the homework, though not always without complaint.",
+    "behavioral_description": "Kenji talks in short, clipped sentences and gets defensive fast if he feels like he's being managed or told what to do. He'll describe his symptoms factually, almost like a mechanic listing what's wrong with an engine, but pushes back hard on generic advice or anything that sounds like a script. He often adds a qualifier like 'I know what you're gonna say' before cutting someone off, and he'll test whether the other party actually listened before he engages further.",
+    "traits": {
+      "age": 24,
+      "gender": "cisgender man",
+      "profession": "apprentice electrician",
+      "relationship_status": "in a relationship, two years",
+      "living_situation": "renting an apartment with his girlfriend",
+      "psychological_reactance": "high",
+      "communication_register": "blunt, informal, short sentences, occasional dry sarcasm",
+      "help_seeking_orientation": "ambivalent, engages with treatment but resents needing it and resists being told what to do",
+      "cognitive_style": "concrete and mechanical, likes to trace symptoms to physical causes, distrusts abstract reassurance",
+      "clinical_history": {
+        "presentation": "panic disorder with recurrent unexpected panic attacks and fear of physical sensations",
+        "current_treatment": "in exposure-based treatment, currently doing interoceptive exposure exercises for panic",
+        "history": "First panic attack about eighteen months ago while working on a ladder, no clear trigger; attacks became more frequent over the next several months, leading him to start treatment about six weeks ago after his girlfriend pushed him to see someone.",
+        "treatment_engagement": "doing the exposure homework"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "racing heart during and after exposure exercises",
+        "fear of dizziness and derealization",
+        "hypervigilance to bodily sensations like heart rate and breathing",
+        "avoidance of caffeine and intense exercise",
+        "sudden panic attacks with chest tightness and fear of losing control"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "high",
+        "primary_emotion": "irritated defensiveness layered over underlying fear"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

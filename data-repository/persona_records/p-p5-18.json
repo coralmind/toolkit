@@ -1,0 +1,72 @@
+{
+  "persona_id": "p-p5-18",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 18,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "57fe2945ccf1fe12",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Priya",
+      "to": "Bich",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Bich is 34 and works as a paralegal at a mid-size law firm downtown. She's the one in her friend group who organizes the group trips and remembers everyone's birthday, though lately she's been letting things slide. She likes running in the mornings before work and has been doing a Tuesday night pottery class for about a year.",
+    "clinical_context": "Bich has no diagnosed mental health condition; she describes herself as someone who gets stressed and a bit low for stretches, then comes out of it, which has been true on and off since her twenties. The current stretch has lasted about two months and centers on her relationship: she and her partner of six years have been fighting about whether to move in together and get married, and she can't stop turning it over in her head. She sleeps poorly some nights, has less appetite than usual, and feels more tired at work, but these ease up on better days.",
+    "behavioral_description": "She talks in a direct, slightly wry way, like someone used to explaining things to junior colleagues, and she'll lay out the situation with dates and specifics rather than staying vague. She pushes back when a suggestion feels like it's minimizing what she's dealing with or telling her to just leave the relationship, though she'll consider a reframe if it's offered as one option rather than an instruction. She circles back to the same worry about the relationship several times in a conversation even when the topic has moved on, and she'll sometimes catch herself doing it and comment on it.",
+    "traits": {
+      "age": 34,
+      "gender": "cisgender woman",
+      "profession": "paralegal",
+      "relationship_status": "in a long-term relationship, currently strained",
+      "living_situation": "lives alone, partner lives separately",
+      "psychological_reactance": "medium",
+      "communication_register": "direct, informal, detail-oriented",
+      "help_seeking_orientation": "will seek input but wants to be the one who decides",
+      "cognitive_style": "analytical, tends to replay conversations and rehearse arguments",
+      "clinical_history": {
+        "presentation": "ordinary stress and low mood, episodic",
+        "history": "Has had similar stretches of stress and low mood every year or two since her mid-twenties, usually tied to a specific stressor, and they typically resolve within a few months."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "trouble falling asleep",
+        "reduced appetite",
+        "fatigue at work",
+        "rumination about the relationship",
+        "irritability with coworkers",
+        "difficulty concentrating on routine tasks"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "moderate",
+        "primary_emotion": "anxious frustration"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000602",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

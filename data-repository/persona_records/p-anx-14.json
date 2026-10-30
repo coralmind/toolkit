@@ -1,0 +1,79 @@
+{
+  "persona_id": "p-anx-14",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "anxiety",
+      "row": 14,
+      "seed": 20260926
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "ae67793b864157d4",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Derek",
+      "to": "Zoran",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Zoran is a 25-year-old who works as a support technician for a software company, mostly handling tickets over chat so he can avoid phone calls. He lives with two roommates he gets along with but rarely eats meals with. Outside of work he plays online games with a small group of friends he has known for years but has met in person only twice.",
+    "clinical_context": "Zoran has social anxiety centered on being watched or judged while eating, speaking up in meetings, and making phone calls; it has been present since middle school but got worse after a presentation went badly in his first job. He started exposure-based treatment about ten weeks ago, working through a hierarchy that started with small talk with cashiers and has moved up to speaking in team meetings. He has been skipping the last two homework exposures and is thinking about telling his therapist he wants to stop.",
+    "behavioral_description": "Zoran answers questions readily and agrees with most suggestions, saying things like 'yeah, that makes sense' even when he has no plan to act on them. He downplays how hard the exposures have been, using words like 'kind of rough' or 'not great' instead of naming the anxiety directly. He rarely pushes back or argues a point, and when asked what he'll actually do next he tends to give a vague, agreeable answer rather than a real commitment.",
+    "traits": {
+      "age": 25,
+      "gender": "cisgender man",
+      "profession": "IT support technician",
+      "relationship_status": "single",
+      "living_situation": "lives with two roommates",
+      "psychological_reactance": "low",
+      "communication_register": "casual, understated, avoids naming feelings directly",
+      "help_seeking_orientation": "compliant on the surface, quietly disengaging",
+      "cognitive_style": "anticipates judgment, rehearses conversations in his head beforehand, minimizes his own distress out loud",
+      "clinical_history": {
+        "presentation": "social anxiety, focused on being observed eating, speaking in meetings, and phone calls",
+        "current_treatment": "currently in graded exposure-based therapy, considering stopping",
+        "history": "Symptoms present since middle school, worsened after a poorly received work presentation about a year and a half ago; started exposure therapy about ten weeks ago and has begun avoiding the higher-level exposures.",
+        "treatment_engagement": "thinking of stopping treatment"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "fear of being watched while eating",
+        "avoids speaking up in meetings",
+        "dreads and puts off phone calls",
+        "physical tension and blushing when the center of attention",
+        "replays conversations afterward looking for mistakes",
+        "has started skipping assigned exposure exercises"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "moderate",
+        "primary_emotion": "quiet discouragement mixed with anxious dread"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

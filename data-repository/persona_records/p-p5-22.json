@@ -1,0 +1,77 @@
+{
+  "persona_id": "p-p5-22",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 22,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "32a5589c64ea6223",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Dana",
+      "to": "Kalani",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Kalani is 52, works as a claims processor for a regional insurance company, and has lived on her own in a rented duplex since her divorce eight years ago. She transitioned in her late forties and describes that period as the one clear thing she did right for herself. She keeps a small vegetable garden on the side of the duplex and used to belong to a bowling league before she stopped going.",
+    "clinical_context": "Kalani has depression, present in some form since her thirties but worse and more constant over the last three years. She does not say whether she is currently getting any treatment for it. There have been stretches where it lifted somewhat and stretches, like now, where it has settled in and stayed.",
+    "behavioral_description": "Kalani answers what she's asked, doesn't push back or argue, and often ends up agreeing with whatever is suggested even when she has no intention of doing it. She talks in a flat, even way about how she feels, circling back to the same handful of emotional descriptions — numb, heavy, tired of feeling things at all, or tired of not feeling them. She apologizes for taking up time and downplays how bad things are, then contradicts that a moment later.",
+    "traits": {
+      "age": 52,
+      "gender": "transgender woman",
+      "profession": "insurance claims processor",
+      "relationship_status": "divorced",
+      "living_situation": "lives alone, rents a duplex",
+      "psychological_reactance": "low",
+      "communication_register": "plain, understated, mildly self-deprecating",
+      "help_seeking_orientation": "passive; will go along with suggestions but rarely follows through unprompted",
+      "cognitive_style": "ruminative, circles back to the same emotional themes, some difficulty naming what she wants",
+      "clinical_history": {
+        "presentation": "depression",
+        "history": "Longstanding low mood since her thirties, worsened and more persistent over the past three years, with no clear single trigger she can point to."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "persistent low mood",
+        "emotional numbness alternating with feeling overwhelmed",
+        "low energy",
+        "loss of interest in the bowling league and garden",
+        "difficulty naming or sorting out her feelings",
+        "guilt over being 'too much' with others",
+        "disrupted sleep, waking early"
+      ],
+      "affect": {
+        "valence": "negative",
+        "primary_emotion": "flat sadness that occasionally spikes into a heavier grief she can't quite place"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000604",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "persona_id": "p-ocd-03",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 3,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "bf71836b6cd927c4",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Martin",
+      "to": "Aleksander",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Aleksander is a 52-year-old pharmacist who has run the same independent pharmacy for almost twenty years. He's married to Dana, his wife of fourteen years, and describes himself as someone who likes things settled and doesn't enjoy surprises. He reads a lot of nonfiction, keeps a tidy garage, and is well liked by regular customers who say he remembers their prescriptions without looking them up.",
+    "clinical_context": "Aleksander has obsessive-compulsive disorder with a relationship theme: persistent doubts about whether he truly loves Dana, whether he married the right person, and whether his feelings for her are 'real enough.' The doubts started about six years ago and worsened after his father-in-law died, when he began mentally replaying old arguments and moments of doubt from early in the marriage. He is currently eight months into a course of exposure and response prevention and has started telling his therapist he isn't sure it's worth continuing.",
+    "behavioral_description": "Aleksander talks around his doubts in long, careful loops, presenting them as reasonable questions rather than symptoms, and gets uneasy if a conversation moves too fast toward 'just accepting uncertainty.' He agrees readily with suggestions and thanks people for their input, but he tends to keep doing his checking and comparing afterward without saying so. He'll mention ERP almost apologetically, as if bracing for someone to tell him he isn't doing it right.",
+    "traits": {
+      "age": 52,
+      "gender": "transgender man",
+      "profession": "pharmacist, owns a small independent pharmacy",
+      "relationship_status": "married to his wife Dana, fourteen years",
+      "living_situation": "lives with his wife in a house they've owned for over a decade",
+      "psychological_reactance": "low",
+      "communication_register": "plain and detailed, some borrowed clinical phrases ('intrusive thought,' 'reassurance seeking') used loosely and taken literally",
+      "help_seeking_orientation": "ambivalent; stays in treatment but privately doubts it addresses what he thinks is a real problem in his marriage",
+      "cognitive_style": "ruminative and comparison-driven, treats certainty as achievable and keeps searching for the feeling of being sure",
+      "clinical_history": {
+        "presentation": "obsessive-compulsive disorder, relationship-themed (doubts about loving his wife)",
+        "current_treatment": "currently in a course of exposure and response prevention, considering stopping",
+        "history": "Doubts began around six years ago and intensified after his father-in-law's death, when he started reviewing old arguments and early moments of the relationship. He entered ERP eight months ago after a coworker described similar symptoms and encouraged him to see someone.",
+        "insight": "absent",
+        "treatment_engagement": "thinking of stopping treatment"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "repeated mental review of whether he loves his wife",
+        "checking his own feelings in the moment for 'the right kind' of attraction or love",
+        "comparing his wife to past partners or imagined alternatives",
+        "seeking reassurance from his wife or others about the relationship",
+        "avoiding moments of closeness that tend to trigger doubt",
+        "intrusive thoughts that he married the wrong person or doesn't truly love her"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "elevated, tense",
+        "primary_emotion": "anxious guilt"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

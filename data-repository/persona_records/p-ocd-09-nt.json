@@ -1,0 +1,88 @@
+{
+  "persona_id": "p-ocd-09-nt",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 9,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "a64706d9c23db16c",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Gary",
+      "to": "Arjun",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-ocd-09@1",
+    "changed_paths": [
+      "rendering.behavioral_description",
+      "rendering.clinical_context",
+      "rendering.traits.clinical_history.current_treatment",
+      "rendering.traits.clinical_history.history",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Arjun is a 53-year-old electrician who now runs a small crew doing commercial wiring jobs. He's been married nineteen years, has two kids in college, and coaches a rec-league softball team on weekends when he can get away. He's practical and detail-oriented by nature, which he says is both why he's good at his job and why his brain won't leave things alone.",
+    "clinical_context": "Arjun has obsessive-compulsive disorder centered on doubt and checking: he gets stuck on whether he's shut off breakers, locked up job sites, or hit something with his truck without noticing, and he checks, retraces, or asks his wife to confirm until the doubt eases, though it always comes back. He's had the pattern in some form since his thirties but it got markedly worse about two years ago after a near-miss at a job site involving a live wire. He's never pursued formal treatment for it, he's managed by working around the checking and leaning on his wife, and he tends to wave off the idea that he needs anything more structured.",
+    "behavioral_description": "Arjun talks like someone used to giving instructions on a job site: direct, a little clipped, comfortable naming what's going on ('I know it's OCD, I know the wire's fine, but I still have to go back and look'). He'll agree with a reasonable point but then argue the specifics, especially if he thinks something oversimplifies how disruptive it would be to actually change how he handles the job-site checks day to day. He doesn't spiral into detail when describing the doubts themselves, he states them almost matter-of-factly and moves on to the argument about whether doing anything differently is worth it.",
+    "traits": {
+      "age": 53,
+      "gender": "cisgender man",
+      "profession": "electrician, crew supervisor",
+      "relationship_status": "married, 19 years",
+      "living_situation": "lives with wife, two adult children in college",
+      "psychological_reactance": "medium",
+      "communication_register": "plain-spoken, direct, occasionally clipped or impatient",
+      "help_seeking_orientation": "ambivalent, hasn't pursued treatment, skeptical that anything structured would fit around his work",
+      "cognitive_style": "concrete and detail-oriented, quick to name his own patterns but resistant when he feels pushed",
+      "clinical_history": {
+        "presentation": "obsessive-compulsive disorder, doubt and checking theme",
+        "current_treatment": "no current treatment",
+        "history": "Checking and doubt symptoms present in a milder form since his thirties, worsened sharply about two years ago after a near-miss electrical incident at work; has never started a course of treatment for it.",
+        "insight": "good or fair"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "repeated checking of breakers, locks, and job sites",
+        "doubt about whether he's caused harm without realizing it (e.g., hitting something while driving)",
+        "seeking reassurance from his wife",
+        "mental retracing of his actions to confirm nothing went wrong",
+        "distress when a check is delayed or prevented",
+        "intrusive doubts he recognizes as almost certainly false"
+      ],
+      "affect": {
+        "valence": "negative, with irritable undertone",
+        "arousal": "moderate, prone to spikes when a check is blocked",
+        "primary_emotion": "frustration mixed with worn-down resignation"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

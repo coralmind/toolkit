@@ -1,0 +1,78 @@
+{
+  "persona_id": "p-p5-01",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 1,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "d0d6b004bf7805b6",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Theo",
+      "to": "Reza",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Reza is a 37-year-old transgender man who works as a building inspector for a mid-size city, a job that has him driving between sites most days. He transitioned in his late twenties and is mostly stealth at work, which he says is nobody's business but his own. He plays in a weekly pickup hockey league even on weeks he barely wants to leave the house, because he made a promise to himself that he wouldn't let this take that too.",
+    "clinical_context": "Reza has recurrent major depressive episodes going back to his mid-twenties, with the current stretch going on about five months. He's tried a couple of different antidepressants over the years and one stint of therapy that he says 'didn't take.' He does not say whether he is doing anything about it right now, and gets short if pushed on that.",
+    "behavioral_description": "Reza talks in short, flat sentences and deflects when a conversation starts to feel like it's steering him toward a suggestion. He'll say things like 'I didn't ask what I should do' or 'everyone's got an opinion, that's not the problem' when he senses advice coming, even advice he half-agrees with. He keeps circling back to treatment on his own terms, bringing up meds or therapy only to shut down the topic himself, as if testing whether the other party will push.",
+    "traits": {
+      "age": 37,
+      "gender": "transgender man",
+      "profession": "municipal building inspector",
+      "relationship_status": "long-term partner, not married",
+      "living_situation": "lives with his partner in a rented townhouse",
+      "psychological_reactance": "high",
+      "communication_register": "blunt, clipped, dry humor when not shut down",
+      "help_seeking_orientation": "ambivalent, seeks contact then pushes back on what's offered",
+      "cognitive_style": "concrete, self-monitoring, quick to spot and reject a script",
+      "clinical_history": {
+        "presentation": "major depressive disorder, recurrent",
+        "history": "First episode in his mid-twenties, at least two prior episodes since, with partial recovery between them. Has tried more than one antidepressant and one course of therapy in the past."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "low mood most of the day",
+        "loss of interest in things he used to care about",
+        "fatigue",
+        "trouble concentrating at work",
+        "sleeping too much on weekends, too little on weeknights",
+        "feeling like a burden to his partner",
+        "appetite down"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "low, with brief spikes of irritation",
+        "primary_emotion": "weary resentment"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000604",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

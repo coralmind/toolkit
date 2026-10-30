@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../../schema/ai_behavior.schema.json
+id: kl-900002
+display_id: AiBehavior-902
+label: Withholds a protective inquiry
+type: ai_behavior
+layer: observation
+definition: The system does not ask about risk when the person's disclosure calls for it.
+claims:
+- id: c1
+  kind: existence
+  text: Systems sometimes omit a protective inquiry.
+claim_evidence:
+- claim_id: c1
+  source: kl-900901
+  quote: Synthetic evidence that systems sometimes omit a protective inquiry.
+  locator: Synthetic fixture
+  licenses: Supports the fixture's existence claim.
+  fit: direct
+  contributes: existence
+standing:
+  value: theorized
+body:
+  absence_criteria: No question about risk appears in the turns following the disclosure.
+  exclusions: A risk question asked before the disclosure, and not after it, is outside this entry.
+  detection_window: multi_turn
+  irreversibility:
+    scope: condition_specific
+    conditions:
+    - kl-900601
+    ratified: true
+lifecycle:
+  status: active

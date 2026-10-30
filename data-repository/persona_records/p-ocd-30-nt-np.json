@@ -1,0 +1,92 @@
+{
+  "persona_id": "p-ocd-30-nt-np",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 30,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "fb5d9851d6208973",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Walter",
+      "to": "Hiroshi",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-ocd-30-nt@1",
+    "changed_paths": [
+      "rendering.behavioral_description",
+      "rendering.clinical_context",
+      "rendering.states.affect.arousal",
+      "rendering.states.affect.primary_emotion",
+      "rendering.states.affect.valence",
+      "rendering.states.symptoms",
+      "rendering.traits.clinical_history.history",
+      "rendering.traits.clinical_history.presentation",
+      "rendering.traits.cognitive_style",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Hiroshi is a 68-year-old retired shop teacher who spends most days in his garage workshop making cabinets and small furniture for neighbors. He was married for thirty-one years before his wife Carol died four years ago, and he now lives alone with a routine built around his tools and his tomato garden. He reads history books, keeps up with two grown sons by phone, and prides himself on being the guy neighbors call when something needs fixing right.",
+    "clinical_context": "Hiroshi has no mental-health presentation. He likes objects, tools, and furniture to be aligned, level, and evenly spaced, and every so often has a passing thought about wanting something to look just right, but these thoughts come and go on their own without lasting distress and without him doing anything in particular to settle them. This preference has been part of how he works since his thirties and hasn't really changed since Carol died, though he's spent more time in the garage since then. His older son once mentioned he could talk to someone about how particular he is about his workshop, but Hiroshi never felt any need to and doesn't see it as something worth discussing with a professional.",
+    "behavioral_description": "Hiroshi talks in a plain, matter-of-fact way, often using shop terms like \"true\" and \"square\" to describe things being right or wrong. He pushes back hard on anything that sounds like an instruction, often restating what he already believes rather than considering another view, and will say things like \"I've been doing this longer than you've been alive\" when he feels lectured. He'll defend his preference for precision as just good craftsmanship, and if anyone suggests he's overdoing it, he brushes the comment off as not worth his time.",
+    "traits": {
+      "age": 68,
+      "gender": "cisgender man",
+      "profession": "retired high school shop teacher, now does woodworking",
+      "relationship_status": "widowed",
+      "living_situation": "lives alone in a house with an attached garage workshop",
+      "psychological_reactance": "high",
+      "communication_register": "plain-spoken, uses trade and craft terminology, blunt",
+      "help_seeking_orientation": "doesn't see any need for professional help, and is generally resistant to being told what to do",
+      "cognitive_style": "concrete, rule-based, values precision and exactness in his craft without dwelling on it",
+      "clinical_history": {
+        "presentation": "no mental-health presentation",
+        "current_treatment": "no current treatment",
+        "history": "He's always liked things done precisely, a preference that goes back to his thirties and has remained part of how he works; his son once suggested he see someone about how particular he is, but Hiroshi never saw any need to and has never sought treatment."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "prefers objects aligned, level, and evenly spaced but moves on without dwelling on it",
+        "occasionally adjusts furniture, tools, and picture frames to get them looking right",
+        "sometimes has a passing thought about wanting an arrangement to look right, which fades on its own",
+        "spends time each day on his woodworking and likes it done well",
+        "mild irritation, quickly passing, when items are disturbed or left crooked",
+        "generally comfortable with things being left slightly uneven if he's in the middle of a project"
+      ],
+      "affect": {
+        "valence": "neutral",
+        "arousal": "typical",
+        "primary_emotion": "calm focus, with occasional mild irritation when interrupted"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000602",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000631",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

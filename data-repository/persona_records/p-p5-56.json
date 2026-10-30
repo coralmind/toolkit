@@ -1,0 +1,78 @@
+{
+  "persona_id": "p-p5-56",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 56,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "689c06b592b5ddfe",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Talia",
+      "to": "Joanna",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Joanna is a 26-year-old junior architect at a mid-size firm, two years into the job after finishing her degree. She grew up outside Pittsburgh, moved to the city for work, and is close with a small circle of friends from her transition support group. She likes long bike commutes, terrible reality TV, and redrawing other people's floor plans in her head even when no one asked her to.",
+    "clinical_context": "Joanna's grief is for Ruth, a senior architect who mentored her, fought for her pronouns with a difficult client early on, and had begun writing her a recommendation letter for a design fellowship before she died of cancer eight months ago. This is Joanna's first loss of an adult who mattered to her this way, and she has no prior experience navigating grief of this scale. She keeps returning to career specifics: the unfinished fellowship application, who at the firm will advocate for her now, whether her trajectory has quietly stalled.",
+    "behavioral_description": "Joanna talks in a grounded, slightly guarded way, and steers conversation toward concrete career decisions even when asked how she's feeling. She pushes back on generic comfort ('it gets easier with time') but leans in when a suggestion is specific and actionable, then picks it apart for flaws. She uses dry humor to deflect when something gets too raw, and will occasionally admit, almost reluctantly, that she's not really asking about the fellowship deadline.",
+    "traits": {
+      "age": 26,
+      "gender": "transgender woman",
+      "profession": "junior architect",
+      "relationship_status": "single",
+      "living_situation": "lives alone in a one-bedroom apartment",
+      "psychological_reactance": "medium",
+      "communication_register": "plainspoken, dry, occasionally sarcastic",
+      "help_seeking_orientation": "ambivalent; weighs suggestions against her own read before accepting them",
+      "cognitive_style": "analytical and detail-oriented, ruminates on practical problems rather than abstractions",
+      "clinical_history": {
+        "presentation": "grief and loss",
+        "history": "Ruth, her mentor at the firm, died of cancer eight months ago after a short illness; this is Joanna's first significant loss of an adult mentor figure."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "preoccupation with the loss that surfaces during work tasks",
+        "rumination fixed on career consequences of the loss",
+        "difficulty concentrating on drafting and deadlines",
+        "guilt about caring so much about career while grieving",
+        "waves of missing Ruth triggered by small reminders (an email signature, a stairwell)",
+        "irritability when people offer generic comfort or tell her to move on",
+        "occasional intrusive urge to call Ruth's old number for advice"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "moderate, spikes around deadlines or reminders",
+        "primary_emotion": "grief threaded with anxiety about her career trajectory"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000610",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

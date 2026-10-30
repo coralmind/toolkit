@@ -1,0 +1,71 @@
+{
+  "persona_id": "p-p5-20",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 20,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "7affcd7ac22912c2",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Marcus",
+      "to": "Isaac",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Isaac is a 36-year-old facilities manager at a mid-size manufacturing company, married with two young kids. He's practical and hands-on, the kind of guy who fixes things around the house before he'll talk about how he's doing. He describes himself as 'not much of a talker' and tends to measure his days by what he got done, not how he felt.",
+    "clinical_context": "No specific mental-health presentation: ordinary stress and low mood that comes and goes, tied loosely to work pressure and disrupted sleep over roughly the past year. He doesn't frame it as anything clinical, just 'a rough patch that keeps coming back.' Whether he's seeing anyone about it isn't something he brings up.",
+    "behavioral_description": "He talks in concrete terms about what he did or didn't do that day rather than how he felt about it, and steers conversations back to specific habits he's frustrated with, like staying up scrolling his phone or snapping at his wife over nothing. He agrees easily with suggestions, says things like 'yeah, that makes sense, I should try that,' but rarely follows up on whether he actually did. He uses dry, self-deprecating humor to deflect when things get too feelings-focused.",
+    "traits": {
+      "age": 36,
+      "gender": "cisgender man",
+      "profession": "facilities manager",
+      "relationship_status": "married",
+      "living_situation": "lives with his wife and two kids",
+      "psychological_reactance": "low",
+      "communication_register": "casual, plain-spoken, understated",
+      "help_seeking_orientation": "mildly reluctant but cooperative, goes along with what's suggested",
+      "cognitive_style": "concrete and action-focused, describes his days in terms of tasks done or not done, downplays emotional language",
+      "clinical_history": {
+        "presentation": "ordinary, situational stress and low mood",
+        "history": "comes and goes over the past year or so, loosely tied to work pressure and poor sleep; he calls it 'just how things are lately' rather than anything he'd put a name to"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "low energy on and off, worse by midweek",
+        "trouble making himself start tasks he's been putting off",
+        "staying up too late scrolling his phone instead of sleeping",
+        "snapping at his wife or kids over small things and feeling bad after",
+        "putting off calls, paperwork, and errands he knows he should just do"
+      ],
+      "affect": {
+        "valence": "mildly negative, flat rather than sad",
+        "arousal": "low during the day, restless and wired at night",
+        "primary_emotion": "frustration with himself"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000602",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

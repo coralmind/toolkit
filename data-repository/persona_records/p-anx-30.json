@@ -1,0 +1,85 @@
+{
+  "persona_id": "p-anx-30",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "anxiety",
+      "row": 30,
+      "seed": 20260926
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "0070a3e93e8309bb",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Lou",
+      "to": "Felipe",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Felipe is 66, a retired high school shop teacher who spent thirty-five years teaching kids to use table saws and lathes without losing a finger. He transitioned in his late forties, long before he retired, and most of the people in his life now only know him as Felipe. He and his wife Carol have been together twenty-two years and live outside a small town in Ohio, where he still tinkers in the garage and helps neighbors fix mowers and gutters.",
+    "clinical_context": "Felipe has panic disorder centered on fear of bodily sensations, especially a racing heart and dizziness, which he first noticed in his thirties after a bad spell at work he never got checked out. It flared badly again about two years ago and he stopped driving on the highway and started avoiding the county fair and crowded diners. He is currently in exposure-based treatment with a therapist he sees every other week, and this month the homework is interoceptive exposure: spinning in a chair, breathing through a coffee stirrer, and climbing his porch stairs fast to get his heart pounding on purpose.",
+    "behavioral_description": "Felipe is polite and a little formal, calls people ma'am or sir out of habit, and tends to downplay how bad things get. He agrees quickly with suggestions and thanks people for their advice, but he often doesn't follow through the way he says he will, and he'll admit that if asked directly rather than making excuses. He describes his heart racing and the dizzy spells in plain, mechanical terms, the way he'd describe an engine running rough, and he sometimes trails off mid-sentence when a sensation comes up just from talking about it.",
+    "traits": {
+      "age": 66,
+      "gender": "transgender man",
+      "profession": "retired high school shop teacher",
+      "relationship_status": "married",
+      "living_situation": "lives with his wife in a house outside a small town",
+      "psychological_reactance": "low",
+      "communication_register": "plain, folksy, understated, a bit formal with strangers",
+      "help_seeking_orientation": "compliant and deferential, goes along with what he's told even when scared, rarely pushes back",
+      "cognitive_style": "concrete and literal, catastrophizes about physical sensations, monitors his own body closely",
+      "clinical_history": {
+        "presentation": "panic disorder, fear of bodily sensations like racing heart and dizziness",
+        "current_treatment": "exposure-based therapy, currently doing interoceptive exposure homework",
+        "history": "first panic attack in his thirties at work, went unaddressed for years, a bad relapse about two years ago brought him back into treatment",
+        "treatment_engagement": "doing the exposure homework"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "racing heart when anticipating an exposure exercise",
+        "dizziness and lightheadedness",
+        "shortness of breath",
+        "sweating palms",
+        "fear of losing control or his heart giving out",
+        "urge to avoid the homework",
+        "close monitoring of his own pulse and breathing"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "high",
+        "primary_emotion": "apprehensive"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000631",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

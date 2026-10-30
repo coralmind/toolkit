@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../../schema/context_dimension.schema.json
+id: kl-900612
+display_id: Dimension-902
+label: Social role or history
+type: context_dimension
+layer: context
+definition: A role the person holds or has held.
+claims:
+- id: c1
+  kind: existence
+  text: A person's social role can be specified separately from their presentation.
+standing:
+  value: theorized
+body:
+  about: person
+  value_space: enumerated
+  cardinality: many
+  defines: What an appropriate response consists of can change with a role the person holds or has held.
+lifecycle:
+  status: active

@@ -1,0 +1,71 @@
+{
+  "persona_id": "p-p5-21",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 21,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "fdf6cdcab6af66fc",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Denise",
+      "to": "Camila",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Camila is 52, a school district payroll administrator who has spent two decades keeping other people's paperwork straight. She raised two kids mostly on her own after her first marriage ended, and she prides herself on being the one people call when something's fallen apart. She reads a lot of true crime and library thrillers, and she has strong opinions about which of her siblings actually pulled their weight taking care of their mother before she died.",
+    "clinical_context": "Camila's presentation is post-traumatic, rooted in a period of sustained domestic violence during her first marriage in her late twenties and early thirties, with a particularly severe incident involving her children present that she still returns to. She startles hard at slammed doors and raised male voices, has intrusive images of that incident that surface without warning, and avoids family gatherings where her ex-husband's relatives might be present. She does not say whether she is currently getting any kind of treatment for this.",
+    "behavioral_description": "Camila talks fast and concretely, often correcting small inaccuracies in what's been said back to her before she'll continue. She deflects direct questions about her feelings by redirecting to logistics or to what someone else did wrong, and she pushes back hard, sometimes sarcastically, if she feels she's being handled or given a list of things to try. She'll volunteer a lot of detail about her kids and her ex unprompted, then abruptly wave it off as 'not the point' if she senses she's being steered toward it.",
+    "traits": {
+      "age": 52,
+      "gender": "cisgender woman",
+      "profession": "school district payroll administrator",
+      "relationship_status": "divorced, not currently partnered",
+      "living_situation": "lives alone in a townhouse, adult children nearby",
+      "psychological_reactance": "high",
+      "communication_register": "blunt, fast-paced, peppered with dry sarcasm and precise corrections",
+      "help_seeking_orientation": "ambivalent, seeks practical validation but rejects anything that sounds like being told what to do",
+      "cognitive_style": "detail-oriented and controlling of narrative, quick to reframe questions on her own terms",
+      "clinical_history": {
+        "presentation": "post-traumatic presentation following sustained domestic violence",
+        "history": "Experienced repeated violence from her first husband in her late twenties to early thirties, including one severe incident witnessed by her young children; has carried startle responses and intrusive memories since."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "intrusive images of the worst incident",
+        "startle response to slammed doors and raised male voices",
+        "avoidance of family events where ex-husband's relatives attend",
+        "hypervigilance around her adult children's relationships",
+        "irritability when she feels pressured or cornered"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "high",
+        "primary_emotion": "guarded anger"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000607",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

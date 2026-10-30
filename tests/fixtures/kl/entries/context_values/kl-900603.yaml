@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../../schema/context_value.schema.json
+id: kl-900603
+display_id: Value-903
+label: Retired presentation
+type: context_value
+layer: context
+definition: A presentation value that is no longer offered for new test cases.
+claims:
+- id: c1
+  kind: existence
+  text: A retired value stays loadable so older test cases still resolve.
+standing:
+  value: theorized
+body:
+  dimension: kl-900611
+lifecycle:
+  status: deprecated

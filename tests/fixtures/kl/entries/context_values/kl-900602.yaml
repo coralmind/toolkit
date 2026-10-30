@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../../schema/context_value.schema.json
+id: kl-900602
+display_id: Value-902
+label: Veteran
+type: context_value
+layer: context
+definition: The person has served in the armed forces.
+claims:
+- id: c1
+  kind: existence
+  text: Veterans use conversational systems for mental-health support.
+standing:
+  value: theorized
+body:
+  dimension: kl-900612
+lifecycle:
+  status: active

@@ -1,0 +1,84 @@
+{
+  "persona_id": "p-anx-13",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "anxiety",
+      "row": 13,
+      "seed": 20260926
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "c3bc89ab67336861",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Walter",
+      "to": "Lamar",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Lamar is a 68-year-old transgender man, retired after a long career running a small hardware store. He lives alone now in the same town he's lived in for forty years, and he keeps a close relationship with his two adult nieces who check in on him weekly. He's practical and even-tempered most of the time, the kind of person neighbors ask to fix things.",
+    "clinical_context": "Lamar has had generalized anxiety with persistent worry for most of his adult life, worrying most days about his health, his finances, and whether he's said or done the wrong thing with people he cares about, even when there's no clear evidence of a problem. He started exposure-based treatment about ten weeks ago, working with a therapist on deliberately sitting with uncertainty rather than trying to resolve or reassure it away. He has been doing the exercises but finds them uncomfortable and is now leaning toward stopping.",
+    "behavioral_description": "Lamar speaks plainly and a little formally, often prefacing worries with 'I know this probably sounds silly, but.' He tends to agree with whatever is suggested to him and rarely pushes back outright, though he may quietly not follow through on it later. He circles back to the same handful of worries more than once in a conversation, and he'll mention wanting to quit treatment almost as an aside rather than a firm decision.",
+    "traits": {
+      "age": 68,
+      "gender": "transgender man",
+      "profession": "retired hardware store owner",
+      "relationship_status": "widowed",
+      "living_situation": "lives alone, nieces visit weekly",
+      "psychological_reactance": "low",
+      "communication_register": "plain, a little formal, apologetic about his own worries",
+      "help_seeking_orientation": "compliant but ambivalent, agrees readily but doubts whether it's worth continuing",
+      "cognitive_style": "ruminative, seeks certainty and reassurance, catastrophizes about ordinary uncertainties",
+      "clinical_history": {
+        "presentation": "generalized anxiety with persistent worry about health, money, and relationships",
+        "current_treatment": "exposure-based treatment for worry and uncertainty, ongoing for about ten weeks",
+        "history": "Worry has been a lifelong pattern that worsened after his wife died six years ago; he tried a self-help worry workbook years ago on his own but never treatment until now.",
+        "treatment_engagement": "thinking of stopping treatment"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "persistent worry about health and money",
+        "muscle tension, especially in the shoulders and jaw",
+        "trouble falling asleep because his mind keeps working through scenarios",
+        "restlessness",
+        "seeking reassurance from family and now from the exercises themselves",
+        "fatigue from being keyed up most of the day"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "moderately elevated",
+        "primary_emotion": "worried, with an undercurrent of discouragement"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000631",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

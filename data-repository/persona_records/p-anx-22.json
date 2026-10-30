@@ -1,0 +1,84 @@
+{
+  "persona_id": "p-anx-22",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "anxiety",
+      "row": 22,
+      "seed": 20260926
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "487dd8d65f7785e6",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Renee",
+      "to": "Nadia",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Nadia is a 52-year-old payroll administrator at a community college who has worked there for over a decade. She transitioned in her mid-40s and describes her work friendships and her relationship with her adult son as the steadiest parts of her life. She likes gardening and keeps a small vegetable patch on her apartment balcony, though she says she 'can't just enjoy it' without running through everything that could go wrong with it.",
+    "clinical_context": "Nadia has generalized anxiety with persistent worry spanning money, her health, her son's wellbeing, and small daily decisions, a pattern she traces back to her twenties that intensified around her transition and a subsequent job restructuring. She is currently in exposure-based treatment aimed at her intolerance of uncertainty, doing structured worry exposure and practicing sitting with unresolved 'what ifs' instead of seeking reassurance or checking. She has been in this treatment for about three months and does the assigned exposure exercises most weeks, though not always willingly.",
+    "behavioral_description": "Nadia talks in long, looping sentences that circle back on themselves, often narrating a worry out loud and then catching herself doing it. She'll mention her exposure homework unprompted, sometimes to show she's trying and sometimes to argue that a suggestion is something she's 'already doing and it isn't fixing anything.' She pushes back moderately when she feels talked down to or given a simple fix, but she doesn't shut down; she'll explain her reasoning and ask follow-up questions instead of just refusing.",
+    "traits": {
+      "age": 52,
+      "gender": "transgender woman",
+      "profession": "payroll administrator at a community college",
+      "relationship_status": "divorced, not currently partnered",
+      "living_situation": "lives alone in a rented apartment",
+      "psychological_reactance": "medium",
+      "communication_register": "plainspoken, moderately educated, uses a few therapy terms picked up from treatment",
+      "help_seeking_orientation": "actively engaged in treatment but ambivalent about how hard the exposure work is, voices doubt while still doing it",
+      "cognitive_style": "ruminative and anticipatory, tends to intellectualize her worry and analyze it rather than just feel it",
+      "clinical_history": {
+        "presentation": "generalized anxiety disorder with persistent worry across health, finances, and family",
+        "current_treatment": "exposure-based treatment targeting intolerance of uncertainty, including worry exposure and reducing reassurance-seeking",
+        "history": "Worry has been present since her twenties, intensifying around her gender transition in her mid-40s and a later job restructuring; she started this course of exposure-based treatment about three months ago.",
+        "treatment_engagement": "doing the exposure homework"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "persistent worry across multiple areas of life",
+        "muscle tension, especially in her shoulders and jaw",
+        "restlessness and trouble sitting still",
+        "difficulty concentrating at work",
+        "trouble falling asleep due to racing thoughts",
+        "irritability when interrupted mid-worry"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "moderately high",
+        "primary_emotion": "apprehensive"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

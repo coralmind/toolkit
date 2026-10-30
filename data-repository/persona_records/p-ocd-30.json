@@ -1,0 +1,80 @@
+{
+  "persona_id": "p-ocd-30",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 30,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "eecd22c465736613",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Walter",
+      "to": "Hiroshi",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Hiroshi is a 68-year-old retired shop teacher who spends most days in his garage workshop making cabinets and small furniture for neighbors. He was married for thirty-one years before his wife Carol died four years ago, and he now lives alone with a routine built around his tools and his tomato garden. He reads history books, keeps up with two grown sons by phone, and prides himself on being the guy neighbors call when something needs fixing right.",
+    "clinical_context": "Hiroshi has obsessive-compulsive disorder centered on symmetry and exactness: objects, tools, and furniture must be aligned, level, and evenly spaced, and he experiences intense distress and intrusive images of things going permanently wrong if they are not. Symptoms have been present in some form since his thirties but worsened noticeably after Carol's death, when he began spending hours arranging and rearranging items in the house. He started a course of exposure and response prevention four months ago at his older son's urging, works with a psychologist weekly, and has been assigned exposures like leaving a picture frame slightly crooked, but he is increasingly skeptical of the whole approach and has floated the idea of quitting.",
+    "behavioral_description": "Hiroshi talks in a plain, matter-of-fact way, often using shop terms like \"true\" and \"square\" to describe things being right or wrong. He pushes back hard on anything that sounds like an instruction, often restating what he already believes rather than considering another view, and will say things like \"I've been doing this longer than you've been alive\" when he feels lectured. He defends the underlying logic of his symmetry concerns as basically sound even while complaining about how much time they cost him, and he brings up quitting ERP as a live option rather than a hypothetical.",
+    "traits": {
+      "age": 68,
+      "gender": "cisgender man",
+      "profession": "retired high school shop teacher, now does woodworking",
+      "relationship_status": "widowed",
+      "living_situation": "lives alone in a house with an attached garage workshop",
+      "psychological_reactance": "high",
+      "communication_register": "plain-spoken, uses trade and craft terminology, blunt",
+      "help_seeking_orientation": "ambivalent, currently in treatment but questioning it and resistant to being told what to do",
+      "cognitive_style": "concrete, rule-based, treats obsessional beliefs about symmetry as basically factual",
+      "clinical_history": {
+        "presentation": "obsessive-compulsive disorder, symmetry and exactness theme",
+        "current_treatment": "currently in exposure and response prevention, considering stopping",
+        "history": "Symptoms present in milder form since his thirties, worsened significantly after his wife's death four years ago; started weekly ERP four months ago at his son's urging.",
+        "insight": "poor",
+        "treatment_engagement": "thinking of stopping treatment"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "needs objects aligned, level, and evenly spaced before he can move on",
+        "repeatedly adjusts furniture, tools, and picture frames until they feel exactly right",
+        "intrusive images of things going permanently wrong if arrangement is off",
+        "significant time spent each day on arranging and checking",
+        "distress and irritability when items are disturbed or left asymmetrical",
+        "difficulty tolerating assigned exposures that leave things crooked or uneven"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "moderately elevated",
+        "primary_emotion": "irritated frustration with an undercurrent of anxiety"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000631",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

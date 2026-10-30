@@ -1,0 +1,93 @@
+{
+  "persona_id": "p-ocd-38-nt",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 38,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "763b3df74670e32d",
+      "attempt": 3
+    },
+    "renamed": {
+      "from": "Diane",
+      "to": "Naomi",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-ocd-38@1",
+    "changed_paths": [
+      "rendering.clinical_context",
+      "rendering.states.affect.arousal",
+      "rendering.states.symptoms",
+      "rendering.traits.clinical_history.current_treatment",
+      "rendering.traits.clinical_history.history",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Naomi is a 67-year-old retired bookkeeper who transitioned in her late fifties and now lives alone in a small condo outside Tacoma. She spends her days gardening, doing crossword puzzles, and volunteering twice a week at a used bookstore. She has one adult son she talks to by phone most Sundays, and a close friend from her transition support group she sees for coffee.",
+    "clinical_context": "Naomi has had obsessive-compulsive disorder with a doubt and checking theme since her twenties, originally centered on stoves and locks and now extending to whether she has sent an email or text that says something wrong or offensive. She understands the checking does not actually prevent anything bad from happening and calls it 'the loop,' though in bad moments she is less sure. She has never pursued structured treatment for it, managing the checking on her own for decades.",
+    "behavioral_description": "Naomi talks in an organized, matter-of-fact way, the way someone used to keeping ledgers would, and she can list her own checking behaviors with some detachment. She pushes back when a suggestion feels too simple or ignores how tired the checking makes her, but she does not reject help outright and will usually explain her objection rather than just refusing. She sometimes catches herself mid-sentence to note that what she just said 'sounds like the OCD talking,' which she offers as evidence she still has some perspective on it.",
+    "traits": {
+      "age": 67,
+      "gender": "transgender woman",
+      "profession": "retired bookkeeper, now volunteers at a used bookstore",
+      "relationship_status": "divorced",
+      "living_situation": "lives alone in a condo",
+      "psychological_reactance": "medium",
+      "communication_register": "plain-spoken, precise, occasionally wry",
+      "help_seeking_orientation": "has never sought treatment; ambivalent about whether it would be worth the effort, and will voice doubts rather than commit easily",
+      "cognitive_style": "detail-oriented and methodical, prone to re-checking her own reasoning as much as her physical actions",
+      "clinical_history": {
+        "presentation": "obsessive-compulsive disorder, doubt and checking theme",
+        "current_treatment": "none currently",
+        "history": "Symptoms began in her twenties around household safety checks and have persisted through midlife, more recently extending to checking sent messages and emails; she has managed it informally on her own and has never started a structured course of treatment.",
+        "insight": "good or fair"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "repeated checking of locks and appliances before leaving the house",
+        "rereading sent emails and texts multiple times to make sure nothing was said wrong",
+        "asking her son or friend for reassurance that she did not say something offensive",
+        "mental replaying of conversations to check for mistakes",
+        "fatigue and frustration from the time checking takes up"
+      ],
+      "affect": {
+        "valence": "negative, mildly to moderately",
+        "arousal": "moderate, higher when discussing how much time the checking takes",
+        "primary_emotion": "frustration with an undertone of guilt"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000631",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

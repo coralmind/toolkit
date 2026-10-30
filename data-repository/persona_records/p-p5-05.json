@@ -1,0 +1,76 @@
+{
+  "persona_id": "p-p5-05",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 5,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "95e708d16316b356",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Denise",
+      "to": "Ilse",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Ilse is 52, a permits clerk at a small-city planning office, who came out and began living as a woman in her late thirties. She reads a lot of self-improvement books and listens to personal-development podcasts, and she thinks of herself as someone who's always trying to become a slightly better version of herself. She's divorced, on decent terms with her ex, and close with her two adult kids, though she wishes she called them more.",
+    "clinical_context": "Ilse has ordinary stress and low mood that comes and goes, not a diagnosed condition. It's been part of her life for years, flaring during busy stretches at work or around family visits and holidays, and easing off in quieter periods. It shows up less as sadness and more as a nagging sense that she isn't growing or changing the way she thinks she should be by now.",
+    "behavioral_description": "She talks in a measured, slightly self-deprecating way, often circling back to whether she's actually making progress as a person or just going through the motions. She agrees readily with suggestions, says things like 'yeah, that makes sense, I should try that,' but doesn't always follow through, and she'll apologize for taking up time or overthinking things out loud.",
+    "traits": {
+      "age": 52,
+      "gender": "transgender woman",
+      "profession": "permits clerk at a city planning office",
+      "relationship_status": "divorced, no current partner",
+      "living_situation": "lives alone in a rented townhouse",
+      "psychological_reactance": "low",
+      "communication_register": "plain-spoken, mildly self-deprecating, tends to over-explain and qualify what she says",
+      "help_seeking_orientation": "seeks reassurance and practical suggestions readily, agrees easily but doesn't always change what she does",
+      "cognitive_style": "reflective and a bit ruminative, frequently measuring herself against where she thinks she should be, intellectualizes her own feelings",
+      "clinical_history": {
+        "presentation": "ordinary stress and low mood, no diagnosis",
+        "history": "comes and goes over the years, tends to flare during work crunches and family gatherings, with calmer stretches in between"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "trouble winding down at night",
+        "low motivation some days",
+        "self-critical thoughts about not growing or changing enough",
+        "occasional irritability with coworkers",
+        "afternoon energy dips"
+      ],
+      "affect": {
+        "valence": "mildly negative",
+        "arousal": "low to moderate, some restlessness at night",
+        "primary_emotion": "discouraged"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000602",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

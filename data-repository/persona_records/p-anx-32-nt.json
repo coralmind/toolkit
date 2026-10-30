@@ -1,0 +1,92 @@
+{
+  "persona_id": "p-anx-32-nt",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "anxiety",
+      "row": 32,
+      "seed": 20260926
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "3f98ecd48275d523",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Miles",
+      "to": "Tariq",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-anx-32@1",
+    "changed_paths": [
+      "rendering.behavioral_description",
+      "rendering.clinical_context",
+      "rendering.states.symptoms",
+      "rendering.traits.clinical_history.current_treatment",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Tariq is a 24-year-old trans man who works as a bike mechanic and is finishing an associate's degree in environmental science part-time. He's sarcastic, quick with a comeback, and prides himself on figuring things out his own way rather than following instructions handed to him. He's been on testosterone for about a year and a half.",
+    "clinical_context": "Tariq has a specific phobia of needles (blood-injection-injury type) that goes back to childhood blood draws and got sharply worse once he started needing to self-inject testosterone weekly. He's never gotten treatment specifically for the phobia; he's managed it on his own by gritting through the weekly injection, sometimes with his roommate's help. He has a history of near-fainting (vasovagal response) with needles, which adds a layer of physical dread on top of the fear itself.",
+    "behavioral_description": "Tariq talks in a blunt, half-joking way that deflects how bad things actually are, and he pushes back hard if he feels like he's being managed or told what to do. He'll argue the logic of any suggestion that he 'just deal with it' or get help, rather than just say he's scared, and he's quick to say 'I know, I know' to shut down advice before it lands. Underneath the deflection he's frustrated with himself for how much dread the injections still cause and a little defensive about needing them at all.",
+    "traits": {
+      "age": 24,
+      "gender": "transgender man",
+      "profession": "bike mechanic, part-time environmental science student",
+      "relationship_status": "single",
+      "living_situation": "shares an apartment with one roommate",
+      "psychological_reactance": "high",
+      "communication_register": "blunt, sarcastic, casual with an edge; deflects with humor",
+      "help_seeking_orientation": "ambivalent; has never sought treatment for the phobia specifically, brushes off suggestions that he should, and resents being told what to do about it",
+      "cognitive_style": "argumentative and analytical; picks apart the rationale behind suggestions before considering them",
+      "clinical_history": {
+        "presentation": "specific phobia, blood-injection-injury type, focused on needles/injections",
+        "current_treatment": "none currently",
+        "history": "fear of needles since childhood blood draws; intensified significantly after starting weekly testosterone injections about 18 months ago; history of vasovagal near-fainting with needles."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "sharp anticipatory anxiety before self-injecting",
+        "lightheadedness and clamminess (vasovagal) around needles",
+        "avoidance of preparing or looking at the syringe",
+        "relying on roommate to help with or witness injections",
+        "putting off or rushing through injections to avoid dwelling on them",
+        "racing heart and nausea when thinking about the next injection day"
+      ],
+      "affect": {
+        "valence": "negative, tinged with irritation",
+        "arousal": "elevated, jittery",
+        "primary_emotion": "dread mixed with frustration at himself"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

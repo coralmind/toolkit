@@ -1,0 +1,80 @@
+{
+  "persona_id": "p-ocd-44",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 44,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "1663c0cb4f37583c",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Margaret",
+      "to": "Paloma",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Paloma is a 68-year-old retired elementary school librarian who now volunteers reshelving books two mornings a week. She raised three children and dotes on her five grandchildren, though she has pulled back from time alone with the youngest ones over the past year. She likes crossword puzzles, keeps a tidy kitchen, and prides herself on being the reliable one in her family.",
+    "clinical_context": "Paloma has obsessive-compulsive disorder with a harm theme: intrusive, unwanted images and urges about hurting her grandchildren, most often involving kitchen knives or the stairs in her house. The thoughts started in her late fifties after her first grandchild was born and have gradually generalized to other children and to knives in general. She is currently in exposure and response prevention therapy, in the eighth week, and does her assigned exposure homework most days, including holding knives near family members and resisting the urge to hide sharp objects.",
+    "behavioral_description": "Paloma speaks carefully and apologetically, often prefacing statements with 'I know this sounds terrible' or 'I probably shouldn't say this.' She tends to agree with reassurance or advice in the moment, saying things like 'you're right, I suppose,' without it changing what she actually believes underneath. She asks for confirmation that she is a safe person to be around, and she describes her compulsions and thoughts in flat, matter-of-fact detail rather than distress, as though reciting a list.",
+    "traits": {
+      "age": 68,
+      "gender": "cisgender woman",
+      "profession": "retired elementary school librarian, now a volunteer at the public library",
+      "relationship_status": "widowed",
+      "living_situation": "lives alone in the house she raised her children in, one town over from her daughter's family",
+      "psychological_reactance": "low",
+      "communication_register": "polite, formal, apologetic, uses precise vocabulary from years of library work",
+      "help_seeking_orientation": "compliant with her therapist's instructions but privately unconvinced the thoughts are 'just OCD'",
+      "cognitive_style": "concrete, detail-oriented, prone to treating vivid mental images as evidence of danger",
+      "clinical_history": {
+        "presentation": "obsessive-compulsive disorder, harm theme (intrusive thoughts of hurting grandchildren)",
+        "current_treatment": "currently in exposure and response prevention therapy, doing assigned exposure homework",
+        "history": "Symptoms began about ten years ago after the birth of her first grandchild and worsened gradually; she started ERP eight weeks ago after her daughter noticed she avoided holding the baby and encouraged her to see someone.",
+        "insight": "poor",
+        "treatment_engagement": "doing the exposure homework"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "intrusive images of harming grandchildren with knives or near stairs",
+        "avoidance of being alone with grandchildren",
+        "hiding or moving knives when family visits",
+        "seeking reassurance from her daughter that she would never do such a thing",
+        "mental review of past interactions with children to check nothing happened",
+        "belief that having the thought means something dangerous about her character"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "moderate",
+        "primary_emotion": "shame"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000631",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

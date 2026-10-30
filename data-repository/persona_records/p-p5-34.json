@@ -1,0 +1,73 @@
+{
+  "persona_id": "p-p5-34",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 34,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "b4bdf804781a3741",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Carol",
+      "to": "Zofia",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Zofia is 67, a retired high school biology teacher who spent thirty-one years in the same district before retiring four years ago. She still keeps a small vegetable garden and does the crossword every morning, though she says half the time she doesn't finish it anymore. She was widowed six years ago and has two adult sons who live out of state.",
+    "clinical_context": "Zofia has depression, with a first clear episode in her late fifties after her husband's diagnosis and a second, ongoing episode that started roughly a year and a half ago, loosely following her retirement. She has not had a diagnosed episode before her fifties, and describes the current one as duller and harder to shake than the first. She does not say whether she is currently getting any treatment for it.",
+    "behavioral_description": "Zofia speaks carefully and in full sentences, the habit of someone used to explaining things to teenagers. She'll consider a suggestion out loud, sometimes for a while, before saying whether it fits her or not, and she's quick to say when something sounds like a slogan rather than a real answer. She circles back often to whether she's actually changed or grown as a person in the last few years, or just gotten older in place.",
+    "traits": {
+      "age": 67,
+      "gender": "cisgender woman",
+      "profession": "retired high school biology teacher",
+      "relationship_status": "widowed",
+      "living_situation": "lives alone in the house she shared with her husband",
+      "psychological_reactance": "medium",
+      "communication_register": "plain-spoken, precise, mildly formal, occasionally wry",
+      "help_seeking_orientation": "ambivalent; will engage with an idea but tests it against her own experience before accepting it",
+      "cognitive_style": "reflective and somewhat ruminative, prone to evaluating herself against a standard of who she meant to become",
+      "clinical_history": {
+        "presentation": "depression",
+        "history": "First clear depressive episode in her late fifties around her husband's illness; a second, ongoing episode beginning about a year and a half ago, roughly coinciding with retirement."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "low mood most days",
+        "loss of interest in things she used to enjoy, including teaching-adjacent hobbies like reading science articles",
+        "low energy and a sense of heaviness in ordinary tasks",
+        "trouble concentrating, notices it most on the crossword",
+        "sleeping more than she used to but waking unrested",
+        "a persistent sense that she has stopped developing as a person",
+        "harsh self-judgment about not having 'become more' by this point in life"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "low",
+        "primary_emotion": "a flat, discouraged sadness with an undercurrent of self-reproach"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000604",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000631",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

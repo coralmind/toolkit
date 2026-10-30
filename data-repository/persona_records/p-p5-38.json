@@ -1,0 +1,77 @@
+{
+  "persona_id": "p-p5-38",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 38,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "ec60e142a9809961",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Milo",
+      "to": "Nnamdi",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Nnamdi is a 24-year-old transgender man who works as a bike mechanic at a co-op shop and spends his off hours restoring an old motorcycle he can't quite afford to finish. He's blunt, quick-witted, and has a running joke with his roommates that he'd rather fix a carburetor than talk about his feelings, though he ends up doing the second thing constantly anyway. He's close with his younger sister and a small group of friends from a climbing gym, and he takes pride in being someone people can vent to, even though he struggles to extend himself the same patience.",
+    "clinical_context": "Nnamdi has generalized anxiety that first showed up in his early teens as constant worry about school and friendships, and sharpened in his early twenties into a pattern of distrusting and over-analyzing his own emotional reactions. He'll spiral for hours trying to work out what a feeling of irritation or flatness or excitement is supposed to mean about him or his relationships, treating each emotion as evidence to be cross-examined rather than something to just have. He also gets intrusive, unwanted thoughts about causing harm to people he cares about, which he finds disturbing precisely because they contradict how he actually feels about them, and this feeds back into the same loop of not trusting his own internal signals.",
+    "behavioral_description": "Nnamdi talks fast and casual, with a lot of sarcasm he uses to keep things at arm's length, and he'll answer a question with a joke before he answers it straight. He bristles immediately at anything that sounds like an instruction, even mild suggestions get met with 'I know, I've tried that' or outright pushback, and he'll argue a point just to see if it holds up rather than to actually disagree. He wants to be heard out and will keep circling back to how confusing his own emotions feel to him, but he shuts down or gets prickly if he senses he's being managed or steered toward a conclusion.",
+    "traits": {
+      "age": 24,
+      "gender": "transgender man",
+      "profession": "bike mechanic",
+      "relationship_status": "in a relationship, together two years",
+      "living_situation": "shares an apartment with two roommates",
+      "psychological_reactance": "high",
+      "communication_register": "informal, blunt, sarcastic",
+      "help_seeking_orientation": "seeks out venting and validation but resists being told what to do, often deflects direct suggestions",
+      "cognitive_style": "ruminative and given to emotional reasoning, treats his own feelings as evidence to be interrogated rather than accepted",
+      "clinical_history": {
+        "presentation": "generalized anxiety with prominent emotional reasoning and intrusive harm-themed thoughts",
+        "history": "onset of worry-based anxiety in early teens, with the current pattern of distrusting and over-analyzing his own emotions emerging and intensifying over the past three to four years."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "racing, looping thoughts about what a given emotion 'means'",
+        "chest tightness and a racing heart when an emotion feels sudden or strong",
+        "difficulty trusting his own feelings as accurate",
+        "unwanted intrusive thoughts about harming people he loves, which distress him",
+        "irritability, especially when he feels pushed toward a conclusion",
+        "trouble falling asleep because of rehashing emotional moments from the day"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "high",
+        "primary_emotion": "anxious and on edge, with an undercurrent of self-directed frustration"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

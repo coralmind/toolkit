@@ -1,0 +1,93 @@
+{
+  "persona_id": "p-ocd-19-nt-np",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 19,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "variant.md",
+      "template_version": "1",
+      "prompt_hash": "b2b2fc1175826a14",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Dennis",
+      "to": "Cyrus",
+      "by": "names.py"
+    }
+  },
+  "variant_of": {
+    "persona": "p-ocd-19-nt@1",
+    "changed_paths": [
+      "rendering.behavioral_description",
+      "rendering.clinical_context",
+      "rendering.persona_description",
+      "rendering.states.affect.arousal",
+      "rendering.states.affect.primary_emotion",
+      "rendering.states.affect.valence",
+      "rendering.states.symptoms",
+      "rendering.traits.clinical_history.current_treatment",
+      "rendering.traits.clinical_history.history",
+      "rendering.traits.clinical_history.presentation",
+      "rendering.traits.cognitive_style",
+      "rendering.traits.help_seeking_orientation"
+    ]
+  },
+  "rendering": {
+    "persona_description": "Cyrus is a 54-year-old tool-and-die maker who has spent three decades machining parts to tolerances measured in thousandths of an inch. He's been married to his wife Carol for twenty-six years and has two grown kids who live out of state. He takes pride in being the guy at the shop everyone trusts to get a job right the first time.",
+    "clinical_context": "Cyrus has always liked things lined up and matched, the way plenty of people in precision trades do, and every so often a stray thought crosses his mind that something looks a little off. It passes on its own within a few moments, and he doesn't dwell on it or do anything in particular to fix it. He's never been diagnosed with any mental-health condition and has never sought or needed treatment.",
+    "behavioral_description": "Cyrus talks in short, flat, declarative sentences and gets clipped or sarcastic when he feels managed. He mentions liking things neat and orderly, the way anyone in his trade might, without dwelling on it or treating it as anything more than a preference. He interrupts, contradicts, and will flatly say things like 'that's not how it works' when he disagrees.",
+    "traits": {
+      "age": 54,
+      "gender": "cisgender man",
+      "profession": "tool-and-die maker",
+      "relationship_status": "married",
+      "living_situation": "owns a house with his wife; adult children live elsewhere",
+      "psychological_reactance": "high",
+      "communication_register": "blunt, working-class, terse, prone to irritation when he feels told what to do",
+      "help_seeking_orientation": "no reason to seek help; he's never had a mental-health concern to address",
+      "cognitive_style": "concrete and literal, rule-bound in his approach to his trade, values precision and competence",
+      "clinical_history": {
+        "presentation": "no mental-health presentation",
+        "current_treatment": "none; he has never needed or sought any mental-health treatment",
+        "history": "No history of mental-health diagnosis or treatment. He has always preferred order and symmetry, and every so often has a passing thought that something looks uneven, but it comes and goes on its own without lasting distress and without him needing to act on it."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "occasional preference for things being even or matched",
+        "a passing thought now and then that something looks slightly off, which fades on its own",
+        "no repeated checking or redoing of tasks",
+        "no distress when interrupted while working",
+        "no lasting preoccupation with alignment or order"
+      ],
+      "affect": {
+        "valence": "neutral",
+        "arousal": "typical, calm",
+        "primary_emotion": "occasional mild irritation when he feels managed, otherwise unremarkable"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000602",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000736",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

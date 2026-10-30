@@ -1,0 +1,25 @@
+# Everything in docs/ is ignored unless it is named below.
+#
+# This directory holds both published documentation and internal material --
+# `docs/specs/` and `docs/plans/`, which are never committed. A default-deny
+# rule is the only arrangement where forgetting to act is safe: a new file
+# added here is ignored until someone deliberately allowlists it, so the
+# mistake mode is "a public doc is missing from the repo", which is visible
+# and trivially fixed, rather than "an internal doc was published", which is
+# not recoverable by deleting it.
+#
+# Copied from CoralMind/knowledge-library so the two repositories answer this
+# question the same way. A contributor moving between them should not have to
+# work out which one publishes its design notes.
+#
+# TO COMMIT A NEW FILE HERE: add a negation below, in the same commit that
+# adds the file, and say in the commit message why it is publishable.
+#
+# Note that git cannot re-include a file inside an excluded directory, so a
+# negation for something in a subdirectory needs the directory unignored too
+# (`!sub/` before `!sub/file.md`). Every allowlisted file today sits directly
+# in docs/, so that case does not arise yet.
+*
+
+!.gitignore
+!sim-call-stack.md

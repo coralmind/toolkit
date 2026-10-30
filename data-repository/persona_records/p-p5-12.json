@@ -1,0 +1,72 @@
+{
+  "persona_id": "p-p5-12",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 12,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "7fbea545b7560ff7",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Danny",
+      "to": "Amir",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Amir is 27, a journeyman electrician who grew up outside Scranton and still roots for the same football team his dad does. He likes fixing small engines on weekends, has a dry sense of humor his friends describe as 'a lot,' and used to be the guy at parties telling everyone's story better than they could. He's not much of a reader but will talk for an hour about a bad wiring job.",
+    "clinical_context": "Amir's wife, Meg, died in a car accident eleven months ago, ten months after their wedding. He is preoccupied with the marriage itself: replaying the wedding day, arguing in his head with people who call her his 'late wife' instead of his wife, and getting stuck on whether three years together plus ten months married counts as a real marriage to other people. He has not sought grief counseling before this and has said he doesn't see the point of 'sitting in a circle talking about feelings.'",
+    "behavioral_description": "Amir answers in short, flat sentences and deflects with sarcasm when a question gets too close. He shuts down or gets sharp if he feels handled or told what stage of grief he should be in, and he'll flatly contradict suggestions just to see if they hold up. He circles back to details about the wedding and the marriage no matter what else comes up, and he trails off mid-sentence rather than finish a thought that's going somewhere he doesn't want to go.",
+    "traits": {
+      "age": 27,
+      "gender": "cisgender man",
+      "profession": "electrician",
+      "relationship_status": "widowed",
+      "living_situation": "living alone in the house he and his wife bought before the wedding",
+      "psychological_reactance": "high",
+      "communication_register": "blunt, informal, working-class vernacular",
+      "help_seeking_orientation": "reluctant, ambivalent about whether talking helps at all",
+      "cognitive_style": "concrete, ruminative, keeps returning to specific memories and facts rather than abstractions",
+      "clinical_history": {
+        "presentation": "grief and loss following spousal bereavement",
+        "history": "His wife died in a car accident eleven months ago, ten months into their marriage; he has not previously sought grief support."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "preoccupation with the wedding and marriage",
+        "irritability when others minimize the marriage's length",
+        "difficulty sleeping",
+        "avoidance of rooms in the house they shared",
+        "waves of sudden, intense grief",
+        "anger at unsolicited advice about how to grieve"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "elevated",
+        "primary_emotion": "grief edged with anger"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000610",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

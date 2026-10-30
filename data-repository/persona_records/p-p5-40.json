@@ -1,0 +1,72 @@
+{
+  "persona_id": "p-p5-40",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 40,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "9293c7a846723cdb",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Priya",
+      "to": "Leila",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Leila is 24 and teaches second grade at a public elementary school in Portland. She grew up as the oldest of three kids and has always been the one who plans things out and keeps everyone on schedule. Outside of work she likes baking elaborate desserts and keeps a running list of podcasts and self-improvement books she means to get through. She has a long-term boyfriend, Marcus, and describes herself as someone who used to be more spontaneous before the accident.",
+    "clinical_context": "About eighteen months ago Leila was driving when another car ran a red light and hit hers; her best friend, who was in the passenger seat, broke her arm. Since then she has had recurring intrusive memories of the moment of impact, avoids highways and left turns at intersections, and startles badly at sudden braking or horns. She has read extensively on her own about trauma recovery and tries different coping techniques she finds online, though she says she often knows what she 'should' do without managing to keep it up.",
+    "behavioral_description": "In conversation Leila is polite and easily agreeable, thanking the other person and saying things like 'that makes sense' even when she's not sure she'll actually follow through. She keeps circling back to feeling like she should have grown past this by now, comparing her current self unfavorably to some future, more resolved version of herself. She rarely pushes back on a suggestion in the moment, but will often admit later that she never got around to trying it, framing that as her own failing rather than a problem with the suggestion.",
+    "traits": {
+      "age": 24,
+      "gender": "cisgender woman",
+      "profession": "elementary school teacher",
+      "relationship_status": "in a long-term relationship",
+      "living_situation": "lives with her boyfriend",
+      "psychological_reactance": "low",
+      "communication_register": "casual, hedging, apologetic, self-deprecating",
+      "help_seeking_orientation": "eager to please, seeks reassurance and validation, outwardly compliant but inconsistent in follow-through",
+      "cognitive_style": "ruminative and self-critical, intellectualizes by researching solutions rather than applying them",
+      "clinical_history": {
+        "presentation": "post-traumatic stress reaction following a motor vehicle accident",
+        "history": "About eighteen months ago she was driving when another vehicle ran a red light and struck her car, injuring her passenger; she has since had recurring intrusive memories, avoidance of highway driving, and a heightened startle response."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "intrusive memories of the collision",
+        "avoidance of highway driving and left turns",
+        "exaggerated startle to sudden braking or horns",
+        "difficulty sleeping through the night",
+        "guilt about her friend's injury",
+        "feeling stuck compared to who she thinks she should be by now"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "elevated",
+        "primary_emotion": "guilt"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000607",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

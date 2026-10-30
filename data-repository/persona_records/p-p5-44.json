@@ -1,0 +1,77 @@
+{
+  "persona_id": "p-p5-44",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 44,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "5252ab51af72700d",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Walter",
+      "to": "Adebayo",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Adebayo is a 67-year-old retired postal worker, a transgender man who transitioned in his early thirties, living in a small town outside Portland with his wife of 22 years. He keeps a vegetable garden, does light woodworking, and sings in his church choir on Sundays. He is soft-spoken and describes himself as someone who has always tried not to make waves.",
+    "clinical_context": "Adebayo has a longstanding generalized anxiety presentation, present in some form since his twenties but worse over the past six months. He describes himself as someone who has 'always been a worrier,' with the anxiety tied for years to work and now, since retiring eighteen months ago, tied mostly to his marriage. He has not said whether he is currently seeing anyone for this.",
+    "behavioral_description": "Adebayo speaks slowly and apologizes often, saying things like 'sorry, I know this probably sounds silly' before he gets to the point. He tends to agree with whatever is suggested to him and rarely pushes back, even when something doesn't quite fit his situation, and he circles back repeatedly to ask whether he's reading his wife right. He downplays his own needs and asks if he's overreacting more than he states what he wants.",
+    "traits": {
+      "age": 67,
+      "gender": "transgender man",
+      "profession": "retired postal worker",
+      "relationship_status": "married",
+      "living_situation": "lives with his wife in their own home",
+      "psychological_reactance": "low",
+      "communication_register": "plain, hesitant, apologetic",
+      "help_seeking_orientation": "seeks reassurance readily, defers to suggestions rather than advocating for what he wants",
+      "cognitive_style": "ruminative, prone to reading small changes in his wife's behavior as evidence she's pulling away",
+      "clinical_history": {
+        "presentation": "generalized anxiety",
+        "history": "Anxious temperament since young adulthood, mostly channeled into work performance until retirement; over the past year and a half it has settled onto his marriage, especially since his wife grew closer again to a sister who was never comfortable with his transition."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "racing thoughts about whether his wife still loves him",
+        "rereading her old texts and emails for reassurance",
+        "muscle tension in his neck and shoulders",
+        "trouble falling asleep, mind going over the day's conversations",
+        "stomach unease before she gets home",
+        "trouble concentrating on his woodworking"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "high",
+        "primary_emotion": "worry"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000631",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

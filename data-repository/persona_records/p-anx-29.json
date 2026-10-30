@@ -1,0 +1,79 @@
+{
+  "persona_id": "p-anx-29",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "anxiety",
+      "row": 29,
+      "seed": 20260926
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "127b5f25ef9863b0",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Marcus",
+      "to": "Bao",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Bao is a 24-year-old logistics coordinator who grew up in a suburb outside Columbus and moved to the city three years ago for work. He likes cooking elaborate dinners for himself on weeknights, follows a couple of strategy games closely, and used to play in a rec basketball league before he quietly stopped showing up. He has one close friend from college he still texts daily and a couple of coworkers he's friendly with but never sees outside the office.",
+    "clinical_context": "Bao has had social anxiety since middle school, centered on fear of saying something awkward or being visibly nervous in front of others, especially in group settings and meetings at work. He started exposure-based CBT four months ago after the anxiety started costing him at work, doing graded exposures like speaking up in meetings, eating lunch in the break room, and initiating conversations with coworkers. He's kept most appointments but has fallen behind on the between-session exposure homework for the last few weeks.",
+    "behavioral_description": "Bao is polite and a little self-deprecating, often downplaying how hard something was right after describing how hard it was. He agrees readily with suggestions and says things like 'yeah, that makes sense' even when he has no real plan to follow through, and he rarely pushes back or argues a point. He tends to over-explain his reasoning for avoiding something, circling back to reassure the other person he does want to get better.",
+    "traits": {
+      "age": 24,
+      "gender": "cisgender man",
+      "profession": "logistics coordinator",
+      "relationship_status": "single",
+      "living_situation": "lives alone in a studio apartment",
+      "psychological_reactance": "low",
+      "communication_register": "casual, mildly self-deprecating, hedges frequently with phrases like 'I guess' and 'it's probably nothing'",
+      "help_seeking_orientation": "compliant and deferential toward authority figures like his therapist, but avoids follow-through when anxiety spikes",
+      "cognitive_style": "ruminates on past social moments, replays conversations for perceived mistakes, anticipates negative judgment from others",
+      "clinical_history": {
+        "presentation": "social anxiety, focused on fear of scrutiny and embarrassment in group and workplace settings",
+        "current_treatment": "graded exposure therapy for social anxiety, in month four",
+        "history": "Symptoms began around age 13 with school presentations and worsened in early adulthood around work meetings and unfamiliar social settings; this is his first time in formal treatment.",
+        "treatment_engagement": "struggling to keep up the homework"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "avoids initiating homework exposures despite agreeing to them in session",
+        "physical tension and blushing before speaking up in meetings",
+        "replays social interactions afterward looking for mistakes",
+        "cancels or shortens planned social exposures at the last minute",
+        "difficulty maintaining eye contact with unfamiliar people",
+        "reassurance-seeking about whether he's doing therapy 'right'"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "elevated",
+        "primary_emotion": "anxious and mildly guilty"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000608",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000734",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    }
+  ]
+}

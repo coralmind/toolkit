@@ -1,0 +1,13 @@
+# fidelity
+
+`elicitation.py` runs on an L3 run's transcripts: `corallab check --run-manifest M --transcripts T`, or `corallab run` on each batch when `simulation.elicitation_fidelity.enabled` is true. One model call reads the transcript, the test case's `scenario_strategies`, and its `behavior_assertions`. The prompt file is `elicitation_fidelity.prompt_version` when set, otherwise the checker's current prompt. Older prompt files stay in `prompts/`; the checker refuses them, because it no longer reads their answers. The check writes one `FidelityCheckRecord`, holding the `FidelityVerdict`, per transcript to `<stem>-check.jsonl` beside the transcripts; the transcripts are not changed. It warns when the checker is the simulator's own model.
+
+A `scenario_strategy` is judged on user messages at or after `available_from_turn`. That number is the exchange: transcript `turn_number` 2 is the person's second message, and the assistant reply in that exchange has the same number. A `trigger` of `none` is always in play once such a turn exists. Any other trigger that never happens is `trigger_absent`. The result is a `StrategyVerdict`. Strategy adherence does not change `fidelity.status`.
+
+A citation names that exchange (`turn`) and `speaker` (`user` or `assistant`). Both messages share the number, so `speaker` selects which one. A citation that omits it, or names any other speaker, cannot be placed. The check logs that reason and leaves `fidelity` unset.
+
+A `behavior_assertion` is judged twice. `catalog_occurred` is whether the transcript shows the behavior as its catalog entry defines it: the checker loads that user behavior and gives the model its definition, criteria, exclusions, and detection window. The model answers each lettered part of the criteria (`parts`), and code decides `catalog_occurred` with the judge's `required_elements` and `needs_separate_turns`. `assertion_occurred` is whether the test case's assertion prose shows up anywhere in the transcript. The two are independent. `citations` are the user turns that show the catalog behavior. A catalog miss sets `miss` to `not_attempted`, which makes `status` `invalid` and adds a `reasons` entry naming that behavior. An assertion miss does not change `status`.
+
+A multi-turn behavior that an earlier AI reply made unnecessary is `preempted` instead of `not_attempted`: the model names why (`preempted_by`: `resolved` when the AI met the need first, `derailed` when it misread the person) and quotes the AI turn (`ai_citation`), and `status` is `not_tested` unless another behavior is `not_attempted`.
+
+`consistency_checker.py` is the per-turn checker. The sim loop does not call it.

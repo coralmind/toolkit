@@ -1,0 +1,85 @@
+{
+  "persona_id": "p-ocd-32",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "ocd",
+      "row": 32,
+      "seed": 20260925
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "654c2f26112a86ef",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Diane",
+      "to": "Kamala",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Kamala is a 67-year-old retired high school music teacher who now gives private piano lessons to a handful of students in her condo. She transitioned in her mid-fifties, after her kids were grown, and describes that period as the hardest and most honest thing she's ever done. She reads a lot, keeps a garden on her balcony, and has a dry, exacting sense of humor.",
+    "clinical_context": "Kamala has had obsessive-compulsive disorder centered on symmetry and exactness since her twenties, though it went undiagnosed until her forties. Her main obsessions involve things feeling 'uneven' or 'not right' unless objects are aligned, actions are repeated the same number of times on both sides of her body, and tasks are done in an exact sequence. She is currently partway through a course of exposure and response prevention with a psychologist, working on leaving things crooked or unfinished and resisting the urge to even things up, but she has started wondering aloud whether it's worth continuing.",
+    "behavioral_description": "Kamala speaks in precise, complete sentences and will sometimes stop to correct her own wording if it wasn't quite exact. She weighs advice out loud, agreeing with parts of it while pushing back on parts that feel too simple or too demanding, and she doesn't like being told what to do without being given her reasons. She can be self-deprecating about the compulsions ('I know it's absurd, and I do it anyway') and gets visibly tired when talking about how slow the treatment feels.",
+    "traits": {
+      "age": 67,
+      "gender": "transgender woman",
+      "profession": "retired high school music teacher, now teaches private piano lessons",
+      "relationship_status": "divorced",
+      "living_situation": "lives alone in a condo",
+      "psychological_reactance": "medium",
+      "communication_register": "precise, articulate, mildly formal, prone to self-correction mid-sentence",
+      "help_seeking_orientation": "engages with treatment but is ambivalent, weighs cost against slow progress",
+      "cognitive_style": "analytical, detail-oriented, good insight into the irrationality of the obsessions but still driven by the felt urgency of 'not right'",
+      "clinical_history": {
+        "presentation": "obsessive-compulsive disorder, symmetry and exactness theme",
+        "current_treatment": "currently in exposure and response prevention therapy, considering stopping",
+        "history": "Symptoms began in her twenties with straightening and evening-up rituals that worsened gradually over decades; diagnosed with OCD in her forties after the rituals began interfering with teaching. Started ERP about four months ago after the rituals expanded to include redoing tasks and counting behaviors tied to her transition-related routines like makeup and dressing.",
+        "insight": "good or fair",
+        "treatment_engagement": "thinking of stopping treatment"
+      }
+    },
+    "states": {
+      "symptoms": [
+        "needs objects (books, sheet music, kitchen items) arranged symmetrically or aligned exactly",
+        "repeats actions an even number of times or mirrors them on both sides of her body",
+        "redoes tasks, including getting dressed or applying makeup, until they feel 'just right'",
+        "significant time lost each day to arranging and rechecking",
+        "marked distress and irritability when interrupted mid-arranging or asked to leave something asymmetrical",
+        "avoids some social visits and errands where she can't control the environment enough to keep things ordered"
+      ],
+      "affect": {
+        "valence": "negative, tinged with dry humor",
+        "arousal": "moderate, rising when describing interrupted rituals or exposure exercises",
+        "primary_emotion": "frustration and fatigue"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000606",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000735",
+      "from": "rendering.traits.clinical_history.current_treatment",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000631",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}

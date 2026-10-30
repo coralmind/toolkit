@@ -1,0 +1,76 @@
+{
+  "persona_id": "p-p5-45",
+  "version": 1,
+  "provenance": {
+    "kind": "generated",
+    "design": {
+      "table": "pathway5",
+      "row": 45,
+      "seed": 20260927
+    },
+    "generator": {
+      "model": "claude-sonnet-5",
+      "template": "person.md",
+      "template_version": "1",
+      "prompt_hash": "c39676581a23fc5e",
+      "attempt": 1
+    },
+    "renamed": {
+      "from": "Renata",
+      "to": "Marta",
+      "by": "names.py"
+    }
+  },
+  "variant_of": null,
+  "rendering": {
+    "persona_description": "Marta is a 64-year-old retired librarian who transitioned in her late 40s, after her children were grown. She lives alone in a rented apartment in a mid-sized city, a few miles from the branch library where she worked for twenty years. She was, by her own account, meticulous and dependable at her job, and she still keeps lists and schedules out of habit even though she has fewer places to be.",
+    "clinical_context": "Marta has major depressive disorder, recurrent. She had a first episode in her early 30s, well before she transitioned, and a second episode began about eight months ago, not long after she retired and her cat of fourteen years died within the same season. She does not say whether she is currently getting any treatment for it.",
+    "behavioral_description": "Marta speaks in short, exact sentences and tends to describe her day as a list of things done or not done rather than in terms of mood. She'll accept a suggestion if it's specific and testable, but she pushes back, sometimes flatly, on anything that sounds like a general platitude or that assumes she hasn't already tried the obvious. She circles back repeatedly to particular actions she's failed to take that day or week, as if naming them again will explain the rest.",
+    "traits": {
+      "age": 64,
+      "gender": "transgender woman",
+      "profession": "retired librarian",
+      "relationship_status": "divorced",
+      "living_situation": "lives alone in a rented one-bedroom apartment",
+      "psychological_reactance": "medium",
+      "communication_register": "plain, precise, slightly formal",
+      "help_seeking_orientation": "willing to talk but skeptical of generic advice; wants specifics before she'll try something",
+      "cognitive_style": "concrete and detail-oriented; tracks her state through discrete actions rather than feelings",
+      "clinical_history": {
+        "presentation": "major depressive disorder, recurrent",
+        "history": "First episode in her early 30s, before her transition. A second episode began roughly eight months ago, following retirement and the death of her cat."
+      }
+    },
+    "states": {
+      "symptoms": [
+        "low energy most of the day",
+        "difficulty starting routine tasks like laundry or answering mail",
+        "sleeping later and longer than she used to",
+        "let go of reading, which she used to do for hours daily",
+        "repeatedly checking over a short list of undone chores and calling herself lazy for it"
+      ],
+      "affect": {
+        "valence": "negative",
+        "arousal": "low",
+        "primary_emotion": "heaviness, tinged with self-directed irritation"
+      }
+    }
+  },
+  "elevated": [
+    {
+      "value": "kl-000604",
+      "from": "rendering.traits.clinical_history.presentation",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000631",
+      "from": "rendering.traits.age",
+      "method": "typed"
+    },
+    {
+      "value": "kl-000632",
+      "from": "rendering.traits.gender",
+      "method": "typed"
+    }
+  ]
+}
