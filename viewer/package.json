@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@coralmind/brand": "git+ssh://git@github.com/coralmind/brand.git#73e228e0038b728919165de831a5eda7342db9ff",
-    "next": "16.4.3",
+    "next": "16.4.5",
     "react": "19.2.0",
     "react-dom": "19.2.0"
   },
